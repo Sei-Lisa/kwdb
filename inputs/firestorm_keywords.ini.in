@@ -1,0 +1,75 @@
+llkeywords version 2
+
+<<< LSL KEYWORDS version >>>
+
+# Based on revision 32228:e866958f5e06
+# http://hg.phoenixviewer.com/phoenix-firestorm-lgpl/file/e866958f5e06/indra/newview/app_settings/keywords.ini
+# Last changed on revision 31351:2cfcf394c567
+
+# sections
+[word .5, .1, .3]
+<<< LSL KEYWORDS sections >>>
+<<< OSSL KEYWORDS sections >>>
+<<< AA KEYWORDS sections >>>
+
+# data types
+[word .1, .3, .1]
+<<< LSL KEYWORDS types >>>
+<<< OSSL KEYWORDS types >>>
+<<< AA KEYWORDS types >>>
+
+# events
+[word 0, .3, .5]
+<<< LSL KEYWORDS events >>>
+<<< OSSL KEYWORDS events >>>
+<<< AA KEYWORDS events >>>
+
+# integer constants
+[word .1, .1, .5]
+<<< LSL KEYWORDS integer constants >>>
+<<< OSSL KEYWORDS integer constants >>>
+<<< AA KEYWORDS integer constants >>>
+
+# string constants
+[word .1, .3, .5]
+<<< LSL KEYWORDS string constants >>>
+<<< OSSL KEYWORDS string constants >>>
+<<< AA KEYWORDS string constants >>>
+
+# float constants
+[word .3, .1, .5]
+<<< LSL KEYWORDS float constants >>>
+<<< OSSL KEYWORDS float constants >>>
+<<< AA KEYWORDS float constants >>>
+
+# compound constants
+[word .4, .2, .4]
+<<< LSL KEYWORDS compound constants >>>
+<<< OSSL KEYWORDS compound constants >>>
+<<< AA KEYWORDS compound constants >>>
+
+
+# flow control keywords
+[word 0, 0, .8]
+<<< LSL KEYWORDS flow >>>
+<<< LSL KEYWORDS other >>>
+<<< OSSL KEYWORDS flow >>>
+<<< OSSL KEYWORDS other >>>
+<<< AA KEYWORDS flow >>>
+<<< AA KEYWORDS other >>>
+
+# flow control label
+[line 0, 0, .8]
+@					Label:Target for jump statement
+
+# Comment
+[one_sided_delimiter .8, .3, .15]
+//					Comment:Non-functional commentary or disabled code
+[two_sided_delimiter .8, .3, .15]
+/* */				Comment:Non-functional commentary or disabled code
+
+# String literals
+[double_quotation_marks 0, .2, 0]
+"					String literal
+
+#functions are supplied by the program now

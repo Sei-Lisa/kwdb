@@ -1,0 +1,2515 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- Based on revision 32228:e866958f5e06
+     http://hg.phoenixviewer.com/phoenix-firestorm-lgpl/file/e866958f5e06/indra/newview/skins/default/xui/en/strings.xml
+     Last changed on revision 32124:889f84d5525f -->
+<!-- This file contains strings that used to be hardcoded in the source.
+     It is only for those strings which do not belong in a floater.
+     For example, the strings used in avatar chat bubbles, and strings
+     that are returned from one component and may appear in many places-->
+<strings>
+
+	<!-- Default Args - these arguments will be replaced in all strings -->
+	<string name="SECOND_LIFE">[CURRENT_GRID]</string>
+	<string name="APP_NAME">Firestorm</string>
+	<string name="CAPITALIZED_APP_NAME">FIRESTORM</string>
+	<string name="SECOND_LIFE_GRID">Second Life Grid</string>
+	<string name="SUPPORT_SITE">Second Life Support Portal</string>
+	<string name="DOWNLOAD_URL">http://www.firestormviewer.org/downloads</string>
+
+	<!-- starting up -->
+	<string name="StartupDetectingHardware">Detecting hardware...</string>
+	<string name="StartupLoading">Loading [APP_NAME]...</string>
+	<string name="StartupClearingCache">Clearing cache...</string>
+	<string name="StartupInitializingTextureCache">Initializing texture cache...</string>
+	<string name="StartupInitializingVFS">Initializing VFS...</string>
+	<string name="StartupRequireDriverUpdate">Graphics initialization failed. Please update your graphics driver!</string>
+
+	<!--  progress -->
+	<string name="ProgressRestoring">Restoring...</string>
+	<string name="ProgressChangingResolution">Changing resolution...</string>
+
+	<!-- Legacy strings, almost never used -->
+	<string name="Fullbright">Fullbright (legacy)</string>	<!-- used in the Build > materials dropdown-->
+
+	<!-- Login -->
+	<string name="LoginInProgress">Logging in. [APP_NAME] may appear frozen.  Please wait.</string>
+	<string name="LoginInProgressNoFrozen">Logging in...</string>
+	<string name="LoginAuthenticating">Authenticating</string>
+	<string name="LoginMaintenance">Performing account maintenance...</string>
+	<string name="LoginAttempt">Previous login attempt failed. Logging in, attempt [NUMBER]</string>
+	<string name="LoginPrecaching">Loading world...</string>
+	<string name="LoginInitializingBrowser">Initializing embedded web browser...</string>
+	<string name="LoginInitializingMultimedia">Initializing multimedia...</string>
+	<string name="LoginInitializingFonts">Loading fonts...</string>
+	<string name="LoginVerifyingCache">Verifying cache files (can take 60-90 seconds)...</string>
+	<string name="LoginProcessingResponse">Processing response...</string>
+	<string name="LoginInitializingWorld">Initializing world...</string>
+	<string name="LoginDecodingImages">Decoding images...</string>
+	<string name="LoginInitializingQuicktime">Initializing QuickTime...</string>
+	<string name="LoginQuicktimeNotFound">QuickTime not found - unable to initialize.</string>
+	<string name="LoginQuicktimeOK">QuickTime initialized successfully.</string>
+	<string name="LoginRequestSeedCapGrant">Requesting region capabilities...</string>
+	<string name="LoginRetrySeedCapGrant">Requesting region capabilities, attempt [NUMBER]...</string>
+	<string name="LoginWaitingForRegionHandshake">Waiting for region handshake...</string>
+	<string name="LoginConnectingToRegion">Connecting to region...</string>
+	<string name="LoginDownloadingClothing">Downloading clothing...</string>
+	<string name="InvalidCertificate">The server returned an invalid or corrupt certificate. Please contact the Grid administrator.</string>
+	<string name="CertInvalidHostname">An invalid hostname was used to access the server, please check your SLURL or Grid hostname.</string>
+	<string name="CertExpired">The certificate returned by the Grid appears to be expired.  Please check your system clock, or contact your Grid administrator.</string>
+	<string name="CertKeyUsage">The certificate returned by the server could not be used for SSL.  Please contact your Grid administrator.</string>
+	<string name="CertBasicConstraints">Too many certificates were in the servers Certificate chain.  Please contact your Grid administrator.</string>
+	<string name="CertInvalidSignature">The certificate signature returned by the Grid server could not be verified.  Please contact your Grid administrator.</string>
+
+	<string name="LoginFailedNoNetwork">Network error: Could not establish connection, please check your network connection.</string>
+	<string name="LoginFailed">Login failed.</string>
+	<string name="Quit">Quit</string>
+	<string name="create_account_url">http://join.secondlife.com/?sourceid=[sourceid]</string>
+
+	<string name="LoginFailedViewerNotPermitted">
+The viewer you are using can no longer access Second Life. Please visit the following page to download a new viewer:
+http://secondlife.com/download
+
+For more information, see our FAQ below:
+http://secondlife.com/viewer-access-faq</string>
+	<string name="LoginIntermediateOptionalUpdateAvailable">Optional viewer update available: [VERSION]</string>
+	<string name="LoginFailedRequiredUpdate">Required viewer update: [VERSION]</string>
+	<string name="LoginFailedAlreadyLoggedIn">This agent is already logged in.
+</string>
+	<string name="LoginFailedAuthenticationFailed">Sorry! We couldn't log you in.
+Please check to make sure you entered the right
+    * Username (like bobsmith12 or steller.sunshine)
+    * Password
+Also, please make sure your Caps Lock key is off.</string>
+	<string name="LoginFailedPasswordChanged">As a security precaution your password has been changed.
+Please go to your account page at http://secondlife.com/password
+and answer the security question to reset your password.
+We are very sorry for the inconvenience.</string>
+	<string name="LoginFailedPasswordReset">We made some changes to our system and you will need to reset your password.
+Please go to your account page at http://secondlife.com/password
+and answer the security question to reset your password.
+We are very sorry for the inconvenience.</string>
+	<string name="LoginFailedEmployeesOnly">Second Life is temporarily closed for maintenance.
+Logins are currently restricted to employees only.
+Check www.secondlife.com/status for updates.</string>
+	<string name="LoginFailedPremiumOnly">Second Life logins are temporarily restricted in order to make sure that those in-world have the best possible experience.
+
+People with free accounts will not be able to access Second Life during this time, to make room for those who have paid for Second Life.</string>
+	<string name="LoginFailedComputerProhibited">Second Life cannot be accessed from this computer.
+If you feel this is an error, please contact
+support@secondlife.com.</string>
+	<string name="LoginFailedAcountSuspended">Your account is not accessible until
+[TIME] Pacific Time.</string>
+	<string name="LoginFailedAccountDisabled">We are unable to complete your request at this time.
+Please contact Second Life support for assistance at http://secondlife.com/support.
+If you are unable to change your password, please call (866) 476-9763.</string>
+	<string name="LoginFailedTransformError">Data inconsistency found during login.
+Please contact support@secondlife.com.</string>
+	<string name="LoginFailedAccountMaintenance">Your account is undergoing minor maintenance.
+Your account is not accessible until
+[TIME] Pacific Time.
+If you feel this is an error, please contact support@secondlife.com.</string>
+	<string name="LoginFailedPendingLogoutFault">Request for logout responded with a fault from simulator.</string>
+	<string name="LoginFailedPendingLogout">The system is logging you out right now.
+Your Account will not be available until
+[TIME] Pacific Time.</string>
+	<string name="LoginFailedUnableToCreateSession">Unable to create valid session.</string>
+	<string name="LoginFailedUnableToConnectToSimulator">Unable to connect to a simulator.</string>
+	<string name="LoginFailedRestrictedHours">Your account can only access Second Life
+between [START] and [END] Pacific Time.
+Please come back during those hours.
+If you feel this is an error, please contact support@secondlife.com.</string>
+	<string name="LoginFailedIncorrectParameters">Incorrect parameters.
+If you feel this is an error, please contact support@secondlife.com.</string>
+	<string name="LoginFailedFirstNameNotAlphanumeric">First name parameter must be alphanumeric.
+If you feel this is an error, please contact support@secondlife.com.</string>
+	<string name="LoginFailedLastNameNotAlphanumeric">Last name parameter must be alphanumeric.
+If you feel this is an error, please contact support@secondlife.com.</string>
+	<string name="LogoutFailedRegionGoingOffline">Region is going offline.
+Please try logging in again in a minute.</string>
+	<string name="LogoutFailedAgentNotInRegion">Agent not in region.
+Please try logging in again in a minute.</string>
+	<string name="LogoutFailedPendingLogin">The region was logging in another session.
+Please try logging in again in a minute.</string>
+	<string name="LogoutFailedLoggingOut">The region was logging out the previous session.
+Please try logging in again in a minute.</string>
+	<string name="LogoutFailedStillLoggingOut">The region is still logging out the previous session.
+Please try logging in again in a minute.</string>
+	<string name="LogoutSucceeded">Region has logged out last session.
+Please try logging in again in a minute.</string>
+	<string name="LogoutFailedLogoutBegun">Region has begun the logout process.
+Please try logging in again in a minute.</string>
+	<string name="LoginFailedLoggingOutSession">The system has begun logging out your last session.
+Please try logging in again in a minute.</string>
+
+
+	<!-- Disconnection -->
+	<string name="AgentLostConnection">This region may be experiencing trouble.  Please check your connection to the Internet.</string>
+	<string name="SavingSettings">Saving your settings...</string>
+	<string name="LoggingOut">Logging out...</string>
+	<string name="ShuttingDown">Shutting down...</string>
+	<string name="YouHaveBeenDisconnected">You have been disconnected from the region you were in.</string>
+	<string name="SentToInvalidRegion">You were sent to an invalid region.</string>
+	<string name="TestingDisconnect">Testing viewer disconnect</string>
+
+	<!-- Tooltip -->
+	<string name="TooltipPerson">Person</string><!-- Object under mouse pointer is an avatar -->
+	<string name="TooltipNoName">(no name)</string> <!-- No name on an object -->
+	<string name="TooltipOwner">Owner:</string> <!-- Owner name follows -->
+	<string name="TooltipPublic">Public</string> <!-- Public permissions on an object -->
+	<string name="TooltipIsGroup">(Group)</string> <!-- The name before this text is that of a group -->
+	<string name="TooltipForSaleL$">For Sale: L$[AMOUNT]</string> <!-- L$ version -->
+	<string name="TooltipFlagGroupBuild">Group Build</string>
+	<string name="TooltipFlagNoBuild">No Build</string>
+	<string name="TooltipFlagNoEdit">No Edit</string>
+	<string name="TooltipFlagNotSafe">Not Safe</string><!-- damage area -->
+	<string name="TooltipFlagNoFly">No Fly</string>
+	<string name="TooltipFlagGroupScripts">Group Scripts</string>
+	<string name="TooltipFlagNoScripts">No Scripts</string>
+	<string name="TooltipLand">Land:</string>
+	<string name="TooltipMustSingleDrop">Only a single item can be dragged here</string>
+	<string name="TooltipPrice" value="L$[AMOUNT]: "/>
+	<string name="TooltipFlagScript">Script</string>
+	<string name="TooltipFlagPhysics">Physics</string>
+	<string name="TooltipFlagTouch">Touch</string>
+	<string name="TooltipFlagL$">L$</string>
+	<string name="TooltipFlagDropInventory">Drop Inventory</string>
+	<string name="TooltipFlagPhantom">Phantom</string>
+	<string name="TooltipFlagTemporary">Temporary</string>
+	<string name="TooltipPrimCount">Prims: [COUNT]</string>
+	<string name="TooltipPrimEquivalent">, Land Impact: [PEWEIGHT] PE</string>
+	<string name="TooltipPrimEquivalentLoading">, loading Land Impact...</string>
+	<string name="TooltipPrimEquivalentUnavailable">, Land Impact unavailable</string>
+	<string name="TooltipDistance">Distance: [DISTANCE] m</string>
+	<string name="TooltipPosition">Position: [POSITION]</string>
+
+	<string name="TooltipOutboxDragToWorld">You can not rez items in your merchant outbox</string>
+	<string name="TooltipOutboxNoTransfer">One or more of these objects cannot be sold or transferred.</string>
+	<string name="TooltipOutboxNotInInventory">Your merchant outbox can only accept items directly from your inventory</string>
+	<string name="TooltipOutboxWorn">You can not put items you are wearing into your merchant outbox</string>
+	<string name="TooltipOutboxCallingCard">You can not put calling cards into your merchant outbox</string>
+	<string name="TooltipOutboxFolderLevels">Depth of nested folders exceeds 3</string>
+	<string name="TooltipOutboxTooManyFolders">Subfolder count in top-level folder exceeds 20</string>
+	<string name="TooltipOutboxTooManyObjects">Item count in top-level folder exceeds 200</string>
+	
+	<string name="TooltipDragOntoOwnChild">You can't move a folder into its child</string>
+	<string name="TooltipDragOntoSelf">You can't move a folder into itself</string>
+	
+	<!-- tooltips for Urls -->
+	<string name="TooltipHttpUrl">Click to view this web page</string>
+	<string name="TooltipSLURL">Click to view this location's information</string>
+	<string name="TooltipAgentUrl">Click to view this Resident's profile</string>
+	<string name="TooltipAgentInspect">Learn more about this Resident</string>
+	<string name="TooltipAgentMute">Click to mute this Resident</string>
+	<string name="TooltipAgentUnmute">Click to unmute this Resident</string>
+	<string name="TooltipAgentIM">Click to IM this Resident</string>
+	<string name="TooltipAgentPay">Click to Pay this Resident</string>
+	<string name="TooltipAgentOfferTeleport">Click to offer a teleport request to this Resident</string>
+	<string name="TooltipAgentRequestFriend">Click to send a friend request to this Resident</string>
+	<string name="TooltipGroupUrl">Click to view this group's description</string>
+	<string name="TooltipEventUrl">Click to view this event's description</string>
+	<string name="TooltipClassifiedUrl">Click to view this classified</string>
+	<string name="TooltipParcelUrl">Click to view this parcel's description</string>
+	<string name="TooltipTeleportUrl">Click to teleport to this location</string>
+	<string name="TooltipObjectIMUrl">Click to view this object's description</string>
+	<string name="TooltipMapUrl">Click to view this location on a map</string>
+	<string name="TooltipSLAPP">Click to run the secondlife:// command</string>
+	<string name="CurrentURL" value=" CurrentURL: [CurrentURL]" />
+
+	<!-- text for SLURL labels -->
+	<string name="SLurlLabelTeleport">Teleport to</string>
+	<string name="SLurlLabelShowOnMap">Show Map for</string>
+
+	<!-- label strings for secondlife:///app/agent SLapps -->
+	<string name="SLappAgentMute">Mute</string>
+	<string name="SLappAgentUnmute">Unmute</string>
+	<string name="SLappAgentIM">IM</string>
+	<string name="SLappAgentPay">Pay</string>
+	<string name="SLappAgentOfferTeleport">Offer Teleport to </string>
+	<string name="SLappAgentRequestFriend">Friend Request </string>
+
+	<!-- ButtonToolTips, llfloater.cpp -->
+	<string name="BUTTON_CLOSE_DARWIN">Close (&#8984;W)</string>
+	<string name="BUTTON_CLOSE_WIN">Close (Ctrl+W)</string>
+	<string name="BUTTON_CLOSE_CHROME">Close</string>
+	<string name="BUTTON_RESTORE">Restore</string>
+	<string name="BUTTON_MINIMIZE">Minimize</string>
+	<string name="BUTTON_TEAR_OFF">Tear Off</string>
+	<string name="BUTTON_DOCK">Dock</string>
+	<string name="BUTTON_HELP">Show Help</string>
+
+	<!-- searching - generic -->
+	<string name="Searching">Searching...</string>
+	<string name="NoneFound">None found.</string>
+
+	<!-- Indicates that an avatar name or other similar datum is being retrieved. General usage. -->
+	<string name="RetrievingData">Retrieving...</string>
+
+	<string name="ReleaseNotes">Release Notes</string>
+	<!-- Always mark translate="false" for strings that are nothing but URLs, as they don't need translation. -->
+	<string name="RELEASE_NOTES_BASE_URL" translate="false">http://wiki.secondlife.com/wiki/Release_Notes/</string>
+
+	<!-- Indicates something is being loaded. Maybe should be merged with RetrievingData -->
+	<string name="LoadingData">Loading...</string>
+
+	<!-- Indicates a protected Inventory folder. ## Zi: Animation Overrider -->
+	<string name="ProtectedFolder">protected</string>
+
+
+	<!-- namecache -->
+	<!-- Avatar name: text shown for LLUUID::null -->
+	<string name="AvatarNameNobody">(nobody)</string>
+
+	<!-- Avatar name: text shown while fetching name -->
+	<string name="AvatarNameWaiting">(waiting)</string>
+
+  <!-- Avatar name: More than one avatar is selected/used here -->
+  <string name="AvatarNameMultiple">(multiple)</string>
+
+	<!-- Group name: text shown for LLUUID::null -->
+	<string name="GroupNameNone">(none)</string>
+
+	<string name="AvalineCaller">Avaline Caller [ORDER]</string>
+
+	<!-- Asset errors. Used in llassetstorage.cpp, translation from error code to error message. -->
+	<string name="AssetErrorNone">No error</string>
+	<string name="AssetErrorRequestFailed">Asset request: failed</string>
+	<string name="AssetErrorNonexistentFile">Asset request: non-existent file</string>
+	<string name="AssetErrorNotInDatabase">Asset request: asset not found in database</string>
+	<string name="AssetErrorEOF">End of file</string>
+	<string name="AssetErrorCannotOpenFile">Cannot open file</string>
+	<string name="AssetErrorFileNotFound">File not found</string>
+	<string name="AssetErrorTCPTimeout">File transfer timeout</string>
+	<string name="AssetErrorCircuitGone">Circuit gone</string>
+	<string name="AssetErrorPriceMismatch">Viewer and server do not agree on price</string>
+	<string name="AssetErrorUnknownStatus">Unknown status</string>
+
+	<!-- Asset Type human readable names:  these will replace variable [TYPE] in notification FailedToFindWearable* -->
+	<!-- Will also replace [OBJECTTYPE] in notifications: UserGiveItem, ObjectGiveItem -->
+	<string name="texture">texture</string>
+	<string name="sound">sound</string>
+	<string name="calling card">calling card</string>
+	<string name="landmark">landmark</string>
+	<string name="legacy script">legacy script</string>
+	<string name="clothing">clothing</string>
+	<string name="object">object</string>
+	<string name="note card">notecard</string>
+	<string name="folder">folder</string>
+	<string name="root">root</string>
+	<string name="lsl2 script">LSL2 script</string>
+	<string name="lsl bytecode">LSL bytecode</string>
+	<string name="tga texture">tga texture</string>
+	<string name="body part">body part</string>
+	<string name="snapshot">snapshot</string>
+	<string name="lost and found">Lost and Found</string>
+	<string name="targa image">targa image</string>
+	<string name="trash">Trash</string>
+	<string name="jpeg image">jpeg image</string>
+	<string name="animation">animation</string>
+	<string name="gesture">gesture</string>
+	<string name="simstate">simstate</string>
+	<string name="favorite">favorite</string>
+	<string name="symbolic link">link</string>
+	<string name="symbolic folder link">folder link</string>
+  <string name="mesh">mesh</string>
+
+	<!-- llvoavatar. Displayed in the avatar chat bubble -->
+	<string name="AvatarEditingAppearance">(Editing Appearance)</string>
+	<string name="AvatarAway">Away</string>
+	<string name="AvatarBusy">Unavailable</string>
+	<string name="AvatarMuted">Blocked</string>
+
+	<!-- animations -->
+	<string name="anim_express_afraid">Afraid</string>
+	<string name="anim_express_anger">Angry</string>
+	<string name="anim_away">Away</string>
+	<string name="anim_backflip">Backflip</string>
+	<string name="anim_express_laugh">Belly Laugh</string>
+	<string name="anim_express_toothsmile">BigSmile</string>
+	<string name="anim_blowkiss">Blow Kiss</string>
+	<string name="anim_express_bored">Bored</string>
+	<string name="anim_bow">Bow</string>
+	<string name="anim_clap">Clap</string>
+	<string name="anim_courtbow">Court Bow</string>
+	<string name="anim_express_cry">Cry</string>
+	<string name="anim_dance1">Dance 1</string>
+	<string name="anim_dance2">Dance 2</string>
+	<string name="anim_dance3">Dance 3</string>
+	<string name="anim_dance4">Dance 4</string>
+	<string name="anim_dance5">Dance 5</string>
+	<string name="anim_dance6">Dance 6</string>
+	<string name="anim_dance7">Dance 7</string>
+	<string name="anim_dance8">Dance 8</string>
+	<string name="anim_express_disdain">Disdain</string>
+	<string name="anim_drink">Drink</string>
+	<string name="anim_express_embarrased">Embarrassed</string>
+	<string name="anim_angry_fingerwag">Finger Wag</string>
+	<string name="anim_fist_pump">Fist Pump</string>
+	<string name="anim_yoga_float">Floating Yoga</string>
+	<string name="anim_express_frown">Frown</string>
+	<string name="anim_impatient">Impatient</string>
+	<string name="anim_jumpforjoy">Jump For Joy</string>
+	<string name="anim_kissmybutt">Kiss My Butt</string>
+	<string name="anim_express_kiss">Kiss</string>
+	<string name="anim_laugh_short">Laugh</string>
+	<string name="anim_musclebeach">Muscle Beach</string>
+	<string name="anim_no_unhappy">No (Unhappy)</string>
+	<string name="anim_no_head">No</string>
+	<string name="anim_nyanya">Nya-nya-nya</string>
+	<string name="anim_punch_onetwo">One-Two Punch</string>
+	<string name="anim_express_open_mouth">Open Mouth</string>
+	<string name="anim_peace">Peace</string>
+	<string name="anim_point_you">Point at Other</string>
+	<string name="anim_point_me">Point at Self</string>
+	<string name="anim_punch_l">Punch Left</string>
+	<string name="anim_punch_r">Punch Right</string>
+	<string name="anim_rps_countdown">RPS count</string>
+	<string name="anim_rps_paper">RPS paper</string>
+	<string name="anim_rps_rock">RPS rock</string>
+	<string name="anim_rps_scissors">RPS scissors</string>
+	<string name="anim_express_repulsed">Repulsed</string>
+	<string name="anim_kick_roundhouse_r">Roundhouse Kick</string>
+	<string name="anim_express_sad">Sad</string>
+	<string name="anim_salute">Salute</string>
+	<string name="anim_shout">Shout</string>
+	<string name="anim_express_shrug">Shrug</string>
+	<string name="anim_express_smile">Smile</string>
+	<string name="anim_smoke_idle">Smoke Idle</string>
+	<string name="anim_smoke_inhale">Smoke Inhale</string>
+	<string name="anim_smoke_throw_down">Smoke Throw Down</string>
+	<string name="anim_express_surprise">Surprise</string>
+	<string name="anim_sword_strike_r">Sword Strike</string>
+	<string name="anim_angry_tantrum">Tantrum</string>
+	<string name="anim_express_tongue_out">TongueOut</string>
+	<string name="anim_hello">Wave</string>
+	<string name="anim_whisper">Whisper</string>
+	<string name="anim_whistle">Whistle</string>
+	<string name="anim_express_wink">Wink</string>
+	<string name="anim_wink_hollywood">Wink (Hollywood)</string>
+	<string name="anim_express_worry">Worry</string>
+	<string name="anim_yes_happy">Yes (Happy)</string>
+	<string name="anim_yes_head">Yes</string>
+
+	<!-- build floater -->
+	<string name="multiple_textures">Multiple</string>
+
+	<!-- world map -->
+	<string name="texture_loading">Loading...</string>
+	<string name="worldmap_offline">Offline</string>
+	<string name="worldmap_item_tooltip_format">[AREA] m² L$[PRICE]</string>
+	<string name="worldmap_results_none_found">None found.</string>
+	<string name="worldmap_agent_position">You are here</string>
+	
+	<!-- mini map -->
+	<string name="minimap_distance">(Distance: [DISTANCE] m)</string>
+	<string name="minimap_no_focus">The camera cannot focus on user because they are outside your draw distance.</string>
+
+	<!-- animations uploading status codes -->
+	<string name="Ok">OK</string>
+	<string name="Premature end of file">Premature end of file</string>
+	<string name="ST_NO_JOINT">Can't find ROOT or JOINT.</string>
+
+	<!-- Chat -->
+	<string name="no_name_object">(no name)</string>
+	<string name="whisper">whispers:</string>
+	<string name="shout">shouts:</string>
+	<string name="ringing">Connecting to in-world Voice Chat...</string>
+	<string name="connected">Connected</string>
+	<string name="unavailable">Voice not available at your current location</string>
+	<string name="hang_up">Disconnected from in-world Voice Chat</string>
+  <string name="reconnect_nearby">You will now be reconnected to Nearby Voice Chat</string>
+	<string name="ScriptQuestionCautionChatGranted">'[OBJECTNAME]', an object owned by '[OWNERNAME]', located in [REGIONNAME] at [REGIONPOS], has been granted permission to: [PERMISSIONS].</string>
+	<string name="ScriptQuestionCautionChatDenied">'[OBJECTNAME]', an object owned by '[OWNERNAME]', located in [REGIONNAME] at [REGIONPOS], has been denied permission to: [PERMISSIONS].</string>
+	<string name="AdditionalPermissionsRequestHeader">If you allow access to your account, you will also be allowing the object to:</string>
+	<string name="ScriptTakeMoney">Take Linden dollars (L$) from you</string>
+	<string name="ActOnControlInputs">Act on your control inputs</string>
+	<string name="RemapControlInputs">Remap your control inputs</string>
+	<string name="AnimateYourAvatar">Animate your avatar</string>
+	<string name="AttachToYourAvatar">Attach to your avatar</string>
+	<string name="ReleaseOwnership">Release ownership and become public</string>
+	<string name="LinkAndDelink">Link and delink from other objects</string>
+	<string name="AddAndRemoveJoints">Add and remove joints with other objects</string>
+	<string name="ChangePermissions">Change its permissions</string>
+	<string name="TrackYourCamera">Track your camera</string>
+  <string name="ControlYourCamera">Control your camera</string>
+  <string name="TeleportYourAgent">Teleport you</string>
+  <string name="NotConnected">Not Connected</string>
+
+	<!-- Sim Access labels -->
+	<string name="SIM_ACCESS_PG">General</string>
+	<string name="SIM_ACCESS_MATURE">Moderate</string>
+	<string name="SIM_ACCESS_ADULT">Adult</string>
+	<string name="SIM_ACCESS_DOWN">Offline</string>
+	<string name="SIM_ACCESS_MIN">Unknown</string>
+
+	<!-- For use when we do not have land type back from the server -->
+	<string name="land_type_unknown">(unknown)</string>
+
+	<!-- For land type back from the simulator -->
+	<string name="Estate / Full Region">Estate / Full Region</string>
+	<string name="Estate / Homestead">Estate / Homestead</string>
+	<string name="Mainland / Homestead">Mainland / Homestead</string>
+	<string name="Mainland / Full Region">Mainland / Full Region</string>
+
+	<!-- File load/save dialogs -->
+	<string name="all_files">All Files</string>
+	<string name="sound_files">Sounds</string>
+	<string name="animation_files">Animations</string>
+	<string name="image_files">Images</string>
+	<string name="save_file_verb">Save</string>
+	<string name="load_file_verb">Load</string>
+	<string name="targa_image_files">Targa Images</string>
+	<string name="bitmap_image_files">Bitmap Images</string>
+	<string name="avi_movie_file">AVI Movie File</string>
+	<string name="xaf_animation_file">XAF Anim File</string>
+	<string name="xml_file">XML File</string>
+	<string name="raw_file">RAW File</string>
+	<string name="compressed_image_files">Compressed Images</string>
+	<string name="load_files">Load Files</string>
+	<string name="choose_the_directory">Choose Directory</string>
+	<string name="script_files">Scripts</string>
+	<string name="dictionary_files">Dictionaries</string>
+
+  <!-- LSL Usage Hover Tips -->
+  <!-- NOTE: For now these are set as translate="false", until DEV-40761 is implemented (to internationalize the rest of tooltips in the same window).
+             This has no effect on viewer code, but prevents Linden Lab internal localization tool from scraping these strings.  -->
+	<string name="LSLTipSleepTime" translate="false">
+Sleeps script for [SLEEP_TIME] seconds.
+	</string>
+
+<<< LSL KEYWORDS >>>
+<<< OSSL KEYWORDS >>>
+<<< AA KEYWORDS >>>
+
+  <!-- Avatar busy/away mode -->
+	<string name="AvatarSetNotAway">Not Away</string>
+	<string name="AvatarSetAway">Away</string>
+	<string name="AvatarSetNotBusy">Available</string>
+	<string name="AvatarSetBusy">Unavailable</string>
+	<string name="AvatarSetNotAutorespond">Don't Autorespond</string>
+	<string name="AvatarSetAutorespond">Autorespond</string>
+	<string name="AvatarSetNotAutorespondNonFriends">Don't Autorespond to non-friends</string>
+	<string name="AvatarSetAutorespondNonFriends">Autorespond to non-friends</string>
+	
+	<!-- Wearable Types -->
+	<string name="shape">Shape</string>
+	<string name="skin">Skin</string>
+	<string name="hair">Hair</string>
+	<string name="eyes">Eyes</string>
+	<string name="shirt">Shirt</string>
+	<string name="pants">Pants</string>
+	<string name="shoes">Shoes</string>
+	<string name="socks">Socks</string>
+	<string name="jacket">Jacket</string>
+	<string name="gloves">Gloves</string>
+	<string name="undershirt">Undershirt</string>
+	<string name="underpants">Underpants</string>
+	<string name="skirt">Skirt</string>
+	<string name="alpha">Alpha</string>
+	<string name="tattoo">Tattoo</string>
+  <string name="physics">Physics</string>
+  <string name="invalid">invalid</string>
+  <string name="none">none</string>
+
+  <!-- Not Worn Wearable Types -->
+	<string name="shirt_not_worn">Shirt not worn</string>
+	<string name="pants_not_worn">Pants not worn</string>
+	<string name="shoes_not_worn">Shoes not worn</string>
+	<string name="socks_not_worn">Socks not worn</string>
+	<string name="jacket_not_worn">Jacket not worn</string>
+	<string name="gloves_not_worn">Gloves not worn</string>
+	<string name="undershirt_not_worn">Undershirt not worn</string>
+	<string name="underpants_not_worn">Underpants not worn</string>
+	<string name="skirt_not_worn">Skirt not worn</string>
+	<string name="alpha_not_worn">Alpha not worn</string>
+	<string name="tattoo_not_worn">Tattoo not worn</string>
+  <string name="physics_not_worn">Physics not worn</string>
+	<string name="invalid_not_worn">invalid</string>
+
+	<!-- Create new wearable of the specified type -->
+	<string name="create_new_shape">Create new shape</string>
+	<string name="create_new_skin">Create new skin</string>
+	<string name="create_new_hair">Create new hair</string>
+	<string name="create_new_eyes">Create new eyes</string>
+	<string name="create_new_shirt">Create new shirt</string>
+	<string name="create_new_pants">Create new pants</string>
+	<string name="create_new_shoes">Create new shoes</string>
+	<string name="create_new_socks">Create new socks</string>
+	<string name="create_new_jacket">Create new jacket</string>
+	<string name="create_new_gloves">Create new gloves</string>
+	<string name="create_new_undershirt">Create new undershirt</string>
+	<string name="create_new_underpants">Create new underpants</string>
+	<string name="create_new_skirt">Create new skirt</string>
+	<string name="create_new_alpha">Create new alpha</string>
+	<string name="create_new_tattoo">Create new tattoo</string>
+  <string name="create_new_physics">Create new physics</string>
+	<string name="create_new_invalid">invalid</string>
+
+  <!-- Wearable List-->
+  <string name="NewWearable">New [WEARABLE_ITEM]</string>
+
+	<!-- LLGroupNotify -->
+	<!-- used in the construction of a Group Notice blue dialog box, buttons, tooltip etc. Seems to be no longer utilized by code in Viewer 2.0 -->
+	<string name="next">Next</string>
+	<string name="ok">OK</string>
+	<string name="GroupNotifyGroupNotice">Group Notice</string>
+	<string name="GroupNotifyGroupNotices">Group Notices</string>
+	<string name="GroupNotifySentBy">Sent by</string>
+	<string name="GroupNotifyAttached">Attached:</string>
+	<string name="GroupNotifyViewPastNotices">View past notices or opt-out of receiving these messages here.</string>
+	<string name="GroupNotifyOpenAttachment">Open Attachment</string>
+	<string name="GroupNotifySaveAttachment">Save Attachment</string>
+	<string name="GroupNotifySender">Sent by [SENDER], [GROUPNAME]</string>
+
+  <string name="TeleportOffer">Teleport offering</string>
+  <!-- start-up toast's string-->
+  <string name="StartUpNotifications">New notifications arrived while you were away.</string>
+  <!-- overflow toast's string-->
+  <string name="OverflowInfoChannelString">You have %d more notification</string>
+
+
+	<!-- body parts -->
+	<string name="BodyPartsRightArm">Right Arm</string>
+	<string name="BodyPartsHead">Head</string>
+	<string name="BodyPartsLeftArm">Left Arm</string>
+	<string name="BodyPartsLeftLeg">Left Leg</string>
+	<string name="BodyPartsTorso">Torso</string>
+	<string name="BodyPartsRightLeg">Right Leg</string>
+	<string name="BodyPartsOther">Other</string>
+
+	<!-- slider -->
+	<string name="GraphicsQualityLow">Low</string>
+	<string name="GraphicsQualityMid">Mid</string>
+	<string name="GraphicsQualityHigh">High</string>
+
+	<!-- mouselook -->
+	<string name="LeaveMouselook">Press ESC to return to World View</string>
+
+	<!-- inventory -->
+	<string name="InventoryNoMatchingItems">Didn't find what you're looking for? Try [secondlife:///app/search/all/[SEARCH_TERM] Search].</string>
+	<string name="PlacesNoMatchingItems">Didn't find what you're looking for? Try [secondlife:///app/search/places/[SEARCH_TERM] Search].</string>
+	<string name="FavoritesNoMatchingItems">Drag a landmark here to add it to your favorites.</string>
+	<string name="InventoryNoTexture">You do not have a copy of this texture in your inventory</string>
+	<string name="InventoryInboxNoItems">Your Marketplace purchases will appear here. You may then drag them into your inventory to use them.</string>
+	<string name="MarketplaceURL">https://marketplace.[MARKETPLACE_DOMAIN_NAME]/</string>
+	<string name="MarketplaceURL_CreateStore">http://community.secondlife.com/t5/English-Knowledge-Base/Selling-in-the-Marketplace/ta-p/700193#Section_.3</string>
+	<string name="MarketplaceURL_Dashboard">https://marketplace.[MARKETPLACE_DOMAIN_NAME]/merchants/store/dashboard</string>
+	<string name="MarketplaceURL_Imports">https://marketplace.[MARKETPLACE_DOMAIN_NAME]/merchants/store/imports</string>
+	<string name="MarketplaceURL_LearnMore">https://marketplace.[MARKETPLACE_DOMAIN_NAME]/learn_more</string>
+	<string name="InventoryOutboxNotMerchantTitle">Anyone can sell items on the Marketplace.</string>
+	<string name="InventoryOutboxNotMerchantTooltip"></string>
+	<string name="InventoryOutboxNotMerchant">
+If you'd like to become a merchant, you'll need to [[MARKETPLACE_CREATE_STORE_URL] create a Marketplace store].
+	</string>
+	<string name="InventoryOutboxNoItemsTitle">Your outbox is empty.</string>
+	<string name="InventoryOutboxNoItemsTooltip"></string>
+	<string name="InventoryOutboxNoItems">
+Drag folders to this area and click "Send to Marketplace" to list them for sale on the [[MARKETPLACE_DASHBOARD_URL] Marketplace].
+	</string>
+
+	<string name="Marketplace Error None">No errors</string>
+	<string name="Marketplace Error Not Merchant">Error: Before sending items to the Marketplace you will need to set yourself up as a merchant (free of charge).</string>
+	<string name="Marketplace Error Empty Folder">Error: This folder has no contents.</string>
+	<string name="Marketplace Error Unassociated Products">Error: This item failed to upload because your merchant account has too many items unassociated with products.  To fix this error, log in to the marketplace website and reduce your unassociated item count.</string>
+
+	<string name="Marketplace Error Object Limit">Error: This item contains too many objects.  Fix this error by placing objects together in boxes to reduce the total count to less than 200.</string>
+	<string name="Marketplace Error Folder Depth">Error: This item contains too many levels of nested folders.  Reorganize it to a maximum of 3 levels of nested folders.</string>
+	<string name="Marketplace Error Unsellable Item">Error: This item can not be sold on the marketplace.</string>
+	<string name="Marketplace Error Internal Import">Error: There was a problem with this item.  Try again later.</string>
+
+	<string name="Open landmarks">Open landmarks</string>
+
+	<!-- use value="" because they have preceding spaces -->
+	<string name="no_transfer" value=" (no transfer)" />
+	<string name="no_modify"   value=" (no modify)" />
+	<string name="no_copy"     value=" (no copy)" />
+	<string name="worn"        value=" (worn)" />
+	<string name="link"        value=" (link)" />
+	<string name="broken_link" value=" (broken_link)" />
+	<string name="LoadingContents">Loading contents...</string>
+	<string name="NoContents">No contents</string>
+	<string name="WornOnAttachmentPoint" value=" (worn on [ATTACHMENT_POINT])" />
+	<string name="ActiveGesture" value="[GESLABEL] (active)"/>
+	<!-- Inventory permissions -->
+	<string name="PermYes">Yes</string>
+	<string name="PermNo">No</string>
+
+	<!-- Gestures labels -->
+    <!-- use value="" because they have preceding spaces -->
+    <string name="Chat Message"  value=" Chat : " />
+    <string name="Sound"         value=" Sound : " />
+	<string name="Wait"          value=" --- Wait : " />
+	<string name="AnimFlagStop"  value=" Stop Animation :    " />
+	<string name="AnimFlagStart" value=" Start Animation :   " />
+	<string name="Wave"          value=" Wave " />
+	<string name="GestureActionNone" value="None" />
+	<string name="HelloAvatar"   value=" Hello, avatar! " />
+	<string name="ViewAllGestures"  value="  View All &gt;&gt;" />
+	<string name="GetMoreGestures"  value="  Get More &gt;&gt;" />
+
+	<!-- inventory filter -->
+    <!-- use value="" because they have preceding spaces -->
+	<string name="Animations"    value=" Animations," />
+	<string name="Calling Cards" value=" Calling Cards," />
+	<string name="Clothing"      value=" Clothing," />
+	<string name="Gestures"      value=" Gestures," />
+	<string name="Landmarks"     value=" Landmarks," />
+	<string name="Notecards"     value=" Notecards," />
+	<string name="Objects"       value=" Objects," />
+	<string name="Scripts"       value=" Scripts," />
+	<string name="Sounds"        value=" Sounds," />
+	<string name="Textures"      value=" Textures," />
+	<string name="Snapshots"     value=" Snapshots," />
+	<string name="No Filters"    value="No " />
+	<string name="Since Logoff"  value=" - Since Logoff" />
+
+	<!-- inventory folder -->
+	<string name="InvFolder My Inventory">Inventory</string>
+	<string name="InvFolder Library">Library</string>
+	<string name="InvFolder Textures">Textures</string>
+	<string name="InvFolder Sounds">Sounds</string>
+	<string name="InvFolder Calling Cards">Calling Cards</string>
+	<string name="InvFolder Landmarks">Landmarks</string>
+	<string name="InvFolder Scripts">Scripts</string>
+	<string name="InvFolder Clothing">Clothing</string>
+	<string name="InvFolder Objects">Objects</string>
+	<string name="InvFolder Notecards">Notecards</string>
+	<string name="InvFolder New Folder">New Folder</string>
+	<string name="InvFolder Inventory">Inventory</string>
+	<string name="InvFolder Uncompressed Images">Uncompressed Images</string>
+	<string name="InvFolder Body Parts">Body Parts</string>
+	<string name="InvFolder Trash">Trash</string>
+	<string name="InvFolder Photo Album">Photo Album</string>
+	<string name="InvFolder Lost And Found">Lost And Found</string>
+	<string name="InvFolder Uncompressed Sounds">Uncompressed Sounds</string>
+	<string name="InvFolder Animations">Animations</string>
+	<string name="InvFolder Gestures">Gestures</string>
+	<string name="InvFolder Favorites">Favorites</string>
+  <!-- historically default name of the Favorites folder can start from either "f" or "F" letter.
+  We should localize both of them with the same value -->
+	<string name="InvFolder favorite">Favorites</string>
+	<string name="InvFolder favorites">Favorites</string>
+	<string name="InvFolder Current Outfit">Current Outfit</string>
+	<string name="InvFolder Initial Outfits">Initial Outfits</string>
+	<string name="InvFolder My Outfits">Outfits</string>
+	<string name="InvFolder Accessories">Accessories</string>
+	<string name="InvFolder Meshes">Meshes</string>
+	<string name="InvFolder Received Items">Received Items</string>
+	<string name="InvFolder Merchant Outbox">Merchant Outbox</string>
+
+  <!-- are used for Friends and Friends/All folders in Inventory "Calling cards" folder. See EXT-694-->
+	<string name="InvFolder Friends">Friends</string>
+	<string name="InvFolder All">All</string>
+
+	<!-- Virtual Firestorm system folders -->
+	<string name="InvFolder #Firestorm">#Firestorm</string>
+	<string name="InvFolder #Phoenix">#Phoenix</string>
+	<string name="InvFolder #RLV">#RLV</string>
+	
+	<string name="no_attachments">No attachments worn</string>
+    <string name="Attachments remain">Attachments ([COUNT] slots remain)</string>
+
+	<!-- inventory FVBridge -->
+	<!--  This is used in llpanelinventory.cpp when constructing a context menu for an item for Sale  -->
+	<string name="Buy">Buy</string>
+	<string name="BuyforL$">Buy for L$</string>
+
+	<string name="Stone">Stone</string>
+	<string name="Metal">Metal</string>
+	<string name="Glass">Glass</string>
+	<string name="Wood">Wood</string>
+	<string name="Flesh">Flesh</string>
+	<string name="Plastic">Plastic</string>
+	<string name="Rubber">Rubber</string>
+	<string name="Light">Light</string>
+
+	<!-- keyboard -->
+	<string name="KBShift">Shift</string>
+	<string name="KBCtrl">Ctrl</string>
+
+	<!-- Avatar Skeleton -->
+	<string name="Chest">Chest</string>
+	<string name="Skull">Skull</string>
+	<string name="Left Shoulder">Left Shoulder</string>
+	<string name="Right Shoulder">Right Shoulder</string>
+	<string name="Left Hand">Left Hand</string>
+	<string name="Right Hand">Right Hand</string>
+	<string name="Left Foot">Left Foot</string>
+	<string name="Right Foot">Right Foot</string>
+	<string name="Spine">Spine</string>
+	<string name="Pelvis">Pelvis</string>
+	<string name="Mouth">Mouth</string>
+	<string name="Chin">Chin</string>
+	<string name="Left Ear">Left Ear</string>
+	<string name="Right Ear">Right Ear</string>
+	<string name="Left Eyeball">Left Eyeball</string>
+	<string name="Right Eyeball">Right Eyeball</string>
+	<string name="Nose">Nose</string>
+	<string name="R Upper Arm">R Upper Arm</string>
+	<string name="R Forearm">R Forearm</string>
+	<string name="L Upper Arm">L Upper Arm</string>
+	<string name="L Forearm">L Forearm</string>
+	<string name="Right Hip">Right Hip</string>
+	<string name="R Upper Leg">R Upper Leg</string>
+	<string name="R Lower Leg">R Lower Leg</string>
+	<string name="Left Hip">Left Hip</string>
+	<string name="L Upper Leg">L Upper Leg</string>
+	<string name="L Lower Leg">L Lower Leg</string>
+	<string name="Stomach">Stomach</string>
+	<string name="Left Pec">Left Pec</string>
+	<string name="Right Pec">Right Pec</string>
+	<string name="Bridge">Bridge</string>
+	<string name="Neck">Neck</string>
+	<string name="Avatar Center">Avatar Center</string>
+	<string name="Invalid Attachment">Invalid Attachment Point</string>
+
+  <!-- Avatar age computation, see LLDateUtil::ageFromDate -->
+  <string name="YearsMonthsOld">[AGEYEARS] [AGEMONTHS]</string>
+  <string name="YearsOld">[AGEYEARS] old</string>
+  <string name="MonthsOld">[AGEMONTHS] old</string>
+  <string name="WeeksOld">[AGEWEEKS] old</string>
+  <string name="DaysOld">[AGEDAYS] old</string>
+  <string name="TodayOld">Joined today</string>
+  <string name="TotalDaysOld">; [AGEDAYSTOTAL]</string>
+
+  <!-- AgeYearsA = singular,
+       AgeYearsB = plural,
+       AgeYearsC = plural for non-English languages like Russian
+       For example, LLTrans::getCountString("AgeYears", 3) is plural form B
+       in English and form C in Russian -->
+  <string name="AgeYearsA">[COUNT] year</string>
+  <string name="AgeYearsB">[COUNT] years</string>
+  <string name="AgeYearsC">[COUNT] years</string>
+  <string name="AgeMonthsA">[COUNT] month</string>
+  <string name="AgeMonthsB">[COUNT] months</string>
+  <string name="AgeMonthsC">[COUNT] months</string>
+  <string name="AgeWeeksA">[COUNT] week</string>
+  <string name="AgeWeeksB">[COUNT] weeks</string>
+  <string name="AgeWeeksC">[COUNT] weeks</string>
+  <string name="AgeDaysA">[COUNT] day</string>
+  <string name="AgeDaysB">[COUNT] days</string>
+  <string name="AgeDaysC">[COUNT] days</string>
+  <!-- Group member counts -->
+  <string name="GroupMembersA">[COUNT] member</string>
+  <string name="GroupMembersB">[COUNT] members</string>
+  <string name="GroupMembersC">[COUNT] members</string>
+
+  <!-- Account types, see LLAvatarPropertiesProcessor -->
+  <string name="AcctTypeResident">Resident</string>
+  <string name="AcctTypeTrial">Trial</string>
+  <string name="AcctTypeCharterMember">Charter Member</string>
+  <string name="AcctTypeEmployee">Linden Lab Employee</string>
+  <string name="PaymentInfoUsed">Payment Info Used</string>
+  <string name="PaymentInfoOnFile">Payment Info On File</string>
+  <string name="NoPaymentInfoOnFile">No Payment Info On File</string>
+  <string name="AgeVerified">Age-verified</string>
+  <string name="NotAgeVerified">Not Age-verified</string>
+
+  <!-- HUD Position -->
+	<string name="Center 2">Center 2</string>
+	<string name="Top Right">Top Right</string>
+	<string name="Top">Top</string>
+	<string name="Top Left">Top Left</string>
+	<string name="Center">Center</string>
+	<string name="Bottom Left">Bottom Left</string>
+	<string name="Bottom">Bottom</string>
+	<string name="Bottom Right">Bottom Right</string>
+
+	<!-- compile queue-->
+	<string name="CompileQueueDownloadedCompiling">Downloaded, now compiling</string>
+	<string name="CompileQueueScriptNotFound">Script not found on server.</string>
+	<string name="CompileQueueProblemDownloading">Problem downloading</string>
+	<string name="CompileQueueInsufficientPermDownload">Insufficient permissions to download a script.</string>
+	<string name="CompileQueueInsufficientPermFor">Insufficient permissions for</string>
+	<string name="CompileQueueUnknownFailure">Unknown failure to download</string>
+	<string name="CompileQueueTitle">RECOMPILATION PROGRESS</string>
+	<string name="CompileQueueStart">recompile</string>
+	<string name="ResetQueueTitle">RESET PROGRESS</string>
+	<string name="ResetQueueStart">reset</string>
+	<string name="RunQueueTitle">SET RUNNING PROGRESS</string>
+	<string name="RunQueueStart">set running</string>
+	<string name="NotRunQueueTitle">SET NOT RUNNING PROGRESS</string>
+	<string name="NotRunQueueStart">set not running</string>
+	<string name="DeleteQueueTitle">DELETE PROGRESS</string>
+	<string name="DeleteQueueStart">Deleting</string>
+
+	<!-- compile comment text-->
+	<string name="Compiling">Compiling [NAME]</string>
+	<string name="CompileSuccessful">Compile successful!</string>
+	<string name="CompileSuccessfulSaving">Compile successful, saving...</string>
+	<string name="SaveComplete">Save complete.</string>
+	<string name="ObjectOutOfRange">Script (object out of range)</string>
+
+	<!-- god tools -->
+	<string name="GodToolsObjectOwnedBy">Object [OBJECT] owned by [OWNER]</string>
+
+	<!-- groups -->
+	<string name="GroupsNone">none</string>
+	<string name="Group" value=" (group)" />
+	<string name="Unknown">(Unknown)</string>
+	<string name="SummaryForTheWeek"    value="Summary for this week, beginning on " />
+	<string name="NextStipendDay"       value="The next stipend day is " />
+	<string name="GroupPlanningDate">[mthnum,datetime,utc]/[day,datetime,utc]/[year,datetime,utc]</string>
+	<string name="GroupIndividualShare" value="                      Group       Individual Share" />
+	<string name="GroupColumn"          value="                      Group" />
+	<string name="Balance">Balance</string>
+	<string name="Credits">Credits</string>
+	<string name="Debits">Debits</string>
+	<string name="Total">Total</string>
+	<string name="NoGroupDataFound">No group data found for group </string>
+
+	<!-- floater IM bonus_info: When a Linden with Admin/god status receives a new IM this displays the estate (Mainland vs. teen grid) of the source avatar.
+		This is to help Lindens when answering questions. -->
+	<string name="IMParentEstate">parent estate</string>
+	<string name="IMMainland">mainland</string>
+	<string name="IMTeen">teen</string>
+
+    <!-- floater about land -->
+    <string name="Anyone">anyone</string>
+
+	<!-- floater region info -->
+	<!-- The following will replace variable [ALL_ESTATES] in notifications EstateAllowed*, EstateBanned*, EstateManager* -->
+	<string name="RegionInfoError">error</string>
+	<string name="RegionInfoAllEstatesOwnedBy">
+		all estates owned by [OWNER]
+	</string>
+	<string name="RegionInfoAllEstatesYouOwn">all estates that you own</string>
+	<string name="RegionInfoAllEstatesYouManage">
+		all estates that you manage for [OWNER]
+	</string>
+	<string name="RegionInfoAllowedResidents">Allowed Residents: ([ALLOWEDAGENTS], max [MAXACCESS])</string>
+	<string name="RegionInfoAllowedGroups">Allowed Groups: ([ALLOWEDGROUPS], max [MAXACCESS])</string>
+	<!-- FS:Ansariel: Estate managers and banned residents strings -->
+	<string name="RegionInfoEstateManagers">Estate Managers: ([ESTATEMANAGERS], max [MAXMANAGERS])</string>
+	<string name="RegionInfoBannedResidents">Banned Residents: ([BANNEDAGENTS], max [MAXBANNED])</string>
+	<string name="RegionInfoListTypeAllowedAgents">Allowed Residents</string>
+	<string name="RegionInfoListTypeBannedAgents">Banned Residents</string>
+	<!-- END FS:Ansariel: Estate managers and banned residents strings -->
+	
+	<!-- script limits floater -->
+	<string name="ScriptLimitsParcelScriptMemory">Parcel Script Memory</string>
+	<string name="ScriptLimitsParcelsOwned">Parcels Listed: [PARCELS]</string>
+	<string name="ScriptLimitsMemoryUsed">Memory used: [COUNT] kb out of [MAX] kb; [AVAILABLE] kb available</string>
+	<string name="ScriptLimitsMemoryUsedSimple">Memory used: [COUNT] kb</string>
+	<string name="ScriptLimitsParcelScriptURLs">Parcel Script URLs</string>
+	<string name="ScriptLimitsURLsUsed">URLs used: [COUNT] out of [MAX]; [AVAILABLE] available</string>
+	<string name="ScriptLimitsURLsUsedSimple">URLs used: [COUNT]</string>
+	<string name="ScriptLimitsRequestError">Error requesting information</string>
+	<string name="ScriptLimitsRequestNoParcelSelected">No Parcel Selected</string>
+	<string name="ScriptLimitsRequestWrongRegion">Error: script information is only available in your current region</string>
+	<string name="ScriptLimitsRequestWaiting">Retrieving information...</string>
+	<string name="ScriptLimitsRequestDontOwnParcel">You do not have permission to examine this parcel</string>
+
+	<string name="SITTING_ON">Sitting On</string>
+	<string name="ATTACH_CHEST">Chest</string>
+	<string name="ATTACH_HEAD">Head</string>
+	<string name="ATTACH_LSHOULDER">Left Shoulder</string>
+	<string name="ATTACH_RSHOULDER">Right Shoulder</string>
+	<string name="ATTACH_LHAND">Left Hand</string>
+	<string name="ATTACH_RHAND">Right Hand</string>
+	<string name="ATTACH_LFOOT">Left Foot</string>
+	<string name="ATTACH_RFOOT">Right Foot</string>
+	<string name="ATTACH_BACK">Back</string>
+	<string name="ATTACH_PELVIS">Pelvis</string>
+	<string name="ATTACH_MOUTH">Mouth</string>
+	<string name="ATTACH_CHIN">Chin</string>
+	<string name="ATTACH_LEAR">Left Ear</string>
+	<string name="ATTACH_REAR">Right Ear</string>
+	<string name="ATTACH_LEYE">Left Eye</string>
+	<string name="ATTACH_REYE">Right Eye</string>
+	<string name="ATTACH_NOSE">Nose</string>
+	<string name="ATTACH_RUARM">Right Upper Arm</string>
+	<string name="ATTACH_RLARM">Right Lower Arm</string>
+	<string name="ATTACH_LUARM">Left Upper Arm</string>
+	<string name="ATTACH_LLARM">Left Lower Arm</string>
+	<string name="ATTACH_RHIP">Right Hip</string>
+	<string name="ATTACH_RULEG">Right Upper Leg</string>
+	<string name="ATTACH_RLLEG">Right Lower Leg</string>
+	<string name="ATTACH_LHIP">Left Hip</string>
+	<string name="ATTACH_LULEG">Left Upper Leg</string>
+	<string name="ATTACH_LLLEG">Left Lower Leg</string>
+	<string name="ATTACH_BELLY">Belly</string>
+	<string name="ATTACH_RPEC">Right Pec</string>
+	<string name="ATTACH_LPEC">Left Pec</string>
+	<string name="ATTACH_HUD_CENTER_2">HUD Center 2</string>
+	<string name="ATTACH_HUD_TOP_RIGHT">HUD Top Right</string>
+	<string name="ATTACH_HUD_TOP_CENTER">HUD Top Center</string>
+	<string name="ATTACH_HUD_TOP_LEFT">HUD Top Left</string>
+	<string name="ATTACH_HUD_CENTER_1">HUD Center 1</string>
+	<string name="ATTACH_HUD_BOTTOM_LEFT">HUD Bottom Left</string>
+	<string name="ATTACH_HUD_BOTTOM">HUD Bottom</string>
+	<string name="ATTACH_HUD_BOTTOM_RIGHT">HUD Bottom Right</string>
+  <string name="ATTACH_BRIDGE">Bridge</string>
+			
+  <!-- script editor -->
+	<string name="CursorPos">Line [LINE], Column [COLUMN]</string>
+
+	<!-- panel dir browser -->
+	<string name="PanelDirCountFound">[COUNT] found</string>
+	<string name="PanelDirTimeStr">[hour12,datetime,slt]:[min,datetime,slt] [ampm,datetime,slt]</string>
+
+	<!-- panel dir events -->
+	<string name="PanelDirEventsDateText">[mthnum,datetime,slt]/[day,datetime,slt]</string>
+
+	<!-- panel contents -->
+	<string name="PanelContentsTooltip">Content of object</string>
+	<string name="PanelContentsNewScript">New Script</string>
+
+  <!-- panel preferences general -->
+  <string name="BusyModeResponseDefault">The Resident you messaged is in &apos;unavailable mode&apos; which means they have requested not to be disturbed.  Your message will still be shown in their Firestorm Viewer&apos;s instant message panel for later viewing.</string>
+
+	<!-- Mute -->
+	<string name="MuteByName">(By name)</string>
+	<string name="MuteAgent">(Resident)</string>
+	<string name="MuteObject">(Object)</string>
+	<string name="MuteGroup">(Group)</string>
+	<string name="MuteExternal">(External)</string>
+
+	<!-- Region/Estate Covenant -->
+	<string name="RegionNoCovenant">There is no Covenant provided for this Estate.</string>
+	<string name="RegionNoCovenantOtherOwner">There is no Covenant provided for this Estate. The land on this estate is being sold by the Estate owner, not Linden Lab.  Please contact the Estate Owner for sales details.</string>
+	<string name="covenant_last_modified" value="Last Modified: " /> <!-- use value="" to keep the trailing space -->
+	<string name="none_text"  value=" (none) " />
+	<string name="never_text" value=" (never) " />
+
+	<!--Region Details-->
+	<string name="GroupOwned">Group Owned</string>
+	<string name="Public">Public</string>
+
+	<!-- Environment settings -->
+	<string name="LocalSettings">Local Settings</string>
+	<string name="RegionSettings">Region Settings</string>
+
+	<!-- panel classified -->
+	<string name="ClassifiedClicksTxt">Clicks: [TELEPORT] teleport, [MAP] map, [PROFILE] profile</string>
+	<string name="ClassifiedUpdateAfterPublish">(will update after publish)</string>
+
+  <!-- panel picks -->
+  <string name="NoPicksClassifiedsText">You haven't created any Picks or Classifieds. Click the Plus button below to create a Pick or Classified.</string>
+  <string name="NoAvatarPicksClassifiedsText">User has no picks or classifieds</string>
+  <string name="PicksClassifiedsLoadingText">Loading...</string>
+  <!-- FS:KC legacy profiles -->
+  <string name="NoPicksText">You haven't created any Picks.</string>
+  <string name="NoAvatarPicksText">User has no picks</string>
+  <string name="NoClassifiedsText">You haven't created any Classifieds. Click the Plus button below to create a Classified.</string>
+  <string name="NoAvatarClassifiedsText">User has no classifieds</string>
+
+	<!-- Multi Preview Floater -->
+	<string name="MultiPreviewTitle">Preview</string>
+	<string name="MultiPropertiesTitle">Properties</string>
+
+	<!-- inventory offer -->
+	<string name="InvOfferAnObjectNamed">An object named</string>
+	<string name="InvOfferOwnedByGroup">owned by the group</string>
+	<string name="InvOfferOwnedByUnknownGroup">owned by an unknown group</string>
+	<string name="InvOfferOwnedBy">owned by</string>
+	<string name="InvOfferOwnedByUnknownUser">owned by an unknown user</string>
+	<string name="InvOfferGaveYou">gave you</string>
+	<string name="InvOfferYouDecline">You decline</string>
+	<!-- FS:Ansariel: Removed nolink-tags for console -->
+	<string name="InvOfferDecline">You decline [DESC] from [NAME].</string>
+	<string name="InvOfferFrom">from</string>
+
+	<!-- group money -->
+	<string name="GroupMoneyTotal">Total</string>
+	<string name="GroupMoneyBought">bought</string>
+	<string name="GroupMoneyPaidYou">paid you</string>
+	<string name="GroupMoneyPaidInto">paid into</string>
+	<string name="GroupMoneyBoughtPassTo">bought pass to</string>
+	<string name="GroupMoneyPaidFeeForEvent">paid fee for event</string>
+	<string name="GroupMoneyPaidPrizeForEvent">paid prize for event</string>
+	<string name="GroupMoneyBalance">Balance</string>
+	<string name="GroupMoneyCredits">Credits</string>
+	<string name="GroupMoneyDebits">Debits</string>
+	<string name="GroupMoneyDate">[weekday,datetime,utc] [mth,datetime,utc] [day,datetime,utc], [year,datetime,utc]</string>
+
+	<!-- viewer object -->
+	<string name="ViewerObjectContents">Contents</string>
+
+	<!-- Viewer menu -->
+	<string name="AcquiredItems">Acquired Items</string>
+	<string name="Cancel">Cancel</string>
+	<string name="UploadingCosts">Uploading [NAME] costs L$ [AMOUNT]</string>
+	<string name="BuyingCosts">Buying this costs L$ [AMOUNT]</string>
+	<string name="UnknownFileExtension">
+		Unknown file extension .%s
+Expected .wav, .tga, .bmp, .jpg, .jpeg, or .bvh
+	</string>
+  <string name="MuteObject2">Block</string>
+  <string name="MuteAvatar">Block</string>
+  <string name="UnmuteObject">Unblock</string>
+  <string name="UnmuteAvatar">Unblock</string>
+	<string name="AddLandmarkNavBarMenu">Add to Landmarks...</string>
+	<string name="EditLandmarkNavBarMenu">Edit Landmark...</string>
+
+	<!-- menu accelerators -->
+	<string name="accel-mac-control">&#8963;</string>
+	<string name="accel-mac-command">&#8984;</string>
+	<string name="accel-mac-option">&#8997;</string>
+	<string name="accel-mac-shift">&#8679;</string>
+	<string name="accel-win-control">Ctrl+</string>
+	<string name="accel-win-alt">Alt+</string>
+	<string name="accel-win-shift">Shift+</string>
+
+	<!-- Previews -->
+	<string name="FileSaved">File Saved</string>
+	<string name="Receiving">Receiving</string>
+
+	<!-- status bar , Time -->
+	<string name="AM">AM</string>
+	<string name="PM">PM</string>
+	<string name="PST">PST</string>
+	<string name="PDT">PDT</string>
+
+	<!-- Directions, HUD -->
+	<string name="Direction_Forward">Forward</string>
+	<string name="Direction_Left">Left</string>
+	<string name="Direction_Right">Right</string>
+	<string name="Direction_Back">Back</string>
+	<string name="Direction_North">North</string>
+	<string name="Direction_South">South</string>
+	<string name="Direction_West">West</string>
+	<string name="Direction_East">East</string>
+	<string name="Direction_Up">Up</string>
+	<string name="Direction_Down">Down</string>
+
+    <!-- Search Category Strings -->
+	<string name="Any Category">Any Category</string>
+	<string name="Shopping">Shopping</string>
+	<string name="Land Rental">Land Rental</string>
+	<string name="Property Rental">Property Rental</string>
+	<string name="Special Attraction">Special Attraction</string>
+	<string name="New Products">New Products</string>
+	<string name="Employment">Employment</string>
+	<string name="Wanted">Wanted</string>
+	<string name="Service">Service</string>
+	<string name="Personal">Personal</string>
+
+	<!-- PARCEL_CATEGORY_UI_STRING -->
+	<string name="None">None</string>
+	<string name="Linden Location">Linden Location</string>
+	<string name="Adult">Adult</string>
+	<!-- FS:Ansariel: Fixed to match PARCEL_CATEGORY_UI_STRING array -->
+	<string name="Arts and Culture">Arts &amp; Culture</string>
+	<string name="Business">Business</string>
+	<string name="Educational">Educational</string>
+	<string name="Gaming">Gaming</string>
+	<string name="Hangout">Hangout</string>
+	<string name="Newcomer Friendly">Newcomer Friendly</string>
+	<!-- FS:Ansariel: Fixed to match PARCEL_CATEGORY_UI_STRING array -->
+	<string name="Parks and Nature">Parks &amp; Nature</string>
+	<string name="Residential">Residential</string>
+	<!--<string name="Shopping">Shopping</string>	-->
+	<string name="Stage">Stage</string>
+	<string name="Other">Other</string>
+	<string name="Rental">Rental</string>
+	<string name="Any">Any</string>
+	<string name="You">You</string>
+
+	<!-- punctuations -->
+	<string name=":">:</string>
+	<string name=",">,</string>
+	<string name="...">...</string>
+	<string name="***">***</string>
+	<string name="(">(</string>
+	<string name=")">)</string>
+	<string name=".">.</string>
+	<string name="'">'</string>
+	<string name="---">---</string>
+
+	<!-- media -->
+	<string name="Multiple Media">Multiple Media</string>
+	<string name="Play Media">Play/Pause Media</string>
+	<string name="StreamtitleNowPlaying">Now playing:</string>
+
+	<!-- OSMessageBox messages -->
+	<string name="MBCmdLineError">
+		An error was found parsing the command line.
+Please see: http://wiki.secondlife.com/wiki/Client_parameters
+Error:
+	</string>
+	<string name="MBCmdLineUsg">[APP_NAME] Command line usage:</string>
+	<string name="MBUnableToAccessFile">
+		[APP_NAME] is unable to access a file that it needs.
+
+This can be because you somehow have multiple copies running, or your system incorrectly thinks a file is open.
+If this message persists, restart your computer and try again.
+If it continues to persist, you may need to completely uninstall [APP_NAME] and reinstall it.
+	</string>
+	<string name="MBFatalError">Fatal Error</string>
+	<string name="MBApplicationError">Application Error - Don't Panic</string>
+	<string name="MBApplicationErrorDetails">We are sorry, but [APP_NAME] has crashed and needs to be closed. If you see this issue happening repeatedly, please contact our support team and submit the following message:
+
+[ERROR_DETAILS]
+	</string>
+	<string name="MBRequiresAltiVec"> [APP_NAME] requires a processor with AltiVec (G4 or later).</string>
+	<string name="MBAlreadyRunning">
+		[APP_NAME] is already running.
+Check your task bar for a minimized copy of the program.
+If this message persists, restart your computer.
+	</string>
+	<string name="MBFrozenCrashed">
+		[APP_NAME] appears to have frozen or crashed on the previous run.
+Would you like to send a crash report?
+	</string>
+	<string name="MBAlert">Notification</string>
+	<string name="MBNoDirectX">
+		[APP_NAME] is unable to detect DirectX 9.0b or greater.
+[APP_NAME] uses DirectX to detect hardware and/or outdated drivers that can cause stability problems, poor performance and crashes.  While you can run [APP_NAME] without it, we highly recommend running with DirectX 9.0b.
+
+Do you wish to continue?
+	</string>
+	<string name="MBWarning">Warning</string>
+	<string name="MBNoAutoUpdate">
+		Automatic updating is not yet implemented for Linux.
+Please download the latest version from www.secondlife.com.
+	</string>
+	<string name="MBRegClassFailed">RegisterClass failed</string>
+	<string name="MBError">Error</string>
+	<string name="MBFullScreenErr">
+		Unable to run fullscreen at [WIDTH] x [HEIGHT].
+Running in window.
+	</string>
+	<string name="MBDestroyWinFailed">Shutdown Error while destroying window (DestroyWindow() failed)</string>
+	<string name="MBShutdownErr">Shutdown Error</string>
+	<string name="MBDevContextErr">Can't make GL device context</string>
+	<string name="MBPixelFmtErr">Can't find suitable pixel format</string>
+	<string name="MBPixelFmtDescErr">Can't get pixel format description</string>
+	<string name="MBTrueColorWindow">
+		[APP_NAME] requires True Color (32-bit) to run.
+Please go to your computer's display settings and set the color mode to 32-bit.
+	</string>
+	<string name="MBAlpha">
+		[APP_NAME] is unable to run because it can't get an 8 bit alpha channel.  Usually this is due to video card driver issues.
+Please make sure you have the latest video card drivers installed.
+Also be sure your monitor is set to True Color (32-bit) in Control Panels &gt; Display &gt; Settings.
+If you continue to receive this message, contact the [SUPPORT_SITE].
+	</string>
+	<string name="MBPixelFmtSetErr">Can't set pixel format</string>
+	<string name="MBGLContextErr">Can't create GL rendering context</string>
+	<string name="MBGLContextActErr">Can't activate GL rendering context</string>
+	<string name="MBVideoDrvErr">
+		[APP_NAME] is unable to run because your video card drivers did not install properly, are out of date, or are for unsupported hardware. Please make sure you have the latest video card drivers and even if you do have the latest, try reinstalling them.
+
+If you continue to receive this message, contact the [SUPPORT_SITE].
+	</string>
+
+	<!-- Avatar Shape Information -->
+<string name="5 O'Clock Shadow">5 O'Clock Shadow</string>
+
+<string name="All White">All White</string>
+<string name="Anime Eyes">Anime Eyes</string>
+<string name="Arced">Arced</string>
+<string name="Arm Length">Arm Length</string>
+<string name="Attached">Attached</string>
+<string name="Attached Earlobes">Attached Earlobes</string>
+
+
+<string name="Back Fringe">Back Fringe</string>
+
+<string name="Baggy">Baggy</string>
+<string name="Bangs">Bangs</string>
+
+<string name="Beady Eyes">Beady Eyes</string>
+<string name="Belly Size">Belly Size</string>
+<string name="Big">Big</string>
+<string name="Big Butt">Big Butt</string>
+
+<string name="Big Hair Back">Big Hair: Back</string>
+<string name="Big Hair Front">Big Hair: Front</string>
+<string name="Big Hair Top">Big Hair: Top</string>
+<string name="Big Head">Big Head</string>
+<string name="Big Pectorals">Big Pectorals</string>
+<string name="Big Spikes">Big Spikes</string>
+<string name="Black">Black</string>
+<string name="Blonde">Blonde</string>
+<string name="Blonde Hair">Blonde Hair</string>
+<string name="Blush">Blush</string>
+<string name="Blush Color">Blush Color</string>
+<string name="Blush Opacity">Blush Opacity</string>
+<string name="Body Definition">Body Definition</string>
+<string name="Body Fat">Body Fat</string>
+<string name="Body Freckles">Body Freckles</string>
+<string name="Body Thick">Body Thick</string>
+<string name="Body Thickness">Body Thickness</string>
+<string name="Body Thin">Body Thin</string>
+
+<string name="Bow Legged">Bow Legged</string>
+<string name="Breast Buoyancy">Breast Buoyancy</string>
+<string name="Breast Cleavage">Breast Cleavage</string>
+<string name="Breast Size">Breast Size</string>
+<string name="Bridge Width">Bridge Width</string>
+<string name="Broad">Broad</string>
+<string name="Brow Size">Brow Size</string>
+<string name="Bug Eyes">Bug Eyes</string>
+<string name="Bugged Eyes">Bugged Eyes</string>
+<string name="Bulbous">Bulbous</string>
+<string name="Bulbous Nose">Bulbous Nose</string>
+
+<string name="Breast Physics Mass">Breast Mass</string>
+<string name="Breast Physics Smoothing">Breast Smoothing</string>
+<string name="Breast Physics Gravity">Breast Gravity</string>
+<string name="Breast Physics Drag">Breast Drag</string>
+
+<string name="Breast Physics InOut Max Effect">Max Effect</string>
+<string name="Breast Physics InOut Spring">Spring</string>
+<string name="Breast Physics InOut Gain">Gain</string>
+<string name="Breast Physics InOut Damping">Damping</string>
+
+<string name="Breast Physics UpDown Max Effect">Max Effect</string>
+<string name="Breast Physics UpDown Spring">Spring</string>
+<string name="Breast Physics UpDown Gain">Gain</string>
+<string name="Breast Physics UpDown Damping">Damping</string>
+
+<string name="Breast Physics LeftRight Max Effect">Max Effect</string>
+<string name="Breast Physics LeftRight Spring">Spring</string>
+<string name="Breast Physics LeftRight Gain">Gain</string>
+<string name="Breast Physics LeftRight Damping">Damping</string>
+
+<string name="Belly Physics Mass">Belly Mass</string>
+<string name="Belly Physics Smoothing">Belly Smoothing</string>
+<string name="Belly Physics Gravity">Belly Gravity</string>
+<string name="Belly Physics Drag">Belly Drag</string>
+
+<string name="Belly Physics UpDown Max Effect">Max Effect</string>
+<string name="Belly Physics UpDown Spring">Spring</string>
+<string name="Belly Physics UpDown Gain">Gain</string>
+<string name="Belly Physics UpDown Damping">Damping</string>
+
+<string name="Butt Physics Mass">Butt Mass</string>
+<string name="Butt Physics Smoothing">Butt Smoothing</string>
+<string name="Butt Physics Gravity">Butt Gravity</string>
+<string name="Butt Physics Drag">Butt Drag</string>
+
+<string name="Butt Physics UpDown Max Effect">Max Effect</string>
+<string name="Butt Physics UpDown Spring">Spring</string>
+<string name="Butt Physics UpDown Gain">Gain</string>
+<string name="Butt Physics UpDown Damping">Damping</string>
+
+<string name="Butt Physics LeftRight Max Effect">Max Effect</string>
+<string name="Butt Physics LeftRight Spring">Spring</string>
+<string name="Butt Physics LeftRight Gain">Gain</string>
+<string name="Butt Physics LeftRight Damping">Damping</string>
+
+<string name="Bushy Eyebrows">Bushy Eyebrows</string>
+<string name="Bushy Hair">Bushy Hair</string>
+<string name="Butt Size">Butt Size</string>
+<string name="Butt Gravity">Butt Gravity</string>
+<string name="bustle skirt">Bustle Skirt</string>
+<string name="no bustle">No Bustle</string>
+<string name="more bustle">More Bustle</string>
+
+<string name="Chaplin">Chaplin</string>
+<string name="Cheek Bones">Cheek Bones</string>
+<string name="Chest Size">Chest Size</string>
+<string name="Chin Angle">Chin Angle</string>
+<string name="Chin Cleft">Chin Cleft</string>
+<string name="Chin Curtains">Chin Curtains</string>
+
+<string name="Chin Depth">Chin Depth</string>
+<string name="Chin Heavy">Chin Heavy</string>
+<string name="Chin In">Chin In</string>
+<string name="Chin Out">Chin Out</string>
+<string name="Chin-Neck">Chin-Neck</string>
+<string name="Clear">Clear</string>
+<string name="Cleft">Cleft</string>
+<string name="Close Set Eyes">Close Set Eyes</string>
+<string name="Closed">Closed</string>
+<string name="Closed Back">Closed Back</string>
+<string name="Closed Front">Closed Front</string>
+<string name="Closed Left">Closed Left</string>
+<string name="Closed Right">Closed Right</string>
+<string name="Coin Purse">Coin Purse</string>
+<string name="Collar Back">Collar Back</string>
+
+
+
+<string name="Collar Front">Collar Front</string>
+
+
+
+<string name="Corner Down">Corner Down</string>
+
+<string name="Corner Up">Corner Up</string>
+<string name="Creased">Creased</string>
+<string name="Crooked Nose">Crooked Nose</string>
+
+<string name="Cuff Flare">Cuff Flare</string>
+<string name="Dark">Dark</string>
+<string name="Dark Green">Dark Green</string>
+<string name="Darker">Darker</string>
+<string name="Deep">Deep</string>
+<string name="Default Heels">Default Heels</string>
+
+<string name="Dense">Dense</string>
+
+<string name="Double Chin">Double Chin</string>
+<string name="Downturned">Downturned</string>
+<string name="Duffle Bag">Duffle Bag</string>
+<string name="Ear Angle">Ear Angle</string>
+<string name="Ear Size">Ear Size</string>
+<string name="Ear Tips">Ear Tips</string>
+<string name="Egg Head">Egg Head</string>
+<string name="Eye Bags">Eye Bags</string>
+<string name="Eye Color">Eye Color</string>
+<string name="Eye Depth">Eye Depth</string>
+<string name="Eye Lightness">Eye Lightness</string>
+<string name="Eye Opening">Eye Opening</string>
+<string name="Eye Pop">Eye Pop</string>
+<string name="Eye Size">Eye Size</string>
+<string name="Eye Spacing">Eye Spacing</string>
+
+<string name="Eyebrow Arc">Eyebrow Arc</string>
+<string name="Eyebrow Density">Eyebrow Density</string>
+
+<string name="Eyebrow Height">Eyebrow Height</string>
+<string name="Eyebrow Points">Eyebrow Points</string>
+<string name="Eyebrow Size">Eyebrow Size</string>
+
+<string name="Eyelash Length">Eyelash Length</string>
+<string name="Eyeliner">Eyeliner</string>
+<string name="Eyeliner Color">Eyeliner Color</string>
+
+<string name="Eyes Bugged">Eyes Bugged</string>
+
+
+
+
+
+
+
+
+<string name="Face Shear">Face Shear</string>
+<string name="Facial Definition">Facial Definition</string>
+<string name="Far Set Eyes">Far Set Eyes</string>
+
+<string name="Fat Lips">Fat Lips</string>
+
+<string name="Female">Female</string>
+<string name="Fingerless">Fingerless</string>
+<string name="Fingers">Fingers</string>
+<string name="Flared Cuffs">Flared Cuffs</string>
+<string name="Flat">Flat</string>
+<string name="Flat Butt">Flat Butt</string>
+<string name="Flat Head">Flat Head</string>
+<string name="Flat Toe">Flat Toe</string>
+<string name="Foot Size">Foot Size</string>
+<string name="Forehead Angle">Forehead Angle</string>
+<string name="Forehead Heavy">Forehead Heavy</string>
+<string name="Freckles">Freckles</string>
+
+<string name="Front Fringe">Front Fringe</string>
+
+<string name="Full Back">Full Back</string>
+<string name="Full Eyeliner">Full Eyeliner</string>
+<string name="Full Front">Full Front</string>
+<string name="Full Hair Sides">Full Hair Sides</string>
+<string name="Full Sides">Full Sides</string>
+<string name="Glossy">Glossy</string>
+<string name="Glove Fingers">Glove Fingers</string>
+
+<string name="Glove Length">Glove Length</string>
+
+
+<string name="Hair">Hair</string>
+<string name="Hair Back">Hair: Back</string>
+<string name="Hair Front">Hair: Front</string>
+<string name="Hair Sides">Hair: Sides</string>
+<string name="Hair Sweep">Hair Sweep</string>
+<string name="Hair Thickess">Hair Thickness</string>
+<string name="Hair Thickness">Hair Thickness</string>
+<string name="Hair Tilt">Hair Tilt</string>
+<string name="Hair Tilted Left">Hair Tilted Left</string>
+<string name="Hair Tilted Right">Hair Tilted Right</string>
+<string name="Hair Volume">Hair: Volume</string>
+<string name="Hand Size">Hand Size</string>
+<string name="Handlebars">Handlebars</string>
+<string name="Head Length">Head Length</string>
+<string name="Head Shape">Head Shape</string>
+<string name="Head Size">Head Size</string>
+<string name="Head Stretch">Head Stretch</string>
+<string name="Heel Height">Heel Height</string>
+<string name="Heel Shape">Heel Shape</string>
+<string name="Height">Height</string>
+<string name="High">High</string>
+<string name="High Heels">High Heels</string>
+<string name="High Jaw">High Jaw</string>
+<string name="High Platforms">High Platforms</string>
+<string name="High and Tight">High and Tight</string>
+<string name="Higher">Higher</string>
+<string name="Hip Length">Hip Length</string>
+<string name="Hip Width">Hip Width</string>
+<string name="In">In</string>
+<string name="In Shdw Color">Inner Shadow Color</string>
+<string name="In Shdw Opacity">Inner Shadow Opacity</string>
+<string name="Inner Eye Corner">Inner Eye Corner</string>
+<string name="Inner Eye Shadow">Inner Eye Shadow</string>
+<string name="Inner Shadow">Inner Shadow</string>
+
+
+<string name="Jacket Length">Jacket Length</string>
+
+<string name="Jacket Wrinkles">Jacket Wrinkles</string>
+<string name="Jaw Angle">Jaw Angle</string>
+<string name="Jaw Jut">Jaw Jut</string>
+<string name="Jaw Shape">Jaw Shape</string>
+<string name="Join">Join</string>
+<string name="Jowls">Jowls</string>
+<string name="Knee Angle">Knee Angle</string>
+<string name="Knock Kneed">Knock Kneed</string>
+
+<string name="Large">Large</string>
+<string name="Large Hands">Large Hands</string>
+<string name="Left Part">Left Part</string>
+<string name="Leg Length">Leg Length</string>
+<string name="Leg Muscles">Leg Muscles</string>
+<string name="Less">Less</string>
+<string name="Less Body Fat">Less Body Fat</string>
+<string name="Less Curtains">Less Curtains</string>
+<string name="Less Freckles">Less Freckles</string>
+<string name="Less Full">Less Full</string>
+<string name="Less Gravity">Less Gravity</string>
+<string name="Less Love">Less Love</string>
+<string name="Less Muscles">Less Muscles</string>
+<string name="Less Muscular">Less Muscular</string>
+<string name="Less Rosy">Less Rosy</string>
+<string name="Less Round">Less Round</string>
+<string name="Less Saddle">Less Saddle</string>
+<string name="Less Square">Less Square</string>
+<string name="Less Volume">Less Volume</string>
+<string name="Less soul">Less soul</string>
+<string name="Lighter">Lighter</string>
+<string name="Lip Cleft">Lip Cleft</string>
+<string name="Lip Cleft Depth">Lip Cleft Depth</string>
+<string name="Lip Fullness">Lip Fullness</string>
+<string name="Lip Pinkness">Lip Pinkness</string>
+<string name="Lip Ratio">Lip Ratio</string>
+<string name="Lip Thickness">Lip Thickness</string>
+<string name="Lip Width">Lip Width</string>
+<string name="Lipgloss">Lipgloss</string>
+<string name="Lipstick">Lipstick</string>
+<string name="Lipstick Color">Lipstick Color</string>
+<string name="Long">Long</string>
+<string name="Long Head">Long Head</string>
+<string name="Long Hips">Long Hips</string>
+<string name="Long Legs">Long Legs</string>
+<string name="Long Neck">Long Neck</string>
+<string name="Long Pigtails">Long Pigtails</string>
+<string name="Long Ponytail">Long Ponytail</string>
+<string name="Long Torso">Long Torso</string>
+<string name="Long arms">Long arms</string>
+
+
+<string name="Loose Pants">Loose Pants</string>
+<string name="Loose Shirt">Loose Shirt</string>
+<string name="Loose Sleeves">Loose Sleeves</string>
+
+<string name="Love Handles">Love Handles</string>
+<string name="Low">Low</string>
+<string name="Low Heels">Low Heels</string>
+<string name="Low Jaw">Low Jaw</string>
+<string name="Low Platforms">Low Platforms</string>
+<string name="Low and Loose">Low and Loose</string>
+<string name="Lower">Lower</string>
+<string name="Lower Bridge">Lower Bridge</string>
+<string name="Lower Cheeks">Lower Cheeks</string>
+
+<string name="Male">Male</string>
+<string name="Middle Part">Middle Part</string>
+<string name="More">More</string>
+<string name="More Blush">More Blush</string>
+<string name="More Body Fat">More Body Fat</string>
+<string name="More Curtains">More Curtains</string>
+<string name="More Eyeshadow">More Eyeshadow</string>
+<string name="More Freckles">More Freckles</string>
+<string name="More Full">More Full</string>
+<string name="More Gravity">More Gravity</string>
+<string name="More Lipstick">More Lipstick</string>
+<string name="More Love">More Love</string>
+<string name="More Lower Lip">More Lower Lip</string>
+<string name="More Muscles">More Muscles</string>
+<string name="More Muscular">More Muscular</string>
+<string name="More Rosy">More Rosy</string>
+<string name="More Round">More Round</string>
+<string name="More Saddle">More Saddle</string>
+<string name="More Sloped">More Sloped</string>
+<string name="More Square">More Square</string>
+<string name="More Upper Lip">More Upper Lip</string>
+<string name="More Vertical">More Vertical</string>
+<string name="More Volume">More Volume</string>
+<string name="More soul">More soul</string>
+<string name="Moustache">Moustache</string>
+
+<string name="Mouth Corner">Mouth Corner</string>
+<string name="Mouth Position">Mouth Position</string>
+<string name="Mowhawk">Mowhawk</string>
+<string name="Muscular">Muscular</string>
+<string name="Mutton Chops">Mutton Chops</string>
+
+<string name="Nail Polish">Nail Polish</string>
+<string name="Nail Polish Color">Nail Polish Color</string>
+<string name="Narrow">Narrow</string>
+<string name="Narrow Back">Narrow Back</string>
+<string name="Narrow Front">Narrow Front</string>
+<string name="Narrow Lips">Narrow Lips</string>
+<string name="Natural">Natural</string>
+<string name="Neck Length">Neck Length</string>
+<string name="Neck Thickness">Neck Thickness</string>
+<string name="No Blush">No Blush</string>
+<string name="No Eyeliner">No Eyeliner</string>
+<string name="No Eyeshadow">No Eyeshadow</string>
+
+<string name="No Lipgloss">No Lipgloss</string>
+<string name="No Lipstick">No Lipstick</string>
+<string name="No Part">No Part</string>
+<string name="No Polish">No Polish</string>
+<string name="No Red">No Red</string>
+<string name="No Spikes">No Spikes</string>
+<string name="No White">No White</string>
+<string name="No Wrinkles">No Wrinkles</string>
+<string name="Normal Lower">Normal Lower</string>
+<string name="Normal Upper">Normal Upper</string>
+<string name="Nose Left">Nose Left</string>
+<string name="Nose Right">Nose Right</string>
+<string name="Nose Size">Nose Size</string>
+<string name="Nose Thickness">Nose Thickness</string>
+<string name="Nose Tip Angle">Nose Tip Angle</string>
+<string name="Nose Tip Shape">Nose Tip Shape</string>
+<string name="Nose Width">Nose Width</string>
+<string name="Nostril Division">Nostril Division</string>
+<string name="Nostril Width">Nostril Width</string>
+
+
+<string name="Opaque">Opaque</string>
+<string name="Open">Open</string>
+<string name="Open Back">Open Back</string>
+<string name="Open Front">Open Front</string>
+<string name="Open Left">Open Left</string>
+<string name="Open Right">Open Right</string>
+<string name="Orange">Orange</string>
+<string name="Out">Out</string>
+<string name="Out Shdw Color">Outer Shadow Color</string>
+<string name="Out Shdw Opacity">Outer Shadow Opacity</string>
+<string name="Outer Eye Corner">Outer Eye Corner</string>
+<string name="Outer Eye Shadow">Outer Eye Shadow</string>
+<string name="Outer Shadow">Outer Shadow</string>
+<string name="Overbite">Overbite</string>
+
+<string name="Package">Package</string>
+<string name="Painted Nails">Painted Nails</string>
+<string name="Pale">Pale</string>
+<string name="Pants Crotch">Pants Crotch</string>
+<string name="Pants Fit">Pants Fit</string>
+<string name="Pants Length">Pants Length</string>
+
+
+<string name="Pants Waist">Pants Waist</string>
+<string name="Pants Wrinkles">Pants Wrinkles</string>
+<string name="Part">Part</string>
+<string name="Part Bangs">Part Bangs</string>
+<string name="Pectorals">Pectorals</string>
+<string name="Pigment">Pigment</string>
+<string name="Pigtails">Pigtails</string>
+<string name="Pink">Pink</string>
+<string name="Pinker">Pinker</string>
+<string name="Platform Height">Platform Height</string>
+<string name="Platform Width">Platform Width</string>
+<string name="Pointy">Pointy</string>
+<string name="Pointy Heels">Pointy Heels</string>
+
+<string name="Ponytail">Ponytail</string>
+<string name="Poofy Skirt">Poofy Skirt</string>
+<string name="Pop Left Eye">Pop Left Eye</string>
+<string name="Pop Right Eye">Pop Right Eye</string>
+<string name="Puffy">Puffy</string>
+<string name="Puffy Eyelids">Puffy Eyelids</string>
+<string name="Rainbow Color">Rainbow Color</string>
+<string name="Red Hair">Red Hair</string>
+
+<string name="Regular">Regular</string>
+
+<string name="Right Part">Right Part</string>
+<string name="Rosy Complexion">Rosy Complexion</string>
+<string name="Round">Round</string>
+
+<string name="Ruddiness">Ruddiness</string>
+<string name="Ruddy">Ruddy</string>
+<string name="Rumpled Hair">Rumpled Hair</string>
+<string name="Saddle Bags">Saddle Bags</string>
+
+
+<string name="Scrawny Leg">Scrawny Leg</string>
+<string name="Separate">Separate</string>
+
+
+<string name="Shallow">Shallow</string>
+<string name="Shear Back">Shear Back</string>
+<string name="Shear Face">Shear Face</string>
+<string name="Shear Front">Shear Front</string>
+
+<string name="Shear Left Up">Shear Left Up</string>
+
+<string name="Shear Right Up">Shear Right Up</string>
+<string name="Sheared Back">Sheared Back</string>
+<string name="Sheared Front">Sheared Front</string>
+<string name="Shift Left">Shift Left</string>
+<string name="Shift Mouth">Shift Mouth</string>
+<string name="Shift Right">Shift Right</string>
+<string name="Shirt Bottom">Shirt Bottom</string>
+
+<string name="Shirt Fit">Shirt Fit</string>
+
+<string name="Shirt Wrinkles">Shirt Wrinkles</string>
+<string name="Shoe Height">Shoe Height</string>
+
+<string name="Short">Short</string>
+<string name="Short Arms">Short Arms</string>
+<string name="Short Legs">Short Legs</string>
+<string name="Short Neck">Short Neck</string>
+<string name="Short Pigtails">Short Pigtails</string>
+<string name="Short Ponytail">Short Ponytail</string>
+<string name="Short Sideburns">Short Sideburns</string>
+<string name="Short Torso">Short Torso</string>
+<string name="Short hips">Short hips</string>
+<string name="Shoulders">Shoulders</string>
+
+<string name="Side Fringe">Side Fringe</string>
+<string name="Sideburns">Sideburns</string>
+
+<string name="Sides Hair">Sides Hair</string>
+<string name="Sides Hair Down">Sides Hair Down</string>
+<string name="Sides Hair Up">Sides Hair Up</string>
+
+<string name="Skinny Neck">Skinny Neck</string>
+<string name="Skirt Fit">Skirt Fit</string>
+<string name="Skirt Length">Skirt Length</string>
+<string name="Slanted Forehead">Slanted Forehead</string>
+<string name="Sleeve Length">Sleeve Length</string>
+
+
+
+<string name="Sleeve Looseness">Sleeve Looseness</string>
+<string name="Slit Back">Slit: Back</string>
+<string name="Slit Front">Slit: Front</string>
+<string name="Slit Left">Slit: Left</string>
+<string name="Slit Right">Slit: Right</string>
+<string name="Small">Small</string>
+<string name="Small Hands">Small Hands</string>
+<string name="Small Head">Small Head</string>
+<string name="Smooth">Smooth</string>
+<string name="Smooth Hair">Smooth Hair</string>
+<string name="Socks Length">Socks Length</string>
+
+
+<string name="Soulpatch">Soulpatch</string>
+
+<string name="Sparse">Sparse</string>
+<string name="Spiked Hair">Spiked Hair</string>
+<string name="Square">Square</string>
+<string name="Square Toe">Square Toe</string>
+<string name="Squash Head">Squash Head</string>
+
+<string name="Stretch Head">Stretch Head</string>
+<string name="Sunken">Sunken</string>
+<string name="Sunken Chest">Sunken Chest</string>
+<string name="Sunken Eyes">Sunken Eyes</string>
+<string name="Sweep Back">Sweep Back</string>
+<string name="Sweep Forward">Sweep Forward</string>
+
+<string name="Tall">Tall</string>
+<string name="Taper Back">Taper Back</string>
+<string name="Taper Front">Taper Front</string>
+<string name="Thick Heels">Thick Heels</string>
+<string name="Thick Neck">Thick Neck</string>
+<string name="Thick Toe">Thick Toe</string>
+
+<string name="Thin">Thin</string>
+<string name="Thin Eyebrows">Thin Eyebrows</string>
+<string name="Thin Lips">Thin Lips</string>
+<string name="Thin Nose">Thin Nose</string>
+<string name="Tight Chin">Tight Chin</string>
+<string name="Tight Cuffs">Tight Cuffs</string>
+<string name="Tight Pants">Tight Pants</string>
+<string name="Tight Shirt">Tight Shirt</string>
+<string name="Tight Skirt">Tight Skirt</string>
+<string name="Tight Sleeves">Tight Sleeves</string>
+
+<string name="Toe Shape">Toe Shape</string>
+<string name="Toe Thickness">Toe Thickness</string>
+<string name="Torso Length">Torso Length</string>
+<string name="Torso Muscles">Torso Muscles</string>
+<string name="Torso Scrawny">Torso Scrawny</string>
+<string name="Unattached">Unattached</string>
+<string name="Uncreased">Uncreased</string>
+<string name="Underbite">Underbite</string>
+<string name="Unnatural">Unnatural</string>
+<string name="Upper Bridge">Upper Bridge</string>
+<string name="Upper Cheeks">Upper Cheeks</string>
+<string name="Upper Chin Cleft">Upper Chin Cleft</string>
+
+<string name="Upper Eyelid Fold">Upper Eyelid Fold</string>
+<string name="Upturned">Upturned</string>
+<string name="Very Red">Very Red</string>
+<string name="Waist Height">Waist Height</string>
+
+
+<string name="Well-Fed">Well-Fed</string>
+<string name="White Hair">White Hair</string>
+<string name="Wide">Wide</string>
+<string name="Wide Back">Wide Back</string>
+<string name="Wide Front">Wide Front</string>
+<string name="Wide Lips">Wide Lips</string>
+<string name="Wild">Wild</string>
+<string name="Wrinkles">Wrinkles</string>
+
+  <!-- Navigation bar location input control.
+       Strings are here because widget xml is not localizable -->
+  <string name="LocationCtrlAddLandmarkTooltip">Add to Landmarks</string>
+  <string name="LocationCtrlEditLandmarkTooltip">Edit Landmark</string>
+  <string name="LocationCtrlInfoBtnTooltip">See more info about the current location</string>
+  <string name="LocationCtrlComboBtnTooltip">Location history</string>
+  <string name="LocationCtrlForSaleTooltip">Buy this land</string>
+  <string name="LocationCtrlVoiceTooltip">Voice not available here</string>
+  <string name="LocationCtrlFlyTooltip">Flying not allowed</string>
+  <string name="LocationCtrlPushTooltip">No pushing</string>
+  <string name="LocationCtrlBuildTooltip">Building/dropping objects not allowed</string>
+  <string name="LocationCtrlScriptsTooltip">Scripts not allowed</string>
+  <string name="LocationCtrlDamageTooltip">Health</string>
+  <string name="LocationCtrlAdultIconTooltip">Adult Region</string>
+  <string name="LocationCtrlModerateIconTooltip">Moderate Region</string>
+  <string name="LocationCtrlGeneralIconTooltip">General Region</string>
+  <string name="LocationCtrlSeeAVsTooltip">Avatars visible and chat allowed outside of this parcel</string>
+  <string name="LocationCtrlPathfindingDirtyTooltip">Objects that move may not behave correctly in this region until the region is rebaked.</string>
+  <string name="LocationCtrlPathfindingDisabledTooltip">Dynamic pathfinding is not enabled on this region.</string>
+  <!-- Strings used by the (currently Linux) auto-updater app -->
+	<string name="UpdaterWindowTitle">
+	  [APP_NAME] Update
+	</string>
+	<string name="UpdaterNowUpdating">
+	  Now updating [APP_NAME]...
+	</string>
+	<string name="UpdaterNowInstalling">
+	  Installing [APP_NAME]...
+	</string>
+	<string name="UpdaterUpdatingDescriptive">
+	  Your [APP_NAME] Viewer is being updated to the latest release.  This may take some time, so please be patient.
+	</string>
+	<string name="UpdaterProgressBarTextWithEllipses">
+	  Downloading update...
+	</string>
+	<string name="UpdaterProgressBarText">
+	  Downloading update
+	</string>
+	<string name="UpdaterFailDownloadTitle">
+	  Failed to download update
+	</string>
+	<string name="UpdaterFailUpdateDescriptive">
+	  An error occurred while updating [APP_NAME]. Please download the latest version from www.secondlife.com.
+	</string>
+	<string name="UpdaterFailInstallTitle">
+	  Failed to install update
+	</string>
+	<string name="UpdaterFailStartTitle">
+	  Failed to start viewer
+	</string>
+
+	<!-- System Messages -->
+	<string name="ItemsComingInTooFastFrom">[APP_NAME]: Items coming in too fast from [FROM_NAME], automatic preview disabled for [TIME] seconds</string>
+	<string name="ItemsComingInTooFast">[APP_NAME]: Items coming in too fast, automatic preview disabled for [TIME] seconds</string>
+
+	<!-- IM system messages -->
+	<string name="IM_logging_string">-- Instant message logging enabled --</string>
+	<string name="IM_typing_start_string">[NAME] is typing...</string>
+	<string name="Unnamed">(Unnamed)</string>
+	<string name="IM_moderated_chat_label">(Moderated: Voices off by default)</string>
+	<string name="IM_unavailable_text_label">Text chat is not available for this call.</string>
+	<string name="IM_muted_text_label">Your text chat has been disabled by a Group Moderator.</string>
+	<string name="IM_default_text_label">Click here to instant message.</string>
+	<string name="IM_to_label">To</string>
+	<string name="IM_moderator_label">(Moderator)</string>
+	<string name="Saved_message">(Saved [LONG_TIMESTAMP])</string>
+	<string name="IM_unblock_only_groups_friends">To see this message, you must uncheck &apos;Only friends and groups can call or IM me&apos; in Preferences/Privacy.</string>
+	
+	<!-- Additional IM messages -->
+	<string name="IM_announce_incoming">Incoming message from [NAME]</string>
+	<string name="IM_autoresponse_sent">Autoresponse sent</string>
+
+	<!-- voice calls -->
+	<string name="answered_call">Your call has been answered</string>
+	<string name="you_started_call">You started a voice call</string>
+	<string name="you_joined_call">You joined the voice call</string>
+	<string name="name_started_call">[NAME] started a voice call</string>
+
+  <string name="ringing-im">
+    Joining voice call...
+  </string>
+  <string name="connected-im">
+    Connected, click Leave Call to hang up
+  </string>
+  <string name="hang_up-im">
+    Left voice call
+  </string>
+  <string name="answering-im">
+    Connecting...
+  </string>
+  <string name="conference-title">
+    Ad-hoc Conference
+  </string>
+  <string name="conference-title-incoming">
+    Conference with [AGENT_NAME]
+  </string>
+  <string name="inventory_item_offered-im">
+    Inventory item offered
+  </string>
+  <string name="inventory_item_offered_rlv">
+    Inventory item offered to [NAME]
+  </string>
+  <string name="share_alert">
+    Drag items from inventory here
+  </string>
+
+
+  <string name="no_session_message">
+    (IM Session Doesn't Exist)
+  </string>
+  <string name="only_user_message">
+    You are the only user in this session.
+  </string>
+  <string name="offline_message">
+    [NAME] is offline.
+  </string>
+  <string name="invite_message">
+    Click the [BUTTON NAME] button to accept/connect to this voice chat.
+  </string>
+  <string name="muted_message">
+    You have blocked this Resident. Sending a message will automatically unblock them.
+  </string>
+  <!--Some times string name is getting from the body of server response.
+  For ex.: from gIMMgr::showSessionStartError in the LLViewerChatterBoxSessionStartReply::post.
+  In case of the EXT-3115 issue 'generic' is passed into the gIMMgr::showSessionStartError as a string name.
+  Also there are some other places where "generic" is used.
+  So, let add string with name="generic" with the same value as "generic_request_error" -->
+  <string name="generic">
+    Error making request, please try again later.
+  </string>
+  <string name="generic_request_error">
+    Error making request, please try again later.
+  </string>
+  <string name="insufficient_perms_error">
+    You do not have sufficient permissions.
+  </string>
+  <string name="session_does_not_exist_error">
+    The session no longer exists
+  </string>
+  <string name="no_ability_error">
+    You do not have that ability.
+  </string>
+  <string name="no_ability">
+    You do not have that ability.
+  </string>
+  <string name="not_a_mod_error">
+    You are not a session moderator.
+  </string>
+  <!--Some times string name is getting from the body of server response.
+  For ex.: from gIMMgr::showSessionStartError in the LLViewerChatterBoxSessionStartReply::post.
+  In case of the EXT-3562 issue 'muted' is passed into the gIMMgr::showSessionStartError as a string name.
+  So, let add string with name="muted" with the same value as "muted_error" -->
+  <string name="muted">
+    A group moderator disabled your text chat.
+  </string>
+  <string name="muted_error">
+    A group moderator disabled your text chat.
+  </string>
+  <string name="add_session_event">
+    Unable to add users to chat session with [RECIPIENT].
+  </string>
+  <!--Some times string name is getting from the body of server response.
+  For ex.: from gIMMgr::showSessionStartError in the LLViewerChatterBoxSessionStartReply::post.
+  In case of the EXT-3562 issue 'message' is passed into the gIMMgr::showSessionStartError as a string name.
+  So, let add string with name="message" with the same value as "message_session_event" -->
+  <string name="message">
+    The message sent to [RECIPIENT] is still being processed.
+    If the message does not appear in the next few minutes, it may have been dropped by the server.
+  </string>
+  <string name="message_session_event">
+    The message sent to [RECIPIENT] is still being processed.
+    If the message does not appear in the next few minutes, it may have been dropped by the server.
+  </string>
+  <string name="mute">
+    Error while moderating.
+  </string>
+  <!--Some times string name is getting from the body of server response.
+  For ex.: from gIMMgr::showSessionStartError in the LLViewerChatterBoxSessionStartReply::post.
+  In case of the EXT-3459 issue 'removed' is passed into the gIMMgr::showSessionStartError as a string name.
+  So, let add string with name="removed" with the same value as "removed_from_group" -->
+  <string name="removed">
+    You have been removed from the group.
+  </string>
+  <string name="removed_from_group">
+    You have been removed from the group.
+  </string>
+  <string name="close_on_no_ability">
+    You no longer have the ability to be in the chat session.
+  </string>
+  <string name="unread_chat_single">
+    [SOURCES] has said something new
+  </string>
+  <string name="unread_chat_multiple">
+    [SOURCES] have said something new
+  </string>
+	<string name="session_initialization_timed_out_error">
+		The session initialization is timed out
+	</string>
+
+  <string name="Home position set.">Home position set.</string>
+
+  <string name="voice_morphing_url">http://secondlife.com/landing/voicemorphing</string>
+
+  <!-- Financial operations strings -->
+  <string name="paid_you_ldollars">[NAME] paid you L$[AMOUNT] [REASON].</string>
+  <string name="paid_you_ldollars_no_reason">[NAME] paid you L$[AMOUNT].</string>
+  <string name="you_paid_ldollars">You paid [NAME] L$[AMOUNT] [REASON].</string>
+  <string name="you_paid_ldollars_no_info">You paid L$[AMOUNT].</string>
+  <string name="you_paid_ldollars_no_reason">You paid [NAME] L$[AMOUNT].</string>
+  <string name="you_paid_ldollars_no_name">You paid L$[AMOUNT] [REASON].</string>
+  <string name="you_paid_failure_ldollars">You failed to pay [NAME] L$[AMOUNT] [REASON].</string>
+  <string name="you_paid_failure_ldollars_no_info">You failed to pay L$[AMOUNT].</string>
+  <string name="you_paid_failure_ldollars_no_reason">You failed to pay [NAME] L$[AMOUNT].</string>
+  <string name="you_paid_failure_ldollars_no_name">You failed to pay L$[AMOUNT] [REASON].</string>
+  <string name="for item">for [ITEM]</string>
+  <string name="for a parcel of land">for a parcel of land</string>
+  <string name="for a land access pass">for a land access pass</string>
+  <string name="for deeding land">for deeding land</string>
+  <string name="to create a group">to create a group</string>
+  <string name="to join a group">to join a group</string>
+  <string name="to upload">to upload</string>
+  <string name="to publish a classified ad">to publish a classified ad</string>
+
+  <string name="giving">Giving L$ [AMOUNT]</string>
+  <string name="uploading_costs">Uploading costs L$ [AMOUNT]</string>
+  <string name="this_costs">This costs L$ [AMOUNT]</string>
+  <string name="buying_selected_land">Buying selected land for L$ [AMOUNT]</string>
+  <string name="this_object_costs">This object costs L$ [AMOUNT]</string>
+
+  <string name="group_role_everyone">Everyone</string>
+  <string name="group_role_officers">Officers</string>
+  <string name="group_role_owners">Owners</string>
+  <string name="group_member_status_online">Online</string>
+
+  <string name="uploading_abuse_report">Uploading...
+
+Abuse Report</string>
+
+  <!-- names for new inventory items-->
+  <string name="New Shape">New Shape</string>
+  <string name="New Skin">New Skin</string>
+  <string name="New Hair">New Hair</string>
+  <string name="New Eyes">New Eyes</string>
+  <string name="New Shirt">New Shirt</string>
+  <string name="New Pants">New Pants</string>
+  <string name="New Shoes">New Shoes</string>
+  <string name="New Socks">New Socks</string>
+  <string name="New Jacket">New Jacket</string>
+  <string name="New Gloves">New Gloves</string>
+  <string name="New Undershirt">New Undershirt</string>
+  <string name="New Underpants">New Underpants</string>
+  <string name="New Skirt">New Skirt</string>
+  <string name="New Alpha">New Alpha</string>
+  <string name="New Tattoo">New Tattoo</string>
+  <string name="New Physics">New Physics</string>
+  <string name="Invalid Wearable">Invalid Wearable</string>
+  <string name="New Gesture">New Gesture</string>
+  <string name="New Script">New Script</string>
+  <string name="New Note">New Note</string>
+  <string name="New Folder">New Folder</string>
+  <string name="Contents">Contents</string>
+  <string name="Gesture">Gesture</string>
+  <string name="Male Gestures">Male Gestures</string>
+  <string name="Female Gestures">Female Gestures</string>
+  <string name="Other Gestures">Other Gestures</string>
+  <string name="Speech Gestures">Speech Gestures</string>
+  <string name="Common Gestures">Common Gestures</string>
+  <!-- gestures -->
+  <string name="Male - Excuse me">Male - Excuse me</string>
+  <string name="Male - Get lost">Male - Get lost</string>
+  <string name="Male - Blow kiss">Male - Blow kiss</string>
+  <string name="Male - Boo">Male - Boo</string>
+  <string name="Male - Bored">Male - Bored</string>
+  <string name="Male - Hey">Male - Hey</string>
+  <string name="Male - Laugh">Male - Laugh</string>
+  <string name="Male - Repulsed">Male - Repulsed</string>
+  <string name="Male - Shrug">Male - Shrug</string>
+  <string name="Male - Stick tougue out">Male - Stick tougue out</string>
+  <string name="Male - Wow">Male - Wow</string>
+
+  <string name="Female - Chuckle">Female - Chuckle</string>
+  <string name="Female - Cry">Female - Cry</string>
+  <string name="Female - Embarrassed">Female - Embarrassed</string>
+  <string name="Female - Excuse me">Female - Excuse me</string>
+  <string name="Female - Get lost">Female - Get lost</string>
+  <string name="Female - Blow kiss">Female - Blow kiss</string>
+  <string name="Female - Boo">Female - Boo</string>
+  <string name="Female - Bored">Female - Bored</string>
+  <string name="Female - Hey">Female - Hey</string>
+  <string name="Female - Hey baby">Female - Hey baby</string>
+  <string name="Female - Laugh">Female - Laugh</string>
+  <string name="Female - Looking good">Female - Looking good</string>
+  <string name="Female - Over here">Female - Over here</string>
+  <string name="Female - Please">Female - Please</string>
+  <string name="Female - Repulsed">Female - Repulsed</string>
+  <string name="Female - Shrug">Female - Shrug</string>
+  <string name="Female - Stick tougue out">Female - Stick tougue out</string>
+  <string name="Female - Wow">Female - Wow</string>
+
+  <string name="/bow">/bow</string>
+  <string name="/clap">/clap</string>
+  <string name="/count">/count</string>
+  <string name="/extinguish">/extinguish</string>
+  <string name="/kmb">/kmb</string>
+  <string name="/muscle">/muscle</string>
+  <string name="/no">/no</string>
+  <string name="/no!">/no!</string>
+  <string name="/paper">/paper</string>
+  <string name="/pointme">/pointme</string>
+  <string name="/pointyou">/pointyou</string>
+  <string name="/rock">/rock</string>
+  <string name="/scissor">/scissor</string>
+  <string name="/smoke">/smoke</string>
+  <string name="/stretch">/stretch</string>
+  <string name="/whistle">/whistle</string>
+  <string name="/yes">/yes</string>
+  <string name="/yes!">/yes!</string>
+  <string name="afk">afk</string>
+  <string name="dance1">dance1</string>
+  <string name="dance2">dance2</string>
+  <string name="dance3">dance3</string>
+  <string name="dance4">dance4</string>
+  <string name="dance5">dance5</string>
+  <string name="dance6">dance6</string>
+  <string name="dance7">dance7</string>
+  <string name="dance8">dance8</string>
+
+  <!-- birth date format shared by avatar inspector and profile panels -->
+  <string name="AvatarBirthDateFormat">[mthnum,datetime,slt]/[day,datetime,slt]/[year,datetime,slt]</string>
+
+  <string name="DefaultMimeType">none/none</string>
+  <string name="texture_load_dimensions_error">Can't load images larger than [WIDTH]*[HEIGHT]</string>
+
+  <!-- language specific white-space characters, delimiters, spacers, item separation symbols -->
+  <string name="sentences_separator" value=" "></string>
+  <string name="words_separator" value=", "/>
+
+  <string name="server_is_down">
+	Despite our best efforts, something unexpected has gone wrong.
+
+	Please check status.secondlifegrid.net to see if there is a known problem with the service.
+        If you continue to experience problems, please check your network and firewall setup.
+  </string>
+
+  <!-- overriding datetime formating.
+	didn't translate if this is not needed for current localization
+  -->
+  <string name="dateTimeWeekdaysNames">Sunday:Monday:Tuesday:Wednesday:Thursday:Friday:Saturday</string>
+  <string name="dateTimeWeekdaysShortNames">Sun:Mon:Tue:Wed:Thu:Fri:Sat</string>
+  <string name="dateTimeMonthNames">January:February:March:April:May:June:July:August:September:October:November:December</string>
+  <string name="dateTimeMonthShortNames">Jan:Feb:Mar:Apr:May:Jun:Jul:Aug:Sep:Oct:Nov:Dec</string>
+  <string name="dateTimeDayFormat">[MDAY]</string>
+  <string name="dateTimeAM">AM</string>
+  <string name="dateTimePM">PM</string>
+
+  <!--  currency formatting -->
+  <string name="LocalEstimateUSD">US$ [AMOUNT]</string>
+
+  <!--  FS:AW opensim currency support -->
+  <string name="free">free</string>
+
+  <!-- Group Profile roles and powers -->
+  <string name="Membership">Membership</string>
+  <string name="Roles">Roles</string>
+  <string name="Group Identity">Group Identity</string>
+  <string name="Parcel Management">Parcel Management</string>
+  <string name="Parcel Identity">Parcel Identity</string>
+  <string name="Parcel Settings">Parcel Settings</string>
+  <string name="Parcel Powers">Parcel Powers</string>
+  <string name="Parcel Access">Parcel Access</string>
+  <string name="Parcel Content">Parcel Content</string>
+  <string name="Object Management">Object Management</string>
+  <string name="Accounting">Accounting</string>
+  <string name="Notices">Notices</string>
+  <string name="Chat">Chat</string>
+
+  <!-- Question strings for delete items notifications -->
+  <string name="DeleteItems">Delete selected items?</string>
+  <string name="DeleteItem">Delete selected item?</string>
+
+  <string name="EmptyOutfitText">There are no items in this outfit</string>
+
+ <!-- External editor status codes -->
+ <string name="ExternalEditorNotSet">Select an editor using the ExternalEditor setting.</string>
+ <string name="ExternalEditorNotFound">Cannot find the external editor you specified.
+Try enclosing path to the editor with double quotes.
+(e.g. "/path to my/editor" "%s")</string>
+ <string name="ExternalEditorCommandParseError">Error parsing the external editor command.</string>
+ <string name="ExternalEditorFailedToRun">External editor failed to run.</string>
+
+ <!--  Machine translation of chat messahes -->
+ <string name="TranslationFailed">Translation failed: [REASON]</string>
+ <string name="TranslationResponseParseError">Error parsing translation response.</string>
+
+  <!-- Key names begin -->
+  <string name="Esc">Esc</string>
+  <string name="Space">Space</string>
+  <string name="Enter">Enter</string>
+  <string name="Tab">Tab</string>
+  <string name="Ins">Ins</string>
+  <string name="Del">Del</string>
+  <string name="Backsp">Backsp</string>
+  <string name="Shift">Shift</string>
+  <string name="Ctrl">Ctrl</string>
+  <string name="Alt">Alt</string>
+  <string name="CapsLock">CapsLock</string>
+  <string name="Left">Left</string>
+  <string name="Right">Right</string>
+  <string name="Up">Up</string>
+  <string name="Down">Down</string>
+  <string name="Home">Home</string>
+  <string name="End">End</string>
+  <string name="PgUp">PgUp</string>
+  <string name="PgDn">PgDn</string>
+
+  <string name="F1">F1</string>
+  <string name="F2">F2</string>
+  <string name="F3">F3</string>
+  <string name="F4">F4</string>
+  <string name="F5">F5</string>
+  <string name="F6">F6</string>
+  <string name="F7">F7</string>
+  <string name="F8">F8</string>
+  <string name="F9">F9</string>
+  <string name="F10">F10</string>
+  <string name="F11">F11</string>
+  <string name="F12">F12</string>
+
+  <string name="Add">Add</string>
+  <string name="Subtract">Subtract</string>
+  <string name="Multiply">Multiply</string>
+  <string name="Divide">Divide</string>
+  <string name="PAD_DIVIDE">PAD_DIVIDE</string>
+  <string name="PAD_LEFT">PAD_LEFT</string>
+  <string name="PAD_RIGHT">PAD_RIGHT</string>
+  <string name="PAD_DOWN">PAD_DOWN</string>
+  <string name="PAD_UP">PAD_UP</string>
+  <string name="PAD_HOME">PAD_HOME</string>
+  <string name="PAD_END">PAD_END</string>
+  <string name="PAD_PGUP">PAD_PGUP</string>
+  <string name="PAD_PGDN">PAD_PGDN</string>
+  <string name="PAD_CENTER">PAD_CENTER</string>
+  <string name="PAD_INS">PAD_INS</string>
+  <string name="PAD_DEL">PAD_DEL</string>
+  <string name="PAD_Enter">PAD_Enter</string>
+  <string name="PAD_BUTTON0">PAD_BUTTON0</string>
+  <string name="PAD_BUTTON1">PAD_BUTTON1</string>
+  <string name="PAD_BUTTON2">PAD_BUTTON2</string>
+  <string name="PAD_BUTTON3">PAD_BUTTON3</string>
+  <string name="PAD_BUTTON4">PAD_BUTTON4</string>
+  <string name="PAD_BUTTON5">PAD_BUTTON5</string>
+  <string name="PAD_BUTTON6">PAD_BUTTON6</string>
+  <string name="PAD_BUTTON7">PAD_BUTTON7</string>
+  <string name="PAD_BUTTON8">PAD_BUTTON8</string>
+  <string name="PAD_BUTTON9">PAD_BUTTON9</string>
+  <string name="PAD_BUTTON10">PAD_BUTTON10</string>
+  <string name="PAD_BUTTON11">PAD_BUTTON11</string>
+  <string name="PAD_BUTTON12">PAD_BUTTON12</string>
+  <string name="PAD_BUTTON13">PAD_BUTTON13</string>
+  <string name="PAD_BUTTON14">PAD_BUTTON14</string>
+  <string name="PAD_BUTTON15">PAD_BUTTON15</string>
+
+  <string name="-">-</string>
+  <string name="=">=</string>
+  <string name="`">`</string>
+  <string name=";">;</string>
+  <string name="[">[</string>
+  <string name="]">]</string>
+  <string name="\">\</string>
+
+  <string name="0">0</string>
+  <string name="1">1</string>
+  <string name="2">2</string>
+  <string name="3">3</string>
+  <string name="4">4</string>
+  <string name="5">5</string>
+  <string name="6">6</string>
+  <string name="7">7</string>
+  <string name="8">8</string>
+  <string name="9">9</string>
+
+  <string name="A">A</string>
+  <string name="B">B</string>
+  <string name="C">C</string>
+  <string name="D">D</string>
+  <string name="E">E</string>
+  <string name="F">F</string>
+  <string name="G">G</string>
+  <string name="H">H</string>
+  <string name="I">I</string>
+  <string name="J">J</string>
+  <string name="K">K</string>
+  <string name="L">L</string>
+  <string name="M">M</string>
+  <string name="N">N</string>
+  <string name="O">O</string>
+  <string name="P">P</string>
+  <string name="Q">Q</string>
+  <string name="R">R</string>
+  <string name="S">S</string>
+  <string name="T">T</string>
+  <string name="U">U</string>
+  <string name="V">V</string>
+  <string name="W">W</string>
+  <string name="X">X</string>
+  <string name="Y">Y</string>
+  <string name="Z">Z</string>
+  <!-- Key names end -->
+
+  <!-- llviewerwindow -->
+  <string name="BeaconParticle">Viewing particle beacons (blue)</string>
+  <string name="BeaconPhysical">Viewing physical object beacons (green)</string>
+  <string name="BeaconScripted">Viewing scripted object beacons (red)</string>
+  <string name="BeaconScriptedTouch">Viewing scripted object with touch function beacons (red)</string>
+  <string name="BeaconSound">Viewing sound beacons (yellow)</string>
+  <string name="BeaconMedia">Viewing media beacons (white)</string>
+  <string name="ParticleHiding">Hiding Particles</string>
+
+  <!-- commands -->
+
+  <string name="Command_AboutLand_Label">About land</string>
+  <string name="Command_Appearance_Label">Appearance</string>
+  <string name="Command_Avatar_Label">Avatar</string>
+  <string name="Command_Build_Label">Build</string>
+  <string name="Command_Chat_Label">Conversations</string>
+  <string name="Command_Compass_Label">Compass</string>
+  <string name="Command_Destinations_Label">Destinations</string>
+  <string name="Command_Gestures_Label">Gestures</string>
+  <string name="Command_HowTo_Label">How to</string>
+  <string name="Command_Inventory_Label">Inventory</string>
+  <string name="Command_Map_Label">Map</string>
+  <string name="Command_Marketplace_Label">Marketplace</string>
+  <string name="Command_MiniMap_Label">Mini-map</string>
+  <string name="Command_Move_Label">Walk / run / fly</string>
+  <string name="Command_Outbox_Label">Merchant outbox</string>
+  <string name="Command_People_Label">People</string>
+  <string name="Command_Picks_Label">Picks</string>
+  <string name="Command_Places_Label">Places</string>
+  <string name="Command_Preferences_Label">Preferences</string>
+  <string name="Command_Profile_Label">Profile</string>
+  <string name="Command_Search_Label">Search</string>
+  <string name="Command_Snapshot_Label">Snapshot</string>
+  <string name="Command_Speak_Label">Speak</string>
+  <string name="Command_View_Label">Camera controls</string>
+<!-- Ansariel: Renamed for FS (FIRE-5019)
+  <string name="Command_Voice_Label">Voice settings</string>-->
+  <string name="Command_Voice_Label">Nearby voice</string>
+<!-- Firestorm commands -->
+  <string name="Command_Quickprefs_Label">Quick prefs</string>
+  <string name="Command_AO_Label">Animation overrider</string>
+  <string name="Command_Webbrowser_Label">Web browser</string>
+  <string name="Command_Default_Chat_Bar_Label">Chat</string>
+  <string name="Command_Areasearch_Label">Area search</string>
+  <string name="Command_Settings_Debug_Label">Debug settings</string>
+  <string name="Command_Statistics_Label">Statistics</string>
+  <string name="Command_Region_Label">Region/Estate</string>
+  <string name="Command_Fly_Label">Fly</string>
+  <string name="Command_Groundsit_Label">Ground sit</string>
+  <string name="Command_Sound_Explorer_Label">Sound explorer</string>
+  <string name="Command_Asset_Blacklist_Label">Asset blacklist</string>
+  <string name="Command_Phototools_Label">Phototools</string>
+  <string name="Command_Phototools_View_Label">Phototools camera</string>
+  <string name="Command_Contact_Sets_Label">Contact sets</string>
+  <string name="Command_Mouselook_Label">Mouselook</string>
+  <string name="Command_Legacy_Search_Label">Legacy Search</string>
+  
+
+  <string name="Command_AboutLand_Tooltip">Information about the land you're visiting</string>
+  <string name="Command_Appearance_Tooltip">Change your avatar</string>
+  <string name="Command_Avatar_Tooltip">Choose a complete avatar</string>
+  <string name="Command_Build_Tooltip">Building objects and reshaping terrain (CTRL+4)</string>
+  <string name="Command_Chat_Tooltip">Chat with people nearby using text (CTRL+T)</string>
+  <string name="Command_Compass_Tooltip">Compass</string>
+  <string name="Command_Destinations_Tooltip">Destinations of interest</string>
+  <string name="Command_Gestures_Tooltip">Gestures for your avatar (CTRL+G)</string>
+  <string name="Command_HowTo_Tooltip">How to do common tasks</string>
+  <string name="Command_Inventory_Tooltip">View and use your belongings (CTRL+I)</string>
+  <string name="Command_Map_Tooltip">Map of the world (CTRL+M)</string>
+  <string name="Command_Marketplace_Tooltip">Go shopping</string>
+  <string name="Command_MiniMap_Tooltip">Show nearby people (CTRL+SHIFT+M)</string>
+  <string name="Command_Move_Tooltip">Moving your avatar</string>
+  <string name="Command_Outbox_Tooltip">Transfer items to your marketplace for sale</string>
+  <string name="Command_People_Tooltip">Friends, groups, and nearby people (CTRL+SHIFT+A)</string>
+  <string name="Command_Picks_Tooltip">Places to show as favorites in your profile</string>
+  <string name="Command_Places_Tooltip">Places you've saved (ALT+H)</string>
+  <string name="Command_Preferences_Tooltip">Preferences (CTRL+P)</string>
+  <string name="Command_Profile_Tooltip">Edit or view your profile</string>
+  <string name="Command_Search_Tooltip">Find places, events, people (CTRL+F)</string>
+  <string name="Command_Snapshot_Tooltip">Take a picture (CTRL+SHIFT+S)</string>
+  <string name="Command_Speak_Tooltip">Speak with people nearby using your microphone</string>
+  <string name="Command_View_Tooltip">Changing camera angle</string>
+  <string name="Command_Voice_Tooltip">Volume controls for calls and people near you in world</string>
+<!-- Firestorm commands -->
+  <string name="Command_Quickprefs_Tooltip">Quick preferences for changing often used settings</string>
+  <string name="Command_AO_Tooltip">Animation overrider</string>
+  <string name="Command_Webbrowser_Tooltip">Opens the internal web browser (CTRL+SHIFT+Z)</string>
+  <string name="Command_Default_Chat_Bar_Tooltip">Shows or hides the default chat bar</string>
+  <string name="Command_Areasearch_Tooltip">Search the area for objects</string>
+  <string name="Command_Settings_Debug_Tooltip">Change configuration settings of the viewer (CTRL+ALT+SHIFT+S)</string>
+  <string name="Command_Statistics_Tooltip">Shows the viewer statistics (CTRL+SHIFT+1)</string>
+  <string name="Command_Region_Tooltip">Opens the region/estate tools (ALT+R)</string>
+  <string name="Command_Groundsit_Tooltip">Toggle ground sit mode on/off (CTRL+ALT+S)</string>
+  <string name="Command_Sound_Explorer_Tooltip">Opens the sound explorer</string>
+  <string name="Command_Asset_Blacklist_Tooltip">Opens the list of all the items you have blacklisted</string>
+  <string name="Command_Phototools_Tooltip">Tools for full-featured image making.</string>
+  <string name="Command_Phototools_View_Tooltip">Advanced phototools camera controls</string>
+  <string name="Command_Contact_Sets_Tooltip">Opens contact sets (CTRL+ALT+SHIFT+C)</string>
+  <string name="Command_Mouselook_Tooltip">Enter mouselook mode (M)</string>
+
+  <string name="Toolbar_Bottom_Tooltip">currently in your bottom toolbar</string>
+  <string name="Toolbar_Left_Tooltip"  >currently in your left toolbar</string>
+  <string name="Toolbar_Right_Tooltip" >currently in your right toolbar</string>
+
+  <string name="Command_Fly_Tooltip">Toggle flying mode on/off</string>
+  <string name="Command_Legacy_Search_Tooltip">Find places, groups, people using legacy searching</string>
+
+ <!-- Mesh UI terms -->
+  <string name="Retain%">Retain%</string>
+  <string name="Detail">Detail</string>
+  <string name="Better Detail">Better Detail</string>
+  <string name="Surface">Surface</string>
+  <string name="Solid">Solid</string>
+  <string name="Wrap">Wrap</string>
+  <string name="Preview">Preview</string>
+  <string name="Normal">Normal</string>
+
+  <!-- Pathfinding -->
+  <string name="Pathfinding_Wiki_URL">http://wiki.secondlife.com/wiki/Pathfinding_Tools_in_the_Second_Life_Viewer</string>
+  <string name="Pathfinding_Object_Attr_None">None</string>
+  <string name="Pathfinding_Object_Attr_Permanent">Affects navmesh</string>
+  <string name="Pathfinding_Object_Attr_Character">Character</string>
+  <string name="Pathfinding_Object_Attr_MultiSelect">(Multiple)</string>
+
+  <!-- Snapshot image quality levels -->
+  <string name="snapshot_quality_very_low">Very Low</string>
+  <string name="snapshot_quality_low">Low</string>
+  <string name="snapshot_quality_medium">Medium</string>
+  <string name="snapshot_quality_high">High</string>
+  <string name="snapshot_quality_very_high">Very High</string>
+  <string name="IMPrefix">IM:</string>
+
+  <!-- Settings sanity checks -->
+  <string name="SanityCheckEquals">The settings control &quot;[CONTROL_NAME]&quot; should be at [VALUE_1].</string>
+  <string name="SanityCheckNotEquals">The settings control&quot;[CONTROL_NAME]&quot; should not be set to [VALUE_1].</string>
+  <string name="SanityCheckLowerThan">The settings control &quot;[CONTROL_NAME]&quot; should be lower than [VALUE_1].</string>
+  <string name="SanityCheckGreaterThan">The settings control &quot;[CONTROL_NAME]&quot; should be higher than [VALUE_1].</string>
+  <string name="SanityCheckBetween">The settings control &quot;[CONTROL_NAME]&quot; should be between [VALUE_1] and [VALUE_2].</string>
+  <string name="SanityCheckNotBetween">The settings control &quot;[CONTROL_NAME]&quot; should not be between [VALUE_1] and [VALUE_2].</string>
+
+  <string name="RlvEnabled">RestrainedLove Support will be enabled after you restart.</string>
+  <string name="RlvDisabled">RestrainedLove Support will be disabled after you restart.</string>
+
+  <!-- Media filter options -->
+  <string name="MediaFilterActionAllow">Allow</string>
+  <string name="MediaFilterActionDeny">Deny</string>
+  <string name="MediaFilterConditionAlways">Always</string>
+  <string name="MediaFilterConditionAlwaysLower">always</string>
+  <string name="MediaFilterConditionNever">Never</string>
+  <string name="MediaFilterConditionNeverLower">never</string>
+  <string name="MediaFilterMediaContentBlocked">Media from the domain [DOMAIN] has been blocked.</string>
+  <string name="MediaFilterMediaContentDomainAlwaysAllowed">Media from the domain [DOMAIN] will always be played.</string>
+  <string name="MediaFilterMediaContentDomainAlwaysBlocked">Media from the domain [DOMAIN] will never be played.</string>
+  <string name="MediaFilterMediaContentUrlAlwaysAllowed">Media from the URL [MEDIAURL] will always be played.</string>
+  <string name="MediaFilterMediaContentUrlAlwaysBlocked">Media from the URL [MEDIAURL] will never be played.</string>
+  
+  <string name="MediaFilterAudioContentBlocked">Audio from the domain [DOMAIN] has been blocked.</string>
+  <string name="MediaFilterAudioContentDomainAlwaysAllowed">Audio from the domain [DOMAIN] will always be played.</string>
+  <string name="MediaFilterAudioContentDomainAlwaysBlocked">Audio from the domain [DOMAIN] will never be played.</string>
+  <string name="MediaFilterAudioContentUrlAlwaysAllowed">Audio from the URL [MEDIAURL] will always be played.</string>
+  <string name="MediaFilterAudioContentUrlAlwaysBlocked">Audio from the URL [MEDIAURL] will never be played.</string>
+
+  <string name="MediaFilterSharedMediaContentBlocked">Shared Media from the domain [DOMAIN] has been blocked.</string>
+  <string name="MediaFilterSharedMediaContentDomainAlwaysAllowed">Shared Media from the domain [DOMAIN] will always be played.</string>
+  <string name="MediaFilterSharedMediaContentDomainAlwaysBlocked">Shared Media from the domain [DOMAIN] will never be played.</string>
+  <string name="MediaFilterSharedMediaContentUrlAlwaysAllowed">Shared Media from the URL [MEDIAURL] will always be played.</string>
+  <string name="MediaFilterSharedMediaContentUrlAlwaysBlocked">Shared Media from the URL [MEDIAURL] will never be played.</string>
+ 
+  <!-- Replacement for hardcoded UI strings -->
+  <string name="UnknownRegion">(unknown region)</string>
+  <string name="UnknownPosition">(unknown position)</string>
+
+  <!-- CmdLine Response Strings-->
+  <!--<FS:HG> FIRE-6340, FIRE-6567 - Setting Bandwidth issues-->
+  <string name="FSCmdLineRSP">Maximum bandwidth set to [VALUE] KBPS.</string>
+  <!--</FS:HG> FIRE-6340, FIRE-6567 - Setting Bandwidth issues-->
+  
+  <!-- NetMap double click action tooltip messages -->
+  <string name="NetMapDoubleClickShowWorldMapToolTipMsg">[AGENT][REGION](Double-click to open Map, shift-drag to pan)</string>
+  <string name="NetMapDoubleClickTeleportToolTipMsg">[REGION](Double-click to teleport, shift-drag to pan)</string>
+  <string name="NetMapDoubleClickNoActionToolTipMsg">[REGION]</string>
+
+  <!-- Nearby Chat Collision Messages -->
+  <string name="Collision_Bump">[NAME] bumped you.</string>
+  <string name="Collision_PushObject">[NAME] pushed you with a script.</string>
+  <string name="Collision_ObjectCollide">[NAME] hit you with an object.</string>
+  <string name="Collision_ScriptedObject">[NAME] hit you with a scripted object.</string>
+  <string name="Collision_PhysicalObject">[NAME] hit you with a physical object.</string>
+  <string name="Collision_UnknownType">[NAME] caused a collision of unknown type.</string>
+
+  <string name="BusyResponse">busy reponse</string>
+  
+  <string name="TeleportMaturityExceeded">The Resident cannot visit this region.</string>
+
+  <!-- Spell check settings floater -->
+  <string name="UserDictionary">[User]</string>
+  
+  <string name="LoadCameraPositionNoneSaved">No camera view has been saved yet.</string>
+  <string name="LoadCameraPositionOutsideDrawDistance">Can't restore camera view because the camera position is beyond draw distance.</string>
+
+  <string name="DrawDistanceSteppingGestureObsolete">Due to the changes in code, it is no longer necessary to use this gesture. Progressive Draw Distance stepping has been enabled.</string>
+  <string name="FSCmdLineDrawDistanceSet">Draw Distance set to [DISTANCE]m.</string>
+
+  <!-- Build types for about floater -->
+  <string name="FSWithHavok">with Havok support</string>
+  <string name="FSWithOpensim">with OpenSimulator support</string>
+    
+  <!-- Firestorm search -->
+  <string name="not_found">&apos;[TEXT]&apos; not found</string>
+  <string name="no_results">No results</string>
+  <string name="searching">Searching...</string>
+  <string name="all_categories">All Categories</string>
+  <string name="search_banned">Some terms in your search query were excluded due to content restrictions as clarified in the Community Standards.</string>
+  <string name="search_short">Your search terms were too short so no search was performed.</string>
+  <string name="search_disabled">Legacy Search has been disabled in this region.</string>
+  
+  <string name="render_quality_low">Low (1/7)</string>
+  <string name="render_quality_mediumlow">Medium-Low (2/7)</string>
+  <string name="render_quality_medium">Medium (3/7)</string>
+  <string name="render_quality_mediumhigh">Medium-High (4/7)</string>
+  <string name="render_quality_high">High (5/7)</string>
+  <string name="render_quality_highultra">High-Ultra (6/7)</string>
+  <string name="render_quality_ultra">Ultra (7/7)</string>
+  <string name="render_quality_unknown">Unknown, beyond the normal range, check RenderQualityPerformance debug setting</string>
+
+  <string name="qtool_busy">Please wait, the align tool is busy working.</string>
+  <string name="qtool_still_busy">Please continue to wait, the align tool is still working.</string>
+  <string name="qtool_done">The align tool has finished.</string>
+
+  <string name="fsbridge_no_library">Firestorm could not create an LSL bridge. Please enable your library and relog.</string>
+  <string name="fsbridge_already_creating">Bridge creation in process, cannot start another. Please wait a few minutes before trying again.</string>
+  <string name="fsbridge_creating">Creating the bridge. This might take a moment, please wait.</string>
+  <string name="fsbridge_failure_creation_bad_name">Bridge not created. The bridge is named incorrectly. Please try to recreate the bridge.</string>
+  <string name="fsbridge_failure_creation_null">Bridge not created. The bridge couldn't be found in inventory. Please try to recreate the bridge.</string>
+  <string name="fsbridge_failure_attach_wrong_object">Bridge failed to attach. This is not the current bridge version. Please try to recreate the bridge.</string>
+  <string name="fsbridge_failure_attach_wrong_location">Bridge failed to attach. The bridge wasn't found in the right inventory location. Please try to recreate the bridge.</string>
+  <string name="fsbridge_failure_attach_point_in_use">Bridge failed to attach. Something else was using the bridge attachment point. Please try to recreate the bridge.</string>
+  <string name="fsbridge_failure_not_found">The bridge object could not be found. Cannot proceed with its creation, exiting.</string>
+  <string name="fsbridge_warning_unexpected_items">The bridge inventory contains unexpected items.</string>
+  <string name="fsbridge_warning_not_finished">The bridge has not finished creating, you may need to recreate it before using.</string>
+  <string name="fsbridge_detached">Bridge detached.</string>
+  <string name="fsbridge_created">Bridge created.</string>
+</strings>

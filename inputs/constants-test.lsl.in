@@ -1,0 +1,96 @@
+/*
+constants-test.lsl.in - This is a LSL2dfg.py input file for the constantvalues.py output module
+
+(C) Copyright 2013 Sei Lisa.
+Sei Lisa is the author's username in the Second Life online virtual world.
+
+This file is part of LSL2 Derived Files Generator.
+
+   LSL2 Derived Files Generator is free software: you can redistribute it
+   and/or modify it under the terms of the GNU Lesser General Public License
+   as published by the Free Software Foundation, either version 3 of the
+   License, or (at your option) any later version.
+
+   LSL2 Derived Files Generator is distributed in the hope that it will be
+   useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public License
+   along with LSL2 Derived Files Generator. If not, see
+   <http://www.gnu.org/licenses/>.
+
+Second Life is a trademark of Linden Research, Inc.
+
+
+This script checks the values of the actual constants against those reported by the database.
+The function c() does the actual check. Parameter is a strided list containing:
+  database value, actual value, "constant name"
+Example:
+  c([0,FALSE,"FALSE"
+    ,1,TRUE,"TRUE"
+    ,"00000000-0000-0000-0000-000000000000",NULL_KEY,"NULL_KEY"
+    ,<0.0, 0.0, 0.0>,ZERO_VECTOR,"ZERO_VECTOR"
+    ]);
+*/
+
+integer errors;
+
+c(list elements)
+{
+    integer i;
+    integer nparams = llGetListLength(elements);
+    while (i < nparams)
+    {
+        integer typ = llGetListEntryType(elements, i);
+        string ident = llList2String(elements, i+2);
+        if (typ != llGetListEntryType(elements, i+1))
+        {
+            errors = TRUE;
+            llOwnerSay("Type mismatch in " + ident + ": type in database is " + (string)llGetListEntryType(elements, 1) + ", should be " + (string)typ);
+        }
+        else if (typ == TYPE_FLOAT)
+        {
+            if (llList2Float(elements, i) != llList2Float(elements, i+1))
+            {
+                errors = TRUE;
+                llOwnerSay("Float constant value mismatch in " + ident);
+            }
+        }
+        else if (typ == TYPE_VECTOR)
+        {
+            if (llList2Vector(elements, i) != llList2Vector(elements, i+1))
+            {
+                errors = TRUE;
+                llOwnerSay("Vector constant value mismatch in " + ident);
+            }
+        }
+        else if (typ == TYPE_ROTATION)
+        {
+            if (llList2Rot(elements, i) != llList2Rot(elements, i+1))
+            {
+                errors = TRUE;
+                llOwnerSay("Rotation constant value mismatch in " + ident);
+            }
+        }
+        // The rest transform to string losslessly
+        else if (llList2String(elements, i) != llList2String(elements, i+1))
+        {
+                errors = TRUE;
+                llOwnerSay("Constant value mismatch in " + ident);
+        }
+        i+=3;
+    }
+}
+
+default
+{
+    state_entry()
+    {
+<<< LSL KEYWORDS >>>
+        if (errors)
+            llOwnerSay("Finished with errors.");
+        else
+            llOwnerSay("Finished successfully.");
+    }
+}

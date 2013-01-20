@@ -1,0 +1,10 @@
+syntax: glob
+
+*~
+*.pyc
+*.bak
+*.bak?
+*.bak??
+misc/
+database/kwdb.dtd
+database/nulldb.xml

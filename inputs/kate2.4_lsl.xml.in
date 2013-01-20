@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language name="LSL" version="1.0" kateversion="2.4" section="Sources" extensions="*.lsl" mimetype="" priority="5">
+
+	<highlighting>
+<<< LSL KEYWORDS >>>
+		<contexts>
+			<context attribute="Normal Text" lineEndContext="#stay" name="Normal">
+				<DetectSpaces />
+				<RegExpr attribute="Preprocessor" context="Outscoped" String="#\s*if\s+0" beginRegion="Outscoped" firstNonSpace="true" />
+				<DetectChar attribute="Preprocessor" context="Preprocessor" char="#" firstNonSpace="true" />
+				<StringDetect attribute="Region Marker" context="Region Marker" String="//BEGIN" beginRegion="Region1" firstNonSpace="true" />
+				<StringDetect attribute="Region Marker" context="Region Marker" String="//END" endRegion="Region1" firstNonSpace="true" />
+				<keyword attribute="Keyword" context="#stay" String="keywords"/>
+				<keyword attribute="Function" context="#stay" String="functions"/>
+				<keyword attribute="Constant" context="#stay" String="constants"/>
+				<keyword attribute="Data Type" context="#stay" String="types"/>
+				<keyword attribute="Event" context="#stay" String="events"/>
+				<DetectIdentifier />
+				<DetectChar attribute="Symbol" context="#stay" char="{" beginRegion="Brace1" />
+				<DetectChar attribute="Symbol" context="#stay" char="}" endRegion="Brace1" />
+				<Float attribute="Float" context="#stay">
+					<AnyChar String="fF" attribute="Float" context="#stay"/>
+				</Float>
+				<HlCHex attribute="Hex" context="#stay"/>
+				<Int attribute="Decimal" context="#stay"/>
+				<DetectChar attribute="String" context="String" char="&quot;"/>
+				<DetectChar attribute="Label" context="#stay" char="@"/>
+				<IncludeRules context="##Doxygen" />
+				<Detect2Chars attribute="Comment" context="Commentar 1" char="/" char1="/"/>
+				<Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*" beginRegion="Comment"/>
+				<AnyChar attribute="Symbol" context="#stay" String=":!%&amp;()+,-/.*&lt;=&gt;?[]|~^;"/>
+			</context>
+			<context attribute="String" lineEndContext="#stay" name="String">
+				<LineContinue attribute="String" context="#stay"/>
+				<HlCStringChar attribute="String Char" context="#stay"/>
+				<DetectChar attribute="String" context="#pop" char="&quot;"/>
+			</context>
+			<context attribute="Region Marker" lineEndContext="#pop" name="Region Marker">
+			</context>
+			<context attribute="Comment" lineEndContext="#pop" name="Commentar 1">
+				<IncludeRules context="##Alerts" />
+			</context>
+			<context attribute="Comment" lineEndContext="#stay" name="Commentar 2">
+				<Detect2Chars attribute="Comment" context="#pop" char="*" char1="/" endRegion="Comment"/>
+				<IncludeRules context="##Alerts" />
+			</context>
+			<context attribute="Preprocessor" lineEndContext="#pop" name="Preprocessor">
+				<LineContinue attribute="Preprocessor" context="#stay"/>
+				<RegExpr attribute="Preprocessor" context="Define" String="define.*((?=\\))"/>
+				<RegExpr attribute="Preprocessor" context="#stay" String="define.*"/>
+				<RangeDetect attribute="Prep. Lib" context="#stay" char="&quot;" char1="&quot;"/>
+				<RangeDetect attribute="Prep. Lib" context="#stay" char="&lt;" char1="&gt;"/>
+				<IncludeRules context="##Doxygen" />
+				<Detect2Chars attribute="Comment" context="Commentar/Preprocessor" char="/" char1="*" beginRegion="Comment2"/>
+			</context>
+			<context attribute="Preprocessor" lineEndContext="#pop" name="Define">
+				<LineContinue attribute="Preprocessor" context="#stay"/>
+			</context>
+			<context attribute="Comment" lineEndContext="#stay" name="Commentar/Preprocessor">
+				<Detect2Chars attribute="Comment" context="#pop" char="*" char1="/" endRegion="Comment2" />
+			</context>
+			<context attribute="Comment" lineEndContext="#stay" name="Outscoped" >
+				<DetectSpaces />
+				<IncludeRules context="##Alerts" />
+				<DetectIdentifier />
+				<DetectChar attribute="String" context="String" char="&quot;"/>
+				<IncludeRules context="##Doxygen" />
+				<Detect2Chars attribute="Comment" context="Commentar 1" char="/" char1="/"/>
+				<Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*" beginRegion="Comment"/>
+				<RegExpr attribute="Comment" context="Outscoped intern" String="#\s*if" beginRegion="Outscoped" firstNonSpace="true" />
+				<RegExpr attribute="Preprocessor" context="#pop" String="#\s*(endif|else|elif)" endRegion="Outscoped" firstNonSpace="true" />
+			</context>
+			<context attribute="Comment" lineEndContext="#stay" name="Outscoped intern">
+				<DetectSpaces />
+				<IncludeRules context="##Alerts" />
+				<DetectIdentifier />
+				<DetectChar attribute="String" context="String" char="&quot;"/>
+				<IncludeRules context="##Doxygen" />
+				<Detect2Chars attribute="Comment" context="Commentar 1" char="/" char1="/"/>
+				<Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*" beginRegion="Comment"/>
+				<RegExpr attribute="Comment" context="Outscoped intern" String="#\s*if" beginRegion="Outscoped" firstNonSpace="true" />
+				<RegExpr attribute="Comment" context="#pop" String="#\s*endif" endRegion="Outscoped" firstNonSpace="true" />
+			</context>
+		</contexts>
+		<itemDatas>
+			<itemData name="Normal Text"  defStyleNum="dsNormal"/>
+			<itemData name="Keyword"      defStyleNum="dsKeyword"     color="#0000FF" />
+			<itemData name="Data Type"    defStyleNum="dsDataType"    color="#408040" />
+			<itemData name="Function"     defStyleNum="dsFunction"    color="#A80040" />
+			<itemData name="Constant"     defStyleNum="dsConstant"    color="#0000C0" />
+			<itemData name="Decimal"      defStyleNum="dsDecVal"/>
+			<itemData name="Event"        defStyleNum="dsEvent"       color="#3070C0" />
+			<itemData name="Hex"          defStyleNum="dsBaseN"/>
+			<itemData name="Float"        defStyleNum="dsFloat"/>
+			<itemData name="Label"        defStyleNum="dsChar" />
+			<itemData name="String"       defStyleNum="dsString"      color="#A020A0" />
+			<itemData name="String Char"  defStyleNum="dsChar"/>
+			<itemData name="Comment"      defStyleNum="dsComment"/>
+			<itemData name="Symbol"       defStyleNum="dsNormal"/>
+			<itemData name="Preprocessor" defStyleNum="dsOthers"/>
+			<itemData name="Prep. Lib"    defStyleNum="dsOthers"/> <!--,Qt::darkYellow,Qt::yellow,false,false)); -->
+			<itemData name="Alert"        defStyleNum="dsAlert" />
+			<itemData name="Region Marker" defStyleNum="dsRegionMarker" />
+		</itemDatas>
+	</highlighting>
+	<general>
+		<comments>
+			<comment name="singleLine" start="//" />
+		</comments>
+		<keywords casesensitive="1" />
+	</general>
+</language>
