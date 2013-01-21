@@ -196,7 +196,6 @@ class LSLDefinitionLoader(saxutils.DefaultHandler):
 
   def startElement(self, tag, attrs):
 
-    #print "Name:", name
     self.lasttag = tag
 
     if tag == "keywords":
@@ -377,7 +376,7 @@ def loadXML(filename, grids, unique):
   defaults = dochandler.defaults
   if "default" not in defaults:
     if defaultlang in defaults:
-      # Use US English as default if it exists
+      # Use default if it exists
       defaults["default"] = defaults[defaultlang]
     else:
       defaults["default"] = ""
@@ -398,7 +397,7 @@ Parameters:
   -d, --database=xxx
                 Database file to use.
   -f, --format=xxx
-                Output format (a module name from the lsloutputs subdir, without the path or the .py extension)
+                Output format (a module name from the lsloutputs subdir, without the path or the .py extension).
   -g, --grids=xxx,yyy,...
                 Grids to include or exclude in the output. If the grid is prefixed with a dash (-), exclude it. For example, --grids=sl,-os will include all identifiers that (implicitly or explicitly) have 'sl' as grid, then exclude all identifiers that have 'os' as grid. Default is to include all from all grids, which is rarely useful actually.
   -h, --help
@@ -482,7 +481,8 @@ try:
   if argversion:
     print "LSL2 Derived Files Generator version: " + version
     if argdatabase is not None:
-      document = loadXML(argdatabase, arggrids, argunique)
+
+      document = loadXML(argdatabase, ["-sl","-os","-aa"], True)
       print "Database version: " + document[2]
 
   if not arghelp and not argversion:
