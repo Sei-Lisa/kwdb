@@ -165,7 +165,7 @@ import getopt
 from xml import sax
 from xml.sax import saxutils
 
-version = "0.0.20130101000"
+version = "0.0.20130125000"
 defaultlang = "en"
 defaulttag = "LSL"
 
@@ -253,7 +253,7 @@ class LSLDefinitionLoader(saxutils.DefaultHandler):
         self.in_desc = True
         self.descstr = ""
         self.descattrs = {}
-        for attr in ("lang"):
+        for attr in ("lang",):
           if attrs.has_key(attr):
             self.descattrs[attr] = attrs.get(attr)
       else:
