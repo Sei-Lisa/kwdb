@@ -29,7 +29,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20130101000"
+  version = "0.0.20130129000"
 
   if outfilename is not None:
     outf = open(outfilename, "w")
@@ -43,14 +43,11 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
 
     for element in document:
       if element['cat'] == 'constant':
-        name = element['name']
         val = element['value']
-        qval = val.replace('\\', '\\\\').replace('\n', '\\n').replace('"', '\\"')
-
         if element['type'] == 'string':
-          outf.write('%s="%s"\n' % (name, qval))
-        else:
-          outf.write('%s=%s\n' % (name, val))
+          val = '"' + val.replace('\\', '\\\\').replace('\n', '\\n').replace('"', '\\"') + '"'
+
+        outf.write('%s=%s\n' % (element['name'], val))
 
   finally:
     if outfilename is not None:
