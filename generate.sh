@@ -64,3 +64,7 @@ dfg -f constantshs -g sl -i inputs/Constants.hs.in \
                         -o outputs/Constants.hs.out \
  && replace_if_different   outputs/Constants.hs.out \
                            outputs/Constants.hs
+
+dfg -f builtinstxt -g sl -o outputs/builtins.txt.out \
+ && replace_if_different    outputs/builtins.txt.out \
+                            outputs/builtins.txt
