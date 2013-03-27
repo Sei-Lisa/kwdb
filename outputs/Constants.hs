@@ -468,6 +468,7 @@ allConstants = [
     Constant "PERMISSION_CHANGE_PERMISSIONS" (IVal 0x200),
     Constant "PERMISSION_CONTROL_CAMERA" llcPermissionControlCamera,
     Constant "PERMISSION_DEBIT" llcPermissionDebit,
+    Constant "PERMISSION_OVERRIDE_ANIMATIONS" (IVal 0x8000),
     Constant "PERMISSION_RELEASE_OWNERSHIP" (IVal 0x40),
     Constant "PERMISSION_REMAP_CONTROLS" (IVal 0x8),
     Constant "PERMISSION_SILENT_ESTATE_MANAGEMENT" (IVal 0x4000),

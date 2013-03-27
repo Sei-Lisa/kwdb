@@ -86,7 +86,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130101000">
+<keywords version="0.0.20130327000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -522,6 +522,12 @@ Passed to llRequestPermissions library function to request permission to telepor
   <constant name="PERMISSION_SILENT_ESTATE_MANAGEMENT" type="integer" value="0x4000" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PERMISSION_OVERRIDE_ANIMATIONS" type="integer" value="0x8000" grid="sl">
+    <description lang="en">
+Passed to llRequestPermissions library function to request permission to override animations
     </description>
   </constant>
 
@@ -8896,6 +8902,28 @@ Returns a list of position vectors indicating pathfinding waypoints between posi
     <description lang="en"><!--
 float llGetSimStats(integer stat_type)-->
 Returns the value of a particular simulator statistic.
+    </description>
+  </function>
+
+  <function name="llSetAnimationOverride" grid="sl">
+    <param type="string" name="anim_state"/>
+    <param type="string" name="anim"/>
+    <description lang="en">
+Set the animation that will play for the given animation state. Requires PERMISSION_OVERRIDE_ANIMATIONS.
+    </description>
+  </function>
+
+  <function name="llGetAnimationOverride" type="string" grid="sl">
+    <param type="string" name="anim_state"/>
+    <description lang="en">
+Get the name of the animation currently set for the given animation state. Requires either PERMISSION_OVERRIDE_ANIMATIONS or PERMISSION_TRIGGER_ANIMATION.
+    </description>
+  </function>
+
+  <function name="llResetAnimationOverride" grid="sl">
+    <param type="string" name="anim_state"/>
+    <description lang="en">
+Resets the animation for the given animation state to the default. The special value "ALL" will reset the animations for all states. Requires PERMISSION_OVERRIDE_ANIMATIONS.
     </description>
   </function>
 

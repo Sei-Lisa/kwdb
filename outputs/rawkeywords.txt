@@ -60,6 +60,7 @@ PERMISSION_TRACK_CAMERA
 PERMISSION_CONTROL_CAMERA
 PERMISSION_TELEPORT
 PERMISSION_SILENT_ESTATE_MANAGEMENT
+PERMISSION_OVERRIDE_ANIMATIONS
 PERMISSION_COMBAT
 DEBUG_CHANNEL
 PUBLIC_CHANNEL
@@ -1290,6 +1291,9 @@ llEvade
 llGetClosestNavPoint
 llGetStaticPath
 llGetSimStats
+llSetAnimationOverride
+llGetAnimationOverride
+llResetAnimationOverride
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted

@@ -78,6 +78,7 @@ float llGetAlpha( integer face )
 float llGetAndResetTime(  )
 string llGetAnimation( key id )
 list llGetAnimationList( key id )
+string llGetAnimationOverride( string anim_state )
 integer llGetAttached(  )
 list llGetBoundingBox( key object )
 vector llGetCameraPos(  )
@@ -272,6 +273,7 @@ key llRequestSecureURL(  )
 key llRequestSimulatorData( string simulator, integer data )
 key llRequestURL(  )
 key llRequestUsername( key id )
+void llResetAnimationOverride( string anim_state )
 void llResetLandBanList(  )
 void llResetLandPassList(  )
 void llResetOtherScript( string name )
@@ -303,6 +305,7 @@ void llSensorRemove(  )
 void llSensorRepeat( string name, key id, integer type, float range, float arc, float rate )
 void llSetAlpha( float alpha, integer face )
 void llSetAngularVelocity( vector angular_velocity, integer local )
+void llSetAnimationOverride( string anim_state, string anim )
 void llSetBuoyancy( float buoyancy )
 void llSetCameraAtOffset( vector offset )
 void llSetCameraEyeOffset( vector offset )
@@ -712,6 +715,7 @@ const integer PERMISSION_CHANGE_LINKS = 0x80
 const integer PERMISSION_CHANGE_PERMISSIONS = 0x200
 const integer PERMISSION_CONTROL_CAMERA = 0x800
 const integer PERMISSION_DEBIT = 0x2
+const integer PERMISSION_OVERRIDE_ANIMATIONS = 0x8000
 const integer PERMISSION_RELEASE_OWNERSHIP = 0x40
 const integer PERMISSION_REMAP_CONTROLS = 0x8
 const integer PERMISSION_SILENT_ESTATE_MANAGEMENT = 0x4000

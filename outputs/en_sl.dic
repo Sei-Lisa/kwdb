@@ -1,4 +1,4 @@
-11161
+11165
 rez
 slex
 slutorial
@@ -10213,6 +10213,7 @@ llGetAlpha
 llGetAndResetTime
 llGetAnimation
 llGetAnimationList
+llGetAnimationOverride
 llGetAttached
 llGetBoundingBox
 llGetCameraPos
@@ -10398,6 +10399,7 @@ llRequestSecureURL
 llRequestSimulatorData
 llRequestURL
 llRequestUsername
+llResetAnimationOverride
 llResetLandBanList
 llResetLandPassList
 llResetOtherScript
@@ -10428,6 +10430,7 @@ llSensorRemove
 llSensorRepeat
 llSetAlpha
 llSetAngularVelocity
+llSetAnimationOverride
 llSetBuoyancy
 llSetCameraAtOffset
 llSetCameraEyeOffset
@@ -10862,6 +10865,7 @@ PERMISSION_ATTACH
 PERMISSION_CHANGE_LINKS
 PERMISSION_CONTROL_CAMERA
 PERMISSION_DEBIT
+PERMISSION_OVERRIDE_ANIMATIONS
 PERMISSION_SILENT_ESTATE_MANAGEMENT
 PERMISSION_TAKE_CONTROLS
 PERMISSION_TELEPORT
