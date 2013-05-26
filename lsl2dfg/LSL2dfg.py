@@ -163,9 +163,8 @@
 import sys #, os
 import getopt
 from xml import sax
-from xml.sax import saxutils
 
-version = "0.0.20130125000"
+version = "0.0.20130526000"
 defaultlang = "en"
 defaulttag = "LSL"
 
@@ -174,7 +173,11 @@ class LSLXMLException(sax.SAXParseException):
     super(LSLXMLException, self).__init__(self, text, self, locator)
 
 
-class LSLDefinitionLoader(saxutils.DefaultHandler):
+class LSLXMLDefaultHandler(sax.handler.EntityResolver, sax.handler.DTDHandler,
+                           sax.handler.ContentHandler, sax.handler.ErrorHandler):
+  pass
+
+class LSLDefinitionLoader(LSLXMLDefaultHandler):
 
   def __init__(self, grids, unique):
     self.grids = grids
@@ -491,6 +494,9 @@ try:
       raise Exception("No --database specified.")
 
     if argvalidatedtd:
+     if True: # We don't validate the DTD at the moment (FIXME)
+      print "WARNING: DTD validation is disabled."
+     else: # Disable the validation code
       from xml.parsers.xmlproc import xmlproc
       from xml.parsers.xmlproc import xmlval
 
