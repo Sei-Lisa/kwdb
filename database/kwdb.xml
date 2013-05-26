@@ -86,7 +86,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130526000">
+<keywords version="0.0.20130526001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -4323,49 +4323,49 @@ Used with http_request when a public URL is not available
     </description>
   </constant>
 
-  <constant name="JSON_INVALID" type="string" value="&#xFDD0;">
+  <constant name="JSON_INVALID" type="string" value="&#xFDD0;" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_OBJECT" type="string" value="&#xFDD1;">
+  <constant name="JSON_OBJECT" type="string" value="&#xFDD1;" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_ARRAY" type="string" value="&#xFDD2;">
+  <constant name="JSON_ARRAY" type="string" value="&#xFDD2;" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_NUMBER" type="string" value="&#xFDD3;">
+  <constant name="JSON_NUMBER" type="string" value="&#xFDD3;" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_STRING" type="string" value="&#xFDD4;">
+  <constant name="JSON_STRING" type="string" value="&#xFDD4;" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_NULL" type="string" value="&#xFDD5;">
+  <constant name="JSON_NULL" type="string" value="&#xFDD5;" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_TRUE" type="string" value="&#xFDD6;">
+  <constant name="JSON_TRUE" type="string" value="&#xFDD6;" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_FALSE" type="string" value="&#xFDD7;">
+  <constant name="JSON_FALSE" type="string" value="&#xFDD7;" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
