@@ -30,7 +30,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20130129000"
+  version = "0.0.20130526000"
 
   def print_function_or_event(element):
     if element["cat"] in ("function", "event"):
@@ -52,7 +52,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
           func = func + param["type"] + " " + param["name"]
       func = func + " )\n"
 
-      outf.write(func)
+      outf.write(func.encode('utf8'))
 
 
   if outfilename is not None:
@@ -88,7 +88,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
       if element['type'] in ('string', 'key'):
         val = '"' + val.replace('\\', '\\\\').replace('\n', '\\n').replace('"', '\\"') + '"'
 
-      outf.write('const %s %s = %s\n' % (element['type'], element['name'], val))
+      outf.write(('const %s %s = %s\n' % (element['type'], element['name'], val)).encode('utf8'))
 
     for element in events:
       print_function_or_event(element)

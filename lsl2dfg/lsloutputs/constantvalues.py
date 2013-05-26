@@ -29,7 +29,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20130129000"
+  version = "0.0.20130526000"
 
   if outfilename is not None:
     outf = open(outfilename, "w")
@@ -47,7 +47,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
         if element['type'] == 'string':
           val = '"' + val.replace('\\', '\\\\').replace('\n', '\\n').replace('"', '\\"') + '"'
 
-        outf.write('%s=%s\n' % (element['name'], val))
+        outf.write(('%s=%s\n' % (element['name'], val)).encode('utf8'))
 
   finally:
     if outfilename is not None:

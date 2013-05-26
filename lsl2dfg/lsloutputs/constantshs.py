@@ -38,7 +38,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
     # though it can be written as SQRT2 to avoid that problem
     return re.sub('([A-Z0-9])_(?:(?=[A-Z0-9]_)|(?=[A-Z0-9]$))', '\\1', re.sub('([A-Z0-9])', '_\\1', arg))[1:].upper()
 
-  version = "0.0.20130101000"
+  version = "0.0.20130526000"
 
   document.sort(lambda x,y: cmp(x["name"],y["name"]))
 
@@ -82,14 +82,14 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
     for line in inputlines:
       if not line.startswith("<<< %s KEYWORDS >>>" % tag):
         if newline != "":
-          outf.write(newline + "\n")
+          outf.write(newline.encode('utf8') + "\n")
           newline = ""
-        outf.write(line)
+        outf.write(line.encode('utf8'))
       else:
         for element in document:
           if element["cat"] == "constant":
             if newline != "":
-              outf.write(newline + ",\n")
+              outf.write(newline.encode('utf8') + ",\n")
               newline = ""
 
             # Special case
@@ -119,7 +119,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
               newline = '    Constant "%s" (%sVal %s)' % (element["name"], element["type"][0].upper(), value)
 
     if newline != "":
-      outf.write(newline + "\n")
+      outf.write(newline.encode('utf8') + "\n")
 
   finally:
     if outfilename is not None:
