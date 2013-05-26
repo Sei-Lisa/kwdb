@@ -75,9 +75,15 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
               fmtstr = '"%(qval)s",%(name)s,"%(name)s"\n'
             else:
               fmtstr = '%(val)s,%(name)s,"%(name)s"\n'
-            outf.write((fmtstr % {'name': name, 'val': val, 'qval': qval}).encode('utf8'))
+            
+            try:
+              outf.write((fmtstr % {'name': name, 'val': val, 'qval': qval}).encode('ascii'))
+            except UnicodeEncodeError:
+              escapeval = ''.join("%%%02X" % ord(c) for c in val.encode('utf8'))
+              outf.write('llUnescapeURL("%(escapeval)s"),%(name)s,"%(name)s"\n' % {'name': name, 'escapeval': escapeval})
+
             count = count + 1
-            if count >= 50: # long enough to save memory and short enough for the sublists to fit in memory
+            if count >= 30: # long enough to save memory and short enough for the sublists to fit in memory
               outf.write(']);\n')
               opened = False
               count = 0
