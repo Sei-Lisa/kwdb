@@ -221,12 +221,17 @@
 			<item> llInsertString </item>
 			<item> llInstantMessage </item>
 			<item> llIntegerToBase64 </item>
+			<item> llJson2List </item>
+			<item> llJsonGetValue </item>
+			<item> llJsonSetValue </item>
+			<item> llJsonValueType </item>
 			<item> llKey2Name </item>
 			<item> llLinkParticleSystem </item>
 			<item> llLinkSitTarget </item>
 			<item> llList2CSV </item>
 			<item> llList2Float </item>
 			<item> llList2Integer </item>
+			<item> llList2Json </item>
 			<item> llList2Key </item>
 			<item> llList2List </item>
 			<item> llList2ListStrided </item>
@@ -623,6 +628,14 @@
 			<item> INVENTORY_SCRIPT </item>
 			<item> INVENTORY_SOUND </item>
 			<item> INVENTORY_TEXTURE </item>
+			<item> JSON_ARRAY </item>
+			<item> JSON_FALSE </item>
+			<item> JSON_INVALID </item>
+			<item> JSON_NULL </item>
+			<item> JSON_NUMBER </item>
+			<item> JSON_OBJECT </item>
+			<item> JSON_STRING </item>
+			<item> JSON_TRUE </item>
 			<item> KFM_CMD_PAUSE </item>
 			<item> KFM_CMD_PLAY </item>
 			<item> KFM_CMD_SET_MODE </item>

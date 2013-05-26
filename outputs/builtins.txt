@@ -191,12 +191,17 @@ void llHTTPResponse( key request_id, integer status, string body )
 string llInsertString( string dst, integer position, string src )
 void llInstantMessage( key user, string message )
 string llIntegerToBase64( integer number )
+list llJson2List( string json )
+string llJsonGetValue( string json, list specifiers )
+string llJsonSetValue( string json, list specifiers, string value )
+string llJsonValueType( string json, list specifiers )
 string llKey2Name( key id )
 void llLinkParticleSystem( integer linknumber, list rules )
 void llLinkSitTarget( integer link, vector offset, rotation rot )
 string llList2CSV( list src )
 float llList2Float( list src, integer index )
 integer llList2Integer( list src, integer index )
+string llList2Json( string type, list values )
 key llList2Key( list src, integer index )
 list llList2List( list src, integer start, integer end )
 list llList2ListStrided( list src, integer start, integer end, integer stride )
@@ -591,6 +596,14 @@ const integer INVENTORY_OBJECT = 6
 const integer INVENTORY_SCRIPT = 10
 const integer INVENTORY_SOUND = 1
 const integer INVENTORY_TEXTURE = 0
+const string JSON_ARRAY = "﷒"
+const string JSON_FALSE = "﷗"
+const string JSON_INVALID = "﷐"
+const string JSON_NULL = "﷕"
+const string JSON_NUMBER = "﷓"
+const string JSON_OBJECT = "﷑"
+const string JSON_STRING = "﷔"
+const string JSON_TRUE = "﷖"
 const integer KFM_CMD_PAUSE = 2
 const integer KFM_CMD_PLAY = 0
 const integer KFM_CMD_SET_MODE = 3

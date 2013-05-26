@@ -4323,6 +4323,54 @@ Used with http_request when a public URL is not available
     </description>
   </constant>
 
+  <constant name="JSON_INVALID" type="string" value="&#xFDD0;">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_OBJECT" type="string" value="&#xFDD1;">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_ARRAY" type="string" value="&#xFDD2;">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_NUMBER" type="string" value="&#xFDD3;">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_STRING" type="string" value="&#xFDD4;">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_NULL" type="string" value="&#xFDD5;">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_TRUE" type="string" value="&#xFDD6;">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_FALSE" type="string" value="&#xFDD7;">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
 <!-- These are actually strings without a constant, returned in the transaction_result() event. Maybe one is added some day...
   <constant name="LINDENDOLLAR_ENTITYDOESNOTEXIST" type="string" value="LINDENDOLLAR_ENTITYDOESNOTEXIST"/>
   <constant name="LINDENDOLLAR_INSUFFICIENTFUNDS" type="string" value="LINDENDOLLAR_INSUFFICIENTFUNDS"/>
@@ -8966,6 +9014,46 @@ Get the name of the animation currently set for the given animation state. Requi
     <param type="string" name="anim_state"/>
     <description lang="en">
 Resets the animation for the given animation state to the default. The special value "ALL" will reset the animations for all states. Requires PERMISSION_OVERRIDE_ANIMATIONS.
+    </description>
+  </function>
+
+  <function name="llJson2List" type="list" grid="sl">
+    <param type="string" name="json"/>
+    <description lang="en">
+Converts the top level of the json string to a list
+    </description>
+  </function>
+
+  <function name="llList2Json" type="string" grid="sl">
+    <param type="string" name="type"/>
+    <param type="list" name="values"/>
+    <description lang="en">
+Converts either a strided list of key:value pairs to a JSON_OBJECT or a list of values to a JSON_ARRAY. type must be either JSON_OBJECT or JSON_ARRAY.
+    </description>
+  </function>
+
+  <function name="llJsonGetValue" type="string" grid="sl">
+    <param type="string" name="json"/>
+    <param type="list" name="specifiers"/>
+    <description lang="en">
+Gets the value indicated by specifiers from the json string
+    </description>
+  </function>
+
+  <function name="llJsonSetValue" type="string" grid="sl">
+    <param type="string" name="json"/>
+    <param type="list" name="specifiers"/>
+    <param type="string" name="value"/>
+    <description lang="en">
+Returns a new json string that is the json given with the value indicated by specifiers set to value 
+    </description>
+  </function>
+
+  <function name="llJsonValueType" type="string" grid="sl">
+    <param type="string" name="json"/>
+    <param type="list" name="specifiers"/>
+    <description lang="en">
+Returns the type constant for the value in json indicated by specifiers
     </description>
   </function>
 
