@@ -137,7 +137,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
         8 => array( // God mode\n""")
         for element in godmode:
           outf.write("            '" + element + "',\n")
-        outf.write("            ),\n");
+        outf.write("            ),\n")
 
   finally:
     if outfilename is not None:
