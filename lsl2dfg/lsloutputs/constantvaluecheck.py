@@ -29,7 +29,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20130526000"
+  version = "0.0.20130607000"
 
   if infilename is not None:
     inf = open(infilename, "r")
@@ -83,7 +83,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
               outf.write('llUnescapeURL("%(escapeval)s"),%(name)s,"%(name)s"\n' % {'name': name, 'escapeval': escapeval})
 
             count = count + 1
-            if count >= 30: # long enough to save memory and short enough for the sublists to fit in memory
+            if count >= 20: # long enough to save memory and short enough for the sublists to fit in memory
               outf.write(']);\n')
               opened = False
               count = 0
