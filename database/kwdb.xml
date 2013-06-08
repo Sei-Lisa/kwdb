@@ -86,7 +86,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130607000">
+<keywords version="0.0.20130608000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -1716,13 +1716,13 @@ Passed to llRequestSimulatorData to get the release of a simulator
     </description>
   </constant>
 
-  <constant name="PAYMENT_INFO_ON_FILE" type="integer" value="1" grid="sl aa">
+  <constant name="PAYMENT_INFO_ON_FILE" type="integer" value="0x1" grid="sl aa">
     <description lang="en">
 Used with llRequestAgentData to tell if Agent is of "Payment Info On File" status
     </description>
   </constant>
 
-  <constant name="PAYMENT_INFO_USED" type="integer" value="2" grid="sl aa">
+  <constant name="PAYMENT_INFO_USED" type="integer" value="0x2" grid="sl aa">
     <description lang="en">
 Used with llRequestAgentData to tell if Agent is of "Payment Info Used" status
     </description>
@@ -2180,7 +2180,7 @@ Followed by a key/string texture uuid, and one of PRIM_SCULPT_TYPE_SPHERE, PRIM_
     </description>
   </constant>
 
-  <constant name="PRIM_HOLE_DEFAULT" type="integer" value="0">
+  <constant name="PRIM_HOLE_DEFAULT" type="integer" value="0x0">
     <description lang="en">
 Sets hole type to match the prim type
     </description>
@@ -2828,7 +2828,7 @@ Used with llGetParcelFlags to find if a parcel only allows group (and owner) obj
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_ALLOW_DAMAGE" type="integer" value="1">
+  <constant name="REGION_FLAG_ALLOW_DAMAGE" type="integer" value="0x00000001">
     <description lang="en">
 Used with llGetRegionFlags to find if a region is entirely damage enabled
     </description>
@@ -3199,7 +3199,7 @@ Used with ll{Get,Set}PrimMediaParams, a PRIM_MEDIA_CONTROLS value meaning "mini 
     </description>
   </constant>
 
-  <constant name="PRIM_MEDIA_PERM_NONE" type="integer" value="0">
+  <constant name="PRIM_MEDIA_PERM_NONE" type="integer" value="0x0">
     <description lang="en">
 Used with ll{Get,Set}PrimMediaParams, a PRIM_MEDIA_PERMS_INTERACT or PRIM_MEDIA_PERMS_CONTROL bit, no permissions
     </description>
