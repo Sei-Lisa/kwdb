@@ -29,7 +29,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20130607000"
+  version = "0.0.20130611000"
 
   if infilename is not None:
     inf = open(infilename, "r")
@@ -70,17 +70,17 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
             val = element['value']
             qval = val.replace('\\', '\\\\').replace('\n', '\\n').replace('"', '\\"')
             if element['type'] == 'key':
-              fmtstr = '(key)"%(qval)s",%(name)s,"%(name)s"\n'
+              fmtstr = '(key)"%(qval)s",%(name)s\n'
             elif element['type'] == 'string':
-              fmtstr = '"%(qval)s",%(name)s,"%(name)s"\n'
+              fmtstr = '"%(qval)s",%(name)s\n'
             else:
-              fmtstr = '%(val)s,%(name)s,"%(name)s"\n'
+              fmtstr = '%(val)s,%(name)s\n'
             
             try:
               outf.write((fmtstr % {'name': name, 'val': val, 'qval': qval}).encode('ascii'))
             except UnicodeEncodeError:
               escapeval = ''.join("%%%02X" % ord(c) for c in val.encode('utf8'))
-              outf.write('llUnescapeURL("%(escapeval)s"),%(name)s,"%(name)s"\n' % {'name': name, 'escapeval': escapeval})
+              outf.write('llUnescapeURL("%(escapeval)s"),%(name)s\n' % {'name': name, 'escapeval': escapeval})
 
             count = count + 1
             if count >= 20: # long enough to save memory and short enough for the sublists to fit in memory

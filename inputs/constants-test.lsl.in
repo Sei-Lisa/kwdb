@@ -23,38 +23,50 @@ This file is part of LSL2 Derived Files Generator.
 Second Life is a trademark of Linden Research, Inc.
 
 
-This script checks the values of the actual constants against those reported by the database.
-The function c() does the actual check. Parameter is a strided list containing:
-  database value, actual value, "constant name"
+This script checks the values of the actual constants against those reported
+by the database. In case of mismatch, an error is reported together with the
+line number of the line that produced it. The function c() does the actual
+check. Parameter is a strided list containing any number of pairs with this
+structure:
+
+  database value, actual value
+
 Example:
-  c([0,FALSE,"FALSE"
-    ,1,TRUE,"TRUE"
-    ,"00000000-0000-0000-0000-000000000000",NULL_KEY,"NULL_KEY"
-    ,<0.0, 0.0, 0.0>,ZERO_VECTOR,"ZERO_VECTOR"
-    ]);
+  c([
+  0,FALSE
+  ,1,TRUE
+  ,"00000000-0000-0000-0000-000000000000",NULL_KEY
+  ,<0.0, 0.0, 0.0>,ZERO_VECTOR
+  ]);
+
+The variable "line" is initialized to the line where the LSL KEYWORDS hook is,
+plus one, following the viewer's editor line numbering convention that the
+first line is line 0, rather than the customary one where the first line is 1.
+Errors are reported using a line number that follows that same convention.
 */
 
 integer errors;
+integer line;
 
 c(list elements)
 {
     integer i;
     integer nparams = llGetListLength(elements);
+    ++line;
     while (i < nparams)
     {
         integer typ = llGetListEntryType(elements, i);
-        string ident = llList2String(elements, i+2);
         if (typ != llGetListEntryType(elements, i+1))
         {
             errors = TRUE;
-            llOwnerSay("Type mismatch in " + ident + ": type in database is " + (string)llGetListEntryType(elements, 1) + ", should be " + (string)typ);
+            llOwnerSay("Type mismatch in line " + (string)line + ": type in database is " + (string)llGetListEntryType(elements, i+1) + ", should be " + (string)typ);
         }
         else if (typ == TYPE_FLOAT)
         {
             if (llList2Float(elements, i) != llList2Float(elements, i+1))
             {
                 errors = TRUE;
-                llOwnerSay("Float constant value mismatch in " + ident);
+                llOwnerSay("Float constant value mismatch in line " + (string)line);
             }
         }
         else if (typ == TYPE_VECTOR)
@@ -62,7 +74,7 @@ c(list elements)
             if (llList2Vector(elements, i) != llList2Vector(elements, i+1))
             {
                 errors = TRUE;
-                llOwnerSay("Vector constant value mismatch in " + ident);
+                llOwnerSay("Vector constant value mismatch in line " + (string)line);
             }
         }
         else if (typ == TYPE_ROTATION)
@@ -70,23 +82,26 @@ c(list elements)
             if (llList2Rot(elements, i) != llList2Rot(elements, i+1))
             {
                 errors = TRUE;
-                llOwnerSay("Rotation constant value mismatch in " + ident);
+                llOwnerSay("Rotation constant value mismatch in line " + (string)line);
             }
         }
         // The rest transform to string losslessly
         else if (llList2String(elements, i) != llList2String(elements, i+1))
         {
                 errors = TRUE;
-                llOwnerSay("Constant value mismatch in " + ident);
+                llOwnerSay("Constant value mismatch in line " + (string)line);
         }
-        i+=3;
+        i+=2;
+        ++line;
     }
+    ++line;
 }
 
 default
 {
     state_entry()
     {
+        line = 105;
 <<< LSL KEYWORDS >>>
         if (errors)
             llOwnerSay("Finished with errors.");
