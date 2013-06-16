@@ -86,7 +86,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130608000">
+<keywords version="0.0.20130616000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -349,23 +349,21 @@ Passed in the llSetStatus library function.  If TRUE, object casts shadows on ot
     </description>
   </constant>
 
-  <constant name="AGENT" type="integer" value="0x1"> <!-- Officially
-        status="deprecated" but still in wide use; the substitutive makes no
-        sense in some contexts like when being used with llDetectedType -->
+  <constant name="AGENT" type="integer" value="0x1">
     <description lang="en">
-Passed in llSensor library function to look for other Agents; DEPRECATED - Use AGENT_BY_LEGACY_NAME
+Passed in llSensor library function to look for other Agents (by Legacy name if filtered)
     </description>
   </constant>
 
   <constant name="AGENT_BY_USERNAME" type="integer" value="0x10">
     <description lang="en">
-Passed in llSensor library function to look for other Agents by username
+Passed in llSensor library function to look for other Agents, filtering by username
     </description>
   </constant>
 
   <constant name="AGENT_BY_LEGACY_NAME" type="integer" value="0x1">
     <description lang="en">
-Passed in llSensor library function to look for other Agents by legacy name
+Passed in llSensor library function to look for other Agents, filtering by legacy name
     </description>
   </constant>
 
@@ -1686,9 +1684,9 @@ Passed to llRequestAgentData to get born on date as a string
     </description>
   </constant>
 
-  <constant name="DATA_RATING" type="integer" value="4">
+  <constant name="DATA_RATING" type="integer" value="4" status="deprecated">
     <description lang="en">
-Passed to llRequestAgentData to get a comma separated sting of integer ratings
+Passed to llRequestAgentData to get a comma separated sting of integer ratings. DEPRECATED - Ratings are no longer in use and using this value in a query always returns "0, 0, 0, 0, 0, 0".
     </description>
   </constant>
 
@@ -5798,11 +5796,12 @@ Returns the ground height below the object position + offset
     </description>
   </function>
 
-  <function name="llCloud" type="float">
+  <function name="llCloud" type="float" status="deprecated">
     <param type="vector" name="offset"/>
     <description lang="en"><!--
 float llCloud(vector offset)-->
-Returns the cloud density at the object position + offset
+Returns the cloud density at the object position + offset.
+DEPRECATED - It always returns 0.0 now
     </description>
   </function>
 
@@ -6149,7 +6148,7 @@ Returns the script time in seconds and then resets the script timer to zero
     <param type="integer" name="loop"/>
     <description lang="en"><!--
 llSound(string sound, float volume, integer queue, integer loop)-->
-Plays sound at volume and whether it should loop or not
+Plays sound at volume and whether it should loop or not. DEPRECATED - Use llPlaySound / llLoopSound / llSetSoundQueueing
     </description>
   </function>
 
@@ -6288,7 +6287,7 @@ Transfers amount of L$ from script owner to destination
     <param type="vector" name="offset"/>
     <description lang="en"><!--
 llMakeExplosion(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)-->
-Makes a round explosion of particles
+(DEPRECATED) Makes a round explosion of particles
     </description>
   </function>
 
@@ -6304,7 +6303,7 @@ Makes a round explosion of particles
     <param type="float" name="bounce_offset"/>
     <description lang="en"><!--
 llMakeFountain(integer particles, float scale, float vel, float lifetime, float arc, integer bounce, string texture, vector offset, float bounce_offset)-->
-Makes a fountain of particles
+(DEPRECATED) Makes a fountain of particles
     </description>
   </function>
 
@@ -6318,7 +6317,7 @@ Makes a fountain of particles
     <param type="vector" name="offset"/>
     <description lang="en"><!--
 llMakeSmoke(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)-->
-Makes smoke like particles
+(DEPRECATED) Makes smoke like particles
     </description>
   </function>
 
@@ -6332,7 +6331,7 @@ Makes smoke like particles
     <param type="vector" name="offset"/>
     <description lang="en"><!--
 llMakeFire(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)-->
-Makes fire like particles
+(DEPRECATED) Makes fire like particles
     </description>
   </function>
 
@@ -6540,7 +6539,7 @@ Sets the minimum time between events being handled
     <param type="string" name="sound"/>
     <description lang="en"><!--
 llSoundPreload(string sound)-->
-Preloads a sound on viewers within range
+Preloads a sound on viewers within range. DEPRECATED - Use llPreloadSound
     </description>
   </function>
 
@@ -7734,7 +7733,7 @@ Incorrectly performs an exclusive or on two Base64 strings and returns a Base64 
     </description>
   </function>
 
-  <function name="llRemoteDataSetRegion">
+  <function name="llRemoteDataSetRegion" status="deprecated">
     <description lang="en"><!--
 llRemoteDataSetRegion()-->
 DEPRECATED!  Please use llOpenRemoteDataChannel instead.

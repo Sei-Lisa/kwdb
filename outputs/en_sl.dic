@@ -1,4 +1,4 @@
-11187
+11184
 rez
 slex
 slutorial
@@ -10160,7 +10160,6 @@ llClearCameraParams
 llClearLinkMedia
 llClearPrimMedia
 llCloseRemoteDataChannel
-llCloud
 llCollisionFilter
 llCollisionSound
 llCollisionSprite
@@ -10390,7 +10389,6 @@ llRegionSayTo
 llReleaseControls
 llReleaseURL
 llRemoteDataReply
-llRemoteDataSetRegion
 llRemoteLoadScriptPin
 llRemoveFromLandBanList
 llRemoveFromLandPassList
@@ -10708,7 +10706,6 @@ DATA_BORN
 DATA_NAME
 DATA_ONLINE
 DATA_PAYINFO
-DATA_RATING
 DATA_SIM_POS
 DATA_SIM_RATING
 DATA_SIM_STATUS
