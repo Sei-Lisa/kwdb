@@ -494,25 +494,14 @@ try:
       raise Exception("No --database specified.")
 
     if argvalidatedtd:
-     if True: # We don't validate the DTD at the moment (FIXME)
-      print "WARNING: DTD validation is disabled."
-     else: # Disable the validation code
-      from xml.parsers.xmlproc import xmlproc
-      from xml.parsers.xmlproc import xmlval
+      try:
+        from lxml import etree
+      except ImportError:
+        print "lxml is necessary for DTD validation, but it is not installed or not found."
+        raise
 
-      class NullApp(xmlproc.Application):
-        def handle_start_tag(self, name, attrs):
-          pass
-        def handle_end_tag(self, name):
-          pass
-        def handle_data(self, data, start, end):
-          pass
-        def handle_comment(self, data):
-          pass
-
-      tmp = xmlval.XMLValidator()
-      tmp.set_application(NullApp())
-      tmp.parse_resource(argdatabase)
+      parser = etree.XMLParser(dtd_validation = True)
+      etree.parse(argdatabase, parser)
 
     if arggrids is not None:
       arggrids = arggrids.split(',')
