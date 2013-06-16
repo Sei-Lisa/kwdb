@@ -164,7 +164,7 @@ import sys #, os
 import getopt
 from xml import sax
 
-version = "0.0.20130526000"
+version = "0.0.20130616000"
 defaultlang = "en"
 defaulttag = "LSL"
 
