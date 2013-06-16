@@ -1686,7 +1686,7 @@ Passed to llRequestAgentData to get born on date as a string
 
   <constant name="DATA_RATING" type="integer" value="4" status="deprecated">
     <description lang="en">
-Passed to llRequestAgentData to get a comma separated sting of integer ratings. DEPRECATED - Ratings are no longer in use and using this value in a query always returns "0, 0, 0, 0, 0, 0".
+Passed to llRequestAgentData to get a comma separated sting of integer ratings. DEPRECATED - Ratings are no longer in use and using this value in a query always returns "0, 0, 0, 0, 0, 0"
     </description>
   </constant>
 
