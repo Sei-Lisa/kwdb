@@ -10027,7 +10027,7 @@ Wraps to bool Regex.IsMatch(string input, string pattern)
   </function>
 
   <function name="aaUpdateDatabase" grid="aa">
-    <param type="string" name="keyname"/> <!-- renamed from 'key' -->
+    <param type="string" name="keyname"/> <!-- renamed from 'key' which is a reserved word -->
     <param type="string" name="value"/>
     <param type="string" name="token"/>
     <description lang="en">
@@ -10036,7 +10036,7 @@ Wraps to bool Regex.IsMatch(string input, string pattern)
   </function>
 
   <function name="aaQueryDatabase" type="list" grid="aa">
-    <param type="string" name="keyname"/> <!-- renamed from 'key' -->
+    <param type="string" name="keyname"/> <!-- renamed from 'key' which is a reserved word -->
     <param type="string" name="token"/>
     <description lang="en">
 <!-- TODO: add documentation -->
