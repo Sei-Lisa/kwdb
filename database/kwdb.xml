@@ -86,7 +86,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130616000">
+<keywords version="0.0.20130619000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -526,6 +526,12 @@ Passed to llRequestPermissions library function to request permission to telepor
   <constant name="PERMISSION_OVERRIDE_ANIMATIONS" type="integer" value="0x8000" grid="sl">
     <description lang="en">
 Passed to llRequestPermissions library function to request permission to override animations
+    </description>
+  </constant>
+
+  <constant name="PERMISSION_RETURN_OBJECTS" type="integer" value="0x10000" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
     </description>
   </constant>
 
@@ -4223,6 +4229,12 @@ Triggered when a character failed to enter a parcel because it is not allowed to
     </description>
   </constant>
 
+  <constant name="CHARACTER_STAY_WITHIN_PARCEL" type="integer" value="15" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
   <constant name="SIM_STAT_PCT_CHARS_STEPPED" type="integer" value="0" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -4259,6 +4271,53 @@ Triggered when a character failed to enter a parcel because it is not allowed to
     </description>
   </constant>
 
+  <constant name="OBJECT_RETURN_PARCEL" type="integer" value="0x1" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OBJECT_RETURN_PARCEL_OWNER" type="integer" value="0x2" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OBJECT_RETURN_REGION" type="integer" value="0x4" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="ERR_GENERIC" type="integer" value="-1" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="ERR_PARCEL_PERMISSIONS" type="integer" value="-2" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="ERR_MALFORMED_PARAMS" type="integer" value="-3" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="ERR_RUNTIME_PERMISSIONS" type="integer" value="-4" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="ERR_THROTTLED" type="integer" value="-5" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
 
 
 <!-- These do not exist but are in the official viewer's keywords.ini:
@@ -4374,6 +4433,7 @@ Used with http_request when a public URL is not available
 <!-- TODO: add documentation -->
     </description>
   </constant>
+
 
 <!-- These are actually strings without a constant, returned in the transaction_result() event. Maybe one is added some day...
   <constant name="LINDENDOLLAR_ENTITYDOESNOTEXIST" type="string" value="LINDENDOLLAR_ENTITYDOESNOTEXIST"/>
@@ -9059,6 +9119,21 @@ Returns a new json string that is the json given with the value indicated by spe
     <param type="list" name="specifiers"/>
     <description lang="en">
 Returns the type constant for the value in json indicated by specifiers
+    </description>
+  </function>
+
+  <function name="llReturnObjectsById" type="integer" grid="sl">
+    <param type="list" name="objects"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llReturnObjectsByOwner" type="integer" grid="sl">
+    <param type="key" name="owner"/>
+    <param type="integer" name="scope"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
     </description>
   </function>
 
