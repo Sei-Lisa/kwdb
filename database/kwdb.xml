@@ -7585,9 +7585,9 @@ Returns the description of the prim the script is attached to
   </function>
 
   <function name="llSetObjectDesc">
-    <param type="string" name="name"/>
+    <param type="string" name="desc"/>
     <description lang="en">
-Sets the prim's description
+Sets the prim's description to desc
     </description>
   </function>
 
