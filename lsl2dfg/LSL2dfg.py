@@ -51,7 +51,7 @@
 #     [<description lang="{langcodes}"> {text} </description> ...]
 #   </defaults>
 #
-#   <keyword name="{ident}" [grid="{grid}"]>
+#   <keyword name="{ident}" [status="{normal|unimplemented}"] [grid="{grid}"]>
 #     [<description lang="{langcodes}" [other attributes?]> {text} </description> ...]
 #   </keyword>
 #
@@ -164,7 +164,7 @@ import sys #, os
 import getopt
 from xml import sax
 
-version = "0.0.20130616000"
+version = "0.0.20130619000"
 defaultlang = "en"
 defaulttag = "LSL"
 

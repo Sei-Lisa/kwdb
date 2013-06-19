@@ -28,7 +28,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20130101000"
+  version = "0.0.20130619000"
 
   keywords = []
   types = []
@@ -41,10 +41,15 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
 
   for element in document:
     if element["cat"] == "keyword":
-      if element["name"] not in ("default", "print"):
-        keywords.append(element["name"])
+      if "status" not in element or element["status"] == "normal":
+        if element["name"] not in ("default", "print"):
+          keywords.append(element["name"])
+        else:
+          functions.append(element["name"])
+      elif element["status"] in ("deprecated", "unimplemented"):
+        unimplemented.append(element["name"])
       else:
-        functions.append(element["name"])
+        raise Exception("Unknown status in '%s' keyword: %s" % (element["name"], element["status"]))
     elif element["cat"] == "type":
       types.append(element["name"])
     elif element["cat"] == "constant":

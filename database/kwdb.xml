@@ -52,7 +52,8 @@ Example: grid="os aa"
 <!ELEMENT keyword (description*)>
 <!ATTLIST keyword
           name CDATA #REQUIRED
-          grid NMTOKENS #IMPLIED>
+          grid NMTOKENS #IMPLIED
+          status (normal | unimplemented) "normal">
 <!ELEMENT type (description*)>
 <!ATTLIST type
           name ID #REQUIRED
@@ -117,7 +118,7 @@ Keyword to indicate state block or state transition
     </description>
   </keyword>
 
-  <keyword name="event" grid="sl"/>
+  <keyword name="event" status="unimplemented" grid="sl"/>
 
   <keyword name="jump">
     <description lang="en">
