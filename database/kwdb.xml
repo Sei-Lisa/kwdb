@@ -86,7 +86,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130619000">
+<keywords version="0.0.20130619001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -5491,24 +5491,21 @@ process message parameter as regex
 
   <function name="llSin" type="float">
     <param type="float" name="theta"/>
-    <description lang="en"><!--
-float llSin(float theta)-->
+    <description lang="en">
 Returns the sine of theta (theta in radians)
     </description>
   </function>
 
   <function name="llCos" type="float">
     <param type="float" name="theta"/>
-    <description lang="en"><!--
-float llCos(float theta)-->
+    <description lang="en">
 Returns the cosine of theta (theta in radians)
     </description>
   </function>
 
   <function name="llTan" type="float">
     <param type="float" name="theta"/>
-    <description lang="en"><!--
-float llTan(float theta)-->
+    <description lang="en">
 Returns the tangent of theta (theta in radians)
     </description>
   </function>
@@ -5516,16 +5513,14 @@ Returns the tangent of theta (theta in radians)
   <function name="llAtan2" type="float">
     <param type="float" name="y"/>
     <param type="float" name="x"/>
-    <description lang="en"><!--
-float llAtan2(float y, float x)-->
+    <description lang="en">
 Returns the arctangent2 of y, x
     </description>
   </function>
 
   <function name="llSqrt" type="float">
     <param type="float" name="val"/>
-    <description lang="en"><!--
-float llSqrt(float val)-->
+    <description lang="en">
 Returns the square root of val, or returns 0 and triggers a Math Error for imaginary results
     </description>
   </function>
@@ -5533,72 +5528,63 @@ Returns the square root of val, or returns 0 and triggers a Math Error for imagi
   <function name="llPow" type="float">
     <param type="float" name="base"/>
     <param type="float" name="exponent"/>
-    <description lang="en"><!--
-float llPow(float base, float exponent)-->
+    <description lang="en">
 Returns the base raised to the power exponent, or returns 0 and triggers Math Error for imaginary results
     </description>
   </function>
 
   <function name="llAbs" type="integer">
     <param type="integer" name="val"/>
-    <description lang="en"><!--
-integer llAbs(integer val)-->
+    <description lang="en">
 Returns the positive version of val
     </description>
   </function>
 
   <function name="llFabs" type="float">
     <param type="float" name="val"/>
-    <description lang="en"><!--
-float llFabs(float val)-->
+    <description lang="en">
 Returns the positive version of val
     </description>
   </function>
 
   <function name="llFrand" type="float">
     <param type="float" name="mag"/>
-    <description lang="en"><!--
-float llFrand(float mag)-->
+    <description lang="en">
 Returns a pseudo random number in the range [0,mag) or (mag,0]
     </description>
   </function>
 
   <function name="llFloor" type="integer">
     <param type="float" name="val"/>
-    <description lang="en"><!--
-integer llFloor(float val)-->
+    <description lang="en">
 Returns largest integer value &lt;= val
     </description>
   </function>
 
   <function name="llCeil" type="integer">
     <param type="float" name="val"/>
-    <description lang="en"><!--
-integer llCeil(float val)-->
+    <description lang="en">
 Returns smallest integer value &gt;= val
     </description>
   </function>
 
   <function name="llRound" type="integer">
     <param type="float" name="val"/>
-    <description lang="en"><!--
-integer llRound(float val)-->
+    <description lang="en">
 Returns val rounded to the nearest integer
     </description>
   </function>
 
   <function name="llVecMag" type="float">
     <param type="vector" name="v"/>
-    <description lang="en"><!--
-float llVecMag(vector v)-->
+    <description lang="en">
 Returns the magnitude of v
     </description>
   </function>
 
   <function name="llVecNorm" type="vector">
     <param type="vector" name="v"/>
-    <description lang="en"><!--
-vector llVecNorm(vector v)-->
+    <description lang="en">
 Returns the v normalized
     </description>
   </function>
@@ -5606,24 +5592,21 @@ Returns the v normalized
   <function name="llVecDist" type="float">
     <param type="vector" name="v1"/>
     <param type="vector" name="v2"/>
-    <description lang="en"><!--
-float llVecDist(vector v1, vector v2)-->
+    <description lang="en">
 Returns the 3D distance between v1 and v2
     </description>
   </function>
 
   <function name="llRot2Euler" type="vector">
     <param type="rotation" name="q"/>
-    <description lang="en"><!--
-vector llRot2Euler(rotation q)-->
+    <description lang="en">
 Returns the Euler representation (roll, pitch, yaw) of q
     </description>
   </function>
 
   <function name="llEuler2Rot" type="rotation">
     <param type="vector" name="v"/>
-    <description lang="en"><!--
-rotation llEuler2Rot(vector v)-->
+    <description lang="en">
 Returns the rotation representation of Euler Angles v
     </description>
   </function>
@@ -5632,32 +5615,28 @@ Returns the rotation representation of Euler Angles v
     <param type="vector" name="fwd"/>
     <param type="vector" name="left"/>
     <param type="vector" name="up"/>
-    <description lang="en"><!--
-rotation llAxes2Rot(vector fwd, vector left, vector up)-->
+    <description lang="en">
 Returns the rotation defined by the coordinate axes
     </description>
   </function>
 
   <function name="llRot2Fwd" type="vector">
     <param type="rotation" name="q"/>
-    <description lang="en"><!--
-vector llRot2Fwd(rotation q)-->
+    <description lang="en">
 Returns the forward vector defined by q
     </description>
   </function>
 
   <function name="llRot2Left" type="vector">
     <param type="rotation" name="q"/>
-    <description lang="en"><!--
-vector llRot2Left(rotation q)-->
+    <description lang="en">
 Returns the left vector defined by q
     </description>
   </function>
 
   <function name="llRot2Up" type="vector">
     <param type="rotation" name="q"/>
-    <description lang="en"><!--
-vector llRot2Up(rotation q)-->
+    <description lang="en">
 Returns the up vector defined by q
     </description>
   </function>
@@ -5665,8 +5644,7 @@ Returns the up vector defined by q
   <function name="llRotBetween" type="rotation">
     <param type="vector" name="v1"/>
     <param type="vector" name="v2"/>
-    <description lang="en"><!--
-rotation llRotBetween(vector v1, vector v2)-->
+    <description lang="en">
 Returns the rotation to rotate v1 to v2
     </description>
   </function>
@@ -5674,8 +5652,7 @@ Returns the rotation to rotate v1 to v2
   <function name="llWhisper">
     <param type="integer" name="channel"/>
     <param type="string" name="msg"/>
-    <description lang="en"><!--
-llWhisper(integer channel, string msg)-->
+    <description lang="en">
 Whispers the text of msg on channel
     </description>
   </function>
@@ -5686,8 +5663,7 @@ Whispers the text of msg on channel
   <function name="llSay">
     <param type="integer" name="channel"/>
     <param type="string" name="msg"/>
-    <description lang="en"><!--
-llSay(integer channel, string msg)-->
+    <description lang="en">
 Says the text of msg on channel
     </description>
   </function>
@@ -5695,8 +5671,7 @@ Says the text of msg on channel
   <function name="llShout">
     <param type="integer" name="channel"/>
     <param type="string" name="msg"/>
-    <description lang="en"><!--
-llShout(integer channel, string msg)-->
+    <description lang="en">
 Shouts the text of msg on channel
     </description>
   </function>
@@ -5706,8 +5681,7 @@ Shouts the text of msg on channel
     <param type="string" name="name"/>
     <param type="key" name="id"/>
     <param type="string" name="msg"/>
-    <description lang="en"><!--
-integer llListen(integer channel, string name, key id, string msg)-->
+    <description lang="en">
 Sets a callback for msg on channel from name and id (name, id, and/or msg can be empty) and returns an identifier that can be used to deactivate or remove the listen
     </description>
   </function>
@@ -5715,16 +5689,14 @@ Sets a callback for msg on channel from name and id (name, id, and/or msg can be
   <function name="llListenControl">
     <param type="integer" name="number"/>
     <param type="integer" name="active"/>
-    <description lang="en"><!--
-llListenControl(integer number, integer active)-->
+    <description lang="en">
 Makes a listen event callback active or inactive
     </description>
   </function>
 
   <function name="llListenRemove">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-llListenRemove(integer number)-->
+    <description lang="en">
 Removes listen event callback number
     </description>
   </function>
@@ -5735,8 +5707,7 @@ Removes listen event callback number
     <param type="integer" name="type"/>
     <param type="float" name="range"/>
     <param type="float" name="arc"/>
-    <description lang="en"><!--
-llSensor(string name, key id, integer type, float range, float arc)-->
+    <description lang="en">
 Performs a single scan for name and id with type (AGENT, ACTIVE, PASSIVE, and/or SCRIPTED) within range meters and arc radians of forward vector (name, id, and/or keytype can be empty or 0)
     </description>
   </function>
@@ -5748,118 +5719,103 @@ Performs a single scan for name and id with type (AGENT, ACTIVE, PASSIVE, and/or
     <param type="float" name="range"/>
     <param type="float" name="arc"/>
     <param type="float" name="rate"/>
-    <description lang="en"><!--
-llSensorRepeat(string name, key id, integer type, float range, float arc, float rate)-->
+    <description lang="en">
 Sets a callback for name and id with type (AGENT, ACTIVE, PASSIVE, and/or SCRIPTED) within range meters and arc radians of forward vector (name, id, and/or keytype can be empty or 0) and repeats every rate seconds
     </description>
   </function>
 
   <function name="llSensorRemove">
-    <description lang="en"><!--
-llSensorRemove()-->
+    <description lang="en">
 Removes the sensor setup by llSensorRepeat
     </description>
   </function>
 
   <function name="llDetectedName" type="string">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-string llDetectedName(integer number)-->
+    <description lang="en">
 Returns the name of detected object number (returns empty string if number is not a valid sensed object)
     </description>
   </function>
 
   <function name="llDetectedKey" type="key">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-key llDetectedKey(integer number)-->
+    <description lang="en">
 Returns the key of detected object number (returns empty key if number is not a valid sensed object)
     </description>
   </function>
 
   <function name="llDetectedOwner" type="key">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-key llDetectedOwner(integer number)-->
+    <description lang="en">
 Returns the key of detected object's owner (returns empty key if number is not a valid sensed object)
     </description>
   </function>
 
   <function name="llDetectedType" type="integer">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-integer llDetectedType(integer number)-->
+    <description lang="en">
 Returns the type (AGENT, ACTIVE, PASSIVE, SCRIPTED) of detected object (returns 0 if number is not a valid sensed object)
     </description>
   </function>
 
   <function name="llDetectedPos" type="vector">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-vector llDetectedPos(integer number)-->
+    <description lang="en">
 Returns the position of detected object number (returns &lt;0,0,0&gt; if number is not a valid sensed object)
     </description>
   </function>
 
   <function name="llDetectedVel" type="vector">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-vector llDetectedVel(integer number)-->
+    <description lang="en">
 Returns the velocity of detected object number (returns &lt;0,0,0&gt; if number is not a valid sensed object)
     </description>
   </function>
 
   <function name="llDetectedGrab" type="vector">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-vector llDetectedGrab(integer number)-->
+    <description lang="en">
 Returns the grab offset of the user touching object (returns &lt;0,0,0&gt; if number is not a valid sensed object)
     </description>
   </function>
 
   <function name="llDetectedRot" type="rotation">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-rotation llDetectedRot(integer number)-->
+    <description lang="en">
 Returns the rotation of detected object number (returns &lt;0,0,0,1&gt; if number is not a valid sensed object)
     </description>
   </function>
 
   <function name="llDetectedGroup" type="integer">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-integer llDetectedGroup(integer number)-->
+    <description lang="en">
 Returns TRUE if detected object is part of same group as owner
     </description>
   </function>
 
   <function name="llDetectedLinkNumber" type="integer">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-integer llDetectedLinkNumber(integer number)-->
+    <description lang="en">
 Returns the link position of the triggered event for touches and collisions only
     </description>
   </function>
 
   <function name="llDie" energy="0">
-    <description lang="en"><!--
-llDie()-->
+    <description lang="en">
 Deletes the object
     </description>
   </function>
 
   <function name="llGround" type="float">
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-float llGround(vector offset)-->
+    <description lang="en">
 Returns the ground height below the object position + offset
     </description>
   </function>
 
   <function name="llCloud" type="float" status="deprecated">
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-float llCloud(vector offset)-->
+    <description lang="en">
 Returns the cloud density at the object position + offset.
 DEPRECATED - It always returns 0.0 now
     </description>
@@ -5867,8 +5823,7 @@ DEPRECATED - It always returns 0.0 now
 
   <function name="llWind" type="vector">
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-vector llWind(vector offset)-->
+    <description lang="en">
 Returns the wind velocity at the object position + offset
     </description>
   </function>
@@ -5876,31 +5831,27 @@ Returns the wind velocity at the object position + offset
   <function name="llSetStatus">
     <param type="integer" name="status"/>
     <param type="integer" name="value"/>
-    <description lang="en"><!--
-llSetStatus(integer status, integer value)-->
+    <description lang="en">
 Sets status (STATUS_PHYSICS, STATUS_PHANTOM, STATUS_BLOCK_GRAB, STATUS_ROTATE_X, STATUS_ROTATE_Y, and/or STATUS_ROTATE_Z) to value
     </description>
   </function>
 
   <function name="llGetStatus" type="integer">
     <param type="integer" name="status"/>
-    <description lang="en"><!--
-integer llGetStatus(integer status)-->
+    <description lang="en">
 Returns value of status (STATUS_PHYSICS, STATUS_PHANTOM, STATUS_BLOCK_GRAB, STATUS_ROTATE_X, STATUS_ROTATE_Y, and/or STATUS_ROTATE_Z)
     </description>
   </function>
 
   <function name="llSetScale">
     <param type="vector" name="scale"/>
-    <description lang="en"><!--
-llSetScale(vector scale)-->
+    <description lang="en">
 Sets the scale of the prim
     </description>
   </function>
 
   <function name="llGetScale" type="vector">
-    <description lang="en"><!--
-vector llGetScale()-->
+    <description lang="en">
 Returns the scale of the prim
     </description>
   </function>
@@ -5908,16 +5859,14 @@ Returns the scale of the prim
   <function name="llSetColor">
     <param type="vector" name="color"/>
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-llSetColor(vector color, integer face)-->
+    <description lang="en">
 Sets the color on face of the prim
     </description>
   </function>
 
   <function name="llGetAlpha" type="float">
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-float llGetAlpha(integer face)-->
+    <description lang="en">
 Returns the alpha of face
     </description>
   </function>
@@ -5925,16 +5874,14 @@ Returns the alpha of face
   <function name="llSetAlpha">
     <param type="float" name="alpha"/>
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-llSetAlpha(float alpha, integer face)-->
+    <description lang="en">
 Sets the alpha on face
     </description>
   </function>
 
   <function name="llGetColor" type="vector">
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-vector llGetColor(integer face)-->
+    <description lang="en">
 Returns the color on face
     </description>
   </function>
@@ -5943,8 +5890,7 @@ Returns the color on face
   <function name="llSetTexture" delay="0.2">
     <param type="string" name="texture"/>
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-llSetTexture(string texture, integer face)-->
+    <description lang="en">
 Sets the texture of face or ALL_SIDES
     </description>
   </function>
@@ -5954,8 +5900,7 @@ Sets the texture of face or ALL_SIDES
     <param type="float" name="u"/>
     <param type="float" name="v"/>
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-llScaleTexture(float u, float v, integer face)-->
+    <description lang="en">
 Sets the texture u &amp; v scales for the chosen face or ALL_SIDES
     </description>
   </function>
@@ -5965,8 +5910,7 @@ Sets the texture u &amp; v scales for the chosen face or ALL_SIDES
     <param type="float" name="u"/>
     <param type="float" name="v"/>
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-llOffsetTexture(float u, float v, integer face)-->
+    <description lang="en">
 Sets the texture u  &amp; v offsets for the chosen face or ALL_SIDES
     </description>
   </function>
@@ -5975,16 +5919,14 @@ Sets the texture u  &amp; v offsets for the chosen face or ALL_SIDES
   <function name="llRotateTexture" delay="0.2">
     <param type="float" name="angle"/> <!-- originally the name was 'rotation' -->
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-llRotateTexture(float rotation, integer face)-->
+    <description lang="en">
 Sets the texture rotation for the chosen face
     </description>
   </function>
 
   <function name="llGetTexture" type="string">
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-string llGetTexture(integer face)-->
+    <description lang="en">
 Returns a string that is the texture on face (the inventory name if it is a texture in the prim's inventory, otherwise the key)
     </description>
   </function>
@@ -5992,22 +5934,19 @@ Returns a string that is the texture on face (the inventory name if it is a text
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llSetPos" delay="0.2">
     <param type="vector" name="pos"/>
-    <description lang="en"><!--
-llSetPos(vector pos)-->
+    <description lang="en">
 Moves the object or prim towards pos without using physics (if the script isn't physical)
     </description>
   </function>
 
   <function name="llGetPos" type="vector">
-    <description lang="en"><!--
-vector llGetPos()-->
+    <description lang="en">
 Returns the position of the task in region coordinates
     </description>
   </function>
 
   <function name="llGetLocalPos" type="vector">
-    <description lang="en"><!--
-vector llGetLocalPos()-->
+    <description lang="en">
 Returns the position relative to the root
     </description>
   </function>
@@ -6015,22 +5954,19 @@ Returns the position relative to the root
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llSetRot" delay="0.2">
     <param type="rotation" name="rot"/>
-    <description lang="en"><!--
-llSetRot(rotation rot)-->
+    <description lang="en">
 Sets the rotation
     </description>
   </function>
 
   <function name="llGetRot" type="rotation">
-    <description lang="en"><!--
-rotation llGetRot()-->
+    <description lang="en">
 Returns the rotation relative to the region's axes
     </description>
   </function>
 
   <function name="llGetLocalRot" type="rotation">
-    <description lang="en"><!--
-rotation llGetLocalRot()-->
+    <description lang="en">
 Returns the rotation local to the root
     </description>
   </function>
@@ -6038,15 +5974,13 @@ Returns the rotation local to the root
   <function name="llSetForce">
     <param type="vector" name="force"/>
     <param type="integer" name="local"/>
-    <description lang="en"><!--
-llSetForce(vector force, integer local)-->
+    <description lang="en">
 Applies force to the object (if the script is physical), in local coords if local == TRUE
     </description>
   </function>
 
   <function name="llGetForce" type="vector">
-    <description lang="en"><!--
-vector llGetForce()-->
+    <description lang="en">
 Returns the force (if the script is physical)
     </description>
   </function>
@@ -6054,16 +5988,14 @@ Returns the force (if the script is physical)
   <function name="llTarget" type="integer">
     <param type="vector" name="position"/>
     <param type="float" name="range"/>
-    <description lang="en"><!--
-integer llTarget(vector position, float range)-->
+    <description lang="en">
 Sets positions within range of position as a target and return an ID for the target
     </description>
   </function>
 
   <function name="llTargetRemove">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-llTargetRemove(integer number)-->
+    <description lang="en">
 Removes positional target number registered with llTarget
     </description>
   </function>
@@ -6071,16 +6003,14 @@ Removes positional target number registered with llTarget
   <function name="llRotTarget" type="integer">
     <param type="rotation" name="rot"/>
     <param type="float" name="error"/>
-    <description lang="en"><!--
-integer llRotTarget(rotation rot, float error)-->
+    <description lang="en">
 Set rotations with error of rot as a rotational target and return an ID for the rotational target
     </description>
   </function>
 
   <function name="llRotTargetRemove">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-llRotTargetRemove(integer number)-->
+    <description lang="en">
 Removes rotational target number registered with llRotTarget
     </description>
   </function>
@@ -6088,15 +6018,13 @@ Removes rotational target number registered with llRotTarget
   <function name="llMoveToTarget">
     <param type="vector" name="target"/>
     <param type="float" name="tau"/>
-    <description lang="en"><!--
-llMoveToTarget(vector target, float tau)-->
+    <description lang="en">
 Critically damps to target in tau seconds (if the script is physical)
     </description>
   </function>
 
   <function name="llStopMoveToTarget">
-    <description lang="en"><!--
-llStopMoveToTarget()-->
+    <description lang="en">
 Stops critically damped motion
     </description>
   </function>
@@ -6104,8 +6032,7 @@ Stops critically damped motion
   <function name="llApplyImpulse">
     <param type="vector" name="force"/>
     <param type="integer" name="local"/>
-    <description lang="en"><!--
-llApplyImpulse(vector force, integer local)-->
+    <description lang="en">
 Applies impulse to object (if the script is physical), in local coords if local == TRUE
     </description>
   </function>
@@ -6113,8 +6040,7 @@ Applies impulse to object (if the script is physical), in local coords if local 
   <function name="llApplyRotationalImpulse">
     <param type="vector" name="force"/>
     <param type="integer" name="local"/>
-    <description lang="en"><!--
-llApplyRotationalImpulse(vector force, integer local)-->
+    <description lang="en">
 Applies rotational impulse to object (if the script is physical), in local coords if local == TRUE
     </description>
   </function>
@@ -6122,15 +6048,13 @@ Applies rotational impulse to object (if the script is physical), in local coord
   <function name="llSetTorque">
     <param type="vector" name="torque"/>
     <param type="integer" name="local"/>
-    <description lang="en"><!--
-llSetTorque(vector torque, integer local)-->
+    <description lang="en">
 Sets the torque of object (if the script is physical), in local coords if local == TRUE
     </description>
   </function>
 
   <function name="llGetTorque" type="vector">
-    <description lang="en"><!--
-vector llGetTorque()-->
+    <description lang="en">
 Returns the torque (if the script is physical)
     </description>
   </function>
@@ -6139,64 +6063,55 @@ Returns the torque (if the script is physical)
     <param type="vector" name="force"/>
     <param type="vector" name="torque"/>
     <param type="integer" name="local"/>
-    <description lang="en"><!--
-llSetForceAndTorque(vector force, vector torque, integer local)-->
+    <description lang="en">
 Sets the force and torque of object (if the script is physical), in local coords if local == TRUE
     </description>
   </function>
 
   <function name="llGetVel" type="vector">
-    <description lang="en"><!--
-vector llGetVel()-->
+    <description lang="en">
 Returns the velocity of the object
     </description>
   </function>
 
   <function name="llGetAccel" type="vector">
-    <description lang="en"><!--
-vector llGetAccel()-->
+    <description lang="en">
 Returns the acceleration of the object relative to the region's axes
     </description>
   </function>
 
   <function name="llGetOmega" type="vector">
-    <description lang="en"><!--
-vector llGetOmega()-->
+    <description lang="en">
 Returns the rotation velocity in radians per second
     </description>
   </function>
 
   <function name="llGetTimeOfDay" type="float">
-    <description lang="en"><!--
-float llGetTimeOfDay()-->
+    <description lang="en">
 Returns the time in seconds since [CURRENT_GRID] server midnight or since region up-time, whichever is smaller
     </description>
   </function>
 
   <function name="llGetWallclock" type="float">
-    <description lang="en"><!--
-float llGetWallclock()-->
+    <description lang="en">
 Returns the time in seconds since midnight California Pacific time (PST/PDT)
     </description>
   </function>
 
   <function name="llGetTime" type="float">
-    <description lang="en"><!--
-float llGetTime()-->
+    <description lang="en">
 Returns the time in seconds since the last region reset, script reset, or call to either llResetTime or llGetAndResetTime
     </description>
   </function>
 
   <function name="llResetTime">
-    <description lang="en"><!--
-llResetTime()-->
+    <description lang="en">
 Sets the script timer to zero
     </description>
   </function>
 
   <function name="llGetAndResetTime" type="float">
-    <description lang="en"><!--
-float llGetAndResetTime()-->
+    <description lang="en">
 Returns the script time in seconds and then resets the script timer to zero
     </description>
   </function>
@@ -6206,8 +6121,7 @@ Returns the script time in seconds and then resets the script timer to zero
     <param type="float" name="volume"/>
     <param type="integer" name="queue"/>
     <param type="integer" name="loop"/>
-    <description lang="en"><!--
-llSound(string sound, float volume, integer queue, integer loop)-->
+    <description lang="en">
 Plays sound at volume and whether it should loop or not. DEPRECATED - Use llPlaySound / llLoopSound / llSetSoundQueueing
     </description>
   </function>
@@ -6215,8 +6129,7 @@ Plays sound at volume and whether it should loop or not. DEPRECATED - Use llPlay
   <function name="llPlaySound">
     <param type="string" name="sound"/>
     <param type="float" name="volume"/>
-    <description lang="en"><!--
-llPlaySound(string sound, float volume)-->
+    <description lang="en">
 Plays attached sound once at volume (0.0 - 1.0)
     </description>
   </function>
@@ -6224,8 +6137,7 @@ Plays attached sound once at volume (0.0 - 1.0)
   <function name="llLoopSound">
     <param type="string" name="sound"/>
     <param type="float" name="volume"/>
-    <description lang="en"><!--
-llLoopSound(string sound, float volume)-->
+    <description lang="en">
 Plays attached sound looping indefinitely at volume (0.0 - 1.0)
     </description>
   </function>
@@ -6233,8 +6145,7 @@ Plays attached sound looping indefinitely at volume (0.0 - 1.0)
   <function name="llLoopSoundMaster">
     <param type="string" name="sound"/>
     <param type="float" name="volume"/>
-    <description lang="en"><!--
-llLoopSoundMaster(string sound, float volume)-->
+    <description lang="en">
 Plays attached sound looping at volume (0.0 - 1.0), declares it a sync master
     </description>
   </function>
@@ -6242,8 +6153,7 @@ Plays attached sound looping at volume (0.0 - 1.0), declares it a sync master
   <function name="llLoopSoundSlave">
     <param type="string" name="sound"/>
     <param type="float" name="volume"/>
-    <description lang="en"><!--
-llLoopSoundSlave(string sound, float volume)-->
+    <description lang="en">
 Plays attached sound looping at volume (0.0 - 1.0), synced to most audible sync master
     </description>
   </function>
@@ -6251,8 +6161,7 @@ Plays attached sound looping at volume (0.0 - 1.0), synced to most audible sync 
   <function name="llPlaySoundSlave">
     <param type="string" name="sound"/>
     <param type="float" name="volume"/>
-    <description lang="en"><!--
-llPlaySoundSlave(string sound, float volume)-->
+    <description lang="en">
 Plays attached sound once at volume (0.0 - 1.0), synced to next loop of most audible sync master
     </description>
   </function>
@@ -6260,15 +6169,13 @@ Plays attached sound once at volume (0.0 - 1.0), synced to next loop of most aud
   <function name="llTriggerSound">
     <param type="string" name="sound"/>
     <param type="float" name="volume"/>
-    <description lang="en"><!--
-llTriggerSound(string sound, float volume)-->
+    <description lang="en">
 Plays sound at volume (0.0 - 1.0), centered at but not attached to object
     </description>
   </function>
 
   <function name="llStopSound">
-    <description lang="en"><!--
-llStopSound()-->
+    <description lang="en">
 Stops currently attached sound
     </description>
   </function>
@@ -6276,8 +6183,7 @@ Stops currently attached sound
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llPreloadSound" delay="1">
     <param type="string" name="sound"/>
-    <description lang="en"><!--
-llPreloadSound(string sound)-->
+    <description lang="en">
 Preloads a sound on viewers within range
     </description>
   </function>
@@ -6286,8 +6192,7 @@ Preloads a sound on viewers within range
     <param type="string" name="src"/>
     <param type="integer" name="start"/>
     <param type="integer" name="end"/>
-    <description lang="en"><!--
-string llGetSubString(string src, integer start, integer end)-->
+    <description lang="en">
 Returns the indicated substring
     </description>
   </function>
@@ -6296,8 +6201,7 @@ Returns the indicated substring
     <param type="string" name="src"/>
     <param type="integer" name="start"/>
     <param type="integer" name="end"/>
-    <description lang="en"><!--
-string llDeleteSubString(string src, integer start, integer end)-->
+    <description lang="en">
 Removes the indicated substring and returns the result
     </description>
   </function>
@@ -6306,24 +6210,21 @@ Removes the indicated substring and returns the result
     <param type="string" name="dst"/>
     <param type="integer" name="position"/>
     <param type="string" name="src"/>
-    <description lang="en"><!--
-string llInsertString(string dst, integer position, string src)-->
+    <description lang="en">
 Returns a destination string dst with the string src inserted starting at position pos
     </description>
   </function>
 
   <function name="llToUpper" type="string">
     <param type="string" name="src"/>
-    <description lang="en"><!--
-string llToUpper(string src)-->
+    <description lang="en">
 Returns a string that is src with all upper-case characters
     </description>
   </function>
 
   <function name="llToLower" type="string">
     <param type="string" name="src"/>
-    <description lang="en"><!--
-string llToLower(string src)-->
+    <description lang="en">
 Returns a string that is src with all lower-case characters
     </description>
   </function>
@@ -6331,8 +6232,7 @@ Returns a string that is src with all lower-case characters
   <function name="llGiveMoney" type="integer">
     <param type="key" name="destination"/>
     <param type="integer" name="amount"/>
-    <description lang="en"><!--
-integer llGiveMoney(key destination, integer amount)-->
+    <description lang="en">
 Transfers amount of L$ from script owner to destination
     </description>
   </function>
@@ -6345,8 +6245,7 @@ Transfers amount of L$ from script owner to destination
     <param type="float" name="arc"/>
     <param type="string" name="texture"/>
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-llMakeExplosion(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)-->
+    <description lang="en">
 (DEPRECATED) Makes a round explosion of particles
     </description>
   </function>
@@ -6361,8 +6260,7 @@ llMakeExplosion(integer particles, float scale, float vel, float lifetime, float
     <param type="string" name="texture"/>
     <param type="vector" name="offset"/>
     <param type="float" name="bounce_offset"/>
-    <description lang="en"><!--
-llMakeFountain(integer particles, float scale, float vel, float lifetime, float arc, integer bounce, string texture, vector offset, float bounce_offset)-->
+    <description lang="en">
 (DEPRECATED) Makes a fountain of particles
     </description>
   </function>
@@ -6375,8 +6273,7 @@ llMakeFountain(integer particles, float scale, float vel, float lifetime, float 
     <param type="float" name="arc"/>
     <param type="string" name="texture"/>
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-llMakeSmoke(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)-->
+    <description lang="en">
 (DEPRECATED) Makes smoke like particles
     </description>
   </function>
@@ -6389,8 +6286,7 @@ llMakeSmoke(integer particles, float scale, float vel, float lifetime, float arc
     <param type="float" name="arc"/>
     <param type="string" name="texture"/>
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-llMakeFire(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)-->
+    <description lang="en">
 (DEPRECATED) Makes fire like particles
     </description>
   </function>
@@ -6402,8 +6298,7 @@ llMakeFire(integer particles, float scale, float vel, float lifetime, float arc,
     <param type="vector" name="vel"/>
     <param type="rotation" name="rot"/>
     <param type="integer" name="param"/>
-    <description lang="en"><!--
-llRezObject(string inventory, vector pos, vector vel, rotation rot, integer param)-->
+    <description lang="en">
 Instantiates owner's inventory object at pos with velocity vel and rotation rot with start parameter param
     </description>
   </function>
@@ -6412,8 +6307,7 @@ Instantiates owner's inventory object at pos with velocity vel and rotation rot 
     <param type="vector" name="target"/>
     <param type="float" name="strength"/>
     <param type="float" name="damping"/>
-    <description lang="en"><!--
-llLookAt(vector target, float strength, float damping)-->
+    <description lang="en">
 Causes object to point its up axis (positive z) towards target, while keeping its forward axis (positive x) below the horizon
     </description>
   </function>
@@ -6429,16 +6323,14 @@ Causes a linked prim to point its up axis (positive z) towards target, while kee
   </function>
 
   <function name="llStopLookAt">
-    <description lang="en"><!--
-llStopLookAt()-->
+    <description lang="en">
 Stops causing object to point at a target
     </description>
   </function>
 
   <function name="llSetTimerEvent">
     <param type="float" name="sec"/>
-    <description lang="en"><!--
-llSetTimerEvent(float sec)-->
+    <description lang="en">
 Causes the timer event to be triggered a maximum of once every sec seconds
     </description>
   </function>
@@ -6446,15 +6338,13 @@ Causes the timer event to be triggered a maximum of once every sec seconds
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llSleep" energy="0">
     <param type="float" name="sec"/>
-    <description lang="en"><!--
-llSleep(float sec)-->
+    <description lang="en">
 Puts the script to sleep for sec seconds
     </description>
   </function>
 
   <function name="llGetMass" type="float">
-    <description lang="en"><!--
-float llGetMass()-->
+    <description lang="en">
 Returns the mass of object that the script is attached to
     </description>
   </function>
@@ -6464,8 +6354,7 @@ Returns the mass of object that the script is attached to
     <param type="string" name="name"/>
     <param type="key" name="id"/>
     <param type="integer" name="accept"/>
-    <description lang="en"><!--
-llCollisionFilter(string name, key id, integer accept)-->
+    <description lang="en">
 Sets the collision filter, exclusively or inclusively. If accept == TRUE, only accept collisions with objects name and id (either is optional), otherwise with objects not name or id
     </description>
   </function>
@@ -6474,53 +6363,46 @@ Sets the collision filter, exclusively or inclusively. If accept == TRUE, only a
     <param type="integer" name="controls"/>
     <param type="integer" name="accept"/>
     <param type="integer" name="pass_on"/>
-    <description lang="en"><!--
-llTakeControls(integer controls, integer accept, integer pass_on)-->
+    <description lang="en">
 Allows for intercepting keyboard and mouse clicks from the agent the script has permissions for
     </description>
   </function>
 
   <function name="llReleaseControls">
-    <description lang="en"><!--
-llReleaseControls()-->
+    <description lang="en">
 Stops taking inputs that were taken with llTakeControls
     </description>
   </function>
 
   <function name="llAttachToAvatar">
     <param type="integer" name="attach_point"/>
-    <description lang="en"><!--
-llAttachToAvatar(integer attach_point)-->
+    <description lang="en">
 Attaches the object to the avatar who has granted permission to the script
     </description>
   </function>
 
   <function name="llDetachFromAvatar">
-    <description lang="en"><!--
-llDetachFromAvatar()-->
+    <description lang="en">
 Detaches object from avatar
     </description>
   </function>
 
   <function name="llTakeCamera" status="unimplemented">
     <param type="key" name="avatar"/>
-    <description lang="en"><!--
-llTakeCamera(key avatar)-->
+    <description lang="en">
 Moves avatar's viewpoint to task
     </description>
   </function>
 
   <function name="llReleaseCamera" status="unimplemented">
     <param type="key" name="avatar"/>
-    <description lang="en"><!--
-llReleaseCamera(key avatar)-->
+    <description lang="en">
 Returns camera to agent avatar
     </description>
   </function>
 
   <function name="llGetOwner" type="key">
-    <description lang="en"><!--
-key llGetOwner()-->
+    <description lang="en">
 Returns the object owner's UUID
     </description>
   </function>
@@ -6529,8 +6411,7 @@ Returns the object owner's UUID
   <function name="llInstantMessage" delay="2">
     <param type="key" name="user"/>
     <param type="string" name="message"/>
-    <description lang="en"><!--
-llInstantMessage(key user, string message)-->
+    <description lang="en">
 Sends the specified string as an Instant Message to the user
     </description>
   </function>
@@ -6540,8 +6421,7 @@ Sends the specified string as an Instant Message to the user
     <param type="string" name="address"/>
     <param type="string" name="subject"/>
     <param type="string" name="message"/>
-    <description lang="en"><!--
-llEmail(string address, string subject, string message)-->
+    <description lang="en">
 Sends an email to address with the subject and message
     </description>
   </function>
@@ -6549,23 +6429,20 @@ Sends an email to address with the subject and message
   <function name="llGetNextEmail">
     <param type="string" name="address"/>
     <param type="string" name="subject"/>
-    <description lang="en"><!--
-llGetNextEmail(string address, string subject)-->
+    <description lang="en">
 Gets the next waiting email that comes from address, with specified subject
     </description>
   </function>
 
   <function name="llGetKey" type="key">
-    <description lang="en"><!--
-key llGetKey()-->
+    <description lang="en">
 Returns the key of the prim the script is attached to
     </description>
   </function>
 
   <function name="llSetBuoyancy">
     <param type="float" name="buoyancy"/>
-    <description lang="en"><!--
-llSetBuoyancy(float buoyancy)-->
+    <description lang="en">
 Sets the buoyancy of the task or object (0 is disabled, &lt; 1.0 sinks, 1.0 floats, &gt; 1.0 rises)
     </description>
   </function>
@@ -6574,31 +6451,27 @@ Sets the buoyancy of the task or object (0 is disabled, &lt; 1.0 sinks, 1.0 floa
     <param type="float" name="height"/>
     <param type="integer" name="water"/>
     <param type="float" name="tau"/>
-    <description lang="en"><!--
-llSetHoverHeight(float height, integer water, float tau)-->
+    <description lang="en">
 Critically damps to a height above the ground (or water) in tau seconds
     </description>
   </function>
 
   <function name="llStopHover">
-    <description lang="en"><!--
-llStopHover()-->
+    <description lang="en">
 Stops hovering to a height
     </description>
   </function>
 
   <function name="llMinEventDelay">
     <param type="float" name="delay"/>
-    <description lang="en"><!--
-llMinEventDelay(float delay)-->
+    <description lang="en">
 Sets the minimum time between events being handled
     </description>
   </function>
 
   <function name="llSoundPreload" status="deprecated">
     <param type="string" name="sound"/>
-    <description lang="en"><!--
-llSoundPreload(string sound)-->
+    <description lang="en">
 Preloads a sound on viewers within range. DEPRECATED - Use llPreloadSound
     </description>
   </function>
@@ -6607,8 +6480,7 @@ Preloads a sound on viewers within range. DEPRECATED - Use llPreloadSound
     <param type="rotation" name="target"/>
     <param type="float" name="strength"/>
     <param type="float" name="damping"/>
-    <description lang="en"><!--
-llRotLookAt(rotation target, float strength, float damping)-->
+    <description lang="en">
 Causes object to point its forward axis towards target
     </description>
   </function>
@@ -6625,39 +6497,34 @@ Causes linked prim to point its forward axis towards target
 
   <function name="llStringLength" type="integer">
     <param type="string" name="str"/>
-    <description lang="en"><!--
-integer llStringLength(string str)-->
+    <description lang="en">
 Returns the length of string
     </description>
   </function>
 
   <function name="llStartAnimation">
     <param type="string" name="anim"/>
-    <description lang="en"><!--
-llStartAnimation(string anim)-->
+    <description lang="en">
 Starts animation anim for agent that granted PERMISSION_TRIGGER_ANIMATION if the permission has not been revoked
     </description>
   </function>
 
   <function name="llStopAnimation">
     <param type="string" name="anim"/>
-    <description lang="en"><!--
-llStopAnimation(string anim)-->
+    <description lang="en">
 Stops animation anim for agent that granted permission
     </description>
   </function>
 
   <function name="llPointAt" status="unimplemented">
     <param type="vector" name="pos"/>
-    <description lang="en"><!--
-llPointAt(vector pos)-->
+    <description lang="en">
 Makes agent that owns object point at pos
     </description>
   </function>
 
   <function name="llStopPointAt" status="unimplemented">
-    <description lang="en"><!--
-llStopPointAt()-->
+    <description lang="en">
 Stops pointing agent that owns object
     </description>
   </function>
@@ -6666,15 +6533,13 @@ Stops pointing agent that owns object
     <param type="vector" name="axis"/>
     <param type="float" name="spinrate"/>
     <param type="float" name="gain"/>
-    <description lang="en"><!--
-llTargetOmega(vector axis, float spinrate, float gain)-->
+    <description lang="en">
 Rotates the object around axis at spinrate with strength gain
     </description>
   </function>
 
   <function name="llGetStartParameter" type="integer">
-    <description lang="en"><!--
-integer llGetStartParameter()-->
+    <description lang="en">
 Returns an integer that is the script start/rez parameter
     </description>
   </function>
@@ -6682,8 +6547,7 @@ Returns an integer that is the script start/rez parameter
   <function name="llGodLikeRezObject" status="godmode">
     <param type="key" name="inventory"/>
     <param type="vector" name="pos"/>
-    <description lang="en"><!--
-llGodLikeRezObject(key inventory, vector pos)-->
+    <description lang="en">
 Rezzes directly off of UUID if owner is in God Mode
     </description>
   </function>
@@ -6691,29 +6555,25 @@ Rezzes directly off of UUID if owner is in God Mode
   <function name="llRequestPermissions">
     <param type="key" name="agent"/>
     <param type="integer" name="perm"/>
-    <description lang="en"><!--
-llRequestPermissions(key agent, integer perm)-->
+    <description lang="en">
 Asks the agent for permission to run certain classes of functions
     </description>
   </function>
 
   <function name="llGetPermissionsKey" type="key">
-    <description lang="en"><!--
-key llGetPermissionsKey()-->
+    <description lang="en">
 Returns the key of the avatar that last granted permissions to the script
     </description>
   </function>
 
   <function name="llGetPermissions" type="integer">
-    <description lang="en"><!--
-integer llGetPermissions()-->
+    <description lang="en">
 Returns an integer bitfield with the permissions that have been granted
     </description>
   </function>
 
   <function name="llGetLinkNumber" type="integer">
-    <description lang="en"><!--
-integer llGetLinkNumber()-->
+    <description lang="en">
 Returns the link number of the prim containing the script (0 means not linked, 1 the prim is the root, 2 the prim is the first child, etc)
     </description>
   </function>
@@ -6722,8 +6582,7 @@ Returns the link number of the prim containing the script (0 means not linked, 1
     <param type="integer" name="linknumber"/>
     <param type="vector" name="color"/>
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-llSetLinkColor(integer linknumber, vector color, integer face)-->
+    <description lang="en">
 Sets face to color if a task exists in the link chain at linknumber
     </description>
   </function>
@@ -6731,47 +6590,41 @@ Sets face to color if a task exists in the link chain at linknumber
   <function name="llCreateLink" delay="1">
     <param type="key" name="target"/>
     <param type="integer" name="parent"/>
-    <description lang="en"><!--
-llCreateLink(key target, integer parent)-->
+    <description lang="en">
 Attempts to link the script's object with the target (requires that PERMISSION_CHANGE_LINKS be granted). If parent == TRUE, then the script's object becomes the root
     </description>
   </function>
 
   <function name="llBreakLink">
     <param type="integer" name="linknum"/>
-    <description lang="en"><!--
-llBreakLink(integer linknum)-->
+    <description lang="en">
 Delinks the prim with the given link number in a linked object set (requires that PERMISSION_CHANGE_LINKS be granted)
     </description>
   </function>
 
   <function name="llBreakAllLinks">
-    <description lang="en"><!--
-llBreakAllLinks()-->
+    <description lang="en">
 Delinks all prims in the link set (requires that PERMISSION_CHANGE_LINKS be granted)
     </description>
   </function>
 
   <function name="llGetLinkKey" type="key">
     <param type="integer" name="linknumber"/>
-    <description lang="en"><!--
-key llGetLinkKey(integer linknumber)-->
+    <description lang="en">
 Returns the key of the linked prim linknumber
     </description>
   </function>
 
   <function name="llGetLinkName" type="string">
     <param type="integer" name="linknumber"/>
-    <description lang="en"><!--
-string llGetLinkName(integer linknumber)-->
+    <description lang="en">
 Returns the name of linknumber in a link set
     </description>
   </function>
 
   <function name="llGetInventoryNumber" type="integer">
     <param type="integer" name="type"/>
-    <description lang="en"><!--
-integer llGetInventoryNumber(integer type)-->
+    <description lang="en">
 Returns the number of items of a given type (INVENTORY_* flag) in the prim's inventory
     </description>
   </function>
@@ -6779,8 +6632,7 @@ Returns the number of items of a given type (INVENTORY_* flag) in the prim's inv
   <function name="llGetInventoryName" type="string">
     <param type="integer" name="type"/>
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-string llGetInventoryName(integer type, integer number)-->
+    <description lang="en">
 Returns the name of the inventory item number of a given type
     </description>
   </function>
@@ -6788,15 +6640,13 @@ Returns the name of the inventory item number of a given type
   <function name="llSetScriptState">
     <param type="string" name="name"/>
     <param type="integer" name="run"/>
-    <description lang="en"><!--
-llSetScriptState(string name, integer run)-->
+    <description lang="en">
 Sets the running state of the specified script
     </description>
   </function>
 
   <function name="llGetEnergy" type="float">
-    <description lang="en"><!--
-float llGetEnergy()-->
+    <description lang="en">
 Returns how much energy is in the object as a percentage of maximum
     </description>
   </function>
@@ -6805,8 +6655,7 @@ Returns how much energy is in the object as a percentage of maximum
   <function name="llGiveInventory">
     <param type="key" name="destination"/>
     <param type="string" name="inventory"/>
-    <description lang="en"><!--
-llGiveInventory(key destination, string inventory)-->
+    <description lang="en">
 Gives inventory to destination.
 Sleeps script for 2 seconds if destination is an avatar
     </description>
@@ -6814,8 +6663,7 @@ Sleeps script for 2 seconds if destination is an avatar
 
   <function name="llRemoveInventory">
     <param type="string" name="item"/>
-    <description lang="en"><!--
-llRemoveInventory(string item)-->
+    <description lang="en">
 Removes the named inventory item
     </description>
   </function>
@@ -6824,24 +6672,21 @@ Removes the named inventory item
     <param type="string" name="text"/>
     <param type="vector" name="color"/>
     <param type="float" name="alpha"/>
-    <description lang="en"><!--
-llSetText(string text, vector color, float alpha)-->
+    <description lang="en">
 Displays text that hovers over the prim with specific color and translucency specified with alpha
     </description>
   </function>
 
   <function name="llWater" type="float">
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-float llWater(vector offset)-->
+    <description lang="en">
 Returns the water height below the object position + offset
     </description>
   </function>
 
   <function name="llPassTouches">
     <param type="integer" name="pass"/>
-    <description lang="en"><!--
-llPassTouches(integer pass)-->
+    <description lang="en">
 If pass == TRUE, touches are passed from children on to parents
     </description>
   </function>
@@ -6849,24 +6694,21 @@ If pass == TRUE, touches are passed from children on to parents
   <function name="llRequestAgentData" type="key" delay="0.1">
     <param type="key" name="id"/>
     <param type="integer" name="data"/>
-    <description lang="en"><!--
-key llRequestAgentData(key id, integer data)-->
+    <description lang="en">
 Requests data about agent id. When data is available the dataserver event will be raised.
     </description>
   </function>
 
   <function name="llRequestInventoryData" type="key" delay="1">
     <param type="string" name="name"/>
-    <description lang="en"><!--
-key llRequestInventoryData(string name)-->
+    <description lang="en">
 Requests data from object's inventory object. When data is available the dataserver event will be raised.
     </description>
   </function>
 
   <function name="llSetDamage">
     <param type="float" name="damage"/>
-    <description lang="en"><!--
-llSetDamage(float damage)-->
+    <description lang="en">
 Sets the amount of damage that will be done when this object hits an avatar.
     </description>
   </function>
@@ -6874,8 +6716,7 @@ Sets the amount of damage that will be done when this object hits an avatar.
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llTeleportAgentHome" delay="5" energy="100">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-llTeleportAgentHome(key id)-->
+    <description lang="en">
 Teleports avatar on the owner's land to their home location without any warning
     </description>
   </function>
@@ -6883,8 +6724,7 @@ Teleports avatar on the owner's land to their home location without any warning
   <function name="llModifyLand">
     <param type="integer" name="action"/>
     <param type="integer" name="brush"/>
-    <description lang="en"><!--
-llModifyLand(integer action, integer brush)-->
+    <description lang="en">
 Modifies land using the specified action on the specified brush size of land
     </description>
   </function>
@@ -6892,31 +6732,27 @@ Modifies land using the specified action on the specified brush size of land
   <function name="llCollisionSound">
     <param type="string" name="impact_sound"/>
     <param type="float" name="impact_volume"/>
-    <description lang="en"><!--
-llCollisionSound(string impact_sound, float impact_volume)-->
+    <description lang="en">
 Suppresses default collision sounds, replaces default impact sounds with impact_sound at the volume impact_volume
     </description>
   </function>
 
   <function name="llCollisionSprite">
     <param type="string" name="impact_sprite"/>
-    <description lang="en"><!--
-llCollisionSprite(string impact_sprite)-->
+    <description lang="en">
 Suppresses default collision sprites, replaces default impact sprite with impact_sprite (use an empty string to just suppress)
     </description>
   </function>
 
   <function name="llGetAnimation" type="string">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-string llGetAnimation(key id)-->
+    <description lang="en">
 Returns the name of the currently playing locomotion animation for avatar id
     </description>
   </function>
 
   <function name="llResetScript">
-    <description lang="en"><!--
-llResetScript()-->
+    <description lang="en">
 Resets the script
     </description>
   </function>
@@ -6926,8 +6762,7 @@ Resets the script
     <param type="integer" name="num"/>
     <param type="string" name="str"/>
     <param type="key" name="id"/>
-    <description lang="en"><!--
-llMessageLinked(integer linknum, integer num, string str, key id)-->
+    <description lang="en">
 Allows scripts in the same object to communicate. Triggers a link_message event with the same parameters num, str, and id in all scripts in the prim(s) described by linknum.
     </description>
   </function>
@@ -6937,30 +6772,26 @@ Allows scripts in the same object to communicate. Triggers a link_message event 
     <param type="vector" name="impulse"/>
     <param type="vector" name="ang_impulse"/>
     <param type="integer" name="local"/>
-    <description lang="en"><!--
-llPushObject(key id, vector impulse, vector ang_impulse, integer local)-->
+    <description lang="en">
 Applies impulse and ang_impulse to object id
     </description>
   </function>
 
   <function name="llPassCollisions">
     <param type="integer" name="pass"/>
-    <description lang="en"><!--
-llPassCollisions(integer pass)-->
+    <description lang="en">
 If pass == TRUE, collisions are passed from children on to parents (default is FALSE)
     </description>
   </function>
 
   <function name="llGetScriptName" type="string">
-    <description lang="en"><!--
-string llGetScriptName()-->
+    <description lang="en">
 Returns the name of the script that this function is used in
     </description>
   </function>
 
   <function name="llGetNumberOfSides" type="integer">
-    <description lang="en"><!--
-integer llGetNumberOfSides()-->
+    <description lang="en">
 Returns the number of faces (or sides) of the prim
     </description>
   </function>
@@ -6968,40 +6799,35 @@ Returns the number of faces (or sides) of the prim
   <function name="llAxisAngle2Rot" type="rotation">
     <param type="vector" name="axis"/>
     <param type="float" name="angle"/>
-    <description lang="en"><!--
-rotation llAxisAngle2Rot(vector axis, float angle)-->
+    <description lang="en">
 Returns the rotation that is a generated angle about axis
     </description>
   </function>
 
   <function name="llRot2Axis" type="vector">
     <param type="rotation" name="rot"/>
-    <description lang="en"><!--
-vector llRot2Axis(rotation rot)-->
+    <description lang="en">
 Returns the rotation axis represented by rot
     </description>
   </function>
 
   <function name="llRot2Angle" type="float">
     <param type="rotation" name="rot"/>
-    <description lang="en"><!--
-float llRot2Angle(rotation rot)-->
+    <description lang="en">
 Returns the rotation angle represented by rot
     </description>
   </function>
 
   <function name="llAcos" type="float">
     <param type="float" name="val"/>
-    <description lang="en"><!--
-float llAcos(float val)-->
+    <description lang="en">
 Returns the arccosine in radians of val
     </description>
   </function>
 
   <function name="llAsin" type="float">
     <param type="float" name="val"/>
-    <description lang="en"><!--
-float llAsin(float val)-->
+    <description lang="en">
 Returns the arcsine in radians of val
     </description>
   </function>
@@ -7009,55 +6835,48 @@ Returns the arcsine in radians of val
   <function name="llAngleBetween" type="float">
     <param type="rotation" name="a"/>
     <param type="rotation" name="b"/>
-    <description lang="en"><!--
-float llAngleBetween(rotation a, rotation b)-->
+    <description lang="en">
 Returns angle between rotation a and b
     </description>
   </function>
 
   <function name="llGetInventoryKey" type="key">
     <param type="string" name="name"/>
-    <description lang="en"><!--
-key llGetInventoryKey(string name)-->
+    <description lang="en">
 Returns the key that is the UUID of the inventory name
     </description>
   </function>
 
   <function name="llAllowInventoryDrop">
     <param type="integer" name="add"/>
-    <description lang="en"><!--
-llAllowInventoryDrop(integer add)-->
+    <description lang="en">
 If add == TRUE, users without modify permissions can still drop inventory items onto a prim
     </description>
   </function>
 
   <function name="llGetSunDirection" type="vector">
-    <description lang="en"><!--
-vector llGetSunDirection()-->
+    <description lang="en">
 Returns a normalized vector of the direction of the sun in the region
     </description>
   </function>
 
   <function name="llGetTextureOffset" type="vector">
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-vector llGetTextureOffset(integer face)-->
+    <description lang="en">
 Returns the texture offset of face in the x and y components of a vector
     </description>
   </function>
 
   <function name="llGetTextureScale" type="vector">
     <param type="integer" name="side"/>
-    <description lang="en"><!--
-vector llGetTextureScale(integer side)-->
+    <description lang="en">
 Returns the texture scale of side in the x and y components of a vector
     </description>
   </function>
 
   <function name="llGetTextureRot" type="float">
     <param type="integer" name="side"/>
-    <description lang="en"><!--
-float llGetTextureRot(integer side)-->
+    <description lang="en">
 Returns the texture rotation of side
     </description>
   </function>
@@ -7065,8 +6884,7 @@ Returns the texture rotation of side
   <function name="llSubStringIndex" type="integer">
     <param type="string" name="source"/>
     <param type="string" name="pattern"/>
-    <description lang="en"><!--
-integer llSubStringIndex(string source, string pattern)-->
+    <description lang="en">
 Returns an integer that is the index in source where pattern first appears.
 (Returns -1 if not found)
     </description>
@@ -7074,15 +6892,13 @@ Returns an integer that is the index in source where pattern first appears.
 
   <function name="llGetOwnerKey" type="key">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-key llGetOwnerKey(key id)-->
+    <description lang="en">
 Returns the owner of object id
     </description>
   </function>
 
   <function name="llGetCenterOfMass" type="vector">
-    <description lang="en"><!--
-vector llGetCenterOfMass()-->
+    <description lang="en">
 Returns the prim's center of mass (unless called from the root prim, where it returns the object's center of mass)
     </description>
   </function>
@@ -7091,8 +6907,7 @@ Returns the prim's center of mass (unless called from the root prim, where it re
     <param type="list" name="src"/>
     <param type="integer" name="stride"/>
     <param type="integer" name="ascending"/>
-    <description lang="en"><!--
-list llListSort(list src, integer stride, integer ascending)-->
+    <description lang="en">
 Sorts the list into blocks of stride, in ascending order if ascending == TRUE.
 The sort order is affected by type.
     </description>
@@ -7100,8 +6915,7 @@ The sort order is affected by type.
 
   <function name="llGetListLength" type="integer">
     <param type="list" name="src"/>
-    <description lang="en"><!--
-integer llGetListLength(list src)-->
+    <description lang="en">
 Returns the number of elements in the list
     </description>
   </function>
@@ -7109,8 +6923,7 @@ Returns the number of elements in the list
   <function name="llList2Integer" type="integer">
     <param type="list" name="src"/>
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-integer llList2Integer(list src, integer index)-->
+    <description lang="en">
 Copies the integer at index in the list
     </description>
   </function>
@@ -7118,8 +6931,7 @@ Copies the integer at index in the list
   <function name="llList2Float" type="float">
     <param type="list" name="src"/>
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-float llList2Float(list src, integer index)-->
+    <description lang="en">
 Copies the float at index in the list
     </description>
   </function>
@@ -7127,8 +6939,7 @@ Copies the float at index in the list
   <function name="llList2String" type="string">
     <param type="list" name="src"/>
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-string llList2String(list src, integer index)-->
+    <description lang="en">
 Copies the string at index in the list
     </description>
   </function>
@@ -7136,8 +6947,7 @@ Copies the string at index in the list
   <function name="llList2Key" type="key">
     <param type="list" name="src"/>
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-key llList2Key(list src, integer index)-->
+    <description lang="en">
 Copies the key at index in the list
     </description>
   </function>
@@ -7145,8 +6955,7 @@ Copies the key at index in the list
   <function name="llList2Vector" type="vector">
     <param type="list" name="src"/>
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-vector llList2Vector(list src, integer index)-->
+    <description lang="en">
 Copies the vector at index in the list
     </description>
   </function>
@@ -7154,8 +6963,7 @@ Copies the vector at index in the list
   <function name="llList2Rot" type="rotation">
     <param type="list" name="src"/>
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-rotation llList2Rot(list src, integer index)-->
+    <description lang="en">
 Copies the rotation at index in the list
     </description>
   </function>
@@ -7164,8 +6972,7 @@ Copies the rotation at index in the list
     <param type="list" name="src"/>
     <param type="integer" name="start"/>
     <param type="integer" name="end"/>
-    <description lang="en"><!--
-list llList2List(list src, integer start, integer end)-->
+    <description lang="en">
 Copies the slice of the list from start to end
     </description>
   </function>
@@ -7174,8 +6981,7 @@ Copies the slice of the list from start to end
     <param type="list" name="src"/>
     <param type="integer" name="start"/>
     <param type="integer" name="end"/>
-    <description lang="en"><!--
-list llDeleteSubList(list src, integer start, integer end)-->
+    <description lang="en">
 Removes the slice from start to end and returns the remainder of the list
     </description>
   </function>
@@ -7183,8 +6989,7 @@ Removes the slice from start to end and returns the remainder of the list
   <function name="llGetListEntryType" type="integer">
     <param type="list" name="src"/>
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-integer llGetListEntryType(list src, integer index)-->
+    <description lang="en">
 Returns the type of the index entry in the list
 (TYPE_INTEGER, TYPE_FLOAT, TYPE_STRING, TYPE_KEY, TYPE_VECTOR, TYPE_ROTATION, or TYPE_INVALID if index is off list)
     </description>
@@ -7192,16 +6997,14 @@ Returns the type of the index entry in the list
 
   <function name="llList2CSV" type="string">
     <param type="list" name="src"/>
-    <description lang="en"><!--
-string llList2CSV(list src)-->
+    <description lang="en">
 Creates a string of comma separated values from list
     </description>
   </function>
 
   <function name="llCSV2List" type="list">
     <param type="string" name="src"/>
-    <description lang="en"><!--
-list llCSV2List(string src)-->
+    <description lang="en">
 Creates a list from a string of comma separated values
     </description>
   </function>
@@ -7209,8 +7012,7 @@ Creates a list from a string of comma separated values
   <function name="llListRandomize" type="list">
     <param type="list" name="src"/>
     <param type="integer" name="stride"/>
-    <description lang="en"><!--
-list llListRandomize(list src, integer stride)-->
+    <description lang="en">
 Returns a randomized list of blocks of size stride
     </description>
   </function>
@@ -7220,15 +7022,13 @@ Returns a randomized list of blocks of size stride
     <param type="integer" name="start"/>
     <param type="integer" name="end"/>
     <param type="integer" name="stride"/>
-    <description lang="en"><!--
-list llList2ListStrided(list src, integer start, integer end, integer stride)-->
+    <description lang="en">
 Copies the strided slice of the list from start to end
     </description>
   </function>
 
   <function name="llGetRegionCorner" type="vector">
-    <description lang="en"><!--
-vector llGetRegionCorner()-->
+    <description lang="en">
 Returns a vector in meters that is the global location of the south-west corner of the region which the object is in
     </description>
   </function>
@@ -7237,8 +7037,7 @@ Returns a vector in meters that is the global location of the south-west corner 
     <param type="list" name="dest"/>
     <param type="list" name="src"/>
     <param type="integer" name="start"/>
-    <description lang="en"><!--
-list llListInsertList(list dest, list src, integer start)-->
+    <description lang="en">
 Returns a list that contains all the elements from dest but with the elements from src inserted at position start
     </description>
   </function>
@@ -7246,31 +7045,27 @@ Returns a list that contains all the elements from dest but with the elements fr
   <function name="llListFindList" type="integer">
     <param type="list" name="src"/>
     <param type="list" name="test"/>
-    <description lang="en"><!--
-integer llListFindList(list src, list test)-->
+    <description lang="en">
 Returns the index of the first instance of test in src.
 (Returns -1 if not found)
     </description>
   </function>
 
   <function name="llGetObjectName" type="string">
-    <description lang="en"><!--
-string llGetObjectName()-->
+    <description lang="en">
 Returns the name of the prim which the script is attached to
     </description>
   </function>
 
   <function name="llSetObjectName">
     <param type="string" name="name"/>
-    <description lang="en"><!--
-llSetObjectName(string name)-->
+    <description lang="en">
 Sets the prim's name to the name parameter
     </description>
   </function>
 
   <function name="llGetDate" type="string">
-    <description lang="en"><!--
-string llGetDate()-->
+    <description lang="en">
 Returns the current date in the UTC time zone in the format YYYY-MM-DD
     </description>
   </function>
@@ -7278,16 +7073,14 @@ Returns the current date in the UTC time zone in the format YYYY-MM-DD
   <function name="llEdgeOfWorld" type="integer">
     <param type="vector" name="pos"/>
     <param type="vector" name="dir"/>
-    <description lang="en"><!--
-integer llEdgeOfWorld(vector pos, vector dir)-->
+    <description lang="en">
 Checks to see whether the border hit by dir from pos is the edge of the world (has no neighboring region)
     </description>
   </function>
 
   <function name="llGetAgentInfo" type="integer">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-integer llGetAgentInfo(key id)-->
+    <description lang="en">
 Returns an integer bitfield containing the agent information about id.
 Returns AGENT_FLYING, AGENT_ATTACHMENTS, AGENT_SCRIPTED, AGENT_SITTING, AGENT_ON_OBJECT, AGENT_MOUSELOOK, AGENT_AWAY, AGENT_BUSY, AGENT_TYPING, AGENT_CROUCHING, AGENT_ALWAYS_RUN, AGENT_WALKING and/or AGENT_IN_AIR.
     </description>
@@ -7296,32 +7089,28 @@ Returns AGENT_FLYING, AGENT_ATTACHMENTS, AGENT_SCRIPTED, AGENT_SITTING, AGENT_ON
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llAdjustSoundVolume" delay="0.1">
     <param type="float" name="volume"/>
-    <description lang="en"><!--
-llAdjustSoundVolume(float volume)-->
+    <description lang="en">
 Adjusts volume of attached sound (0.0 - 1.0)
     </description>
   </function>
 
   <function name="llSetSoundQueueing">
     <param type="integer" name="queue"/>
-    <description lang="en"><!--
-llSetSoundQueueing(integer queue)-->
+    <description lang="en">
 Sets whether attached sounds wait for the current sound to finish (If queue == TRUE then queuing is enabled, if FALSE queuing is disabled [default])
     </description>
   </function>
 
   <function name="llSetSoundRadius">
     <param type="float" name="radius"/>
-    <description lang="en"><!--
-llSetSoundRadius(float radius)-->
+    <description lang="en">
 Establishes a hard cut-off radius for audibility of scripted sounds (both attached and triggered)
     </description>
   </function>
 
   <function name="llKey2Name" type="string">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-string llKey2Name(key id)-->
+    <description lang="en">
 Returns the name of the prim or avatar specified by id.
 (The id must be a valid rezzed prim or avatar key in the current simulator, otherwise an empty string is returned.)
     </description>
@@ -7335,8 +7124,7 @@ Returns the name of the prim or avatar specified by id.
     <param type="float" name="start"/>
     <param type="float" name="length"/>
     <param type="float" name="rate"/>
-    <description lang="en"><!--
-llSetTextureAnim(integer mode, integer face, integer sizex, integer sizey, float start, float length, float rate)-->
+    <description lang="en">
 Animates the texture on the specified face/faces
     </description>
   </function>
@@ -7346,8 +7134,7 @@ Animates the texture on the specified face/faces
     <param type="float" name="volume"/>
     <param type="vector" name="top_north_east"/>
     <param type="vector" name="bottom_south_west"/>
-    <description lang="en"><!--
-llTriggerSoundLimited(string sound, float volume, vector top_north_east, vector bottom_south_west)-->
+    <description lang="en">
 Plays sound at volume (0.0 - 1.0), centered at but not attached to object, limited to the box defined by vectors top_north_east and bottom_south_west
     </description>
   </function>
@@ -7355,8 +7142,7 @@ Plays sound at volume (0.0 - 1.0), centered at but not attached to object, limit
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llEjectFromLand">
     <param type="key" name="avatar"/>
-    <description lang="en"><!--
-llEjectFromLand(key avatar)-->
+    <description lang="en">
 Ejects avatar from the parcel
     </description>
   </function>
@@ -7365,8 +7151,7 @@ Ejects avatar from the parcel
     <param type="string" name="src"/>
     <param type="list" name="separators"/>
     <param type="list" name="spacers"/>
-    <description lang="en"><!--
-list llParseString2List(string src, list separators, list spacers)-->
+    <description lang="en">
 Breaks src into a list, discarding separators, keeping spacers
 (separators and spacers must be lists of strings, maximum of 8 each)
     </description>
@@ -7374,16 +7159,14 @@ Breaks src into a list, discarding separators, keeping spacers
 
   <function name="llOverMyLand" type="integer">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-integer llOverMyLand(key id)-->
+    <description lang="en">
 Returns TRUE if id is over land owned by the script owner, otherwise FALSE
     </description>
   </function>
 
   <function name="llGetLandOwnerAt" type="key">
     <param type="vector" name="pos"/>
-    <description lang="en"><!--
-key llGetLandOwnerAt(vector pos)-->
+    <description lang="en">
 Returns the key of the land owner, returns NULL_KEY if public
     </description>
   </function>
@@ -7391,99 +7174,86 @@ Returns the key of the land owner, returns NULL_KEY if public
   <function name="llGetNotecardLine" type="key" delay="0.1">
     <param type="string" name="name"/>
     <param type="integer" name="line"/>
-    <description lang="en"><!--
-key llGetNotecardLine(string name, integer line)-->
+    <description lang="en">
 Returns line line of notecard name via the dataserver event
     </description>
   </function>
 
   <function name="llGetAgentSize" type="vector">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-vector llGetAgentSize(key id)-->
+    <description lang="en">
 If the avatar is in the same region, returns the size of the bounding box of the requested avatar by id, otherwise returns ZERO_VECTOR
     </description>
   </function>
 
   <function name="llSameGroup" type="integer">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-integer llSameGroup(key id)-->
+    <description lang="en">
 Returns TRUE if avatar id is in the same region and has the same active group, otherwise FALSE
     </description>
   </function>
 
   <function name="llUnSit">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-llUnSit(key id)-->
+    <description lang="en">
 If avatar identified by id is sitting on the object the script is attached to or is over land owned by the object's owner, the avatar is forced to stand up
     </description>
   </function>
 
   <function name="llGroundSlope" type="vector">
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-vector llGroundSlope(vector offset)-->
+    <description lang="en">
 Returns the ground slope below the object position + offset
     </description>
   </function>
 
   <function name="llGroundNormal" type="vector">
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-vector llGroundNormal(vector offset)-->
+    <description lang="en">
 Returns the ground normal below the object position + offset
     </description>
   </function>
 
   <function name="llGroundContour" type="vector">
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-vector llGroundContour(vector offset)-->
+    <description lang="en">
 Returns the ground contour direction below the object position + offset
     </description>
   </function>
 
   <function name="llGetAttached" type="integer">
-    <description lang="en"><!--
-integer llGetAttached()-->
+    <description lang="en">
 Returns the object's attachment point, or 0 if not attached
     </description>
   </function>
 
   <function name="llGetFreeMemory" type="integer">
-    <description lang="en"><!--
-integer llGetFreeMemory()-->
+    <description lang="en">
 Returns the number of free bytes of memory the script can use
     </description>
   </function>
 
   <function name="llGetRegionName" type="string">
-    <description lang="en"><!--
-string llGetRegionName()-->
+    <description lang="en">
 Returns the current region name
     </description>
   </function>
 
   <function name="llGetRegionTimeDilation" type="float">
-    <description lang="en"><!--
-float llGetRegionTimeDilation()-->
+    <description lang="en">
 Returns the current time dilation as a float between 0.0 (full dilation) and 1.0 (no dilation)
     </description>
   </function>
 
   <function name="llGetRegionFPS" type="float">
-    <description lang="en"><!--
-float llGetRegionFPS()-->
+    <description lang="en">
 Returns the mean region frames per second
     </description>
   </function>
 
   <function name="llParticleSystem">
     <param type="list" name="rules"/>
-    <description lang="en"><!--
-llParticleSystem(list rules)-->
+    <description lang="en">
 Creates a particle system based on rules.  An empty list removes the particle system.
 List format is [ rule1, data1, rule2, data2 . . . rulen, datan ]
     </description>
@@ -7493,8 +7263,7 @@ List format is [ rule1, data1, rule2, data2 . . . rulen, datan ]
     <param type="float" name="height"/>
     <param type="integer" name="water"/>
     <param type="float" name="tau"/>
-    <description lang="en"><!--
-llGroundRepel(float height, integer water, float tau)-->
+    <description lang="en">
 Critically damps to height if within height*0.5 of level (either above ground level, or above the higher of land and water if water == TRUE)
     </description>
   </function>
@@ -7503,16 +7272,14 @@ Critically damps to height if within height*0.5 of level (either above ground le
     <param type="key" name="target"/>
     <param type="string" name="folder"/>
     <param type="list" name="inventory"/>
-    <description lang="en"><!--
-llGiveInventoryList(key target, string folder, list inventory)-->
+    <description lang="en">
 Gives inventory items to target, creating a new folder to put them in
     </description>
   </function>
 
   <function name="llSetVehicleType">
     <param type="integer" name="type"/>
-    <description lang="en"><!--
-llSetVehicleType(integer type)-->
+    <description lang="en">
 Sets the vehicle to one of the default types
     </description>
   </function>
@@ -7520,8 +7287,7 @@ Sets the vehicle to one of the default types
   <function name="llSetVehicleFloatParam">
     <param type="integer" name="param"/>
     <param type="float" name="value"/>
-    <description lang="en"><!--
-llSetVehicleFloatParam(integer param, float value)-->
+    <description lang="en">
 Sets the specified vehicle float parameter
     </description>
   </function>
@@ -7529,8 +7295,7 @@ Sets the specified vehicle float parameter
   <function name="llSetVehicleVectorParam">
     <param type="integer" name="param"/>
     <param type="vector" name="vec"/>
-    <description lang="en"><!--
-llSetVehicleVectorParam(integer param, vector vec)-->
+    <description lang="en">
 Sets the specified vehicle vector parameter
     </description>
   </function>
@@ -7538,24 +7303,21 @@ Sets the specified vehicle vector parameter
   <function name="llSetVehicleRotationParam">
     <param type="integer" name="param"/>
     <param type="rotation" name="rot"/>
-    <description lang="en"><!--
-llSetVehicleRotationParam(integer param, rotation rot)-->
+    <description lang="en">
 Sets the specified vehicle rotation parameter
     </description>
   </function>
 
   <function name="llSetVehicleFlags">
     <param type="integer" name="flags"/>
-    <description lang="en"><!--
-llSetVehicleFlags(integer flags)-->
+    <description lang="en">
 Sets the enabled bits in 'flags'
     </description>
   </function>
 
   <function name="llRemoveVehicleFlags">
     <param type="integer" name="flags"/>
-    <description lang="en"><!--
-llRemoveVehicleFlags(integer flags)-->
+    <description lang="en">
 Removes the enabled bits in 'flags'
     </description>
   </function>
@@ -7563,15 +7325,13 @@ Removes the enabled bits in 'flags'
   <function name="llSitTarget">
     <param type="vector" name="offset"/>
     <param type="rotation" name="rot"/>
-    <description lang="en"><!--
-llSitTarget(vector offset, rotation rot)-->
+    <description lang="en">
 Sets the sit location for the prim.  If offset == &lt;0,0,0&gt; then the sit target is removed.
     </description>
   </function>
 
   <function name="llAvatarOnSitTarget" type="key">
-    <description lang="en"><!--
-key llAvatarOnSitTarget()-->
+    <description lang="en">
 If an avatar is seated on the sit target, returns the avatar's key, otherwise NULL_KEY
     </description>
   </function>
@@ -7580,40 +7340,35 @@ If an avatar is seated on the sit target, returns the avatar's key, otherwise NU
   <function name="llAddToLandPassList" delay="0.1">
     <param type="key" name="avatar"/>
     <param type="float" name="hours"/>
-    <description lang="en"><!--
-llAddToLandPassList(key avatar, float hours)-->
+    <description lang="en">
 Adds avatar to the land pass list for hours, or indefinitely if hours is 0
     </description>
   </function>
 
   <function name="llSetTouchText">
     <param type="string" name="text"/>
-    <description lang="en"><!--
-llSetTouchText(string text)-->
+    <description lang="en">
 Displays text rather than the default 'Touch' in the pie menu
     </description>
   </function>
 
   <function name="llSetSitText">
     <param type="string" name="text"/>
-    <description lang="en"><!--
-llSetSitText(string text)-->
+    <description lang="en">
 Displays text rather than the default 'Sit Here' in the pie menu
     </description>
   </function>
 
   <function name="llSetCameraEyeOffset">
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-llSetCameraEyeOffset(vector offset)-->
+    <description lang="en">
 Sets the camera eye offset for avatars that sit on the object
     </description>
   </function>
 
   <function name="llSetCameraAtOffset">
     <param type="vector" name="offset"/>
-    <description lang="en"><!--
-llSetCameraAtOffset(vector offset)-->
+    <description lang="en">
 Sets the point the camera is looking at to offset for avatars that sit on the object
     </description>
   </function>
@@ -7621,16 +7376,14 @@ Sets the point the camera is looking at to offset for avatars that sit on the ob
   <function name="llDumpList2String" type="string">
     <param type="list" name="src"/>
     <param type="string" name="separator"/>
-    <description lang="en"><!--
-string llDumpList2String(list src, string separator)-->
+    <description lang="en">
 Returns the list in a single string, using separator between the entries
     </description>
   </function>
 
   <function name="llScriptDanger" type="integer">
     <param type="vector" name="pos"/>
-    <description lang="en"><!--
-integer llScriptDanger(vector pos)-->
+    <description lang="en">
 Returns TRUE if pos is over public land, sandbox land, land that doesn't allow everyone to edit and build, or land that doesn't allow outside scripts
     </description>
   </function>
@@ -7640,8 +7393,7 @@ Returns TRUE if pos is over public land, sandbox land, land that doesn't allow e
     <param type="string" name="message"/>
     <param type="list" name="buttons"/>
     <param type="integer" name="chat_channel"/>
-    <description lang="en"><!--
-llDialog(key avatar, string message, list buttons, integer chat_channel)-->
+    <description lang="en">
 Shows a dialog box on the avatar's screen with a message and up to 12 buttons.
 If a button is pressed, the avatar says the text of the button label on chat_channel.
     </description>
@@ -7649,8 +7401,7 @@ If a button is pressed, the avatar says the text of the button label on chat_cha
 
   <function name="llVolumeDetect">
     <param type="integer" name="detect"/>
-    <description lang="en"><!--
-llVolumeDetect(integer detect)-->
+    <description lang="en">
 If detect = TRUE, object works much like Phantom, but triggers collision_start and collision_end events when other objects start and stop interpenetrating.
 Must be applied to the root prim.
     </description>
@@ -7658,16 +7409,14 @@ Must be applied to the root prim.
 
   <function name="llResetOtherScript">
     <param type="string" name="name"/>
-    <description lang="en"><!--
-llResetOtherScript(string name)-->
+    <description lang="en">
 Resets script name
     </description>
   </function>
 
   <function name="llGetScriptState" type="integer">
     <param type="string" name="name"/>
-    <description lang="en"><!--
-integer llGetScriptState(string name)-->
+    <description lang="en">
 Returns TRUE if the script name is running
     </description>
   </function>
@@ -7678,16 +7427,14 @@ Returns TRUE if the script name is running
     <param type="string" name="name"/>
     <param type="integer" name="running"/>
     <param type="integer" name="start_param"/>
-    <description lang="en"><!--
-llRemoteLoadScript(key target, string name, integer running, integer start_param)-->
+    <description lang="en">
 DEPRECATED!  Please use llRemoteLoadScriptPin instead.
     </description>
   </function>
 
   <function name="llSetRemoteScriptAccessPin" delay="0.2">
     <param type="integer" name="pin"/>
-    <description lang="en"><!--
-llSetRemoteScriptAccessPin(integer pin)-->
+    <description lang="en">
 If pin is set to a non-zero number, allows a prim to have scripts remotely loaded via llRemoteLoadScriptPin when it passes in the correct pin. Otherwise, llRemoteLoadScriptPin is ignored.
     </description>
   </function>
@@ -7699,8 +7446,7 @@ If pin is set to a non-zero number, allows a prim to have scripts remotely loade
     <param type="integer" name="pin"/>
     <param type="integer" name="running"/>
     <param type="integer" name="start_param"/>
-    <description lang="en"><!--
-llRemoteLoadScriptPin(key target, string name, integer pin, integer running, integer start_param)-->
+    <description lang="en">
 Copies script name onto target, if the owner of this scripted object can modify target and is in the same region, and the matching pin is used.
 If running == TRUE, starts the script with start_param
     </description>
@@ -7708,8 +7454,7 @@ If running == TRUE, starts the script with start_param
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llOpenRemoteDataChannel" delay="1">
-    <description lang="en"><!--
-llOpenRemoteDataChannel()-->
+    <description lang="en">
 Creates a channel to listen for XML-RPC calls, and will trigger a remote_data event with channel id once it is available
     </description>
   </function>
@@ -7719,8 +7464,7 @@ Creates a channel to listen for XML-RPC calls, and will trigger a remote_data ev
     <param type="string" name="dest"/>
     <param type="integer" name="idata"/>
     <param type="string" name="sdata"/>
-    <description lang="en"><!--
-key llSendRemoteData(key channel, string dest, integer idata, string sdata)-->
+    <description lang="en">
 Sends an XML-RPC request to dest through channel with payload of channel (in a string), integer idata and string sdata.
 Returns a key that is the message_id for the resulting remote_data events.
     </description>
@@ -7732,8 +7476,7 @@ Returns a key that is the message_id for the resulting remote_data events.
     <param type="key" name="message_id"/>
     <param type="string" name="sdata"/>
     <param type="integer" name="idata"/>
-    <description lang="en"><!--
-llRemoteDataReply(key channel, key message_id, string sdata, integer idata)-->
+    <description lang="en">
 Sends an XML-RPC reply to message_id on channel with payload of string sdata and integer idata
     </description>
   </function>
@@ -7743,8 +7486,7 @@ Sends an XML-RPC reply to message_id on channel with payload of string sdata and
   -->
   <function name="llCloseRemoteDataChannel" delay="1">
     <param type="key" name="channel"/>
-    <description lang="en"><!--
-llCloseRemoteDataChannel(key channel)-->
+    <description lang="en">
 Closes XML-RPC channel
     </description>
   </function>
@@ -7752,32 +7494,28 @@ Closes XML-RPC channel
   <function name="llMD5String" type="string">
     <param type="string" name="src"/>
     <param type="integer" name="nonce"/>
-    <description lang="en"><!--
-string llMD5String(string src, integer nonce)-->
+    <description lang="en">
 Returns a string of 32 hex characters that is a RSA Data Security, Inc. MD5 Message-Digest Algorithm of src with nonce
     </description>
   </function>
 
   <function name="llSetPrimitiveParams" delay="0.2">
     <param type="list" name="rules"/>
-    <description lang="en"><!--
-llSetPrimitiveParams(list rules)-->
+    <description lang="en">
 Sets the prim's parameters according to rules
     </description>
   </function>
 
   <function name="llStringToBase64" type="string">
     <param type="string" name="str"/>
-    <description lang="en"><!--
-string llStringToBase64(string str)-->
+    <description lang="en">
 Converts a string to the Base64 representation of the string
     </description>
   </function>
 
   <function name="llBase64ToString" type="string">
     <param type="string" name="str"/>
-    <description lang="en"><!--
-string llBase64ToString(string str)-->
+    <description lang="en">
 Converts a Base64 string to a conventional string.
 If the conversion creates any unprintable characters, they are converted to spaces.
     </description>
@@ -7786,16 +7524,14 @@ If the conversion creates any unprintable characters, they are converted to spac
   <function name="llXorBase64Strings" type="string" delay="0.3" status="deprecated">
     <param type="string" name="s1"/>
     <param type="string" name="s2"/>
-    <description lang="en"><!--
-string llXorBase64Strings(string s1, string s2)-->
+    <description lang="en">
 DEPRECATED!  Please use llXorBase64StringsCorrect instead.
 Incorrectly performs an exclusive or on two Base64 strings and returns a Base64 string.  s2 repeats if it is shorter than s1.  Retained for backwards compatability.
     </description>
   </function>
 
   <function name="llRemoteDataSetRegion" status="deprecated">
-    <description lang="en"><!--
-llRemoteDataSetRegion()-->
+    <description lang="en">
 DEPRECATED!  Please use llOpenRemoteDataChannel instead.
 If an object using remote data channels changes regions, you must call this function to reregister the remote data channels. This call is not needed if the prim does not change regions.
     </description>
@@ -7803,24 +7539,21 @@ If an object using remote data channels changes regions, you must call this func
 
   <function name="llLog10" type="float">
     <param type="float" name="val"/>
-    <description lang="en"><!--
-float llLog10(float val)-->
+    <description lang="en">
 Returns the base 10 logarithm of val.  Returns zero if val &lt;= 0.
     </description>
   </function>
 
   <function name="llLog" type="float">
     <param type="float" name="val"/>
-    <description lang="en"><!--
-float llLog(float val)-->
+    <description lang="en">
 Returns the natural logarithm of val.  Returns zero if val &lt;= 0.
     </description>
   </function>
 
   <function name="llGetAnimationList" type="list">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-list llGetAnimationList(key id)-->
+    <description lang="en">
 Returns a list of keys of playing animations for avatar described by id
     </description>
   </function>
@@ -7828,51 +7561,44 @@ Returns a list of keys of playing animations for avatar described by id
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llSetParcelMusicURL" delay="2">
     <param type="string" name="url"/>
-    <description lang="en"><!--
-llSetParcelMusicURL(string url)-->
+    <description lang="en">
 Sets the streaming audio URL for the parcel which the object is on
     </description>
   </function>
 
   <function name="llGetRootPosition" type="vector">
-    <description lang="en"><!--
-vector llGetRootPosition()-->
+    <description lang="en">
 Returns the position (in region coordinates) of the root prim of the object which the script is attached to
     </description>
   </function>
 
   <function name="llGetRootRotation" type="rotation">
-    <description lang="en"><!--
-rotation llGetRootRotation()-->
+    <description lang="en">
 Returns the rotation (relative to the region) of the root prim of the object which the script is attached to
     </description>
   </function>
 
   <function name="llGetObjectDesc" type="string">
-    <description lang="en"><!--
-string llGetObjectDesc()-->
+    <description lang="en">
 Returns the description of the prim the script is attached to
     </description>
   </function>
 
   <function name="llSetObjectDesc">
     <param type="string" name="name"/>
-    <description lang="en"><!--
-llSetObjectDesc(string name)-->
+    <description lang="en">
 Sets the prim's description
     </description>
   </function>
 
   <function name="llGetCreator" type="key">
-    <description lang="en"><!--
-key llGetCreator()-->
+    <description lang="en">
 Returns a key for the creator of the prim
     </description>
   </function>
 
   <function name="llGetTimestamp" type="string">
-    <description lang="en"><!--
-string llGetTimestamp()-->
+    <description lang="en">
 Returns the timestamp in the UTC time zone in the format: YYYY-MM-DDThh:mm:ss.ff..fZ
     </description>
   </function>
@@ -7881,76 +7607,66 @@ Returns the timestamp in the UTC time zone in the format: YYYY-MM-DDThh:mm:ss.ff
     <param type="integer" name="linknumber"/>
     <param type="float" name="alpha"/>
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-llSetLinkAlpha(integer linknumber, float alpha, integer face)-->
+    <description lang="en">
 If a prim exists in the link chain at linknumber, sets face to alpha
     </description>
   </function>
 
   <function name="llGetNumberOfPrims" type="integer">
-    <description lang="en"><!--
-integer llGetNumberOfPrims()-->
+    <description lang="en">
 Returns the number of prims in a link set the script is attached to
     </description>
   </function>
 
   <function name="llGetNumberOfNotecardLines" type="key" delay="0.1">
     <param type="string" name="name"/>
-    <description lang="en"><!--
-key llGetNumberOfNotecardLines(string name)-->
+    <description lang="en">
 Returns number of lines in notecard name via the dataserver event (cast return value to integer)
     </description>
   </function>
 
   <function name="llGetBoundingBox" type="list">
     <param type="key" name="object"/>
-    <description lang="en"><!--
-list llGetBoundingBox(key object)-->
+    <description lang="en">
 Returns the bounding box around the object (including any linked prims) relative to its root prim, in a list in the format [ (vector) min_corner, (vector) max_corner ]
     </description>
   </function>
 
   <function name="llGetGeometricCenter" type="vector">
-    <description lang="en"><!--
-vector llGetGeometricCenter()-->
+    <description lang="en">
 Returns the geometric center of the linked set the script is attached to.
     </description>
   </function>
 
   <function name="llGetPrimitiveParams" type="list" delay="0.2">
     <param type="list" name="params"/>
-    <description lang="en"><!--
-list llGetPrimitiveParams(list params)-->
+    <description lang="en">
 Returns the primitive parameters specified in the params list.
     </description>
   </function>
 
   <function name="llIntegerToBase64" type="string" delay="0.0">
     <param type="integer" name="number"/>
-    <description lang="en"><!--
-string llIntegerToBase64(integer number)-->
+    <description lang="en">
 Returns a string that is a Base64 big endian encode of number
     </description>
   </function>
 
   <function name="llBase64ToInteger" type="integer" delay="0.0">
     <param type="string" name="str"/>
-    <description lang="en"><!--
-integer llBase64ToInteger(string str)-->
+    <description lang="en">
 Returns an integer that is the str Base64 decoded as a big endian integer
     </description>
   </function>
 
   <function name="llGetGMTclock" type="float">
-    <description lang="en"><!--
-float llGetGMTclock()-->
+    <description lang="en">
 Returns the time in seconds since midnight GMT
     </description>
   </function>
 
   <function name="llGetSimulatorHostname" type="string" delay="10">
-    <description lang="en"><!--
-string llGetSimulatorHostname()-->
+    <description lang="en">
 Returns the hostname of the machine which the script is running on (same as string in viewer Help dialog)
     </description>
   </function>
@@ -7958,8 +7674,7 @@ Returns the hostname of the machine which the script is running on (same as stri
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llSetLocalRot" delay="0.2">
     <param type="rotation" name="rot"/>
-    <description lang="en"><!--
-llSetLocalRot(rotation rot)-->
+    <description lang="en">
 Sets the rotation of a child prim relative to the root prim
     </description>
   </function>
@@ -7968,8 +7683,7 @@ Sets the rotation of a child prim relative to the root prim
     <param type="string" name="src"/>
     <param type="list" name="separators"/>
     <param type="list" name="spacers"/>
-    <description lang="en"><!--
-list llParseStringKeepNulls(string src, list separators, list spacers)-->
+    <description lang="en">
 Breaks src into a list, discarding separators, keeping spacers, keeping any null values generated.
 (separators and spacers must be lists of strings, maximum of 8 each)
     </description>
@@ -7982,16 +7696,14 @@ Breaks src into a list, discarding separators, keeping spacers, keeping any null
     <param type="vector" name="vel"/>
     <param type="rotation" name="rot"/>
     <param type="integer" name="param"/>
-    <description lang="en"><!--
-llRezAtRoot(string inventory, vector pos, vector vel, rotation rot, integer param)-->
+    <description lang="en">
 Instantiates owner's inventory object rotated to rot with its root at pos, moving at vel, using param as the start parameter
     </description>
   </function>
 
   <function name="llGetObjectPermMask" type="integer">
     <param type="integer" name="mask"/>
-    <description lang="en"><!--
-integer llGetObjectPermMask(integer mask)-->
+    <description lang="en">
 Returns the requested permission mask for the root object the task is attached to
     </description>
   </function>
@@ -7999,8 +7711,7 @@ Returns the requested permission mask for the root object the task is attached t
   <function name="llSetObjectPermMask" status="godmode">
     <param type="integer" name="mask"/>
     <param type="integer" name="value"/>
-    <description lang="en"><!--
-llSetObjectPermMask(integer mask, integer value)-->
+    <description lang="en">
 Sets the given permission mask to the new value on the root object the task is attached to (requires God Mode)
     </description>
   </function>
@@ -8008,8 +7719,7 @@ Sets the given permission mask to the new value on the root object the task is a
   <function name="llGetInventoryPermMask" type="integer">
     <param type="string" name="item"/>
     <param type="integer" name="mask"/>
-    <description lang="en"><!--
-integer llGetInventoryPermMask(string item, integer mask)-->
+    <description lang="en">
 Returns the requested permission mask for the inventory item
     </description>
   </function>
@@ -8018,24 +7728,21 @@ Returns the requested permission mask for the inventory item
     <param type="string" name="item"/>
     <param type="integer" name="mask"/>
     <param type="integer" name="value"/>
-    <description lang="en"><!--
-llSetInventoryPermMask(string item, integer mask, integer value)-->
+    <description lang="en">
 Sets the given permission mask to the new value on the inventory item (requires God Mode)
     </description>
   </function>
 
   <function name="llGetInventoryCreator" type="key">
     <param type="string" name="item"/>
-    <description lang="en"><!--
-key llGetInventoryCreator(string item)-->
+    <description lang="en">
 Returns a key for the creator of the inventory item
     </description>
   </function>
 
   <function name="llOwnerSay">
     <param type="string" name="msg"/>
-    <description lang="en"><!--
-llOwnerSay(string msg)-->
+    <description lang="en">
 Says msg to owner only.  (Owner must be in the same region.)
     </description>
   </function>
@@ -8043,24 +7750,21 @@ Says msg to owner only.  (Owner must be in the same region.)
   <function name="llRequestSimulatorData" type="key" delay="1">
     <param type="string" name="simulator"/>
     <param type="integer" name="data"/>
-    <description lang="en"><!--
-key llRequestSimulatorData(string simulator, integer data)-->
+    <description lang="en">
 Requests data about simulator.  When data is available the dataserver event will be raised.
     </description>
   </function>
 
   <function name="llForceMouselook">
     <param type="integer" name="mouselook"/>
-    <description lang="en"><!--
-llForceMouselook(integer mouselook)-->
+    <description lang="en">
 If mouselook is TRUE, any avatar that sits upon the prim will be forced into mouselook mode
     </description>
   </function>
 
   <function name="llGetObjectMass" type="float">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-float llGetObjectMass(key id)-->
+    <description lang="en">
 Returns the mass of the avatar or object in the region
     </description>
   </function>
@@ -8070,8 +7774,7 @@ Returns the mass of the avatar or object in the region
     <param type="list" name="src"/>
     <param type="integer" name="start"/>
     <param type="integer" name="end"/>
-    <description lang="en"><!--
-list llListReplaceList(list dest, list src, integer start, integer end)-->
+    <description lang="en">
 Returns a list that is dest with start through end removed and src inserted at start
     </description>
   </function>
@@ -8081,8 +7784,7 @@ Returns a list that is dest with start through end removed and src inserted at s
     <param type="key" name="avatar"/>
     <param type="string" name="message"/>
     <param type="string" name="url"/>
-    <description lang="en"><!--
-llLoadURL(key avatar, string message, string url)-->
+    <description lang="en">
 Shows a dialog to avatar offering to load the web page at url with a message.
 If user clicks yes, launches the page in their web browser.
     </description>
@@ -8091,16 +7793,14 @@ If user clicks yes, launches the page in their web browser.
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llParcelMediaCommandList" delay="2">
     <param type="list" name="command"/>
-    <description lang="en"><!--
-llParcelMediaCommandList(list command)-->
+    <description lang="en">
 Sends a list of commands, some with arguments, to a parcel to control the playback of movies and other media
     </description>
   </function>
 
   <function name="llParcelMediaQuery" type="list" delay="2">
     <param type="list" name="query"/>
-    <description lang="en"><!--
-list llParcelMediaQuery(list query)-->
+    <description lang="en">
 Returns a list containing results of the sent query
     </description>
   </function>
@@ -8109,8 +7809,7 @@ Returns a list containing results of the sent query
     <param type="integer" name="a"/>
     <param type="integer" name="b"/>
     <param type="integer" name="c"/>
-    <description lang="en"><!--
-integer llModPow(integer a, integer b, integer c)-->
+    <description lang="en">
 Returns a raised to the b power, mod c. ( (a**b)%c )
 b is capped at 0xFFFF (16 bits).
     </description>
@@ -8118,8 +7817,7 @@ b is capped at 0xFFFF (16 bits).
 
   <function name="llGetInventoryType" type="integer">
     <param type="string" name="name"/>
-    <description lang="en"><!--
-integer llGetInventoryType(string name)-->
+    <description lang="en">
 Returns the type of the inventory item name
     </description>
   </function>
@@ -8127,22 +7825,19 @@ Returns the type of the inventory item name
   <function name="llSetPayPrice">
     <param type="integer" name="price"/>
     <param type="list" name="quick_pay_buttons"/>
-    <description lang="en"><!--
-llSetPayPrice(integer price, list quick_pay_buttons)-->
+    <description lang="en">
 Sets the default amount on the dialog that appears when someone chooses to pay this prim
     </description>
   </function>
 
   <function name="llGetCameraPos" type="vector">
-    <description lang="en"><!--
-vector llGetCameraPos()-->
+    <description lang="en">
 Returns the current camera position for the agent the task has permissions for
     </description>
   </function>
 
   <function name="llGetCameraRot" type="rotation">
-    <description lang="en"><!--
-rotation llGetCameraRot()-->
+    <description lang="en">
 Returns the current camera orientation for the agent the task has permissions for
     </description>
   </function>
@@ -8150,32 +7845,28 @@ Returns the current camera orientation for the agent the task has permissions fo
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llSetPrimURL" delay="20" status="unimplemented">
     <param type="string" name="url"/>
-    <description lang="en"><!--
-llSetPrimURL(string url)-->
+    <description lang="en">
 Updates the URL for the web page shown on the sides of the object
     </description>
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llRefreshPrimURL" delay="20" status="unimplemented">
-    <description lang="en"><!--
-llRefreshPrimURL()-->
+    <description lang="en">
 Reloads the web page shown on the sides of the object
     </description>
   </function>
 
   <function name="llEscapeURL" type="string">
     <param type="string" name="url"/>
-    <description lang="en"><!--
-string llEscapeURL(string url)-->
+    <description lang="en">
 Returns an escaped/encoded version of url, replacing spaces with %20 etc.
     </description>
   </function>
 
   <function name="llUnescapeURL" type="string">
     <param type="string" name="url"/>
-    <description lang="en"><!--
-string llUnescapeURL(string url)-->
+    <description lang="en">
 Returns an unescaped/ unencoded version of url, replacing %20 with spaces etc.
     </description>
   </function>
@@ -8185,8 +7876,7 @@ Returns an unescaped/ unencoded version of url, replacing %20 with spaces etc.
     <param type="string" name="simname"/>
     <param type="vector" name="pos"/>
     <param type="vector" name="look_at"/>
-    <description lang="en"><!--
-llMapDestination(string simname, vector pos, vector look_at)-->
+    <description lang="en">
 Opens the World Map centered on the region simname with pos highlighted. (NOTE: look_at currently does nothing.)
 Only works for scripts attached to avatar, or during touch events.
     </description>
@@ -8196,8 +7886,7 @@ Only works for scripts attached to avatar, or during touch events.
   <function name="llAddToLandBanList" delay="0.1">
     <param type="key" name="avatar"/>
     <param type="float" name="hours"/>
-    <description lang="en"><!--
-llAddToLandBanList(key avatar, float hours)-->
+    <description lang="en">
 Adds avatar to the land ban list for hours, or indefinitely if hours is 0
     </description>
   </function>
@@ -8205,8 +7894,7 @@ Adds avatar to the land ban list for hours, or indefinitely if hours is 0
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llRemoveFromLandPassList" delay="0.1">
     <param type="key" name="avatar"/>
-    <description lang="en"><!--
-llRemoveFromLandPassList(key avatar)-->
+    <description lang="en">
 Removes avatar from the land pass list
     </description>
   </function>
@@ -8214,24 +7902,21 @@ Removes avatar from the land pass list
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llRemoveFromLandBanList" delay="0.1">
     <param type="key" name="avatar"/>
-    <description lang="en"><!--
-llRemoveFromLandBanList(key avatar)-->
+    <description lang="en">
 Removes avatar from the land ban list
     </description>
   </function>
 
   <function name="llSetCameraParams">
     <param type="list" name="rules"/>
-    <description lang="en"><!--
-llSetCameraParams(list rules)-->
+    <description lang="en">
 Sets multiple camera parameters at once.
 List format is [ rule1, data1, rule2, data2 . . . rulen, datan ]
     </description>
   </function>
 
   <function name="llClearCameraParams">
-    <description lang="en"><!--
-llClearCameraParams()-->
+    <description lang="en">
 Resets all camera parameters to default values and turns off scripted camera control
     </description>
   </function>
@@ -8239,30 +7924,26 @@ Resets all camera parameters to default values and turns off scripted camera con
   <function name="llListStatistics" type="float">
     <param type="integer" name="operation"/>
     <param type="list" name="src"/>
-    <description lang="en"><!--
-float llListStatistics(integer operation, list src)-->
+    <description lang="en">
 Performs statistical aggregate functions on list src using LIST_STAT_* operations
     </description>
   </function>
 
   <function name="llGetUnixTime" type="integer">
-    <description lang="en"><!--
-integer llGetUnixTime()-->
+    <description lang="en">
 Returns the number of seconds elapsed since 00:00 hours, Jan 1, 1970 UTC from the system clock
     </description>
   </function>
 
   <function name="llGetParcelFlags" type="integer">
     <param type="vector" name="pos"/>
-    <description lang="en"><!--
-integer llGetParcelFlags(vector pos)-->
+    <description lang="en">
 Returns a mask of the parcel flags (PARCEL_FLAG_*) for the parcel that includes the point pos
     </description>
   </function>
 
   <function name="llGetRegionFlags" type="integer">
-    <description lang="en"><!--
-integer llGetRegionFlags()-->
+    <description lang="en">
 Returns the region flags (REGION_FLAG_*) for the region the object is in
     </description>
   </function>
@@ -8270,8 +7951,7 @@ Returns the region flags (REGION_FLAG_*) for the region the object is in
   <function name="llXorBase64StringsCorrect" type="string">
     <param type="string" name="s1"/>
     <param type="string" name="s2"/>
-    <description lang="en"><!--
-string llXorBase64StringsCorrect(string s1, string s2)-->
+    <description lang="en">
 Correctly performs an exclusive or on two Base64 strings and returns a Base64 string.
 s2 repeats if it is shorter than s1.
     </description>
@@ -8281,40 +7961,35 @@ s2 repeats if it is shorter than s1.
     <param type="string" name="url"/>
     <param type="list" name="parameters"/>
     <param type="string" name="body"/>
-    <description lang="en"><!--
-key llHTTPRequest(string url, list parameters, string body)-->
+    <description lang="en">
 Sends an HTTP request to the specified url with the body of the request and parameters
     </description>
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llResetLandBanList" delay="0.1">
-    <description lang="en"><!--
-llResetLandBanList()-->
+    <description lang="en">
 Removes all Residents from the land ban list
     </description>
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llResetLandPassList" delay="0.1">
-    <description lang="en"><!--
-llResetLandPassList()-->
+    <description lang="en">
 Removes all Residents from the land access/pass list
     </description>
   </function>
 
   <function name="llGetObjectPrimCount" type="integer">
     <param type="key" name="object_id"/>
-    <description lang="en"><!--
-integer llGetObjectPrimCount(key object_id)-->
+    <description lang="en">
 Returns the total number of prims for an object in the region
     </description>
   </function>
 
   <function name="llGetParcelPrimOwners" type="list" delay="2.0">
     <param type="vector" name="pos"/>
-    <description lang="en"><!--
-list llGetParcelPrimOwners(vector pos)-->
+    <description lang="en">
 Returns a list of all Residents who own objects on the parcel at pos and with individual prim counts.
 Requires owner-like permissions for the parcel.
     </description>
@@ -8324,8 +7999,7 @@ Requires owner-like permissions for the parcel.
     <param type="vector" name="pos"/>
     <param type="integer" name="category"/>
     <param type="integer" name="sim_wide"/>
-    <description lang="en"><!--
-integer llGetParcelPrimCount(vector pos, integer category, integer sim_wide)-->
+    <description lang="en">
 Returns the number of prims on the parcel at pos of the given category.
 Categories: PARCEL_COUNT_TOTAL, _OWNER, _GROUP, _OTHER, _SELECTED, _TEMP
     </description>
@@ -8334,8 +8008,7 @@ Categories: PARCEL_COUNT_TOTAL, _OWNER, _GROUP, _OTHER, _SELECTED, _TEMP
   <function name="llGetParcelMaxPrims" type="integer">
     <param type="vector" name="pos"/>
     <param type="integer" name="sim_wide"/>
-    <description lang="en"><!--
-integer llGetParcelMaxPrims(vector pos, integer sim_wide)-->
+    <description lang="en">
 Returns the maximum number of prims allowed on the parcel at pos
     </description>
   </function>
@@ -8343,8 +8016,7 @@ Returns the maximum number of prims allowed on the parcel at pos
   <function name="llGetParcelDetails" type="list">
     <param type="vector" name="pos"/>
     <param type="list" name="params"/>
-    <description lang="en"><!--
-list llGetParcelDetails(vector pos, list params)-->
+    <description lang="en">
 Returns the parcel details specified in params for the parcel at pos.
 Params is one or more of: PARCEL_DETAILS_NAME, _DESC, _OWNER, _GROUP, _AREA, _ID, _SEE_AVATARS
     </description>
@@ -8353,8 +8025,7 @@ Params is one or more of: PARCEL_DETAILS_NAME, _DESC, _OWNER, _GROUP, _AREA, _ID
   <function name="llSetLinkPrimitiveParams" delay="0.2">
     <param type="integer" name="linknumber"/>
     <param type="list" name="rules"/>
-    <description lang="en"><!--
-llSetLinkPrimitiveParams(integer linknumber, list rules)-->
+    <description lang="en">
 Sets primitive parameters for linknumber based on rules
     </description>
   </function>
@@ -8364,8 +8035,7 @@ Sets primitive parameters for linknumber based on rules
     <param type="integer" name="linknumber"/>
     <param type="string" name="texture"/>
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-llSetLinkTexture(integer linknumber, string texture, integer face)-->
+    <description lang="en">
 Sets the texture of face for a task that exists in the link chain at linknumber
     </description>
   </function>
@@ -8373,8 +8043,7 @@ Sets the texture of face for a task that exists in the link chain at linknumber
   <function name="llStringTrim" type="string">
     <param type="string" name="src"/>
     <param type="integer" name="trim_type"/>
-    <description lang="en"><!--
-string llStringTrim(string src, integer trim_type)-->
+    <description lang="en">
 Trims the leading and/or trailing white spaces from a string.
 trim_type can be STRING_TRIM, STRING_TRIM_HEAD or STRING_TRIM_TAIL.
     </description>
@@ -8383,8 +8052,7 @@ trim_type can be STRING_TRIM, STRING_TRIM_HEAD or STRING_TRIM_TAIL.
   <function name="llRegionSay">
     <param type="integer" name="channel"/>
     <param type="string" name="msg"/>
-    <description lang="en"><!--
-llRegionSay(integer channel, string msg)-->
+    <description lang="en">
 Broadcasts msg on channel (not 0) that can be heard anywhere in the region by a script listening on channel
     </description>
   </function>
@@ -8392,8 +8060,7 @@ Broadcasts msg on channel (not 0) that can be heard anywhere in the region by a 
   <function name="llGetObjectDetails" type="list">
     <param type="key" name="id"/>
     <param type="list" name="params"/>
-    <description lang="en"><!--
-list llGetObjectDetails(key id, list params)-->
+    <description lang="en">
 Returns the object details specified in params for the object with key id.
 Params are OBJECT_NAME, _DESC, _POS, _ROT, _VELOCITY, _OWNER, _GROUP, _CREATOR
     </description>
@@ -8401,15 +8068,13 @@ Params are OBJECT_NAME, _DESC, _POS, _ROT, _VELOCITY, _OWNER, _GROUP, _CREATOR
 
   <function name="llSetClickAction">
     <param type="integer" name="action"/>
-    <description lang="en"><!--
-llSetClickAction(integer action)-->
+    <description lang="en">
 Sets the action performed when a prim is clicked upon
     </description>
   </function>
 
   <function name="llGetRegionAgentCount" type="integer">
-    <description lang="en"><!--
-integer llGetRegionAgentCount()-->
+    <description lang="en">
 Returns the number of avatars in the region
     </description>
   </function>
@@ -8419,8 +8084,7 @@ Returns the number of avatars in the region
     <param type="key" name="avatar"/>
     <param type="string" name="message"/>
     <param type="integer" name="chat_channel"/>
-    <description lang="en"><!--
-llTextBox(key avatar, string message, integer chat_channel)-->
+    <description lang="en">
 Shows a window on the avatar's screen with the message.
 It contains a text box for input, and if entered that text is chatted on chat_channel.
     </description>
@@ -8428,86 +8092,75 @@ It contains a text box for input, and if entered that text is chatted on chat_ch
 
   <function name="llGetAgentLanguage" type="string">
     <param type="key" name="avatar"/>
-    <description lang="en"><!--
-string llGetAgentLanguage(key avatar)-->
+    <description lang="en">
 Returns the language code of the preferred interface language of the avatar
     </description>
   </function>
 
   <function name="llDetectedTouchUV" type="vector">
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-vector llDetectedTouchUV(integer index)-->
+    <description lang="en">
 Returns the u and v coordinates in the first two components of a vector, for the texture coordinates where the prim was touched in a triggered touch event
     </description>
   </function>
 
   <function name="llDetectedTouchFace" type="integer">
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-integer llDetectedTouchFace(integer index)-->
+    <description lang="en">
 Returns the index of the face where the avatar clicked in a triggered touch event
     </description>
   </function>
 
   <function name="llDetectedTouchPos" type="vector">
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-vector llDetectedTouchPos(integer index)-->
+    <description lang="en">
 Returns the position where the object was touched in a triggered touch event
     </description>
   </function>
 
   <function name="llDetectedTouchNormal" type="vector">
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-vector llDetectedTouchNormal(integer index)-->
+    <description lang="en">
 Returns the surface normal for a triggered touch event
     </description>
   </function>
 
   <function name="llDetectedTouchBinormal" type="vector">
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-vector llDetectedTouchBinormal(integer index)-->
+    <description lang="en">
 Returns the surface binormal for a triggered touch event
     </description>
   </function>
 
   <function name="llDetectedTouchST" type="vector">
     <param type="integer" name="index"/>
-    <description lang="en"><!--
-vector llDetectedTouchST(integer index)-->
+    <description lang="en">
 Returns the s and t coordinates in the first two components of a vector, for the surface coordinates where the prim was touched in a triggered touch event
     </description>
   </function>
 
   <function name="llSHA1String" type="string">
     <param type="string" name="src"/>
-    <description lang="en"><!--
-string llSHA1String(string src)-->
+    <description lang="en">
 Returns a string of 40 hex characters that is the SHA1 security Hash of src
     </description>
   </function>
 
   <function name="llGetFreeURLs" type="integer">
-    <description lang="en"><!--
-integer llGetFreeURLs()-->
+    <description lang="en">
 Returns the number of available URLs for the current script
     </description>
   </function>
 
   <function name="llRequestURL" type="key">
-    <description lang="en"><!--
-key llRequestURL()-->
+    <description lang="en">
 Requests one HTTP:// url for use by this object.
 An http_request event is triggered with the results.
     </description>
   </function>
 
   <function name="llRequestSecureURL" type="key">
-    <description lang="en"><!--
-key llRequestSecureURL()-->
+    <description lang="en">
 Requests one HTTPS:// (SSL) url for use by this object.
 An http_request event is triggered with the results.
     </description>
@@ -8515,8 +8168,7 @@ An http_request event is triggered with the results.
 
   <function name="llReleaseURL">
     <param type="string" name="url"/>
-    <description lang="en"><!--
-llReleaseURL(string url)-->
+    <description lang="en">
 Releases the specified URL, it will no longer be usable
     </description>
   </function>
@@ -8525,8 +8177,7 @@ Releases the specified URL, it will no longer be usable
     <param type="key" name="request_id"/>
     <param type="integer" name="status"/>
     <param type="string" name="body"/>
-    <description lang="en"><!--
-llHTTPResponse(key request_id, integer status, string body)-->
+    <description lang="en">
 Responds to request_id with status and body
     </description>
   </function>
@@ -8534,8 +8185,7 @@ Responds to request_id with status and body
   <function name="llGetHTTPHeader" type="string">
     <param type="key" name="request_id"/>
     <param type="string" name="header"/>
-    <description lang="en"><!--
-string llGetHTTPHeader(key request_id, string header)-->
+    <description lang="en">
 Returns the value for header for request_id
     </description>
   </function>
@@ -8543,8 +8193,7 @@ Returns the value for header for request_id
   <function name="llSetPrimMediaParams" type="integer" delay="1.0">
     <param type="integer" name="face"/>
     <param type="list" name="params"/>
-    <description lang="en"><!--
-integer llSetPrimMediaParams(integer face, list params)-->
+    <description lang="en">
 Sets the media params for a particular face on an object. If media is not already on this object, add it.
 List is a set of name/value pairs in no particular order.  Params not specified are unchanged, or if new media is added then set to the default specified.
 The possible names are below, along with the types of values and what they mean.
@@ -8554,8 +8203,7 @@ The possible names are below, along with the types of values and what they mean.
   <function name="llGetPrimMediaParams" type="list" delay="1.0">
     <param type="integer" name="face"/>
     <param type="list" name="params"/>
-    <description lang="en"><!--
-list llGetPrimMediaParams(integer face, list params)-->
+    <description lang="en">
 Returns the media params for a particular face on an object, given the desired list of names, in the order requested.
 (Returns an empty list if no media exists on the face.)
     </description>
@@ -8563,8 +8211,7 @@ Returns the media params for a particular face on an object, given the desired l
 
   <function name="llClearPrimMedia" type="integer" delay="1.0">
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-integer llClearPrimMedia(integer face)-->
+    <description lang="en">
 Clears (deletes) the media and all params from the given face.
     </description>
   </function>
@@ -8572,8 +8219,7 @@ Clears (deletes) the media and all params from the given face.
   <function name="llSetLinkPrimitiveParamsFast">
     <param type="integer" name="linknumber"/>
     <param type="list" name="rules"/>
-    <description lang="en"><!--
-llSetLinkPrimitiveParamsFast(integer linknumber, list rules)-->
+    <description lang="en">
 Set primitive parameters for linknumber based on rules.
     </description>
   </function>
@@ -8581,8 +8227,7 @@ Set primitive parameters for linknumber based on rules.
   <function name="llGetLinkPrimitiveParams" type="list">
     <param type="integer" name="linknumber"/>
     <param type="list" name="rules"/>
-    <description lang="en"><!--
-list llGetLinkPrimitiveParams(integer linknumber, list rules)-->
+    <description lang="en">
 Get primitive parameters for linknumber based on rules.
     </description>
   </function>
@@ -8590,8 +8235,7 @@ Get primitive parameters for linknumber based on rules.
   <function name="llLinkParticleSystem">
     <param type="integer" name="linknumber"/>
     <param type="list" name="rules"/>
-    <description lang="en"><!--
-llLinkParticleSystem(integer linknumber, list rules)-->
+    <description lang="en">
 Creates a particle system based on rules.  Empty list removes particle system from object.
 List format is [ rule1, data1, rule2, data2 . . . rulen, datan ].
     </description>
@@ -8606,56 +8250,49 @@ List format is [ rule1, data1, rule2, data2 . . . rulen, datan ].
     <param type="float" name="start"/>
     <param type="float" name="length"/>
     <param type="float" name="rate"/>
-    <description lang="en"><!--
-llSetLinkTextureAnim(integer link, integer mode, integer face, integer sizex, integer sizey, float start, float length, float rate)-->
+    <description lang="en">
 Animate the texture on the specified prim's face/faces.
     </description>
   </function>
 
   <function name="llGetLinkNumberOfSides" type="integer">
     <param type="integer" name="link"/>
-    <description lang="en"><!--
-integer llGetLinkNumberOfSides(integer link)-->
+    <description lang="en">
 Returns the number of sides of the specified linked prim.
     </description>
   </function>
 
   <function name="llGetUsername" type="string">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-string llGetUsername(key id)-->
+    <description lang="en">
 Returns the single-word username of an avatar, iff the avatar is in the current region, otherwise the empty string.
     </description>
   </function>
 
   <function name="llRequestUsername" type="key">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-key llRequestUsername(key id)-->
+    <description lang="en">
 Requests single-word username of an avatar.  When data is available the dataserver event will be raised.
     </description>
   </function>
 
   <function name="llGetDisplayName" type="string">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-string llGetDisplayName(key id)-->
+    <description lang="en">
 Returns the name of an avatar, iff the avatar is in the current simulator, and the name has been cached, otherwise the same as llGetUsername.  Use llRequestDisplayName if you absolutely must have the display name.
     </description>
   </function>
 
   <function name="llRequestDisplayName" type="key">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-key llRequestDisplayName(key id)-->
+    <description lang="en">
 Requests name of an avatar.  When data is available the dataserver event will be raised.
     </description>
   </function>
 
   <function name="llGetEnv" type="string" grid="sl aa">
     <param type="string" name="name"/>
-    <description lang="en"><!--
-string llGetEnv(string name)-->
+    <description lang="en">
 Returns a string with the requested data about the region
     </description>
   </function>
@@ -8664,16 +8301,14 @@ Returns a string with the requested data about the region
     <param type="key" name="target"/>
     <param type="integer" name="channel"/>
     <param type="string" name="msg"/>
-    <description lang="en"><!--
-llRegionSayTo(key target, integer channel, string msg)-->
+    <description lang="en">
 Sends msg on channel (not DEBUG_CHANNEL) directly to prim or avatar target anywhere within the region.
     </description>
   </function>
 
   <function name="llSetMemoryLimit" type="integer">
     <param type="integer" name="limit"/>
-    <description lang="en"><!--
-integer llSetMemoryLimit(integer limit)-->
+    <description lang="en">
 Request limit bytes to be reserved for this script.
 Returns a success/failure flag (STATUS_OK when sucessful, another of the STATUS_* flags on failure) for whether the memory limit was set.
 Only relevant for Mono-compiled scripts.
@@ -8681,8 +8316,7 @@ Only relevant for Mono-compiled scripts.
   </function>
 
   <function name="llGetMemoryLimit" type="integer">
-    <description lang="en"><!--
-integer llGetMemoryLimit()-->
+    <description lang="en">
 Get the maximum memory a script can use.
 Returns the integer amount of memory the script can use in bytes.
     </description>
@@ -8692,8 +8326,7 @@ Returns the integer amount of memory the script can use in bytes.
     <param type="integer" name="link"/>
     <param type="integer" name="face"/>
     <param type="list" name="params"/>
-    <description lang="en"><!--
-integer llSetLinkMedia(integer link, integer face, list params)-->
+    <description lang="en">
 Set the media params for a particular face on linked prim.  List is a set of name/value pairs (in no particular order). The possible names are below, along with the types of values and what they mean.  If media is not already on this object, add it. Params not specified are unchanged, or if new media is added set to the default specified.
     </description>
   </function>
@@ -8702,8 +8335,7 @@ Set the media params for a particular face on linked prim.  List is a set of nam
     <param type="integer" name="link"/>
     <param type="integer" name="face"/>
     <param type="list" name="params"/>
-    <description lang="en"><!--
-list llGetLinkMedia(integer link, integer face, list params)-->
+    <description lang="en">
 Get the media params for a particular face on linked prim, given the desired list of names. Returns a list of values in the order requested.  Returns an empty list if no media exists on the face.
     </description>
   </function>
@@ -8711,8 +8343,7 @@ Get the media params for a particular face on linked prim, given the desired lis
   <function name="llClearLinkMedia" type="integer">
     <param type="integer" name="link"/>
     <param type="integer" name="face"/>
-    <description lang="en"><!--
-integer llClearLinkMedia(integer link, integer face)-->
+    <description lang="en">
 Clears (deletes) the media and all params from the given face on linked prim.
     </description>
   </function>
@@ -8721,8 +8352,7 @@ Clears (deletes) the media and all params from the given face on linked prim.
     <param type="integer" name="link"/>
     <param type="vector" name="eye"/>
     <param type="vector" name="at"/>
-    <description lang="en"><!--
-llSetLinkCamera(integer link, vector eye, vector at)-->
+    <description lang="en">
 Sets the camera eye offset, and the offset that camera is looking at, for avatars that sit on the linked prim.
 The two vector parameters are offsets relative to the object's center and expressed in local coordinates.
     </description>
@@ -8731,8 +8361,7 @@ The two vector parameters are offsets relative to the object's center and expres
   <function name="llSetContentType">
     <param type="key" name="request_id"/>
     <param type="integer" name="content_type"/>
-    <description lang="en"><!--
-llSetContentType(key request_id, integer content_type)-->
+    <description lang="en">
 Set the Internet media type of an LSL HTTP server response.
 content_type may be one of CONTENT_TYPE_TEXT (default) "text/plain", or CONTENT_TYPE_HTML "text/html", only valid for embedded browsers on content owned by the person viewing. Falls back to "text/plain" otherwise.
     </description>
@@ -8742,24 +8371,21 @@ content_type may be one of CONTENT_TYPE_TEXT (default) "text/plain", or CONTENT_
     <param type="integer" name="link"/>
     <param type="vector" name="offset"/>
     <param type="rotation" name="rot"/>
-    <description lang="en"><!--
-llLinkSitTarget(integer link, vector offset, rotation rot)-->
+    <description lang="en">
 Set the sit location for this object (if offset == &lt;0,0,0&gt; clear it)
     </description>
   </function>
 
   <function name="llAvatarOnLinkSitTarget" type="key" grid="sl os">
     <param type="integer" name="link"/>
-    <description lang="en"><!--
-key llAvatarOnLinkSitTarget(integer link)-->
+    <description lang="en">
 If an avatar is sitting on the sit target, return the avatar's key, NULL_KEY otherwise
     </description>
   </function>
 
   <!-- The Aurora variation doesn't have a parameter (??) -->
   <function name="llAvatarOnLinkSitTarget" type="key" grid="aa">
-    <description lang="en"><!--
-key llAvatarOnLinkSitTarget(integer link)-->
+    <description lang="en">
 If an avatar is sitting on the sit target, return the avatar's key, NULL_KEY otherwise
     </description>
   </function>
@@ -8767,8 +8393,7 @@ If an avatar is sitting on the sit target, return the avatar's key, NULL_KEY oth
   <function name="llSetVelocity" grid="sl aa">
     <param type="vector" name="velocity"/>
     <param type="integer" name="local"/>
-    <description lang="en"><!--
-llSetVelocity(vector velocity, integer local)-->
+    <description lang="en">
 Sets an objects velocity, in local coords if local == TRUE (if the script is physical)
     </description>
   </function>
@@ -8777,15 +8402,13 @@ Sets an objects velocity, in local coords if local == TRUE (if the script is phy
     <param type="vector" name="start"/>
     <param type="vector" name="end"/>
     <param type="list" name="params"/>
-    <description lang="en"><!--
-list llCastRay(vector start, vector end, list params)-->
+    <description lang="en">
 Casts a ray into the physics world from 'start' to 'end' and returns data according to details in params.
     </description>
   </function>
 
   <function name="llGetMassMKS" type="float" grid="sl aa">
-    <description lang="en"><!--
-float llGetMassMKS()-->
+    <description lang="en">
 Returns the mass of the linkset in kilograms.
     </description>
   </function>
@@ -8796,15 +8419,13 @@ Returns the mass of the linkset in kilograms.
     <param type="float" name="restitution"/>
     <param type="float" name="friction"/>
     <param type="float" name="density"/>
-    <description lang="en"><!--
-llSetPhysicsMaterial(integer flags, float gravity_multiplier, float restitution, float friction, float density)-->
+    <description lang="en">
 Sets the requested attributes of the root object's physics material.
     </description>
   </function>
 
   <function name="llGetPhysicsMaterial" type="list" grid="sl">
-    <description lang="en"><!--
-list llGetPhysicsMaterial()-->
+    <description lang="en">
 Returns the gravity multiplier, restitution, friction, and density of the linkset as a list in that order.
     </description>
   </function>
@@ -8812,8 +8433,7 @@ Returns the gravity multiplier, restitution, friction, and density of the linkse
   <function name="llManageEstateAccess" type="integer">
     <param type="integer" name="action"/>
     <param type="key" name="id"/>
-    <description lang="en"><!--
-integer llManageEstateAccess(integer action, key id)-->
+    <description lang="en">
 To add or remove agents from the estate's agent access or ban lists or groups from the estate's group access list.
 Only works for objects owned by the Estate Owner or an Estate Manager.
 Returns TRUE if successful and FALSE if throttled, on invalid action, on invalid or null id, or if object owner is not allowed to manage the estate.
@@ -8824,8 +8444,7 @@ Returns TRUE if successful and FALSE if throttled, on invalid action, on invalid
   <function name="llSetKeyframedMotion" grid="sl aa">
     <param type="list" name="keyframes"/>
     <param type="list" name="options"/>
-    <description lang="en"><!--
-llSetKeyframedMotion(list keyframes, list options)-->
+    <description lang="en">
 Requests that a nonphysical object be keyframed according to keyframe list.
     </description>
   </function>
@@ -8833,38 +8452,33 @@ Requests that a nonphysical object be keyframed according to keyframe list.
   <function name="llTransferLindenDollars" type="key" grid="sl aa">
     <param type="key" name="destination"/>
     <param type="integer" name="amount"/>
-    <description lang="en"><!--
-key llTransferLindenDollars(key destination, integer amount)-->
+    <description lang="en">
 Transfer amount of linden dollars (L$) from script owner to destination. Returns a key to a corresponding transaction_result event for the success of the transfer.
     </description>
   </function>
 
   <function name="llGetParcelMusicURL" type="string">
-    <description lang="en"><!--
-string llGetParcelMusicURL()-->
+    <description lang="en">
 Gets the streaming audio URL for the parcel of land on which the object is located.
     </description>
   </function>
 
   <function name="llScriptProfiler">
     <param type="integer" name="flags"/>
-    <description lang="en"><!--
-llScriptProfiler(integer flags)-->
+    <description lang="en">
 Enabled or disables script profiling options. Currently only supports PROFILE_SCRIPT_MEMORY (mono only) and PROFILE_NONE.
 MAY SIGNIFICANTLY REDUCE SCRIPT PERFORMANCE!
     </description>
   </function>
 
   <function name="llGetSPMaxMemory" type="integer">
-    <description lang="en"><!--
-integer llGetSPMaxMemory()-->
+    <description lang="en">
 Returns the maximum used memory for the current script. Only valid after using PROFILE_SCRIPT_MEMORY. Non-mono scripts always use 16k.
     </description>
   </function>
 
   <function name="llGetUsedMemory" type="integer">
-    <description lang="en"><!--
-integer llGetUsedMemory()-->
+    <description lang="en">
 Returns the current used memory for the current script. Non-mono scripts always use 16k.
     </description>
   </function>
@@ -8872,16 +8486,14 @@ Returns the current used memory for the current script. Non-mono scripts always 
   <function name="llSetAngularVelocity" grid="sl aa">
     <param type="vector" name="angular_velocity"/>
     <param type="integer" name="local"/>
-    <description lang="en"><!--
-llSetAngularVelocity(vector angular_velocity, integer local)-->
+    <description lang="en">
 Sets an objects angular velocity, in local coords if local == TRUE (if the script is physical)
     </description>
   </function>
 
   <function name="llSetRegionPos" type="integer" energy="0">
     <param type="vector" name="pos"/>
-    <description lang="en"><!--
-integer llSetRegionPos(vector pos)-->
+    <description lang="en">
 Sets the position anywhere within the region (if the object isn't physical)
     </description>
   </function>
@@ -8889,16 +8501,14 @@ Sets the position anywhere within the region (if the object isn't physical)
   <function name="llGetAgentList" type="list" energy="0">
     <param type="integer" name="scope"/>
     <param type="list" name="options"/>
-    <description lang="en"><!--
-list llGetAgentList(integer scope, list options)-->
+    <description lang="en">
 Requests a list of agents currently in the region, limited by the scope parameter.
     </description>
   </function>
 
   <function name="llAttachToAvatarTemp" energy="0" grid="sl aa">
     <param type="integer" name="attach_point"/>
-    <description lang="en"><!--
-llAttachToAvatarTemp(integer attach_point)-->
+    <description lang="en">
 Attaches the object to the avatar who has granted permission to the script, with the exception that the object will not create new inventory for the user, and will disappear on detach or disconnect.
     </description>
   </function>
@@ -8908,8 +8518,7 @@ Attaches the object to the avatar who has granted permission to the script, with
     <param type="string" name="landmark"/>
     <param type="vector" name="position"/>
     <param type="vector" name="look_at"/>
-    <description lang="en"><!--
-llTeleportAgent(key avatar, string landmark, vector position, vector look_at)-->
+    <description lang="en">
 Requests a teleport of avatar to a landmark stored in the object's inventory. If no landmark is provided (an empty string), the avatar is teleported to the location position in the current region. In either case, the avatar is turned to face the position given by look_at in local coordinates.
     </description>
   </function>
@@ -8919,16 +8528,14 @@ Requests a teleport of avatar to a landmark stored in the object's inventory. If
     <param type="vector" name="global_coordinates"/>
     <param type="vector" name="region_coordinates"/>
     <param type="vector" name="look_at"/>
-    <description lang="en"><!--
-llTeleportAgentGlobalCoords(key agent, vector global_coordinates, vector region_coordinates, vector look_at)-->
+    <description lang="en">
 Teleports an agent to set of a region_coordinates within a region at the specified global_coordinates. The agent lands facing the position defined by look_at local coordinates.
 A region's global coordinates can be retrieved using llRequestSimulatorData(region_name, DATA_SIM_POS)
     </description>
   </function>
 
   <function name="llGenerateKey" type="key" energy="0">
-    <description lang="en"><!--
-key llGenerateKey()-->
+    <description lang="en">
 Return a unique generated key
     </description>
   </function>
@@ -8936,16 +8543,14 @@ Return a unique generated key
   <function name="llNavigateTo" energy="0" grid="sl aa">
     <param type="vector" name="point"/>
     <param type="list" name="options"/>
-    <description lang="en"><!--
-llNavigateTo(vector point, list options)-->
+    <description lang="en">
 For AI Character: Navigate to destination.
     </description>
   </function>
 
   <function name="llCreateCharacter" energy="0" grid="sl aa">
     <param type="list" name="options"/>
-    <description lang="en"><!--
-llCreateCharacter(list options)-->
+    <description lang="en">
 Convert linkset to AI Character which can navigate the world.
     </description>
   </function>
@@ -8953,8 +8558,7 @@ Convert linkset to AI Character which can navigate the world.
   <function name="llPursue" energy="0" grid="sl aa">
     <param type="key" name="target"/>
     <param type="list" name="options"/>
-    <description lang="en"><!--
-llPursue(key target, list options)-->
+    <description lang="en">
 For AI Character: Chase after a target.
     </description>
   </function>
@@ -8963,8 +8567,7 @@ For AI Character: Chase after a target.
     <param type="vector" name="center"/>
     <param type="vector" name="radius"/>
     <param type="list" name="options"/>
-    <description lang="en"><!--
-llWanderWithin(vector center, float radius, list options)-->
+    <description lang="en">
 For AI Character: Wander within a specified volume.
     </description>
   </function>
@@ -8974,8 +8577,7 @@ For AI Character: Wander within a specified volume.
     <param type="vector" name="center"/>
     <param type="float" name="radius"/>
     <param type="list" name="options"/>
-    <description lang="en"><!--
-llWanderWithin(vector center, float radius, list options)-->
+    <description lang="en">
 For AI Character: Wander within a specified volume.
     </description>
   </function>
@@ -8984,8 +8586,7 @@ For AI Character: Wander within a specified volume.
     <param type="vector" name="source"/>
     <param type="float" name="radius"/>
     <param type="list" name="options"/>
-    <description lang="en"><!--
-llFleeFrom(vector source, float radius, list options)-->
+    <description lang="en">
 For AI Character: Flee from a point.
     </description>
   </function>
@@ -8993,8 +8594,7 @@ For AI Character: Flee from a point.
   <function name="llPatrolPoints" energy="0" grid="sl aa">
     <param type="list" name="points"/>
     <param type="list" name="options"/>
-    <description lang="en"><!--
-llPatrolPoints(list points, list options)-->
+    <description lang="en">
 For AI Character: Patrol a list of points.
     </description>
   </function>
@@ -9002,23 +8602,20 @@ For AI Character: Patrol a list of points.
   <function name="llExecCharacterCmd" energy="0" grid="sl aa">
     <param type="integer" name="cmd"/>
     <param type="list" name="options"/>
-    <description lang="en"><!--
-llExecCharacterCmd(integer cmd, list options)-->
+    <description lang="en">
 For AI Character: Execute a character command.
     </description>
   </function>
 
   <function name="llDeleteCharacter" energy="0" grid="sl aa">
-    <description lang="en"><!--
-llDeleteCharacter()-->
+    <description lang="en">
 Convert linkset from AI Character to Physics object.
     </description>
   </function>
 
   <function name="llUpdateCharacter" energy="0" grid="sl aa">
     <param type="list" name="options"/>
-    <description lang="en"><!--
-llUpdateCharacter(list options)-->
+    <description lang="en">
 Change the AI Character's settings.
     </description>
   </function>
@@ -9026,8 +8623,7 @@ Change the AI Character's settings.
   <function name="llEvade" energy="0" grid="sl aa">
     <param type="key" name="target"/>
     <param type="list" name="options"/>
-    <description lang="en"><!--
-llEvade(key target, list options)-->
+    <description lang="en">
 For AI Character: Evade a specified target.
     </description>
   </function>
@@ -9035,8 +8631,7 @@ For AI Character: Evade a specified target.
   <function name="llGetClosestNavPoint" type="list" energy="0" grid="sl aa">
     <param type="vector" name="point"/>
     <param type="list" name="options"/>
-    <description lang="en"><!--
-list llGetClosestNavPoint(vector point, list options)-->
+    <description lang="en">
 For AI Character: Get the closest navigable point to the point provided.
     </description>
   </function>
@@ -9046,16 +8641,14 @@ For AI Character: Get the closest navigable point to the point provided.
     <param type="vector" name="end"/>
     <param type="float" name="radius"/>
     <param type="list" name="params"/>
-    <description lang="en"><!--
-list llGetStaticPath(vector start, vector end, float radius, list params)-->
+    <description lang="en">
 Returns a list of position vectors indicating pathfinding waypoints between positions at start and end, for a character of a given radius.
     </description>
   </function>
 
   <function name="llGetSimStats" type="float" energy="0" grid="sl">
     <param type="integer" name="stat_type"/>
-    <description lang="en"><!--
-float llGetSimStats(integer stat_type)-->
+    <description lang="en">
 Returns the value of a particular simulator statistic.
     </description>
   </function>
@@ -10858,94 +10451,82 @@ Wraps to bool Regex.IsMatch(string input, string pattern)
   <!-- Events -->
 
   <event name="state_entry">
-    <description lang="en"><!--
-state_entry()-->
+    <description lang="en">
 Triggered on any state transition and startup
     </description>
   </event>
 
   <event name="state_exit">
-    <description lang="en"><!--
-state_exit()-->
+    <description lang="en">
 Triggered on any state transition
     </description>
   </event>
 
   <event name="touch_start">
     <param type="integer" name="num_detected"/>
-    <description lang="en"><!--
-touch_start(integer num_detected)-->
+    <description lang="en">
 Triggered by the start of agent clicking on task
     </description>
   </event>
 
   <event name="touch">
     <param type="integer" name="num_detected"/>
-    <description lang="en"><!--
-touch(integer num_detected)-->
+    <description lang="en">
 Triggered while agent is clicking on task
     </description>
   </event>
 
   <event name="touch_end">
     <param type="integer" name="num_detected"/>
-    <description lang="en"><!--
-touch_end(integer num_detected)-->
+    <description lang="en">
 Triggered when agent stops clicking on task
     </description>
   </event>
 
   <event name="collision_start">
     <param type="integer" name="num_detected"/>
-    <description lang="en"><!--
-collision_start(integer num_detected)-->
+    <description lang="en">
 Triggered when task starts colliding with another task
     </description>
   </event>
 
   <event name="collision">
     <param type="integer" name="num_detected"/>
-    <description lang="en"><!--
-collision(integer num_detected)-->
+    <description lang="en">
 Triggered while task is colliding with another task
     </description>
   </event>
 
   <event name="collision_end">
     <param type="integer" name="num_detected"/>
-    <description lang="en"><!--
-collision_end(integer num_detected)-->
+    <description lang="en">
 Triggered when task stops colliding with another task
     </description>
   </event>
 
   <event name="land_collision_start">
     <param type="vector" name="pos"/>
-    <description lang="en"><!--
-land_collision_start(vector pos)-->
+    <description lang="en">
 Triggered when task starts colliding with land
     </description>
   </event>
 
   <event name="land_collision">
     <param type="vector" name="pos"/>
-    <description lang="en"><!--
-land_collision(vector pos)-->
+    <description lang="en">
 Triggered when task is colliding with land
     </description>
   </event>
 
   <event name="land_collision_end">
     <param type="vector" name="pos"/>
-    <description lang="en"><!--
-land_collision_end(vector pos)-->
+    <description lang="en">
 Triggered when task stops colliding with land
     </description>
   </event>
 
   <event name="timer">
-    <description lang="en"><!--
-timer()-->
+    <description lang="en">
 Result of the llSetTimerEvent library function call
     </description>
   </event>
@@ -10955,23 +10536,20 @@ Result of the llSetTimerEvent library function call
     <param type="string"  name="name"   />
     <param type="key"     name="id"     />
     <param type="string"  name="message"/>
-    <description lang="en"><!--
-listen(integer channel, string name, key id, string message)-->
+    <description lang="en">
 Result of the llListen library function call
     </description>
   </event>
 
   <event name="sensor">
     <param type="integer" name="num_detected"/>
-    <description lang="en"><!--
-sensor(integer num_detected)-->
+    <description lang="en">
 Result of the llSensor library function call
     </description>
   </event>
 
   <event name="no_sensor">
-    <description lang="en"><!--
-no_sensor()-->
+    <description lang="en">
 Result of the llSensor library function call
     </description>
   </event>
@@ -10980,8 +10558,7 @@ Result of the llSensor library function call
     <param type="key"     name="id"   />
     <param type="integer" name="level"/>
     <param type="integer" name="edge" />
-    <description lang="en"><!--
-control(key id, integer level, integer edge)-->
+    <description lang="en">
 Result of llTakeControls library function call
     </description>
   </event>
@@ -10990,15 +10567,13 @@ Result of llTakeControls library function call
     <param type="integer" name="tnum"     />
     <param type="vector"  name="targetpos"/>
     <param type="vector"  name="ourpos"   />
-    <description lang="en"><!--
-at_target(integer tnum, vector targetpos, vector ourpos)-->
+    <description lang="en">
 Result of llTarget library function call
     </description>
   </event>
 
   <event name="not_at_target">
-    <description lang="en"><!--
-not_at_target()-->
+    <description lang="en">
 Result of llTarget library function call
     </description>
   </event>
@@ -11007,15 +10582,13 @@ Result of llTarget library function call
     <param type="integer"    name="tnum"     />
     <param type="rotation"   name="targetrot"/>
     <param type="rotation"   name="ourrot"   />
-    <description lang="en"><!--
-at_rot_target(integer tnum, rotation targetrot, rotation ourrot)-->
+    <description lang="en">
 Result of LLRotTarget library function call
     </description>
   </event>
 
   <event name="not_at_rot_target">
-    <description lang="en"><!--
-not_at_rot_target()-->
+    <description lang="en">
 Result of LLRotTarget library function call
     </description>
   </event>
@@ -11023,8 +10596,7 @@ Result of LLRotTarget library function call
   <event name="money">
     <param type="key"     name="id"    />
     <param type="integer" name="amount"/>
-    <description lang="en"><!--
-money(key id, integer amount)-->
+    <description lang="en">
 Triggered when L$ is given to task
     </description>
   </event>
@@ -11035,24 +10607,21 @@ Triggered when L$ is given to task
     <param type="string"  name="subj"    />
     <param type="string"  name="message" />
     <param type="integer" name="num_left"/>
-    <description lang="en"><!--
-email(string time, string address, string subj, string message, integer num_left)-->
+    <description lang="en">
 Triggered when task receives email
     </description>
   </event>
 
   <event name="run_time_permissions">
     <param type="integer" name="perm"/>
-    <description lang="en"><!--
-run_time_permissions(integer perm)-->
+    <description lang="en">
 Triggered when an agent grants run time permissions to task
     </description>
   </event>
 
   <event name="attach">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-attach(key id)-->
+    <description lang="en">
 Triggered when task attaches or detaches from agent
     </description>
   </event>
@@ -11060,38 +10629,33 @@ Triggered when task attaches or detaches from agent
   <event name="dataserver">
     <param type="key"    name="queryid"/>
     <param type="string" name="data"   />
-    <description lang="en"><!--
-dataserver(key queryid, string data)-->
+    <description lang="en">
 Triggered when task receives asynchronous data
     </description>
   </event>
 
   <event name="moving_start">
-    <description lang="en"><!--
-moving_start()-->
+    <description lang="en">
 Triggered when task begins moving
     </description>
   </event>
 
   <event name="moving_end">
-    <description lang="en"><!--
-moving_end()-->
+    <description lang="en">
 Triggered when task stops moving
     </description>
   </event>
 
   <event name="on_rez">
     <param type="integer" name="start_param"/>
-    <description lang="en"><!--
-on_rez(integer start_param)-->
+    <description lang="en">
 Triggered when task is rezzed in from inventory or another task
     </description>
   </event>
 
   <event name="object_rez">
     <param type="key" name="id"/>
-    <description lang="en"><!--
-object_rez(key id)-->
+    <description lang="en">
 Triggered when task rezzes in another task
     </description>
   </event>
@@ -11101,16 +10665,14 @@ Triggered when task rezzes in another task
     <param type="integer" name="num"       />
     <param type="string"  name="str"       />
     <param type="key"     name="id"        />
-    <description lang="en"><!--
-link_message(integer sender_num, integer num, string str, key id)-->
+    <description lang="en">
 Triggered when task receives a link message via LLMessageLinked library function call
     </description>
   </event>
 
   <event name="changed">
     <param type="integer" name="change"/>
-    <description lang="en"><!--
-changed( integer change )-->
+    <description lang="en">
 Triggered various event change the task
 (test change with CHANGED_INVENTORY, CHANGED_COLOR, CHANGED_SHAPE, CHANGED_SCALE, CHANGED_TEXTURE, CHANGED_LINK, CHANGED_ALLOWED_DROP, CHANGED_OWNER, CHANGED_REGION, CHANGED_TELEPORT, CHANGED_REGION_START, CHANGED_MEDIA)
     </description>
@@ -11123,8 +10685,7 @@ Triggered various event change the task
     <param type="string"  name="sender"    />
     <param type="integer" name="idata"     />
     <param type="string"  name="sdata"     />
-    <description lang="en"><!--
-remote_data(integer event_type, key channel, key message_id, string sender,integer idata, string sdata)-->
+    <description lang="en">
 Triggered by various XML-RPC calls (event_type will be one of REMOTE_DATA_CHANNEL, REMOTE_DATA_REQUEST, REMOTE_DATA_REPLY)
     </description>
   </event>
@@ -11134,8 +10695,7 @@ Triggered by various XML-RPC calls (event_type will be one of REMOTE_DATA_CHANNE
     <param type="integer" name="status"    />
     <param type="list"    name="metadata"  />
     <param type="string"  name="body"      />
-    <description lang="en"><!--
-http_response(key request_id, integer status, list metadata, string body)-->
+    <description lang="en">
 Triggered when task receives a response to one of its llHTTPRequests
     </description>
   </event>
@@ -11144,8 +10704,7 @@ Triggered when task receives a response to one of its llHTTPRequests
     <param type="key"    name="id"    />
     <param type="string" name="method"/>
     <param type="string" name="body"  />
-    <description lang="en"><!--
-http_request(key id, string method, string body)-->
+    <description lang="en">
 Triggered when task receives an http request against a public URL
     </description>
   </event>
@@ -11154,8 +10713,7 @@ Triggered when task receives an http request against a public URL
     <param type="key"     name="id"     />
     <param type="integer" name="success"/>
     <param type="string"  name="data"   />
-    <description lang="en"><!--
-transaction_result(key id, integer success, string data)-->
+    <description lang="en">
 Triggered when transferring L$ to Agent via llTransferLindenDollars
     </description>
   </event>
@@ -11163,8 +10721,7 @@ Triggered when transferring L$ to Agent via llTransferLindenDollars
   <event name="path_update" grid="sl aa">
     <param type="integer" name="type"    />
     <param type="list"    name="reserved"/>
-    <description lang="en"><!--
-path_update(integer type, list reserved)-->
+    <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </event>
