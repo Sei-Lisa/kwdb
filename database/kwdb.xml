@@ -5917,7 +5917,7 @@ Sets the texture u  &amp; v offsets for the chosen face or ALL_SIDES
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llRotateTexture" delay="0.2">
-    <param type="float" name="angle"/> <!-- originally the name was 'rotation' -->
+    <param type="float" name="angle"/>
     <param type="integer" name="face"/>
     <description lang="en">
 Sets the texture rotation for the chosen face
