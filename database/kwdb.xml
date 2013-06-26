@@ -15,7 +15,7 @@ virtual world.
 
     LSL2 Keywords Database is distributed in the hope that it will be
     useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
@@ -87,7 +87,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130626001">
+<keywords version="0.0.20130626002">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -346,7 +346,7 @@ STATUS_RETURN_AT_EDGE trumps STATUS_DIE_AT_EDGE if both are set
 
   <constant name="STATUS_CAST_SHADOWS" type="integer" value="0x200">
     <description lang="en">
-Passed in the llSetStatus library function.  If TRUE, object casts shadows on other objects
+Passed in the llSetStatus library function. If TRUE, object casts shadows on other objects
     </description>
   </constant>
 
@@ -745,7 +745,7 @@ Used with llGetObjectDetails to get an object's velocity
 
   <constant name="OBJECT_OWNER" type="integer" value="6">
     <description lang="en">
-Used with llGetObjectDetails to get an object's owner's key.  Will be NULL_KEY if group owned
+Used with llGetObjectDetails to get an object's owner's key. Will be NULL_KEY if group owned
     </description>
   </constant>
 
@@ -2655,7 +2655,7 @@ Unloads the media stream
 
   <constant name="PARCEL_MEDIA_COMMAND_AUTO_ALIGN" type="integer" value="9">
     <description lang="en">
-Auto aligns the media stream to the texture size.  May cause a performance hit and loss of some visual quality
+Auto aligns the media stream to the texture size. May cause a performance hit and loss of some visual quality
     </description>
   </constant>
 
@@ -7255,8 +7255,8 @@ Returns the mean region frames per second
   <function name="llParticleSystem">
     <param type="list" name="rules"/>
     <description lang="en">
-Creates a particle system based on rules.  An empty list removes the particle system.
-List format is [ rule1, data1, rule2, data2 . . . rulen, datan ]
+Creates a particle system based on rules. An empty list removes the particle system.
+List format is [ rule1, data1, rule2, data2 ... rulen, datan ]
     </description>
   </function>
 
@@ -7327,7 +7327,7 @@ Removes the enabled bits in 'flags'
     <param type="vector" name="offset"/>
     <param type="rotation" name="rot"/>
     <description lang="en">
-Sets the sit location for the prim.  If offset == &lt;0,0,0&gt; then the sit target is removed.
+Sets the sit location for the prim. If offset == &lt;0,0,0&gt; then the sit target is removed.
     </description>
   </function>
 
@@ -7541,14 +7541,14 @@ If an object using remote data channels changes regions, you must call this func
   <function name="llLog10" type="float">
     <param type="float" name="val"/>
     <description lang="en">
-Returns the base 10 logarithm of val.  Returns zero if val &lt;= 0.
+Returns the base 10 logarithm of val. Returns zero if val &lt;= 0.
     </description>
   </function>
 
   <function name="llLog" type="float">
     <param type="float" name="val"/>
     <description lang="en">
-Returns the natural logarithm of val.  Returns zero if val &lt;= 0.
+Returns the natural logarithm of val. Returns zero if val &lt;= 0.
     </description>
   </function>
 
@@ -7744,7 +7744,7 @@ Returns a key for the creator of the inventory item
   <function name="llOwnerSay">
     <param type="string" name="msg"/>
     <description lang="en">
-Says msg to owner only.  (Owner must be in the same region.)
+Says msg to owner only. (Owner must be in the same region.)
     </description>
   </function>
 
@@ -7752,7 +7752,7 @@ Says msg to owner only.  (Owner must be in the same region.)
     <param type="string" name="simulator"/>
     <param type="integer" name="data"/>
     <description lang="en">
-Requests data about simulator.  When data is available the dataserver event will be raised.
+Requests data about simulator. When data is available the dataserver event will be raised.
     </description>
   </function>
 
@@ -8237,8 +8237,8 @@ Get primitive parameters for linknumber based on rules.
     <param type="integer" name="linknumber"/>
     <param type="list" name="rules"/>
     <description lang="en">
-Creates a particle system based on rules.  Empty list removes particle system from object.
-List format is [ rule1, data1, rule2, data2 . . . rulen, datan ].
+Creates a particle system based on rules. Empty list removes particle system from object.
+List format is [ rule1, data1, rule2, data2 ... rulen, datan ].
     </description>
   </function>
 
@@ -8273,21 +8273,21 @@ Returns the single-word username of an avatar, iff the avatar is in the current 
   <function name="llRequestUsername" type="key">
     <param type="key" name="id"/>
     <description lang="en">
-Requests single-word username of an avatar.  When data is available the dataserver event will be raised.
+Requests single-word username of an avatar. When data is available the dataserver event will be raised.
     </description>
   </function>
 
   <function name="llGetDisplayName" type="string">
     <param type="key" name="id"/>
     <description lang="en">
-Returns the name of an avatar, iff the avatar is in the current simulator, and the name has been cached, otherwise the same as llGetUsername.  Use llRequestDisplayName if you absolutely must have the display name.
+Returns the name of an avatar, iff the avatar is in the current simulator, and the name has been cached, otherwise the same as llGetUsername. Use llRequestDisplayName if you absolutely must have the display name.
     </description>
   </function>
 
   <function name="llRequestDisplayName" type="key">
     <param type="key" name="id"/>
     <description lang="en">
-Requests name of an avatar.  When data is available the dataserver event will be raised.
+Requests name of an avatar. When data is available the dataserver event will be raised.
     </description>
   </function>
 
@@ -8328,7 +8328,7 @@ Returns the integer amount of memory the script can use in bytes.
     <param type="integer" name="face"/>
     <param type="list" name="params"/>
     <description lang="en">
-Set the media params for a particular face on linked prim.  List is a set of name/value pairs (in no particular order). If media is not already on this object, add it. Params not specified are unchanged, or if new media is added set to the default specified.
+Set the media params for a particular face on linked prim. List is a set of name/value pairs (in no particular order). If media is not already on this object, add it. Params not specified are unchanged, or if new media is added set to the default specified.
     </description>
   </function>
 
@@ -8337,7 +8337,7 @@ Set the media params for a particular face on linked prim.  List is a set of nam
     <param type="integer" name="face"/>
     <param type="list" name="params"/>
     <description lang="en">
-Get the media params for a particular face on linked prim, given the desired list of names. Returns a list of values in the order requested.  Returns an empty list if no media exists on the face.
+Get the media params for a particular face on linked prim, given the desired list of names. Returns a list of values in the order requested. Returns an empty list if no media exists on the face.
     </description>
   </function>
 
