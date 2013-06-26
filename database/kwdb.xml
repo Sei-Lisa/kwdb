@@ -87,7 +87,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130626000">
+<keywords version="0.0.20130626001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -8197,8 +8197,7 @@ Returns the value for header for request_id
     <param type="list" name="params"/>
     <description lang="en">
 Sets the media params for a particular face on an object. If media is not already on this object, add it.
-List is a set of name/value pairs in no particular order.  Params not specified are unchanged, or if new media is added then set to the default specified.
-The possible names are below, along with the types of values and what they mean.
+List is a set of name/value pairs in no particular order. Params not specified are unchanged, or if new media is added then set to the default specified.
     </description>
   </function>
 
@@ -8329,7 +8328,7 @@ Returns the integer amount of memory the script can use in bytes.
     <param type="integer" name="face"/>
     <param type="list" name="params"/>
     <description lang="en">
-Set the media params for a particular face on linked prim.  List is a set of name/value pairs (in no particular order). The possible names are below, along with the types of values and what they mean.  If media is not already on this object, add it. Params not specified are unchanged, or if new media is added set to the default specified.
+Set the media params for a particular face on linked prim.  List is a set of name/value pairs (in no particular order). If media is not already on this object, add it. Params not specified are unchanged, or if new media is added set to the default specified.
     </description>
   </function>
 
