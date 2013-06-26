@@ -87,7 +87,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130619001">
+<keywords version="0.0.20130626000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -7523,11 +7523,11 @@ If the conversion creates any unprintable characters, they are converted to spac
   </function>
 
   <function name="llXorBase64Strings" type="string" delay="0.3" status="deprecated">
-    <param type="string" name="s1"/>
-    <param type="string" name="s2"/>
+    <param type="string" name="str1"/>
+    <param type="string" name="str2"/>
     <description lang="en">
-DEPRECATED!  Please use llXorBase64StringsCorrect instead.
-Incorrectly performs an exclusive or on two Base64 strings and returns a Base64 string.  s2 repeats if it is shorter than s1.  Retained for backwards compatability.
+DEPRECATED!  Please use llXorBase64 instead.
+Incorrectly performs an exclusive or on two Base64 strings and returns a Base64 string. str2 repeats if it is shorter than str1. Retained for backwards compatability.
     </description>
   </function>
 
@@ -7949,12 +7949,13 @@ Returns the region flags (REGION_FLAG_*) for the region the object is in
     </description>
   </function>
 
-  <function name="llXorBase64StringsCorrect" type="string">
-    <param type="string" name="s1"/>
-    <param type="string" name="s2"/>
+  <function name="llXorBase64StringsCorrect" type="string" status="deprecated">
+    <param type="string" name="str1"/>
+    <param type="string" name="str2"/>
     <description lang="en">
-Correctly performs an exclusive or on two Base64 strings and returns a Base64 string.
-s2 repeats if it is shorter than s1.
+DEPRECATED! Please use llXorBase64 instead.
+Incorrectly performs an exclusive or on two Base64 strings and returns a Base64 string.
+str2 repeats if it is shorter than str1. Retained for backwards compatability.
     </description>
   </function>
 
@@ -8731,6 +8732,14 @@ Returns the type constant for the value in json indicated by specifiers
     </description>
   </function>
 
+  <function name="llXorBase64" type="string" grid="sl">
+    <param type="string" name="str1"/>
+    <param type="string" name="str2"/>
+    <description lang="en">
+Performs an exclusive or on two Base64 strings and returns a Base64 string.
+str2 repeats if it is shorter than str1.
+    </description>
+  </function>
 
   <!-- OpenSim/Aurora-specific functions -->
 

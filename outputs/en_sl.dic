@@ -10528,7 +10528,7 @@ llWanderWithin
 llWater
 llWhisper
 llWind
-llXorBase64StringsCorrect
+llXorBase64
 at_rot_target
 at_target
 attach

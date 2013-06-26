@@ -1327,6 +1327,7 @@ llJsonSetValue
 llJsonValueType
 llReturnObjectsById
 llReturnObjectsByOwner
+llXorBase64
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted
