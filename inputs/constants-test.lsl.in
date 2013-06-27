@@ -104,8 +104,8 @@ default
         line = 105;
 <<< LSL KEYWORDS >>>
         if (errors)
-            llOwnerSay("Finished with errors.");
+            llOwnerSay("Constants test finished with errors.");
         else
-            llOwnerSay("Finished successfully.");
+            llOwnerSay("Constants test finished successfully.");
     }
 }

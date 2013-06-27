@@ -1,0 +1,21 @@
+default
+{
+    state_entry()
+    {
+<<< LSL HEADER >>>
+        llOwnerSay("Functions check compiled successfully");
+    }
+
+    state_exit()
+    {
+        string s;
+        key k;
+        integer i;
+        float f;
+        vector v;
+        rotation r;
+        quaternion q;
+        list l;
+<<< LSL KEYWORDS >>>
+    }
+}

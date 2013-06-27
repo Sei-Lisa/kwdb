@@ -10,6 +10,9 @@ dfg -f rawkeywords -o outputs/rawkeywords.txt
 dfg -f constantvaluecheck -g sl -i inputs/constants-test.lsl.in -o outputs/constants-test-sl.lsl
 dfg -f constantvaluecheck -g os -i inputs/constants-test.lsl.in -o outputs/constants-test-os.lsl
 dfg -f constantvaluecheck -g aa -i inputs/constants-test.lsl.in -o outputs/constants-test-aa.lsl
+dfg -f functioncheck -g sl -i inputs/functioncheck.lsl.in -o outputs/functioncheck-sl.lsl
+dfg -f functioncheck -g os -i inputs/functioncheck.lsl.in -o outputs/functioncheck-os.lsl
+dfg -f functioncheck -g aa -i inputs/functioncheck.lsl.in -o outputs/functioncheck-aa.lsl
 dfg -f constantvalues -g sl -o outputs/constants-sl.txt
 dfg -f constantvalues -g os -o outputs/constants-os.txt
 dfg -f constantvalues -g aa -o outputs/constants-aa.txt
