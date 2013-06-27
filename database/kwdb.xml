@@ -87,7 +87,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130626003">
+<keywords version="0.0.20130627000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -6737,7 +6737,7 @@ Suppresses default collision sounds, replaces default impact sounds with impact_
     </description>
   </function>
 
-  <function name="llCollisionSprite">
+  <function name="llCollisionSprite" status="unimplemented">
     <param type="string" name="impact_sprite"/>
     <description lang="en">
 Suppresses default collision sprites, replaces default impact sprite with impact_sprite (use an empty string to just suppress)
