@@ -28,7 +28,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20130101000"
+  version = "0.0.20130627000"
 
   def fpformat(s):
     s = str(float(s))
@@ -36,7 +36,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
       s = s[:-1]
     return s
   type2char = {"integer":"i", "float":"f", "string":"s", "key":"k", "vector":"v",
-               "rotation":"q", "quaternion":"q", "list":"l"}
+               "rotation":"q", "quaternion":"q", "list":"l", "bool":"i"}
 
   marker = "<<< %s KEYWORDS >>>" % tag
 

@@ -25,7 +25,7 @@ dfg -f viewerkw -g sl -t LSL \
                          outputs/firestorm_keywords.ini
 
 dfg -f viewersrc -g sl -t LSL \
-                       -i inputs/firestorm_lscript_library.cpp \
+                       -i inputs/firestorm_lscript_library.cpp.in \
  | dfg -f viewersrc -g os,-sl -t OSSL \
  | dfg -f viewersrc -g aa,-os,-sl -t AA \
                       -o outputs/firestorm_lscript_library.cpp.out \
