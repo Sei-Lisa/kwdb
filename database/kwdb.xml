@@ -87,7 +87,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130627000">
+<keywords version="0.0.20130627001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -8714,7 +8714,7 @@ Returns the type constant for the value in json indicated by specifiers
     </description>
   </function>
 
-  <function name="llReturnObjectsById" type="integer" grid="sl">
+  <function name="llReturnObjectsByID" type="integer" grid="sl">
     <param type="list" name="objects"/>
     <description lang="en">
 <!-- TODO: add documentation -->
