@@ -1,4 +1,4 @@
-11196
+11195
 rez
 slex
 slutorial
@@ -10162,7 +10162,6 @@ llClearPrimMedia
 llCloseRemoteDataChannel
 llCollisionFilter
 llCollisionSound
-llCollisionSprite
 llCos
 llCreateCharacter
 llCreateLink
@@ -10408,7 +10407,7 @@ llResetLandPassList
 llResetOtherScript
 llResetScript
 llResetTime
-llReturnObjectsById
+llReturnObjectsByID
 llReturnObjectsByOwner
 llRezAtRoot
 llRezObject

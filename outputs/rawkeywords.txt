@@ -1325,7 +1325,7 @@ llList2Json
 llJsonGetValue
 llJsonSetValue
 llJsonValueType
-llReturnObjectsById
+llReturnObjectsByID
 llReturnObjectsByOwner
 llXorBase64
 lsGetWindlightScene
