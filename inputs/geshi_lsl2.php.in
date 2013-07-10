@@ -17,6 +17,8 @@
  *   -  Modified by Sei Lisa for compatibility with the geshi.py output module
  *      which is part of the LSL2 Derived Files Generator, available at:
  *      http://code.google.com/p/lsl-keywords
+ * 2013-07-11
+ *   -  Modified by Sei Lisa to fix symbols and to add multiline comment support
  *
  * TODO (updated 2009/02/05)
  * -------------------------
