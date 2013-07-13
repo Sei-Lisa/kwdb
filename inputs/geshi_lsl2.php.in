@@ -51,7 +51,31 @@ $language_data = array (
     'QUOTEMARKS' => array('"'),
     'ESCAPE_CHAR' => '\\',
     'KEYWORDS' => array(
-<<< LSL KEYWORDS >>>
+<<< LSL KEYWORDS VERSION >>>
+        1 => array( // flow control
+<<< LSL KEYWORDS KEYWORDS >>>
+            ),
+        2 => array( // manifest constants
+<<< LSL KEYWORDS CONSTANTS >>>
+            ),
+        3 => array( // handlers
+<<< LSL KEYWORDS EVENTS >>>
+            ),
+        4 => array( // data types
+<<< LSL KEYWORDS TYPES >>>
+            ),
+        5 => array( // library
+<<< LSL KEYWORDS FUNCTIONS >>>
+            ),
+        6 => array( // deprecated
+<<< LSL KEYWORDS DEPRECATED >>>
+            ),
+        7 => array( // unimplemented
+<<< LSL KEYWORDS UNIMPLEMENTED >>>
+            ),
+        8 => array( // God mode
+<<< LSL KEYWORDS GODMODE >>>
+            ),
         ),
     'SYMBOLS' => array(
         '{', '}', '(', ')', '[', ']',
