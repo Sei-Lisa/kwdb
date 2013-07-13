@@ -55,6 +55,11 @@ dfg -f geshi -g sl     -i inputs/geshi_lsl2.php.in \
  && replace_if_different outputs/geshi_lsl2.php.out \
                          outputs/geshi_lsl2.php
 
+dfg -f geshi -g sl     -i inputs/geshi_1.2_lang_lsl2.php.in \
+                      -o outputs/geshi_1.2_lang_lsl2.php.out \
+ && replace_if_different outputs/geshi_1.2_lang_lsl2.php.out \
+                         outputs/geshi_1.2_lang_lsl2.php
+
 dfg -f funcsigshs -g sl -i inputs/FuncSigs.hs.in \
                        -o outputs/FuncSigs.hs.out \
  && replace_if_different  outputs/FuncSigs.hs.out \

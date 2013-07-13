@@ -1,0 +1,139 @@
+<?php
+/**
+ * GeSHi - Generic Syntax Highlighter
+ * <pre>
+ *   File:   geshi/classes/class.geshicodecontext.php
+ *   Author: Nigel McNie and Sei Lisa
+ *   E-mail: nigel@geshi.org, seilisasl+geshi@gmail.com
+ * </pre>
+ *
+ * For information on how to use GeSHi, please consult the documentation
+ * found in the docs/ directory, or online at http://geshi.org/docs/
+ *
+ * This program is part of GeSHi.
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+ *
+ * @package    geshi
+ * @subpackage lang
+ * @author     Nigel McNie <nigel@geshi.org>
+ * @author     Sei Lisa <seilisasl+geshi@gmail.com>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
+ * @copyright  (C) 2004 - 2006 Nigel McNie
+ * @copyright  (C) 2013 Sei Lisa
+ * @version    $Id$
+ *
+ */
+
+/**#@+
+ * @access private
+ */
+
+<<< LSL KEYWORDS VERSION >>>
+
+function geshi_lsl2_lsl2 (&$context)
+{
+    $context->addChild('comment', 'code');
+    $context->addChild('string', 'string');
+    $context->addChild('preproc');
+
+    // Keywords
+    $context->addKeywordGroup(array(
+<<< LSL KEYWORDS KEYWORDS >>>
+    ), 'keyword', true);
+
+    // Functions
+    $context->addKeywordGroup(array(
+<<< LSL KEYWORDS FUNCTIONS >>>
+    ), 'function', true);
+
+    // Objects
+    $context->addKeywordGroup(array(
+<<< LSL KEYWORDS TYPES >>>
+    ), 'type', true);
+
+    // Constants
+    $context->addKeywordGroup(array(
+<<< LSL KEYWORDS CONSTANTS >>>
+    ), 'constant', true);
+
+    // Events
+    $context->addKeywordGroup(array(
+<<< LSL KEYWORDS EVENTS >>>
+    ), 'event', true);
+
+    // Deprecated/unimplemented stuff
+    $context->addKeywordGroup(array(
+<<< LSL KEYWORDS DEPRECATED >>>
+    ), 'deprecated', true);
+
+    // GodMode stuff
+    $context->addKeywordGroup(array(
+<<< LSL KEYWORDS GODMODE >>>
+    ), 'godmode', true);
+
+    $context->setCharactersDisallowedBeforeKeywords(array('A-Za-z_'));
+
+    // Symbols
+    $context->addSymbolGroup(array(
+
+        '{', '}', '(', ')', '[', ']',
+        '=', '+', '-', '*', '/', '%',
+        '<', '>', '!',
+        '&', '|', '~', '^',
+        ':', // forces syntax err; other symbols such as $ are silently ignored
+
+        // double symbols are treated one at a time in current GeSHi 1.1,
+        // so no point in adding this at the moment
+        //'+=', '-=', '*=', '/=', '%=', '++', '--', '<<', '>>',
+        //'&&', '||', '==', '!=', '<=', '>=',
+    ), 'symbol');
+
+    // Decimal integers
+    $context->useStandardIntegers();
+
+    // Hexadecimal integers
+    $context->addRegexGroup(array('/(?<![a-zA-Z0-9_.])(0[xX][0-9A-Fa-f]+)/'),
+                            '0', array(1 => array('num/hexint', false)));
+
+    // Floats
+    $context->useStandardDoubles(array('chars_after_number' => array('f', 'F')));
+}
+
+
+function geshi_lsl2_lsl2_comment (&$context)
+{
+    $context->addDelimiters('//', "\n");
+    $context->addDelimiters('/*', '*/');
+    $context->setCharactersDisallowedBeforeKeywords(array('A-Za-z_'));
+    $context->addKeywordGroup(
+        array('TODO', 'FIXME', 'HACK', 'NOTE', 'NOTICE', 'WARNING'),
+        'commentnotice', true);
+}
+
+function geshi_lsl2_lsl2_string (&$context)
+{
+    $context->addDelimiters('"', '"');
+    $context->addEscapeGroup(array('\\'), array('n', 't', '\\', '"'));
+}
+
+function geshi_lsl2_lsl2_preproc (&$context)
+{
+    $context->addDelimiters('REGEX#(?:(?:^|\n)(?:[ \t\f\v]*)(?=\#))#',
+                            "REGEX#(?<!\\\\)\n#");
+}
+/**#@-*/
+
+?>
