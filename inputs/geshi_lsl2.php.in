@@ -43,6 +43,8 @@
  *
  ************************************************************************************/
 
+<<< LSL KEYWORDS VERSION >>>
+
 $language_data = array (
     'LANG_NAME' => 'LSL2',
     'COMMENT_SINGLE' => array(1 => '//'),
@@ -51,7 +53,6 @@ $language_data = array (
     'QUOTEMARKS' => array('"'),
     'ESCAPE_CHAR' => '\\',
     'KEYWORDS' => array(
-<<< LSL KEYWORDS VERSION >>>
         1 => array( // flow control
 <<< LSL KEYWORDS KEYWORDS >>>
             ),
