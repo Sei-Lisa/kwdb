@@ -1213,9 +1213,8 @@ function geshi_lsl2_lsl2_comment (&$context)
 {
     $context->addDelimiters('//', "\n");
     $context->addDelimiters('/*', '*/');
-    $context->setCharactersDisallowedBeforeKeywords(array('A-Za-z_'));
     $context->addKeywordGroup(
-        array('TODO', 'FIXME', 'HACK', 'NOTE', 'NOTICE', 'WARNING'),
+        array('TODO', 'FIXME', 'HACK', 'NOTE', 'NOTICE', 'WARNING', 'TASK'),
         'commentnotice', true);
 }
 
@@ -1227,8 +1226,8 @@ function geshi_lsl2_lsl2_string (&$context)
 
 function geshi_lsl2_lsl2_preproc (&$context)
 {
-    $context->addDelimiters('REGEX#(?:(?:^|\n)(?:[ \t\f\v]*)(?=\#))#',
-                            "REGEX#(?<!\\\\)\n#");
+    $context->addDelimiters('REGEX#(?:^|\n)[ \t\f\v]*\##',
+                            'REGEX#(?<!\\\\)(?:\n|$)#');
 }
 /**#@-*/
 
