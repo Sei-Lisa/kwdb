@@ -1185,7 +1185,6 @@ function geshi_lsl2_lsl2 (&$context)
 
     // Symbols
     $context->addSymbolGroup(array(
-
         '{', '}', '(', ')', '[', ']',
         '=', '+', '-', '*', '/', '%',
         '<', '>', '!',
