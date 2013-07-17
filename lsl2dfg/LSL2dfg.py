@@ -164,7 +164,7 @@ import sys #, os
 import getopt
 from xml import sax
 
-version = "0.0.20130619000"
+version = "0.0.20130717000"
 defaultlang = "en"
 defaulttag = "LSL"
 
@@ -528,7 +528,7 @@ try:
 
 except Exception, e:
   if not argpyexcept:
-    sys.stderr.write("EXCEPTION: " + str(e) + "\n")
+    sys.stderr.write("EXCEPTION %s: %s\n" % (e.__class__.__name__, str(e)))
     sys.exit(2)
   else:
     raise
