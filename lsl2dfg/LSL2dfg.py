@@ -46,8 +46,18 @@
 # This program takes as input an XML file containing all keywords, types,
 # constants, functions and events, with this format:
 #
-# <keywords version"version">  Top level element - contains a collection of these tags (all optional) in any order:
-#   <defaults>  Not more than one of these.
+# <keywords version="version">  Top level element - contains a collection of the following tags:
+#
+#   Grid tags must appear at the start and there can be any number of them:
+#
+#   <grid id="{ident}" [version="version"]>
+#     [Grid description]
+#   </grid>
+#
+#   The rest are all optional and can appear in any order, and except for <defaults>
+#   there can be any number of them (there can be only one <defaults>):
+#
+#   <defaults>
 #     [<description lang="{langcodes}"> {text} </description> ...]
 #   </defaults>
 #
@@ -164,13 +174,13 @@ import sys #, os
 import getopt
 from xml import sax
 
-version = "0.0.20130717000"
+version = "0.0.20130817000"
 defaultlang = "en"
 defaulttag = "LSL"
 
 class LSLXMLException(sax.SAXParseException):
   def __init__(self, text, locator):
-    super(LSLXMLException, self).__init__(self, text, self, locator)
+    super(LSLXMLException, self).__init__(text, self, locator)
 
 
 class LSLXMLDefaultHandler(sax.handler.EntityResolver, sax.handler.DTDHandler,
@@ -188,6 +198,8 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
     self.in_keywords = False
     self.has_keywords = False
     self.in_ident = False
+    self.has_nongrid = False
+    self.in_grid = False
     self.in_defaults = False
     self.has_defaults = False
     self.in_param = False
@@ -210,12 +222,20 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
       self.has_keywords = True
       self.version = attrs.get("version")
 
+    elif tag == "grid":
+      if self.has_nongrid:
+        raise LSLXMLException("<grid> tag must appear before any other tags", self.locator)
+      self.in_grid = True
+      self.content = ""
+
     elif tag in ("defaults", "keyword", "type", "constant", "function", "event"):
       if not self.in_keywords:
         raise LSLXMLException("<keywords> root tag not opened", self.locator)
 
-      if self.in_ident or self.in_defaults:
+      if self.in_ident or self.in_defaults or self.in_grid:
         raise LSLXMLException("Nested identifier/defaults tags not allowed. Found nested tag; <%s>" % tag, self.locator)
+
+      self.has_nongrid = True
 
       if tag == "defaults":
         if self.has_defaults:
@@ -241,7 +261,7 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
           , "name": attrs.get("name")
           }
         for attr in ("grid", "type", "value", "status", "energy", "delay"):
-          if attrs.has_key(attr):
+          if attr in attrs:
             self.data[attr] = attrs.get(attr)
 
     elif tag == "description":
@@ -253,11 +273,13 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
             raise LSLXMLException("Nested <description> tags not allowed inside <defaults>", self.locator)
         if self.in_param:
           raise LSLXMLException("<description> tag not allowed inside <param> tag, in identifier '%s'" % self.data["name"], self.locator)
+        if self.in_grid:
+          raise LSLXMLException("<description> tag not allowed inside <grid> tag", self.locator)
         self.in_desc = True
-        self.descstr = ""
+        self.content = ""
         self.descattrs = {}
         for attr in ("lang",):
-          if attrs.has_key(attr):
+          if attr in attrs:
             self.descattrs[attr] = attrs.get(attr)
       else:
         raise LSLXMLException("<description> not inside an identifier definition or defaults tag", self.locator)
@@ -287,14 +309,20 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
 
   def characters(self, ch):
 
-    if self.in_desc:
-      self.descstr = self.descstr + ch
+    if self.in_desc or self.in_grid:
+      self.content = self.content + ch
     elif ch.strip(" \r\n\t") != "":
       raise LSLXMLException("Unexpected text '%s' inside <%s> tag" % (ch, self.lasttag), self.locator)
 
   def endElement(self, tag):
+    if tag == "grid":
+      if not self.in_grid:
+        raise LSLXMLException("Closing <grid> without opening it", self.locator)
+      self.in_grid = False
 
-    if tag in ("keyword", "type", "constant", "function", "event"):
+    elif tag in ("keyword", "type", "constant", "function", "event"):
+      if not self.in_ident:
+        raise LSLXMLException("Closing <%s> without opening it" % tag, self.locator)
       self.in_ident = False
       if self.params is not None:
         self.data["params"] = self.params
@@ -325,23 +353,27 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
           self.document.append(self.data)
 
     elif tag == "defaults":
+      if not self.in_defaults:
+        raise LSLXMLException("Closing <defaults> without opening it", self.locator)
       self.in_defaults = False
 
     elif tag == "description":
+      if not self.in_desc:
+        raise LSLXMLException("Closing <description> without opening it", self.locator)
       self.in_desc = False
 
       # Strip spaces and tabs
-      self.descstr = self.descstr.strip(" \t")
+      self.content = self.content.strip(" \t")
       # Strip exactly one LF if present at first position
-      if self.descstr[:1] == "\n":
-        self.descstr = self.descstr[1:]
+      if self.content[:1] == "\n":
+        self.content = self.content[1:]
       # Strip exactly one LF if present at last position
-      if self.descstr[-1:] == "\n":
-        self.descstr = self.descstr[:-1]
+      if self.content[-1:] == "\n":
+        self.content = self.content[:-1]
 
-      if self.descstr != "": # do not add empty descriptions
+      if self.content != "": # do not add empty descriptions
 
-        self.descattrs["text"] = self.descstr
+        self.descattrs["text"] = self.content
         langs = [defaultlang]
         if "lang" in self.descattrs:
           langs = self.descattrs["lang"].split()
@@ -351,7 +383,7 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
           for lang in langs:
             if lang in self.defaults:
               raise LSLXMLException("Duplicate language '%s' in descriptions within <defaults>" % lang, self.locator)
-            self.defaults[lang] = self.descstr
+            self.defaults[lang] = self.content
 
         else:
           if "desc" not in self.data:
@@ -363,6 +395,8 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
             self.data["desc"][lang] = self.descattrs
 
     elif tag == "param":
+      if not self.in_param:
+        raise LSLXMLException("Closing <param> without opening it", self.locator)
       self.in_param = False
 
 
@@ -482,11 +516,11 @@ try:
     showhelp()
 
   if argversion:
-    print "LSL2 Derived Files Generator version: " + version
+    print("LSL2 Derived Files Generator version: " + version)
     if argdatabase is not None:
 
       document = loadXML(argdatabase, ["-sl","-os","-aa"], True)
-      print "Database version: " + document[2]
+      print("Database version: " + document[2])
 
   if not arghelp and not argversion:
     if argdatabase is None:
@@ -497,7 +531,7 @@ try:
       try:
         from lxml import etree
       except ImportError:
-        print "lxml is necessary for DTD validation, but it is not installed or not found."
+        print("lxml is necessary for DTD validation, but it is not installed or not found.")
         raise
 
       parser = etree.XMLParser(dtd_validation = True)
@@ -526,9 +560,10 @@ try:
       lsloutput = getattr(__import__("lsloutputs." + argformat), argformat)
       lsloutput.output(document[0], document[1], document[2], arginput, argoutput, arglang, argtag)
 
-except Exception, e:
+except Exception:
   if not argpyexcept:
-    sys.stderr.write("EXCEPTION %s: %s\n" % (e.__class__.__name__, str(e)))
+    e = sys.exc_info()
+    sys.stderr.write("EXCEPTION %s: %s\n" % (e[0].__name__, str(e[1])))
     sys.exit(2)
   else:
     raise

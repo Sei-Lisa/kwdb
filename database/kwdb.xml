@@ -44,10 +44,15 @@ Example: grid="os aa"
 
 <!DOCTYPE keywords [
 
-<!ELEMENT keywords ((keyword | type | constant | function | event)*,
+<!ELEMENT keywords (grid*, (keyword | type | constant | function | event)*,
                     (defaults, (keyword | type | constant | function | event)*)?)>
 <!ATTLIST keywords
           version CDATA #REQUIRED>
+<!ELEMENT grid (#PCDATA)>
+<!ATTLIST grid
+          id NMTOKEN #REQUIRED
+          version CDATA #IMPLIED
+          >
 <!ELEMENT defaults (description*)>
 <!ELEMENT keyword (description*)>
 <!ATTLIST keyword
@@ -87,7 +92,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130627001">
+<keywords version="0.0.20130817000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -96,6 +101,11 @@ Example: grid="os aa"
       AuroraSim revision 0049c9335f8b91ab119ce4fee5ba1d50d4f6f017
           https://github.com/aurora-sim/Aurora-Sim/commit/0049c9335f8b91ab119ce4fee5ba1d50d4f6f017
   -->
+
+  <!-- Grids supported and their versions -->
+  <grid id="sl" version="13.06.21.277682">Second Life</grid>
+  <grid id="os" version="v0.7.5-rc1">OpenSimulator</grid>
+  <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
   <!-- Defaults for absent descriptions -->
   <defaults>
