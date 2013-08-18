@@ -30,7 +30,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20130526000"
+  version = "0.0.20130817000"
 
   def print_function_or_event(element):
     if element["cat"] in ("function", "event"):
@@ -56,7 +56,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
 
 
   if outfilename is not None:
-    outf = open(outfilename, "w")
+    outf = open(outfilename, "wb")
   else:
     outf = sys.stdout
 
@@ -71,9 +71,14 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
     elif element["cat"] == "constant":
       constants.append(element)
 
-  functions.sort(lambda x,y: cmp(x["name"],y["name"]))
-  events.sort(lambda x,y: cmp(x["name"],y["name"]))
-  constants.sort(lambda x,y: cmp(x["name"],y["name"]))
+  try:
+    functions.sort(key=lambda x: x["name"])
+    events.sort(key=lambda x: x["name"])
+    constants.sort(key=lambda x: x["name"])
+  except:
+    functions.sort(lambda x,y: cmp(x["name"],y["name"]))
+    events.sort(lambda x,y: cmp(x["name"],y["name"]))
+    constants.sort(lambda x,y: cmp(x["name"],y["name"]))
 
   try:
 

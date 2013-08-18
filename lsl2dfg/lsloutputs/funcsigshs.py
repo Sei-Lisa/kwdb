@@ -28,7 +28,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20130101000"
+  version = "0.0.20130817000"
 
   if lang not in defaultdescs:
     defaultdescs[lang] = defaultdescs["default"]
@@ -38,7 +38,10 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
             "rotation":"LLRot", "quaternion":"LLRot",
             "vector":"LLVector", "list":"LLList"}
 
-  document.sort(lambda x,y: cmp(x["name"],y["name"]))
+  try:
+    document.sort(key=lambda x: x["name"])
+  except:
+    document.sort(lambda x,y: cmp(x["name"],y["name"]))
 
   if infilename is not None:
     inf = open(infilename, "r")

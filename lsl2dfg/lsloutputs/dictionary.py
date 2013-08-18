@@ -28,7 +28,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20130101000"
+  version = "0.0.20130817000"
 
   keywords = []
   types = []
@@ -53,8 +53,11 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
   keywords.sort()
   types.sort()
   constants.sort()
-  functions.sort(lambda x,y: cmp(x.lower(), y.lower()))
   events.sort()
+  try:
+    functions.sort(key=lambda x: x.lower())
+  except:
+    functions.sort(lambda x,y: cmp(x.lower(), y.lower()))
 
   words = []
 
