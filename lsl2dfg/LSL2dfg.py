@@ -562,7 +562,7 @@ try:
 
 except Exception:
   if not argpyexcept:
-    e = sys.exc_info()
+    e = sys.exc_info()[:2]
     sys.stderr.write("EXCEPTION %s: %s\n" % (e[0].__name__, str(e[1])))
     sys.exit(2)
   else:
