@@ -178,6 +178,9 @@ version = "0.0.20130817000"
 defaultlang = "en"
 defaulttag = "LSL"
 
+class ParameterException(Exception):
+  pass
+
 class LSLXMLException(sax.SAXParseException):
   def __init__(self, text, locator):
     super(LSLXMLException, self).__init__(text, self, locator)
@@ -205,6 +208,8 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
     self.in_param = False
     self.in_desc = False
     self.version = "0"
+    self.checked_grids = False
+    self.griddata = {}
 
   def setDocumentLocator(self, locator):
     self.locator = locator
@@ -227,6 +232,10 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
         raise LSLXMLException("<grid> tag must appear before any other tags", self.locator)
       self.in_grid = True
       self.content = ""
+      self.data = {"id": attrs.get("id")}
+      for attr in ("version",):
+        if attr in attrs:
+          self.data[attr] = attrs.get(attr)
 
     elif tag in ("defaults", "keyword", "type", "constant", "function", "event"):
       if not self.in_keywords:
@@ -234,6 +243,15 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
 
       if self.in_ident or self.in_defaults or self.in_grid:
         raise LSLXMLException("Nested identifier/defaults tags not allowed. Found nested tag; <%s>" % tag, self.locator)
+
+      if not self.checked_grids:
+        if self.grids is not None:
+          for grid in self.grids:
+            if grid[0:1] == '-':
+              grid = grid[1:]
+            if grid not in self.griddata:
+              raise ParameterException("One of the specified grids is not in the database: " + grid)
+        self.checked_grids = True
 
       self.has_nongrid = True
 
@@ -319,6 +337,12 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
       if not self.in_grid:
         raise LSLXMLException("Closing <grid> without opening it", self.locator)
       self.in_grid = False
+      gridid = self.data['id']
+      self.griddata[gridid] = {}
+      if self.content != "":
+        self.griddata[gridid]["name"] = self.content
+      if "version" in self.data:
+        self.griddata[gridid]["version"] = self.data["version"]
 
     elif tag in ("keyword", "type", "constant", "function", "event"):
       if not self.in_ident:
@@ -418,7 +442,7 @@ def loadXML(filename, grids, unique):
     else:
       defaults["default"] = ""
 
-  return (dochandler.document, defaults, dochandler.version)
+  return (dochandler.document, defaults, dochandler.version, dochandler.griddata)
 
 
 def showusage():
@@ -515,17 +539,33 @@ try:
   if arghelp:
     showhelp()
 
+  if arggrids is not None:
+    arggrids = arggrids.split(',')
+
   if argversion:
     print("LSL2 Derived Files Generator version: " + version)
     if argdatabase is not None:
 
-      document = loadXML(argdatabase, ["-sl","-os","-aa"], True)
+      document = loadXML(argdatabase, [], True)
       print("Database version: " + document[2])
+      if document[3]:
+        print("Based on the following grid versions:")
+        for grid in document[3]:
+          if arggrids is None or grid in arggrids:
+            data = document[3][grid]
+            gridname = grid
+            if 'name' in data:
+              gridname += " (" + data['name'] + ")"
+            if 'version' in data:
+              ver = data['version']
+            else:
+              ver = '(unspecified)'
+            print("\t%s: %s" % (gridname, ver))
 
   if not arghelp and not argversion:
     if argdatabase is None:
       showusage()
-      raise Exception("No --database specified.")
+      raise ParameterException("No --database specified.")
 
     if argvalidatedtd:
       try:
@@ -537,15 +577,12 @@ try:
       parser = etree.XMLParser(dtd_validation = True)
       etree.parse(argdatabase, parser)
 
-    if arggrids is not None:
-      arggrids = arggrids.split(',')
-
     document = loadXML(argdatabase, arggrids, argunique)
 
     if not argparseonly:
       if argformat is None:
         showusage()
-        raise Exception("Neither --format nor --parse-only was specified.")
+        raise ParameterException("Neither --format nor --parse-only was specified.")
 
       if arglang is None:
         arglang = defaultlang
