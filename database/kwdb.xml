@@ -92,7 +92,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20130817000">
+<keywords version="0.0.20131008000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -103,7 +103,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="13.06.21.277682">Second Life</grid>
+  <grid id="sl" version="13.09.27.281745">Second Life</grid>
   <grid id="os" version="v0.7.5-rc1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -674,16 +674,25 @@ Passed to llGetAgentList to return any/all agents in the region
   <constant name="PSYS_PART_END_ALPHA" type="integer" value="4"/>
   <constant name="PSYS_PART_END_SCALE" type="integer" value="6"/>
   <constant name="PSYS_PART_MAX_AGE" type="integer" value="7"/>
-  <constant name="PSYS_PART_BOUNCE_MASK" type="integer" value="0x4"/>
-  <constant name="PSYS_PART_WIND_MASK" type="integer" value="0x8"/>
   <constant name="PSYS_PART_INTERP_COLOR_MASK" type="integer" value="0x1"/>
   <constant name="PSYS_PART_INTERP_SCALE_MASK" type="integer" value="0x2"/>
+  <constant name="PSYS_PART_BOUNCE_MASK" type="integer" value="0x4"/>
+  <constant name="PSYS_PART_WIND_MASK" type="integer" value="0x8"/>
   <constant name="PSYS_PART_FOLLOW_SRC_MASK" type="integer" value="0x10"/>
   <constant name="PSYS_PART_FOLLOW_VELOCITY_MASK" type="integer" value="0x20"/>
   <constant name="PSYS_PART_TARGET_POS_MASK" type="integer" value="0x40"/>
-  <constant name="PSYS_PART_EMISSIVE_MASK" type="integer" value="0x100"/>
   <constant name="PSYS_PART_TARGET_LINEAR_MASK" type="integer" value="0x80"/>
+  <constant name="PSYS_PART_EMISSIVE_MASK" type="integer" value="0x100"/>
+  <constant name="PSYS_PART_RIBBON_MASK" type="integer" value="0x400" grid="sl"/>
   <constant name="PSYS_SRC_PATTERN" type="integer" value="9"/>
+  <constant name="PSYS_PART_BF_ONE" type="integer" value="0" grid="sl"/>
+  <constant name="PSYS_PART_BF_ZERO" type="integer" value="1" grid="sl"/>
+  <constant name="PSYS_PART_BF_DEST_COLOR" type="integer" value="2" grid="sl"/>
+  <constant name="PSYS_PART_BF_SOURCE_COLOR" type="integer" value="3" grid="sl"/>
+  <constant name="PSYS_PART_BF_ONE_MINUS_DEST_COLOR" type="integer" value="4" grid="sl"/>
+  <constant name="PSYS_PART_BF_ONE_MINUS_SOURCE_COLOR" type="integer" value="5" grid="sl"/>
+  <constant name="PSYS_PART_BF_SOURCE_ALPHA" type="integer" value="7" grid="sl"/>
+  <constant name="PSYS_PART_BF_ONE_MINUS_SOURCE_ALPHA" type="integer" value="9" grid="sl"/>
 
   <constant name="PSYS_SRC_INNERANGLE" type="integer" value="10" status="deprecated">
     <description lang="en">
@@ -715,6 +724,10 @@ Deprecated -- Use PSYS_SRC_ANGLE_END
   <constant name="PSYS_SRC_PATTERN_ANGLE_CONE" type="integer" value="8"/>
   <constant name="PSYS_SRC_PATTERN_ANGLE_CONE_EMPTY" type="integer" value="16"/>
   <constant name="PSYS_SRC_OBJ_REL_MASK" type="integer" value="1" status="unimplemented" grid="sl"/>
+  <constant name="PSYS_PART_BLEND_FUNC_SOURCE" type="integer" value="24" grid="sl"/>
+  <constant name="PSYS_PART_BLEND_FUNC_DEST" type="integer" value="25" grid="sl"/>
+  <constant name="PSYS_PART_START_GLOW" type="integer" value="26" grid="sl"/>
+  <constant name="PSYS_PART_END_GLOW" type="integer" value="27" grid="sl"/>
 
   <constant name="OBJECT_UNKNOWN_DETAIL" type="integer" value="-1">
     <description lang="en">
@@ -837,6 +850,12 @@ Used with llGetObjectDetails to get the streaming (download) cost
   </constant>
 
   <constant name="OBJECT_PATHFINDING_TYPE" type="integer" value="20" grid="sl aa">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OBJECT_RENDER_WEIGHT" type="integer" value="24" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -2051,7 +2070,7 @@ Gets/Sets primitive local (root-prim relative) rotation
 
   <constant name="PRIM_TEXTURE" type="integer" value="17">
     <description lang="en">
-Followed by an integer face, key id, vector repeats, vector offsets,
+Followed by an integer face, string name, vector repeats, vector offsets,
 and float rotation in radians
     </description>
   </constant>
@@ -4439,6 +4458,12 @@ Used with http_request when a public URL is not available
   </constant>
 
   <constant name="JSON_FALSE" type="string" value="&#xFDD7;" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_DELETE" type="string" value="&#xFDD8;" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
