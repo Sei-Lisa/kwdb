@@ -861,6 +861,11 @@ Used with llGetObjectDetails to get the streaming (download) cost
     </description>
   </constant>
 
+<!-- Never implemented, removed:
+  <constant name="OBJECT_ATTACHMENT_GEOMETRY_BYTES" type="integer" value="25" grid="sl"/>
+  <constant name="OBJECT_ATTACHMENT_SURFACE_AREA" type="integer" value="26" grid="sl"/>
+-->
+
   <constant name="OPT_AVATAR" type="integer" value="1" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
