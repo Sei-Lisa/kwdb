@@ -1343,6 +1343,9 @@ llJsonValueType
 llReturnObjectsByID
 llReturnObjectsByOwner
 llXorBase64
+llScaleByFactor
+llGetMinScaleFactor
+llGetMaxScaleFactor
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted

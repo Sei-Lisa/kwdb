@@ -7819,7 +7819,7 @@ Returns a list that is dest with start through end removed and src inserted at s
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llLoadURL" delay="10">
+  <function name="llLoadURL" delay="0.1">
     <param type="key" name="avatar"/>
     <param type="string" name="message"/>
     <param type="string" name="url"/>
@@ -8775,6 +8775,25 @@ Returns the type constant for the value in json indicated by specifiers
     <description lang="en">
 Performs an exclusive or on two Base64 strings and returns a Base64 string.
 str2 repeats if it is shorter than str1.
+    </description>
+  </function>
+
+  <function name="llScaleByFactor" type="integer" grid="sl">
+    <param type="float" name="scaling_factor"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetMinScaleFactor" type="float" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetMaxScaleFactor" type="float" grid="sl">
+    <description lang="en">
+<!-- TODO: add documentation -->
     </description>
   </function>
 

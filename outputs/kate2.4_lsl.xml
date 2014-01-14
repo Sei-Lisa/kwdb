@@ -147,7 +147,9 @@
 			<item> llGetLocalRot </item>
 			<item> llGetMass </item>
 			<item> llGetMassMKS </item>
+			<item> llGetMaxScaleFactor </item>
 			<item> llGetMemoryLimit </item>
+			<item> llGetMinScaleFactor </item>
 			<item> llGetNextEmail </item>
 			<item> llGetNotecardLine </item>
 			<item> llGetNumberOfNotecardLines </item>
@@ -332,6 +334,7 @@
 			<item> llRound </item>
 			<item> llSameGroup </item>
 			<item> llSay </item>
+			<item> llScaleByFactor </item>
 			<item> llScaleTexture </item>
 			<item> llScriptDanger </item>
 			<item> llScriptProfiler </item>

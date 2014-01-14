@@ -432,5 +432,8 @@ s = llJsonValueType(s,l);
 i = llReturnObjectsByID(l);
 i = llReturnObjectsByOwner(k,i);
 s = llXorBase64(s,s);
+i = llScaleByFactor(f);
+f = llGetMinScaleFactor();
+f = llGetMaxScaleFactor();
     }
 }

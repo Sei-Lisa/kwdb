@@ -1,4 +1,4 @@
-11210
+11213
 rez
 slex
 slutorial
@@ -10250,7 +10250,9 @@ llGetLocalPos
 llGetLocalRot
 llGetMass
 llGetMassMKS
+llGetMaxScaleFactor
 llGetMemoryLimit
+llGetMinScaleFactor
 llGetNextEmail
 llGetNotecardLine
 llGetNumberOfNotecardLines
@@ -10425,6 +10427,7 @@ llRotTargetRemove
 llRound
 llSameGroup
 llSay
+llScaleByFactor
 llScaleTexture
 llScriptDanger
 llScriptProfiler
