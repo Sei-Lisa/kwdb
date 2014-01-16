@@ -69,11 +69,13 @@
 #     [<description lang="{langcodes}" [other attributes?]> {text} </description> ...]
 #   </type>
 #
-#   <constant name="{ident}" [grid="{grid}"] type="{LSL type}" [value="{value}"] [status="{normal|deprecated|unimplemented}"]>
+#   <constant name="{ident}" [grid="{grid}"] type="{LSL type}" [value="{value}"] [version="{version}]
+#             [status="{normal|deprecated|unimplemented}"]>
 #     [<description lang="{langcodes}" [other attributes?]> {text} </description> ...]
 #   </constant>
 #
-#   <function name="{ident}" [grid="{grid}"] [type="{return type}"] [delay="{float value}"] [energy="{float value}"]
+#   <function name="{ident}" [grid="{grid}"] [type="{return type}"] [delay="{float value}"]
+#             [energy="{float value}"] [version="{version}"]
 #             [status="{normal|deprecated|godmode|unimplemented}"]>
 #     [<param name="{ident}" type="{LSL type}"/> ...]
 #     [<description lang="{langcodes}" [other attributes?]> {text} </description> ...]
@@ -95,6 +97,8 @@
 #       "grid": string with the grid list; if not present it means all grids
 #       "type": return type for functions; value type for constants; not used for the rest
 #       "value": value of the constant for constants; not used for the rest
+#       "version": a version string representing the server version and date in which the
+#                  constant, function or event was added (not applicable to keywords or types)
 #       "status": it can be:
 #                 - the string "normal" (the default if not present)
 #                 - the strings "deprecated", "unimplemented" or "godmode" for functions or constants
@@ -174,7 +178,7 @@ import sys #, os
 import getopt
 from xml import sax
 
-version = "0.0.20130817000"
+version = "0.0.20140116001"
 defaultlang = "en"
 defaulttag = "LSL"
 
@@ -278,7 +282,7 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
           { "cat": tag
           , "name": attrs.get("name")
           }
-        for attr in ("grid", "type", "value", "status", "energy", "delay"):
+        for attr in ("grid", "type", "value", "status", "energy", "delay", "version"):
           if attr in attrs:
             self.data[attr] = attrs.get(attr)
 

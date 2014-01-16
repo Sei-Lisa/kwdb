@@ -69,6 +69,7 @@ Example: grid="os aa"
           grid NMTOKENS #IMPLIED
           type IDREF #REQUIRED
           value CDATA #IMPLIED
+          version CDATA #IMPLIED
           status (normal | deprecated | unimplemented) "normal">
 <!ELEMENT function (param | description)*>
 <!ATTLIST function
@@ -77,10 +78,12 @@ Example: grid="os aa"
           type IDREF #IMPLIED
           delay CDATA "0."
           energy CDATA "10."
+          version CDATA #IMPLIED
           status (normal | deprecated | godmode | unimplemented) "normal">
 <!ELEMENT event (param | description)*>
 <!ATTLIST event
           name CDATA #REQUIRED
+          version CDATA #IMPLIED
           grid NMTOKENS #IMPLIED>
 <!ELEMENT description (#PCDATA)>
 <!ATTLIST description
@@ -92,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20140116000">
+<keywords version="0.0.20140116001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
