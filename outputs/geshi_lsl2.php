@@ -4,7 +4,7 @@
  * --------
  * Author: William Fry (william.fry@nyu.edu)
  * Copyright: (c) 2009 William Fry
- * Release Version: 1.0.8.4
+ * Release Version: 1.0.8.12
  * Date Started: 2009/02/04
  *
  * Linden Scripting Language (LSL2) language file for GeSHi.
@@ -19,9 +19,6 @@
  *      http://code.google.com/p/lsl-keywords
  * 2013-07-11
  *   -  Modified by Sei Lisa to fix symbols and to add multiline comment support
- *
- * TODO (updated 2009/02/05)
- * -------------------------
  *
  *************************************************************************************
  *
