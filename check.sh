@@ -6,7 +6,10 @@ function dfg ()
 }
 
 dfg -ycp
-dfg -f rawkeywords -o outputs/rawkeywords.txt
+dfg -f rawkeywords -o outputs/rawkeywords.txt # includes dupes
+dfg -f rawkeywords -g sl -o outputs/rawkeywords-sl.txt
+dfg -f rawkeywords -g os -o outputs/rawkeywords-os.txt
+dfg -f rawkeywords -g aa -o outputs/rawkeywords-aa.txt
 dfg -f constantvaluecheck -g sl -i inputs/constants-test.lsl.in -o outputs/constants-test-sl.lsl
 dfg -f constantvaluecheck -g os -i inputs/constants-test.lsl.in -o outputs/constants-test-os.lsl
 dfg -f constantvaluecheck -g aa -i inputs/constants-test.lsl.in -o outputs/constants-test-aa.lsl
