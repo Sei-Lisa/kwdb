@@ -1233,7 +1233,8 @@ function geshi_lsl2_lsl2_comment (&$context)
     $context->addDelimiters('//', "\n");
     $context->addDelimiters('/*', '*/');
     $context->addKeywordGroup(
-        array('TODO', 'FIXME', 'HACK', 'NOTE', 'NOTICE', 'WARNING', 'TASK'),
+        array('TODO', 'FIXME', 'HACK', 'NOTE', 'NOTICE', 'WARNING', 'TASK',
+              'BUG'),
         'commentnotice', true);
 }
 
