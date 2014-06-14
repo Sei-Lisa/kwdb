@@ -3,7 +3,7 @@
  * GeSHi - Generic Syntax Highlighter
  * <pre>
  *   File:   geshi/classes/class.geshicodecontext.php
- *   Author: Nigel McNie and Sei Lisa
+ *   Author: Nigel McNie, Sei Lisa
  *   E-mail: nigel@geshi.org, seilisasl+geshi@gmail.com
  * </pre>
  *
@@ -35,13 +35,13 @@
  * @copyright  (C) 2013 Sei Lisa
  * @version    $Id$
  *
+<<< LSL KEYWORDS VERSION >>>
+ *
  */
 
 /**#@+
  * @access private
  */
-
-<<< LSL KEYWORDS VERSION >>>
 
 function geshi_lsl2_lsl2 (&$context)
 {
@@ -133,5 +133,3 @@ function geshi_lsl2_lsl2_preproc (&$context)
                             'REGEX#(?<!\\\\)(?:\n|$)#');
 }
 /**#@-*/
-
-?>
