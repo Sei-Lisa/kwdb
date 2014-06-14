@@ -28,11 +28,11 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20130627000"
+  version = "0.0.20140615000"
 
   def fpformat(s):
     s = str(float(s))
-    if len(s) > 1 and s[-2:-1] == '.0':
+    if len(s) > 1 and s[-2:] == '.0':
       s = s[:-1]
     return s
   type2char = {"integer":"i", "float":"f", "string":"s", "key":"k", "vector":"v",
