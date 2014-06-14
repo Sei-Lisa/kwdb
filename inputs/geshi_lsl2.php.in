@@ -9,6 +9,8 @@
  *
  * Linden Scripting Language (LSL2) language file for GeSHi.
  *
+<<< LSL KEYWORDS VERSION >>>
+ *
  * CHANGES
  * -------
  * 2009-02-05 (1.0.0)
@@ -19,6 +21,7 @@
  *      http://code.google.com/p/lsl-keywords
  * 2013-07-11
  *   -  Modified by Sei Lisa to fix symbols and to add multiline comment support
+ *      (also to auto-generate content)
  *
  *************************************************************************************
  *
@@ -40,9 +43,7 @@
  *
  ************************************************************************************/
 
-<<< LSL KEYWORDS VERSION >>>
-
-$language_data = array (
+$language_data = array(
     'LANG_NAME' => 'LSL2',
     'COMMENT_SINGLE' => array(1 => '//'),
     'COMMENT_MULTI' => array('/*' => '*/'),
@@ -151,4 +152,3 @@ $language_data = array (
     'HIGHLIGHT_STRICT_BLOCK' => array(
         )
 );
-?>
