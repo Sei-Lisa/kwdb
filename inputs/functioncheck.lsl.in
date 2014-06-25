@@ -6,7 +6,7 @@ default
     {
         outp = "\nFunctions test compiled on " + llGetDate() + " in " + llGetEnv("sim_channel") + " " + llGetEnv("sim_version");
 <<< LSL HEADER >>>
-        outp += "\nFunctions test compiled successfully";
+        outp += "\nFunctions test compiled successfully.";
         llOwnerSay(outp);
     }
 
