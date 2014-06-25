@@ -59,7 +59,6 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
 
       elif line.startswith("<<< %s KEYWORDS >>>" % tag):
 
-        count = 0
         for element in document:
           if element['cat'] == 'function':
             name = element['name']
