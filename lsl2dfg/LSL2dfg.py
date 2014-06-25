@@ -266,8 +266,6 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
         self.has_defaults = True
 
       else:
-        attrname = attrs.get("name")
-
         # No duplicate check - at most it should be unique per grid, not in the file;
         # but also, overloaded functions are supported by some grids, so it should
         # be actually unique per grid and param type list. No such detection is made.
