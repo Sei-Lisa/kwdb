@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20140116001">
+<keywords version="0.0.20140624001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -3054,19 +3054,19 @@ Used with llGetParcelDetails to get the avatars visibility setting
     </description>
   </constant>
 
-  <constant name="STRING_TRIM_HEAD" type="integer" value="1">
+  <constant name="STRING_TRIM_HEAD" type="integer" value="0x1">
     <description lang="en">
 Used with llStringTrim to trim leading spaces from a string
     </description>
   </constant>
 
-  <constant name="STRING_TRIM_TAIL" type="integer" value="2">
+  <constant name="STRING_TRIM_TAIL" type="integer" value="0x2">
     <description lang="en">
 Used with llStringTrim to trim trailing spaces from a string
     </description>
   </constant>
 
-  <constant name="STRING_TRIM" type="integer" value="3">
+  <constant name="STRING_TRIM" type="integer" value="0x3">
     <description lang="en">
 Used with llStringTrim to trim both leading and trailing spaces from a string
     </description>
