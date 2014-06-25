@@ -19,7 +19,7 @@ virtual world.
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with LSL2 Keywords Database. If not, see 
+    along with LSL2 Keywords Database. If not, see
     <http://www.gnu.org/licenses/>.
 
 Second Life is a trademark of Linden Research, Inc.
@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20140624001">
+<keywords version="0.0.20140625000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -106,7 +106,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="13.12.20.285035">Second Life</grid>
+  <grid id="sl" version="14.06.20.291351">Second Life</grid>
   <grid id="os" version="v0.7.5-rc1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -4356,6 +4356,47 @@ Triggered when a character failed to enter a parcel because it is not allowed to
     </description>
   </constant>
 
+  <constant name="PRIM_NORMAL" type="integer" value="37" grid="sl" version="14.06.20.291351">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_SPECULAR" type="integer" value="36" grid="sl" version="14.06.20.291351">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_ALPHA_MODE" type="integer" value="38" grid="sl" version="14.06.20.291351">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_ALPHA_MODE_NONE" type="integer" value="0" grid="sl" version="14.06.20.291351">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_ALPHA_MODE_BLEND" type="integer" value="1" grid="sl" version="14.06.20.291351">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_ALPHA_MODE_MASK" type="integer" value="2" grid="sl" version="14.06.20.291351">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_ALPHA_MODE_EMISSIVE" type="integer" value="3" grid="sl" version="14.06.20.291351">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
 
 <!-- These do not exist but are in the official viewer's keywords.ini:
 
@@ -8745,7 +8786,7 @@ Gets the value indicated by specifiers from the json string
     <param type="list" name="specifiers"/>
     <param type="string" name="value"/>
     <description lang="en">
-Returns a new json string that is the json given with the value indicated by specifiers set to value 
+Returns a new json string that is the json given with the value indicated by specifiers set to value
     </description>
   </function>
 
