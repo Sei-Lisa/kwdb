@@ -29,6 +29,7 @@ import sys
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
   version = "0.0.20130817000"
+  str(version) # silence PyFlakes
 
   keywords = []
   types = []
