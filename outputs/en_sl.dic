@@ -1,4 +1,4 @@
-11220
+11250
 rez
 slex
 slutorial
@@ -10138,6 +10138,7 @@ llAcos
 llAddToLandBanList
 llAddToLandPassList
 llAdjustSoundVolume
+llAgentInExperience
 llAllowInventoryDrop
 llAngleBetween
 llApplyImpulse
@@ -10164,9 +10165,12 @@ llCollisionFilter
 llCollisionSound
 llCos
 llCreateCharacter
+llCreateKeyValue
 llCreateLink
 llCSV2List
+llDataSizeKeyValue
 llDeleteCharacter
+llDeleteKeyValue
 llDeleteSubList
 llDeleteSubString
 llDetachFromAvatar
@@ -10224,6 +10228,8 @@ llGetDate
 llGetDisplayName
 llGetEnergy
 llGetEnv
+llGetExperienceDetails
+llGetExperienceErrorMessage
 llGetForce
 llGetFreeMemory
 llGetFreeURLs
@@ -10330,6 +10336,8 @@ llJsonGetValue
 llJsonSetValue
 llJsonValueType
 llKey2Name
+llKeyCountKeyValue
+llKeysKeyValue
 llLinkParticleSystem
 llLinkSitTarget
 llList2CSV
@@ -10385,6 +10393,7 @@ llPow
 llPreloadSound
 llPursue
 llPushObject
+llReadKeyValue
 llRegionSay
 llRegionSayTo
 llReleaseControls
@@ -10397,6 +10406,7 @@ llRemoveInventory
 llRemoveVehicleFlags
 llRequestAgentData
 llRequestDisplayName
+llRequestExperiencePermissions
 llRequestInventoryData
 llRequestPermissions
 llRequestSecureURL
@@ -10522,6 +10532,7 @@ llTriggerSoundLimited
 llUnescapeURL
 llUnSit
 llUpdateCharacter
+llUpdateKeyValue
 llVecDist
 llVecMag
 llVecNorm
@@ -10541,6 +10552,8 @@ collision_start
 control
 dataserver
 email
+experience_permissions
+experience_permissions_denied
 http_request
 http_response
 land_collision
@@ -11216,6 +11229,23 @@ VEHICLE_VERTICAL_ATTRACTION_EFFICIENCY
 VEHICLE_VERTICAL_ATTRACTION_TIMESCALE
 VERTICAL
 WANDER_PAUSE_AT_WAYPOINTS
+XP_ERROR_EXPERIENCES_DISABLED
+XP_ERROR_EXPERIENCE_DISABLED
+XP_ERROR_EXPERIENCE_SUSPENDED
+XP_ERROR_INVALID_EXPERIENCE
+XP_ERROR_INVALID_PARAMETERS
+XP_ERROR_KEY_NOT_FOUND
+XP_ERROR_MATURITY_EXCEEDED
+XP_ERROR_NONE
+XP_ERROR_NOT_FOUND
+XP_ERROR_NOT_PERMITTED
+XP_ERROR_NO_EXPERIENCE
+XP_ERROR_QUOTA_EXCEEDED
+XP_ERROR_RETRY_UPDATE
+XP_ERROR_STORAGE_EXCEPTION
+XP_ERROR_STORE_DISABLED
+XP_ERROR_THROTTLED
+XP_ERROR_UNKNOWN_ERROR
 ZERO_ROTATION
 ZERO_VECTOR
 total_number

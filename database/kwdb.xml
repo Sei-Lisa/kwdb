@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20140625000">
+<keywords version="0.0.20140731000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -106,7 +106,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="14.06.20.291351">Second Life</grid>
+  <grid id="sl" version="14.07.18.292162">Second Life</grid>
   <grid id="os" version="v0.7.5-rc1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -4397,6 +4397,109 @@ Triggered when a character failed to enter a parcel because it is not allowed to
 <!-- TODO: add documentation -->
     </description>
   </constant>
+
+  <constant name="XP_ERROR_NONE" type="integer" value="0" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_THROTTLED" type="integer" value="1" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_EXPERIENCES_DISABLED" type="integer" value="2" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_INVALID_PARAMETERS" type="integer" value="3" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_NOT_PERMITTED" type="integer" value="4" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_NO_EXPERIENCE" type="integer" value="5" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_NOT_FOUND" type="integer" value="6" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_INVALID_EXPERIENCE" type="integer" value="7" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_EXPERIENCE_DISABLED" type="integer" value="8" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_EXPERIENCE_SUSPENDED" type="integer" value="9" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_UNKNOWN_ERROR" type="integer" value="10" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_QUOTA_EXCEEDED" type="integer" value="11" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_STORE_DISABLED" type="integer" value="12" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_STORAGE_EXCEPTION" type="integer" value="13" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_KEY_NOT_FOUND" type="integer" value="14" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_RETRY_UPDATE" type="integer" value="15" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_MATURITY_EXCEEDED" type="integer" value="16" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
 
 <!-- These do not exist but are in the official viewer's keywords.ini:
 
@@ -8841,6 +8944,101 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
+  <function name="llAgentInExperience" type="integer" grid="sl" version="14.07.18.292162">
+    <param type="key" name="agent"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetExperienceDetails" grid="sl" type="list" version="14.07.18.292162">
+    <param type="key" name="experience_id"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llRequestExperiencePermissions" grid="sl" version="14.07.18.292162">
+    <param type="key" name="agent"/>
+    <param type="string" name="name"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llReadKeyValue" grid="sl" type="key" version="14.07.18.292162">
+    <param type="key" name="k"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llCreateKeyValue" grid="sl" type="key" version="14.07.18.292162">
+    <param type="key" name="k"/>
+    <param type="string" name="v"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llUpdateKeyValue" grid="sl" type="key" version="14.07.18.292162">
+    <param type="key" name="k"/>
+    <param type="string" name="v"/>
+    <param type="integer" name="checked"/>
+    <param type="string" name="original_value"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llDeleteKeyValue" grid="sl" type="key" version="14.07.18.292162">
+    <param type="key" name="k"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llDataSizeKeyValue" grid="sl" type="key" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llKeysKeyValue" grid="sl" type="key" version="14.07.18.292162">
+    <param type="integer" name="start"/>
+    <param type="integer" name="count"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llKeyCountKeyValue" grid="sl" type="key" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetExperienceErrorMessage" grid="sl" type="string" version="14.07.18.292162">
+    <param type="integer" name="value"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetExperienceList" grid="sl" type="list" version="14.07.18.292162" status="unimplemented">
+    <param type="key" name="agent"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llClearExperiencePermissions" grid="sl" version="14.07.18.292162" status="unimplemented">
+    <param type="key" name="agent"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <!-- OpenSim/Aurora-specific functions -->
 
   <!-- From ILS_Api.cs -->
@@ -10833,6 +11031,22 @@ Triggered when transferring L$ to Agent via llTransferLindenDollars
     <param type="list"    name="reserved"/>
     <description lang="en">
 <!-- TODO: add documentation -->
+    </description>
+  </event>
+
+  <event name="experience_permissions" grid="sl" version="14.07.18.292162">
+    <param type="key"     name="agent"   />
+    <description lang="en">
+Triggered by llRequestExperiencePermissions when the permission has been granted.
+<!-- TODO: add documentation -->
+    </description>
+  </event>
+
+  <event name="experience_permissions_denied" grid="sl" version="14.07.18.292162">
+    <param type="key"     name="agent"   />
+    <param type="integer" name="reason"  />
+    <description lang="en">
+Triggered by llRequestExperiencePermissions when the permission has been denied.
     </description>
   </event>
 
