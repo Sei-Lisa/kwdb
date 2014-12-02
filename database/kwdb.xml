@@ -2461,7 +2461,7 @@ Stitch edges in a cylinder-like way
     </description>
   </constant>
 
-  <constant name="PRIM_SCULPT_TYPE_MESH" type="integer" value="5" grid="a">
+  <constant name="PRIM_SCULPT_TYPE_MESH" type="integer" value="5" grid="aa">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
