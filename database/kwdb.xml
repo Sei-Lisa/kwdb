@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20141202000">
+<keywords version="0.0.20150111000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -1685,21 +1685,21 @@ Passed to llModifyLand to revert terrain toward original state
     </description>
   </constant>
 
-  <constant name="LAND_SMALL_BRUSH" type="integer" value="1">
+  <constant name="LAND_SMALL_BRUSH" type="integer" value="1" status="deprecated">
     <description lang="en">
-Passed to llModifyLand to modify small land areas
+Deprecated, do not use. Use the value 0 to mean a 2x2 brush.
     </description>
   </constant>
 
-  <constant name="LAND_MEDIUM_BRUSH" type="integer" value="2">
+  <constant name="LAND_MEDIUM_BRUSH" type="integer" value="2" status="deprecated">
     <description lang="en">
-Passed to llModifyLand to modify medium land areas
+Deprecated, do not use. Use the value 1 to mean a 4x4 brush.
     </description>
   </constant>
 
-  <constant name="LAND_LARGE_BRUSH" type="integer" value="3">
+  <constant name="LAND_LARGE_BRUSH" type="integer" value="3" status="deprecated">
     <description lang="en">
-Passed to llModifyLand to modify large land areas
+Deprecated, do not use. Use the value 2 to mean an 8x8 brush.
     </description>
   </constant>
 
