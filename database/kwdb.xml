@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20150111000">
+<keywords version="0.0.20150303000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -4495,6 +4495,12 @@ Triggered when a character failed to enter a parcel because it is not allowed to
   </constant>
 
   <constant name="XP_ERROR_MATURITY_EXCEEDED" type="integer" value="16" grid="sl" version="14.07.18.292162">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="XP_ERROR_NOT_PERMITTED_LAND" type="integer" value="17" grid="sl" version="15.01.23.298475">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
