@@ -94,11 +94,12 @@
 #       "cat": string with identifier category ("keyword", "type", "constant", "function", "event")
 #       "name": string with the identifier itself
 #     and the following optional entries extracted from the attributes of the XML tag:
-#       "grid": string with the grid list; if not present it means all grids
+#       "grid": string with the space-separated grid list; if not present it means all grids
 #       "type": return type for functions; value type for constants; not used for the rest
 #       "value": value of the constant for constants; not used for the rest
 #       "version": a version string representing the server version and date in which the
-#                  constant, function or event was added (not applicable to keywords or types)
+#                  constant, function or event was added (not applicable to keywords or types);
+#                  the string contains a space-separated list of grid:version pairs.
 #       "status": it can be:
 #                 - the string "normal" (the default if not present)
 #                 - the strings "deprecated", "unimplemented" or "godmode" for functions or constants

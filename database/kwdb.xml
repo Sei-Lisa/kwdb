@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20150429000">
+<keywords version="0.0.20150501000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -329,7 +329,7 @@ Passed in the llSetStatus library function. If TRUE, object can't cross region b
     </description>
   </constant>
 
-  <constant name="STATUS_BLOCK_GRAB" type="integer" value="0x40">
+  <constant name="STATUS_BLOCK_GRAB" type="integer" value="0x40" version="sl:0.2.0">
     <description lang="en">
 Passed in the llSetStatus library function. If TRUE, object can't be grabbed and physically dragged.
     </description>
@@ -342,14 +342,14 @@ This flag applies to the entire linkset.
     </description>
   </constant>
 
-  <constant name="STATUS_DIE_AT_EDGE" type="integer" value="0x80">
+  <constant name="STATUS_DIE_AT_EDGE" type="integer" value="0x80" version="sl:0.2.0">
     <description lang="en">
 Passed in the llSetStatus library function. If TRUE, objects that reach the edge of the world just die
 rather than teleporting back to the owner.
     </description>
   </constant>
 
-  <constant name="STATUS_RETURN_AT_EDGE" type="integer" value="0x100">
+  <constant name="STATUS_RETURN_AT_EDGE" type="integer" value="0x100" version="sl:1.5.0">
     <description lang="en">
 Passed in the llSetStatus library function. If TRUE, script rezzed objects that reach the edge of the world are returned rather than killed.
 STATUS_RETURN_AT_EDGE trumps STATUS_DIE_AT_EDGE if both are set.
@@ -518,7 +518,7 @@ Passed to llRequestPermissions library function to request permission to track a
     </description>
   </constant>
 
-  <constant name="PERMISSION_CONTROL_CAMERA" type="integer" value="0x800">
+  <constant name="PERMISSION_CONTROL_CAMERA" type="integer" value="0x800" version="sl:1.9.0(15)">
     <description lang="en">
 Passed to llRequestPermissions library function to request permission to change agent's camera
     </description>
@@ -555,7 +555,7 @@ Passed to llRequestPermissions library function to request permission to overrid
   </constant>
 
 
-  <constant name="DEBUG_CHANNEL" type="integer" value="0x7FFFFFFF">
+  <constant name="DEBUG_CHANNEL" type="integer" value="0x7FFFFFFF" version="sl:1.9.0(15)">
     <description lang="en">
 Chat channel reserved for debug and error messages from scripts
     </description>
@@ -567,19 +567,19 @@ Chat channel that broadcasts to all nearby users
     </description>
   </constant>
 
-  <constant name="AGENT_FLYING" type="integer" value="0x1">
+  <constant name="AGENT_FLYING" type="integer" value="0x1" version="sl:0.4.0">
     <description lang="en">
 Returned by llGetAgentInfo if the Agent is flying
     </description>
   </constant>
 
-  <constant name="AGENT_ATTACHMENTS" type="integer" value="0x2">
+  <constant name="AGENT_ATTACHMENTS" type="integer" value="0x2" version="sl:0.4.0">
     <description lang="en">
 Returned by llGetAgentInfo if the Agent has attachments
     </description>
   </constant>
 
-  <constant name="AGENT_SCRIPTED" type="integer" value="0x4">
+  <constant name="AGENT_SCRIPTED" type="integer" value="0x4" version="sl:0.4.0">
     <description lang="en">
 Returned by llGetAgentInfo if the Agent has scripted attachments
     </description>
@@ -732,55 +732,55 @@ Deprecated -- Use PSYS_SRC_ANGLE_END
   <constant name="PSYS_PART_START_GLOW" type="integer" value="26" grid="sl"/>
   <constant name="PSYS_PART_END_GLOW" type="integer" value="27" grid="sl"/>
 
-  <constant name="OBJECT_UNKNOWN_DETAIL" type="integer" value="-1">
+  <constant name="OBJECT_UNKNOWN_DETAIL" type="integer" value="-1" version="sl:1.18.3(5)">
     <description lang="en">
 Returned by llGetObjectDetails when passed an invalid object parameter type
     </description>
   </constant>
 
-  <constant name="OBJECT_NAME" type="integer" value="1">
+  <constant name="OBJECT_NAME" type="integer" value="1" version="sl:1.18.3(5)">
     <description lang="en">
 Used with llGetObjectDetails to get an object's name
     </description>
   </constant>
 
-  <constant name="OBJECT_DESC" type="integer" value="2">
+  <constant name="OBJECT_DESC" type="integer" value="2" version="sl:1.18.3(5)">
     <description lang="en">
 Used with llGetObjectDetails to get an object's description
     </description>
   </constant>
 
-  <constant name="OBJECT_POS" type="integer" value="3">
+  <constant name="OBJECT_POS" type="integer" value="3" version="sl:1.18.3(5)">
     <description lang="en">
 Used with llGetObjectDetails to get an object's position
     </description>
   </constant>
 
-  <constant name="OBJECT_ROT" type="integer" value="4">
+  <constant name="OBJECT_ROT" type="integer" value="4" version="sl:1.18.3(5)">
     <description lang="en">
 Used with llGetObjectDetails to get an object's rotation
     </description>
   </constant>
 
-  <constant name="OBJECT_VELOCITY" type="integer" value="5">
+  <constant name="OBJECT_VELOCITY" type="integer" value="5" version="sl:1.18.3(5)">
     <description lang="en">
 Used with llGetObjectDetails to get an object's velocity
     </description>
   </constant>
 
-  <constant name="OBJECT_OWNER" type="integer" value="6">
+  <constant name="OBJECT_OWNER" type="integer" value="6" version="sl:1.18.3(5)">
     <description lang="en">
 Used with llGetObjectDetails to get an object's owner's key. Will be NULL_KEY if group owned.
     </description>
   </constant>
 
-  <constant name="OBJECT_GROUP" type="integer" value="7">
+  <constant name="OBJECT_GROUP" type="integer" value="7" version="sl:1.18.3(5)">
     <description lang="en">
 Used with llGetObjectDetails to get an object's group's key
     </description>
   </constant>
 
-  <constant name="OBJECT_CREATOR" type="integer" value="8">
+  <constant name="OBJECT_CREATOR" type="integer" value="8" version="sl:1.18.3(5)">
     <description lang="en">
 Used with llGetObjectDetails to get an object's creator's key
     </description>
@@ -864,19 +864,19 @@ Used with llGetObjectDetails to get the streaming (download) cost
     </description>
   </constant>
 
-  <constant name="OBJECT_HOVER_HEIGHT" type="integer" value="25" grid="sl" version="15.04.08.300724">
+  <constant name="OBJECT_HOVER_HEIGHT" type="integer" value="25" grid="sl" version="sl:15.04.08.300724">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_BODY_SHAPE_TYPE" type="integer" value="26" grid="sl" version="15.04.08.300724">
+  <constant name="OBJECT_BODY_SHAPE_TYPE" type="integer" value="26" grid="sl" version="sl:15.04.08.300724">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_LAST_OWNER_ID" type="integer" value="27" grid="sl" version="15.04.24.301279">
+  <constant name="OBJECT_LAST_OWNER_ID" type="integer" value="27" grid="sl" version="sl:15.04.24.301279">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -942,7 +942,7 @@ Used with llGetObjectDetails to get the streaming (download) cost
   <constant name="VEHICLE_TYPE_AIRPLANE" type="integer" value="4"/>
   <constant name="VEHICLE_TYPE_BALLOON" type="integer" value="5"/>
 
-  <constant name="VEHICLE_REFERENCE_FRAME" type="integer" value="44">
+  <constant name="VEHICLE_REFERENCE_FRAME" type="integer" value="44" version="sl:1.1.0">
     <description lang="en">
 Rotation of vehicle axes relative to local frame
     </description>
@@ -978,7 +978,7 @@ The angular velocity that the vehicle will try to achieve
     </description>
   </constant>
 
-  <constant name="VEHICLE_HOVER_HEIGHT" type="integer" value="24">
+  <constant name="VEHICLE_HOVER_HEIGHT" type="integer" value="24" version="sl:1.1.0">
     <description lang="en">
 The height the vehicle will try to hover
     </description>
@@ -1092,19 +1092,19 @@ The exponential timescale for the banking behavior to take full effect
     </description>
   </constant>
 
-  <constant name="VEHICLE_FLAG_NO_FLY_UP" type="integer" value="0x1" status="deprecated" grid="sl aa">
+  <constant name="VEHICLE_FLAG_NO_FLY_UP" type="integer" value="0x1" status="deprecated" grid="sl aa" version="sl:1.1.0">
     <description lang="en">
 DEPRECATED - use VEHICLE_FLAG_NO_DEFLECTION_UP
     </description>
   </constant>
 
-  <constant name="VEHICLE_FLAG_NO_DEFLECTION_UP" type="integer" value="0x1">
+  <constant name="VEHICLE_FLAG_NO_DEFLECTION_UP" type="integer" value="0x1" version="sl:1.1.5">
     <description lang="en">
 Prevents linear deflection along world-z axis
     </description>
   </constant>
 
-  <constant name="VEHICLE_FLAG_LIMIT_ROLL_ONLY" type="integer" value="0x2">
+  <constant name="VEHICLE_FLAG_LIMIT_ROLL_ONLY" type="integer" value="0x2" version="sl:1.1.0">
     <description lang="en">
 Removes vertical attraction for changes in vehicle pitch
     </description>
@@ -1134,7 +1134,7 @@ Hover only pushes up
     </description>
   </constant>
 
-  <constant name="VEHICLE_FLAG_LIMIT_MOTOR_UP" type="integer" value="0x40">
+  <constant name="VEHICLE_FLAG_LIMIT_MOTOR_UP" type="integer" value="0x40" version="sl:1.1.5">
     <description lang="en">
 Prevents ground vehicles from motoring into the sky
     </description>
@@ -1194,13 +1194,13 @@ Causes the camera look-at axis to NOT move when the vehicle rotates
     </description>
   </constant>
 
-  <constant name="CAMERA_PITCH" type="integer" value="0">
+  <constant name="CAMERA_PITCH" type="integer" value="0" version="sl:1.9.0(15)">
     <description lang="en">
 (-45 to 80) Adjusts the angular amount that the camera aims straight ahead vs. straight down, maintaining the same distance. Analogous to 'incidence'.
     </description>
   </constant>
 
-  <constant name="CAMERA_FOCUS_OFFSET" type="integer" value="1">
+  <constant name="CAMERA_FOCUS_OFFSET" type="integer" value="1" version="sl:1.9.0(15)">
     <description lang="en">
 (-10 to 10) A vector that adjusts the position of the camera focus position relative to the subject
     </description>
@@ -1221,55 +1221,55 @@ Causes the camera look-at axis to NOT move when the vehicle rotates
     </description>
   </constant>
 
-  <constant name="CAMERA_POSITION_LAG" type="integer" value="5">
+  <constant name="CAMERA_POSITION_LAG" type="integer" value="5" version="sl:1.9.0(15)">
     <description lang="en">
 (0.0 to 3.0)  How much the camera lags as it tries to move towards its 'ideal' position
     </description>
   </constant>
 
-  <constant name="CAMERA_FOCUS_LAG" type="integer" value="6">
+  <constant name="CAMERA_FOCUS_LAG" type="integer" value="6" version="sl:1.9.0(15)">
     <description lang="en">
 (0.0 to 3.0) How much the camera lags as it tries to aim towards the subject
     </description>
   </constant>
 
-  <constant name="CAMERA_DISTANCE" type="integer" value="7">
+  <constant name="CAMERA_DISTANCE" type="integer" value="7" version="sl:1.9.0(15)">
     <description lang="en">
 (0.5 to 10) Sets how far away the camera wants to be from its subject
     </description>
   </constant>
 
-  <constant name="CAMERA_BEHINDNESS_ANGLE" type="integer" value="8">
+  <constant name="CAMERA_BEHINDNESS_ANGLE" type="integer" value="8" version="sl:1.9.0(15)">
     <description lang="en">
 (0 to 180) Sets the angle in degrees within which the camera is not constrained by changes in subject rotation
     </description>
   </constant>
 
-  <constant name="CAMERA_BEHINDNESS_LAG" type="integer" value="9">
+  <constant name="CAMERA_BEHINDNESS_LAG" type="integer" value="9" version="sl:1.9.0(15)">
     <description lang="en">
 (0.0 to 3.0) Sets how strongly the camera is forced to stay behind the target if outside of behindness angle
     </description>
   </constant>
 
-  <constant name="CAMERA_POSITION_THRESHOLD" type="integer" value="10">
+  <constant name="CAMERA_POSITION_THRESHOLD" type="integer" value="10" version="sl:1.9.0(15)">
     <description lang="en">
 (0.0 to 4.0) Sets the radius of a sphere around the camera's ideal position within which it is not affected by subject motion
     </description>
   </constant>
 
-  <constant name="CAMERA_FOCUS_THRESHOLD" type="integer" value="11">
+  <constant name="CAMERA_FOCUS_THRESHOLD" type="integer" value="11" version="sl:1.9.0(15)">
     <description lang="en">
 (0.0 to 4.0) Sets the radius of a sphere around the camera's subject position within which its focus is not affected by subject motion
     </description>
   </constant>
 
-  <constant name="CAMERA_ACTIVE" type="integer" value="12">
+  <constant name="CAMERA_ACTIVE" type="integer" value="12" version="sl:1.9.0(15)">
     <description lang="en">
 (0 or 1) Turns on or off scripted control of the camera
     </description>
   </constant>
 
-  <constant name="CAMERA_POSITION" type="integer" value="13">
+  <constant name="CAMERA_POSITION" type="integer" value="13" version="sl:1.9.0(15)">
     <description lang="en">
 Sets the position of the camera
     </description>
@@ -1293,7 +1293,7 @@ Sets the position of the camera
     </description>
   </constant>
 
-  <constant name="CAMERA_FOCUS" type="integer" value="17">
+  <constant name="CAMERA_FOCUS" type="integer" value="17" version="sl:1.9.0(15)">
     <description lang="en">
 Sets the focus (target position) of the camera
     </description>
@@ -1317,13 +1317,13 @@ Sets the focus (target position) of the camera
     </description>
   </constant>
 
-  <constant name="CAMERA_POSITION_LOCKED" type="integer" value="21">
+  <constant name="CAMERA_POSITION_LOCKED" type="integer" value="21" version="sl:1.9.0(15)">
     <description lang="en">
 (0 or 1) Locks the camera position so it will not move
     </description>
   </constant>
 
-  <constant name="CAMERA_FOCUS_LOCKED" type="integer" value="22">
+  <constant name="CAMERA_FOCUS_LOCKED" type="integer" value="22" version="sl:1.9.0(15)">
     <description lang="en">
 (0 or 1) Locks the camera focus so it will not move
     </description>
@@ -1389,7 +1389,7 @@ Passed to task inventory library functions to reference gestures
     </description>
   </constant>
 
-  <constant name="INVENTORY_ALL" type="integer" value="-1">
+  <constant name="INVENTORY_ALL" type="integer" value="-1" version="sl:1.6.0">
     <description lang="en">
 Passed to task inventory library functions to reference all inventory items
     </description>
@@ -1721,7 +1721,7 @@ Deprecated, do not use. Use the value 2 to mean an 8x8 brush.
     </description>
   </constant>
 
-  <constant name="DATA_PAYINFO" type="integer" value="8">
+  <constant name="DATA_PAYINFO" type="integer" value="8" version="sl:1.11.2(1)">
     <description lang="en">
 Passed to llRequestAgentData to get payment status of an agent
     </description>
@@ -1733,19 +1733,19 @@ Passed to llRequestAgentData to determine if agent is online
     </description>
   </constant>
 
-  <constant name="DATA_NAME" type="integer" value="2">
+  <constant name="DATA_NAME" type="integer" value="2" version="sl:1.1.0">
     <description lang="en">
 Passed to llRequestAgentData to get full agent name
     </description>
   </constant>
 
-  <constant name="DATA_BORN" type="integer" value="3">
+  <constant name="DATA_BORN" type="integer" value="3" version="sl:1.1.0">
     <description lang="en">
 Passed to llRequestAgentData to get born on date as a string
     </description>
   </constant>
 
-  <constant name="DATA_RATING" type="integer" value="4" status="deprecated">
+  <constant name="DATA_RATING" type="integer" value="4" status="deprecated" version="sl:1.1.0">
     <description lang="en">
 Passed to llRequestAgentData to get a comma separated sting of integer ratings. DEPRECATED - Ratings are no longer in use and using this value in a query always returns "0, 0, 0, 0, 0, 0".
     </description>
@@ -1763,7 +1763,7 @@ Passed to llRequestSimulatorData to get the status of a simulator
     </description>
   </constant>
 
-  <constant name="DATA_SIM_RATING" type="integer" value="7">
+  <constant name="DATA_SIM_RATING" type="integer" value="7" version="sl:1.7.0">
     <description lang="en">
 Passed to llRequestSimulatorData to get the rating of a simulator
     </description>
@@ -1859,7 +1859,7 @@ Passed to various link functions to modify all child blocks in the object
     </description>
   </constant>
 
-  <constant name="LINK_THIS" type="integer" value="-4">
+  <constant name="LINK_THIS" type="integer" value="-4" version="sl:1.6.0">
     <description lang="en">
 Passed to various link functions to modify only the calling block
     </description>
@@ -2034,13 +2034,13 @@ Sets physics to TRUE or FALSE
     </description>
   </constant>
 
-  <constant name="PRIM_FLEXIBLE" type="integer" value="21">
+  <constant name="PRIM_FLEXIBLE" type="integer" value="21" version="sl:1.9.1.13">
     <description lang="en">
 Followed by TRUE or FALSE, integer softness, float gravity, float friction, float wind, float tension, and vector force
     </description>
   </constant>
 
-  <constant name="PRIM_POINT_LIGHT" type="integer" value="23">
+  <constant name="PRIM_POINT_LIGHT" type="integer" value="23" version="sl:1.9.1.13">
     <description lang="en">
 Followed by TRUE or FALSE, vector color, float intensity, float radius, float falloff
     </description>
@@ -2115,7 +2115,7 @@ and one of PRIM_BUMP_NONE, PRIM_BUMP_BRIGHT, PRIM_BUMP_DARK, etc
     </description>
   </constant>
 
-  <constant name="PRIM_FULLBRIGHT" type="integer" value="20">
+  <constant name="PRIM_FULLBRIGHT" type="integer" value="20" version="sl:1.7.0">
     <description lang="en">
 Followed by an integer face, and TRUE or FALSE
     </description>
@@ -2127,7 +2127,7 @@ Followed by an integer face, and one of PRIM_TEXGEN_DEFAULT or PRIM_TEXGEN_PLANA
     </description>
   </constant>
 
-  <constant name="PRIM_GLOW" type="integer" value="25">
+  <constant name="PRIM_GLOW" type="integer" value="25" version="sl:1.20.15">
     <description lang="en">
 Followed by an integer face, and a float from 0.0 to 1.0 specifying glow amount
     </description>
@@ -2725,55 +2725,55 @@ Used with llSetPayPrice to use the default price for a button
     </description>
   </constant>
 
-  <constant name="LIST_STAT_MAX" type="integer" value="2">
+  <constant name="LIST_STAT_MAX" type="integer" value="2" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llListStatistics to find the largest number in a list
     </description>
   </constant>
 
-  <constant name="LIST_STAT_MIN" type="integer" value="1">
+  <constant name="LIST_STAT_MIN" type="integer" value="1" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llListStatistics to find the smallest number in a list
     </description>
   </constant>
 
-  <constant name="LIST_STAT_MEAN" type="integer" value="3">
+  <constant name="LIST_STAT_MEAN" type="integer" value="3" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llListStatistics to find the mean of the numbers in a list
     </description>
   </constant>
 
-  <constant name="LIST_STAT_MEDIAN" type="integer" value="4">
+  <constant name="LIST_STAT_MEDIAN" type="integer" value="4" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llListStatistics to find the median of the numbers in a list
     </description>
   </constant>
 
-  <constant name="LIST_STAT_STD_DEV" type="integer" value="5">
+  <constant name="LIST_STAT_STD_DEV" type="integer" value="5" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llListStatistics to find the standard deviation of the numbers in a list
     </description>
   </constant>
 
-  <constant name="LIST_STAT_SUM" type="integer" value="6">
+  <constant name="LIST_STAT_SUM" type="integer" value="6" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llListStatistics to find the sum of the numbers in a list
     </description>
   </constant>
 
-  <constant name="LIST_STAT_SUM_SQUARES" type="integer" value="7">
+  <constant name="LIST_STAT_SUM_SQUARES" type="integer" value="7" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llListStatistics to find the sum of the squares of the numbers in a list
     </description>
   </constant>
 
-  <constant name="LIST_STAT_NUM_COUNT" type="integer" value="8">
+  <constant name="LIST_STAT_NUM_COUNT" type="integer" value="8" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llListStatistics to find how many numbers are in a list
     </description>
   </constant>
 
-  <constant name="LIST_STAT_GEOMETRIC_MEAN" type="integer" value="9">
+  <constant name="LIST_STAT_GEOMETRIC_MEAN" type="integer" value="9" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llListStatistics to find the geometric mean of the numbers in a list (all numbers must be &gt; 0)
     </description>
@@ -2785,13 +2785,13 @@ Used with llListStatistics to find the harmonic mean of the numbers in a list (a
     </description>
   </constant>
 
-  <constant name="LIST_STAT_RANGE" type="integer" value="0">
+  <constant name="LIST_STAT_RANGE" type="integer" value="0" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llListStatistics to find the range of the numbers in a list
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_ALLOW_FLY" type="integer" value="0x00000001">
+  <constant name="PARCEL_FLAG_ALLOW_FLY" type="integer" value="0x00000001" version="sl:1.9.1.9">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel allows flying
     </description>
@@ -2803,31 +2803,31 @@ Used with llGetParcelFlags to find if a parcel allows group scripts
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_ALLOW_SCRIPTS" type="integer" value="0x00000002">
+  <constant name="PARCEL_FLAG_ALLOW_SCRIPTS" type="integer" value="0x00000002" version="sl:1.9.1.9">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel allows outside scripts
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_ALLOW_LANDMARK" type="integer" value="0x00000008">
+  <constant name="PARCEL_FLAG_ALLOW_LANDMARK" type="integer" value="0x00000008" version="sl:1.9.1.9">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel allows landmarks to be created
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_ALLOW_TERRAFORM" type="integer" value="0x00000010">
+  <constant name="PARCEL_FLAG_ALLOW_TERRAFORM" type="integer" value="0x00000010" version="sl:1.9.1.9">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel allows anyone to terraform the land
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_ALLOW_DAMAGE" type="integer" value="0x00000020">
+  <constant name="PARCEL_FLAG_ALLOW_DAMAGE" type="integer" value="0x00000020" version="sl:1.9.1.9">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel allows damage
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_ALLOW_CREATE_OBJECTS" type="integer" value="0x00000040">
+  <constant name="PARCEL_FLAG_ALLOW_CREATE_OBJECTS" type="integer" value="0x00000040" version="sl:1.9.1.9">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel allows anyone to create objects
     </description>
@@ -2839,103 +2839,103 @@ Used with llGetParcelFlags to find if a parcel allows group members or objects t
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_USE_ACCESS_GROUP" type="integer" value="0x00000100">
+  <constant name="PARCEL_FLAG_USE_ACCESS_GROUP" type="integer" value="0x00000100" version="sl:1.9.1.9">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel limits access to a group
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_USE_ACCESS_LIST" type="integer" value="0x00000200">
+  <constant name="PARCEL_FLAG_USE_ACCESS_LIST" type="integer" value="0x00000200" version="sl:1.9.1.9">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel limits access to a list of residents
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_USE_BAN_LIST" type="integer" value="0x00000400">
+  <constant name="PARCEL_FLAG_USE_BAN_LIST" type="integer" value="0x00000400" version="sl:1.9.1.9">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel uses a ban list
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_USE_LAND_PASS_LIST" type="integer" value="0x00000800">
+  <constant name="PARCEL_FLAG_USE_LAND_PASS_LIST" type="integer" value="0x00000800" version="sl:1.9.1.9">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel allows passes to be purchased
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_LOCAL_SOUND_ONLY" type="integer" value="0x00008000">
+  <constant name="PARCEL_FLAG_LOCAL_SOUND_ONLY" type="integer" value="0x00008000" version="sl:1.9.1.9">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel restricts spacialized sound to the parcel
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_RESTRICT_PUSHOBJECT" type="integer" value="0x00200000">
+  <constant name="PARCEL_FLAG_RESTRICT_PUSHOBJECT" type="integer" value="0x00200000" version="sl:1.11.2(1)">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel restricts llPushObject calls
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_ALLOW_ALL_OBJECT_ENTRY" type="integer" value="0x08000000">
+  <constant name="PARCEL_FLAG_ALLOW_ALL_OBJECT_ENTRY" type="integer" value="0x08000000" version="sl:1.15.0(2)">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel allows all objects to enter
     </description>
   </constant>
 
-  <constant name="PARCEL_FLAG_ALLOW_GROUP_OBJECT_ENTRY" type="integer" value="0x10000000">
+  <constant name="PARCEL_FLAG_ALLOW_GROUP_OBJECT_ENTRY" type="integer" value="0x10000000" version="sl:1.15.0(2)">
     <description lang="en">
 Used with llGetParcelFlags to find if a parcel only allows group (and owner) objects to enter
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_ALLOW_DAMAGE" type="integer" value="0x00000001">
+  <constant name="REGION_FLAG_ALLOW_DAMAGE" type="integer" value="0x00000001" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llGetRegionFlags to find if a region is entirely damage enabled
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_FIXED_SUN" type="integer" value="0x00000010">
+  <constant name="REGION_FLAG_FIXED_SUN" type="integer" value="0x00000010" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llGetRegionFlags to find if a region has a fixed sun position
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_BLOCK_TERRAFORM" type="integer" value="0x00000040">
+  <constant name="REGION_FLAG_BLOCK_TERRAFORM" type="integer" value="0x00000040" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llGetRegionFlags to find if a region terraforming disabled
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_SANDBOX" type="integer" value="0x00000100">
+  <constant name="REGION_FLAG_SANDBOX" type="integer" value="0x00000100" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llGetRegionFlags to find if a region is a sandbox
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_DISABLE_COLLISIONS" type="integer" value="0x00001000">
+  <constant name="REGION_FLAG_DISABLE_COLLISIONS" type="integer" value="0x00001000" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llGetRegionFlags to find if a region has disabled collisions
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_DISABLE_PHYSICS" type="integer" value="0x00004000">
+  <constant name="REGION_FLAG_DISABLE_PHYSICS" type="integer" value="0x00004000" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llGetRegionFlags to find if a region has disabled physics
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_BLOCK_FLY" type="integer" value="0x00080000">
+  <constant name="REGION_FLAG_BLOCK_FLY" type="integer" value="0x00080000" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llGetRegionFlags to find if a region blocks flying
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_ALLOW_DIRECT_TELEPORT" type="integer" value="0x00100000">
+  <constant name="REGION_FLAG_ALLOW_DIRECT_TELEPORT" type="integer" value="0x00100000" version="sl:1.9.0(15)">
     <description lang="en">
 Used with llGetRegionFlags to find if a region allows direct teleports
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_RESTRICT_PUSHOBJECT" type="integer" value="0x00400000">
+  <constant name="REGION_FLAG_RESTRICT_PUSHOBJECT" type="integer" value="0x00400000" version="sl:1.11.2(1)">
     <description lang="en">
 Used with llGetRegionFlags to find if a region restricts llPushObject calls
     </description>
@@ -2947,7 +2947,7 @@ Used with llHTTPRequest to specify the method, such as "GET" or "POST"
     </description>
   </constant>
 
-  <constant name="HTTP_MIMETYPE" type="integer" value="1">
+  <constant name="HTTP_MIMETYPE" type="integer" value="1" version="sl:1.10.4(0)">
     <description lang="en">
 Used with llHTTPRequest to specify the MIME type, defaults to "text/plain"
     </description>
@@ -2959,7 +2959,7 @@ Used with llHTTPRequest to specify the maximum reponse body to return
     </description>
   </constant>
 
-  <constant name="HTTP_VERIFY_CERT" type="integer" value="3">
+  <constant name="HTTP_VERIFY_CERT" type="integer" value="3" version="sl:1.10.4(0)">
     <description lang="en">
 Used with llHTTPRequest to specify SSL certificate verification
     </description>
@@ -2983,67 +2983,67 @@ Used with llHTTPRequest to toggle errors on outgoing requests throttling hit
     </description>
   </constant>
 
-  <constant name="PARCEL_COUNT_TOTAL" type="integer" value="0">
+  <constant name="PARCEL_COUNT_TOTAL" type="integer" value="0" version="sl:1.13.0(8)">
     <description lang="en">
 Used with llGetParcelPrimCount to get the total number of prims on the parcel
     </description>
   </constant>
 
-  <constant name="PARCEL_COUNT_OWNER" type="integer" value="1">
+  <constant name="PARCEL_COUNT_OWNER" type="integer" value="1" version="sl:1.13.0(8)">
     <description lang="en">
 Used with llGetParcelPrimCount to get the number of prims on the parcel owned by the owner
     </description>
   </constant>
 
-  <constant name="PARCEL_COUNT_GROUP" type="integer" value="2">
+  <constant name="PARCEL_COUNT_GROUP" type="integer" value="2" version="sl:1.13.0(8)">
     <description lang="en">
 Used with llGetParcelPrimCount to get the number of prims on the parcel owned by the group
     </description>
   </constant>
 
-  <constant name="PARCEL_COUNT_OTHER" type="integer" value="3">
+  <constant name="PARCEL_COUNT_OTHER" type="integer" value="3" version="sl:1.13.0(8)">
     <description lang="en">
 Used with llGetParcelPrimCount to get the number of prims on the parcel owned by others
     </description>
   </constant>
 
-  <constant name="PARCEL_COUNT_SELECTED" type="integer" value="4">
+  <constant name="PARCEL_COUNT_SELECTED" type="integer" value="4" version="sl:1.13.0(8)">
     <description lang="en">
 Used with llGetParcelPrimCount to get the number of prims on the parcel currently selected or sat upon
     </description>
   </constant>
 
-  <constant name="PARCEL_COUNT_TEMP" type="integer" value="5">
+  <constant name="PARCEL_COUNT_TEMP" type="integer" value="5" version="sl:1.13.0(8)">
     <description lang="en">
 Used with llGetParcelPrimCount to get the number of prims on the parcel that are temp on rez
     </description>
   </constant>
 
-  <constant name="PARCEL_DETAILS_NAME" type="integer" value="0">
+  <constant name="PARCEL_DETAILS_NAME" type="integer" value="0" version="sl:1.13.0(8)">
     <description lang="en">
 Used with llGetParcelDetails to get the parcel name
     </description>
   </constant>
 
-  <constant name="PARCEL_DETAILS_DESC" type="integer" value="1">
+  <constant name="PARCEL_DETAILS_DESC" type="integer" value="1" version="sl:1.13.0(8)">
     <description lang="en">
 Used with llGetParcelDetails to get the parcel description
     </description>
   </constant>
 
-  <constant name="PARCEL_DETAILS_OWNER" type="integer" value="2">
+  <constant name="PARCEL_DETAILS_OWNER" type="integer" value="2" version="sl:1.13.0(8)">
     <description lang="en">
 Used with llGetParcelDetails to get the parcel owner id
     </description>
   </constant>
 
-  <constant name="PARCEL_DETAILS_GROUP" type="integer" value="3">
+  <constant name="PARCEL_DETAILS_GROUP" type="integer" value="3" version="sl:1.13.0(8)">
     <description lang="en">
 Used with llGetParcelDetails to get the parcel group id
     </description>
   </constant>
 
-  <constant name="PARCEL_DETAILS_AREA" type="integer" value="4">
+  <constant name="PARCEL_DETAILS_AREA" type="integer" value="4" version="sl:1.13.0(8)">
     <description lang="en">
 Used with llGetParcelDetails to get the parcel area in square meters
     </description>
@@ -3072,19 +3072,19 @@ Used with llGetParcelDetails to get the avatars visibility setting
     </description>
   </constant>
 
-  <constant name="STRING_TRIM_HEAD" type="integer" value="0x1">
+  <constant name="STRING_TRIM_HEAD" type="integer" value="0x1" version="sl:1.15.0(2)">
     <description lang="en">
 Used with llStringTrim to trim leading spaces from a string
     </description>
   </constant>
 
-  <constant name="STRING_TRIM_TAIL" type="integer" value="0x2">
+  <constant name="STRING_TRIM_TAIL" type="integer" value="0x2" version="sl:1.15.0(2)">
     <description lang="en">
 Used with llStringTrim to trim trailing spaces from a string
     </description>
   </constant>
 
-  <constant name="STRING_TRIM" type="integer" value="0x3">
+  <constant name="STRING_TRIM" type="integer" value="0x3" version="sl:1.15.0(2)">
     <description lang="en">
 Used with llStringTrim to trim both leading and trailing spaces from a string
     </description>
@@ -4374,151 +4374,151 @@ Triggered when a character failed to enter a parcel because it is not allowed to
     </description>
   </constant>
 
-  <constant name="PRIM_NORMAL" type="integer" value="37" grid="sl" version="14.06.20.291351">
+  <constant name="PRIM_NORMAL" type="integer" value="37" grid="sl" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_SPECULAR" type="integer" value="36" grid="sl" version="14.06.20.291351">
+  <constant name="PRIM_SPECULAR" type="integer" value="36" grid="sl" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_ALPHA_MODE" type="integer" value="38" grid="sl" version="14.06.20.291351">
+  <constant name="PRIM_ALPHA_MODE" type="integer" value="38" grid="sl" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_ALPHA_MODE_NONE" type="integer" value="0" grid="sl" version="14.06.20.291351">
+  <constant name="PRIM_ALPHA_MODE_NONE" type="integer" value="0" grid="sl" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_ALPHA_MODE_BLEND" type="integer" value="1" grid="sl" version="14.06.20.291351">
+  <constant name="PRIM_ALPHA_MODE_BLEND" type="integer" value="1" grid="sl" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_ALPHA_MODE_MASK" type="integer" value="2" grid="sl" version="14.06.20.291351">
+  <constant name="PRIM_ALPHA_MODE_MASK" type="integer" value="2" grid="sl" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_ALPHA_MODE_EMISSIVE" type="integer" value="3" grid="sl" version="14.06.20.291351">
+  <constant name="PRIM_ALPHA_MODE_EMISSIVE" type="integer" value="3" grid="sl" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_NONE" type="integer" value="0" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_NONE" type="integer" value="0" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_THROTTLED" type="integer" value="1" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_THROTTLED" type="integer" value="1" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_EXPERIENCES_DISABLED" type="integer" value="2" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_EXPERIENCES_DISABLED" type="integer" value="2" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_INVALID_PARAMETERS" type="integer" value="3" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_INVALID_PARAMETERS" type="integer" value="3" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_NOT_PERMITTED" type="integer" value="4" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_NOT_PERMITTED" type="integer" value="4" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_NO_EXPERIENCE" type="integer" value="5" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_NO_EXPERIENCE" type="integer" value="5" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_NOT_FOUND" type="integer" value="6" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_NOT_FOUND" type="integer" value="6" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_INVALID_EXPERIENCE" type="integer" value="7" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_INVALID_EXPERIENCE" type="integer" value="7" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_EXPERIENCE_DISABLED" type="integer" value="8" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_EXPERIENCE_DISABLED" type="integer" value="8" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_EXPERIENCE_SUSPENDED" type="integer" value="9" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_EXPERIENCE_SUSPENDED" type="integer" value="9" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_UNKNOWN_ERROR" type="integer" value="10" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_UNKNOWN_ERROR" type="integer" value="10" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_QUOTA_EXCEEDED" type="integer" value="11" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_QUOTA_EXCEEDED" type="integer" value="11" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_STORE_DISABLED" type="integer" value="12" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_STORE_DISABLED" type="integer" value="12" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_STORAGE_EXCEPTION" type="integer" value="13" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_STORAGE_EXCEPTION" type="integer" value="13" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_KEY_NOT_FOUND" type="integer" value="14" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_KEY_NOT_FOUND" type="integer" value="14" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_RETRY_UPDATE" type="integer" value="15" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_RETRY_UPDATE" type="integer" value="15" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_MATURITY_EXCEEDED" type="integer" value="16" grid="sl" version="14.07.18.292162">
+  <constant name="XP_ERROR_MATURITY_EXCEEDED" type="integer" value="16" grid="sl" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="XP_ERROR_NOT_PERMITTED_LAND" type="integer" value="17" grid="sl" version="15.01.23.298475">
+  <constant name="XP_ERROR_NOT_PERMITTED_LAND" type="integer" value="17" grid="sl" version="sl:15.01.23.298475">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -6039,7 +6039,7 @@ Returns the wind velocity at the object position + offset
     </description>
   </function>
 
-  <function name="llSetStatus">
+  <function name="llSetStatus" version="sl:0.1.0">
     <param type="integer" name="status"/>
     <param type="integer" name="value"/>
     <description lang="en">
@@ -6054,7 +6054,7 @@ Returns value of status (STATUS_PHYSICS, STATUS_PHANTOM, STATUS_BLOCK_GRAB, STAT
     </description>
   </function>
 
-  <function name="llSetScale">
+  <function name="llSetScale" version="sl:0.1.0">
     <param type="vector" name="scale"/>
     <description lang="en">
 Sets the scale of the prim
@@ -6327,7 +6327,7 @@ Returns the script time in seconds and then resets the script timer to zero
     </description>
   </function>
 
-  <function name="llSound" status="deprecated">
+  <function name="llSound" status="deprecated" version="sl:0.1.0">
     <param type="string" name="sound"/>
     <param type="float" name="volume"/>
     <param type="integer" name="queue"/>
@@ -6337,7 +6337,7 @@ Plays sound at volume and whether it should loop or not. DEPRECATED - Use llPlay
     </description>
   </function>
 
-  <function name="llPlaySound">
+  <function name="llPlaySound" version="sl:0.1.0">
     <param type="string" name="sound"/>
     <param type="float" name="volume"/>
     <description lang="en">
@@ -6345,7 +6345,7 @@ Plays attached sound once at volume (0.0 - 1.0)
     </description>
   </function>
 
-  <function name="llLoopSound">
+  <function name="llLoopSound" version="sl:0.1.0">
     <param type="string" name="sound"/>
     <param type="float" name="volume"/>
     <description lang="en">
@@ -6392,7 +6392,7 @@ Stops currently attached sound
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llPreloadSound" delay="1">
+  <function name="llPreloadSound" delay="1" version="sl:0.1.0">
     <param type="string" name="sound"/>
     <description lang="en">
 Preloads a sound on viewers within range
@@ -6503,7 +6503,7 @@ Transfers amount of L$ from script owner to destination
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llRezObject" delay="0.1" energy="200">
+  <function name="llRezObject" delay="0.1" energy="200" version="sl:0.1.0">
     <param type="string" name="inventory"/>
     <param type="vector" name="pos"/>
     <param type="vector" name="vel"/>
@@ -6514,7 +6514,7 @@ Instantiates owner's inventory object at pos with velocity vel and rotation rot 
     </description>
   </function>
 
-  <function name="llLookAt">
+  <function name="llLookAt" version="sl:0.1.0">
     <param type="vector" name="target"/>
     <param type="float" name="strength"/>
     <param type="float" name="damping"/>
@@ -6554,7 +6554,7 @@ Puts the script to sleep for sec seconds
     </description>
   </function>
 
-  <function name="llGetMass" type="float">
+  <function name="llGetMass" type="float" version="sl:0.1.0">
     <description lang="en">
 Returns the mass of object that the script is attached to
     </description>
@@ -6628,7 +6628,7 @@ Sends the specified string as an Instant Message to the user
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llEmail" delay="20">
+  <function name="llEmail" delay="20" version="sl:1.3.0">
     <param type="string" name="address"/>
     <param type="string" name="subject"/>
     <param type="string" name="message"/>
@@ -6637,7 +6637,7 @@ Sends an email to address with the subject and message
     </description>
   </function>
 
-  <function name="llGetNextEmail">
+  <function name="llGetNextEmail" version="sl:1.3.0">
     <param type="string" name="address"/>
     <param type="string" name="subject"/>
     <description lang="en">
@@ -6687,7 +6687,7 @@ Preloads a sound on viewers within range. DEPRECATED - Use llPreloadSound.
     </description>
   </function>
 
-  <function name="llRotLookAt">
+  <function name="llRotLookAt" version="sl:0.1.0">
     <param type="rotation" name="target"/>
     <param type="float" name="strength"/>
     <param type="float" name="damping"/>
@@ -6740,7 +6740,7 @@ Stops pointing agent that owns object
     </description>
   </function>
 
-  <function name="llTargetOmega">
+  <function name="llTargetOmega" version="sl:0.2.0">
     <param type="vector" name="axis"/>
     <param type="float" name="spinrate"/>
     <param type="float" name="gain"/>
@@ -6879,7 +6879,7 @@ Removes the named inventory item
     </description>
   </function>
 
-  <function name="llSetText">
+  <function name="llSetText" version="sl:0.1.0">
     <param type="string" name="text"/>
     <param type="vector" name="color"/>
     <param type="float" name="alpha"/>
@@ -6940,7 +6940,7 @@ Modifies land using the specified action on the specified brush size of land
     </description>
   </function>
 
-  <function name="llCollisionSound">
+  <function name="llCollisionSound" version="sl:0.2.0">
     <param type="string" name="impact_sound"/>
     <param type="float" name="impact_volume"/>
     <description lang="en">
@@ -6948,7 +6948,7 @@ Suppresses default collision sounds, replaces default impact sounds with impact_
     </description>
   </function>
 
-  <function name="llCollisionSprite" status="unimplemented">
+  <function name="llCollisionSprite" status="unimplemented" version="sl:0.2.0">
     <param type="string" name="impact_sprite"/>
     <description lang="en">
 Suppresses default collision sprites, replaces default impact sprite with impact_sprite (use an empty string to just suppress)
@@ -7281,7 +7281,7 @@ Returns the current date in the UTC time zone in the format YYYY-MM-DD
     </description>
   </function>
 
-  <function name="llEdgeOfWorld" type="integer">
+  <function name="llEdgeOfWorld" type="integer" version="sl:0.2.0">
     <param type="vector" name="pos"/>
     <param type="vector" name="dir"/>
     <description lang="en">
@@ -7289,7 +7289,7 @@ Checks to see whether the border hit by dir from pos is the edge of the world (h
     </description>
   </function>
 
-  <function name="llGetAgentInfo" type="integer">
+  <function name="llGetAgentInfo" type="integer" version="sl:0.4.0">
     <param type="key" name="id"/>
     <description lang="en">
 Returns an integer bitfield containing the agent information about id.
@@ -7298,28 +7298,28 @@ Returns AGENT_FLYING, AGENT_ATTACHMENTS, AGENT_SCRIPTED, AGENT_SITTING, AGENT_ON
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llAdjustSoundVolume" delay="0.1">
+  <function name="llAdjustSoundVolume" delay="0.1"><!-- Version is unclear - mentioned in 0.2 and also in 0.4 -->
     <param type="float" name="volume"/>
     <description lang="en">
 Adjusts volume of attached sound (0.0 - 1.0)
     </description>
   </function>
 
-  <function name="llSetSoundQueueing">
+  <function name="llSetSoundQueueing"><!-- Version is unclear - mentioned in 0.2 and also in 0.4 -->
     <param type="integer" name="queue"/>
     <description lang="en">
 Sets whether attached sounds wait for the current sound to finish (If queue == TRUE then queuing is enabled, if FALSE queuing is disabled [default])
     </description>
   </function>
 
-  <function name="llSetSoundRadius">
+  <function name="llSetSoundRadius" version="sl:0.4.0">
     <param type="float" name="radius"/>
     <description lang="en">
 Establishes a hard cut-off radius for audibility of scripted sounds (both attached and triggered)
     </description>
   </function>
 
-  <function name="llKey2Name" type="string">
+  <function name="llKey2Name" type="string" version="sl:0.4.0">
     <param type="key" name="id"/>
     <description lang="en">
 Returns the name of the prim or avatar specified by id.
@@ -7327,7 +7327,7 @@ Returns the name of the prim or avatar specified by id.
     </description>
   </function>
 
-  <function name="llSetTextureAnim">
+  <function name="llSetTextureAnim" version="sl:0.4.0">
     <param type="integer" name="mode"/>
     <param type="integer" name="face"/>
     <param type="integer" name="sizex"/>
@@ -7340,7 +7340,7 @@ Animates the texture on the specified face/faces
     </description>
   </function>
 
-  <function name="llTriggerSoundLimited">
+  <function name="llTriggerSoundLimited" version="sl:0.4.0">
     <param type="string" name="sound"/>
     <param type="float" name="volume"/>
     <param type="vector" name="top_north_east"/>
@@ -7351,14 +7351,14 @@ Plays sound at volume (0.0 - 1.0), centered at but not attached to object, limit
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llEjectFromLand">
+  <function name="llEjectFromLand" version="sl:0.6.0">
     <param type="key" name="avatar"/>
     <description lang="en">
 Ejects avatar from the parcel
     </description>
   </function>
 
-  <function name="llParseString2List" type="list">
+  <function name="llParseString2List" type="list" version="sl:0.6.0">
     <param type="string" name="src"/>
     <param type="list" name="separators"/>
     <param type="list" name="spacers"/>
@@ -7368,21 +7368,21 @@ Breaks src into a list, discarding separators, keeping spacers
     </description>
   </function>
 
-  <function name="llOverMyLand" type="integer">
+  <function name="llOverMyLand" type="integer" version="sl:0.6.0">
     <param type="key" name="id"/>
     <description lang="en">
 Returns TRUE if id is over land owned by the script owner, otherwise FALSE
     </description>
   </function>
 
-  <function name="llGetLandOwnerAt" type="key">
+  <function name="llGetLandOwnerAt" type="key" version="sl:0.6.0">
     <param type="vector" name="pos"/>
     <description lang="en">
 Returns the key of the land owner, returns NULL_KEY if public
     </description>
   </function>
 
-  <function name="llGetNotecardLine" type="key" delay="0.1">
+  <function name="llGetNotecardLine" type="key" delay="0.1" version="sl:0.6.0">
     <param type="string" name="name"/>
     <param type="integer" name="line"/>
     <description lang="en">
@@ -7411,58 +7411,58 @@ If avatar identified by id is sitting on the object the script is attached to or
     </description>
   </function>
 
-  <function name="llGroundSlope" type="vector">
+  <function name="llGroundSlope" type="vector" version="sl:0.9.0">
     <param type="vector" name="offset"/>
     <description lang="en">
 Returns the ground slope below the object position + offset
     </description>
   </function>
 
-  <function name="llGroundNormal" type="vector">
+  <function name="llGroundNormal" type="vector" version="sl:0.9.0">
     <param type="vector" name="offset"/>
     <description lang="en">
 Returns the ground normal below the object position + offset
     </description>
   </function>
 
-  <function name="llGroundContour" type="vector">
+  <function name="llGroundContour" type="vector" version="sl:0.9.0">
     <param type="vector" name="offset"/>
     <description lang="en">
 Returns the ground contour direction below the object position + offset
     </description>
   </function>
 
-  <function name="llGetAttached" type="integer">
+  <function name="llGetAttached" type="integer" version="sl:1.1.0">
     <description lang="en">
 Returns the object's attachment point, or 0 if not attached
     </description>
   </function>
 
-  <function name="llGetFreeMemory" type="integer">
+  <function name="llGetFreeMemory" type="integer" version="sl:1.1.0">
     <description lang="en">
 Returns the number of free bytes of memory the script can use
     </description>
   </function>
 
-  <function name="llGetRegionName" type="string">
+  <function name="llGetRegionName" type="string" version="sl:1.1.0">
     <description lang="en">
 Returns the current region name
     </description>
   </function>
 
-  <function name="llGetRegionTimeDilation" type="float">
+  <function name="llGetRegionTimeDilation" type="float" version="sl:1.1.0">
     <description lang="en">
 Returns the current time dilation as a float between 0.0 (full dilation) and 1.0 (no dilation)
     </description>
   </function>
 
-  <function name="llGetRegionFPS" type="float">
+  <function name="llGetRegionFPS" type="float" version="sl:1.1.0">
     <description lang="en">
 Returns the mean region frames per second
     </description>
   </function>
 
-  <function name="llParticleSystem">
+  <function name="llParticleSystem" version="sl:1.1.0">
     <param type="list" name="rules"/>
     <description lang="en">
 Creates a particle system based on rules. An empty list removes the particle system.
@@ -7470,7 +7470,7 @@ List format is [ rule1, data1, rule2, data2 ... rulen, datan ].
     </description>
   </function>
 
-  <function name="llGroundRepel">
+  <function name="llGroundRepel" version="sl:1.1.0"><!-- Version deduced (presumed to be introduced with vehicles) -->
     <param type="float" name="height"/>
     <param type="integer" name="water"/>
     <param type="float" name="tau"/>
@@ -7479,7 +7479,7 @@ Critically damps to height if within height*0.5 of level (either above ground le
     </description>
   </function>
 
-  <function name="llGiveInventoryList" delay="3">
+  <function name="llGiveInventoryList" delay="3" version="sl:1.1.0">
     <param type="key" name="target"/>
     <param type="string" name="folder"/>
     <param type="list" name="inventory"/>
@@ -7488,14 +7488,14 @@ Gives inventory items to target, creating a new folder to put them in
     </description>
   </function>
 
-  <function name="llSetVehicleType">
+  <function name="llSetVehicleType" version="sl:1.1.0">
     <param type="integer" name="type"/>
     <description lang="en">
 Sets the vehicle to one of the default types
     </description>
   </function>
 
-  <function name="llSetVehicleFloatParam">
+  <function name="llSetVehicleFloatParam" version="sl:1.1.0">
     <param type="integer" name="param"/>
     <param type="float" name="value"/>
     <description lang="en">
@@ -7503,7 +7503,7 @@ Sets the specified vehicle float parameter
     </description>
   </function>
 
-  <function name="llSetVehicleVectorParam">
+  <function name="llSetVehicleVectorParam" version="sl:1.1.0">
     <param type="integer" name="param"/>
     <param type="vector" name="vec"/>
     <description lang="en">
@@ -7511,7 +7511,7 @@ Sets the specified vehicle vector parameter
     </description>
   </function>
 
-  <function name="llSetVehicleRotationParam">
+  <function name="llSetVehicleRotationParam" version="sl:1.1.0">
     <param type="integer" name="param"/>
     <param type="rotation" name="rot"/>
     <description lang="en">
@@ -7519,14 +7519,14 @@ Sets the specified vehicle rotation parameter
     </description>
   </function>
 
-  <function name="llSetVehicleFlags">
+  <function name="llSetVehicleFlags" version="sl:1.1.0">
     <param type="integer" name="flags"/>
     <description lang="en">
 Sets the enabled bits in 'flags'
     </description>
   </function>
 
-  <function name="llRemoveVehicleFlags">
+  <function name="llRemoveVehicleFlags" version="sl:1.1.0">
     <param type="integer" name="flags"/>
     <description lang="en">
 Removes the enabled bits in 'flags'
@@ -7584,7 +7584,7 @@ Sets the point the camera is looking at to offset for avatars that sit on the ob
     </description>
   </function>
 
-  <function name="llDumpList2String" type="string">
+  <function name="llDumpList2String" type="string" version="sl:1.2.0">
     <param type="list" name="src"/>
     <param type="string" name="separator"/>
     <description lang="en">
@@ -7592,14 +7592,14 @@ Returns the list in a single string, using separator between the entries
     </description>
   </function>
 
-  <function name="llScriptDanger" type="integer">
+  <function name="llScriptDanger" type="integer" version="sl:1.2.0">
     <param type="vector" name="pos"/>
     <description lang="en">
 Returns TRUE if pos is over public land, sandbox land, land that doesn't allow everyone to edit and build, or land that doesn't allow outside scripts
     </description>
   </function>
 
-  <function name="llDialog" delay="1">
+  <function name="llDialog" delay="1" version="sl:1.2.0">
     <param type="key" name="avatar"/>
     <param type="string" name="message"/>
     <param type="list" name="buttons"/>
@@ -7610,7 +7610,7 @@ If a button is pressed, the avatar says the text of the button label on chat_cha
     </description>
   </function>
 
-  <function name="llVolumeDetect">
+  <function name="llVolumeDetect" version="sl:1.2.0">
     <param type="integer" name="detect"/>
     <description lang="en">
 If detect = TRUE, object works much like Phantom, but triggers collision_start and collision_end events when other objects start and stop interpenetrating.
@@ -7702,7 +7702,7 @@ Closes XML-RPC channel
     </description>
   </function>
 
-  <function name="llMD5String" type="string">
+  <function name="llMD5String" type="string" version="sl:1.3.0">
     <param type="string" name="src"/>
     <param type="integer" name="nonce"/>
     <description lang="en">
@@ -7710,21 +7710,21 @@ Returns a string of 32 hex characters that is a RSA Data Security, Inc. MD5 Mess
     </description>
   </function>
 
-  <function name="llSetPrimitiveParams" delay="0.2">
+  <function name="llSetPrimitiveParams" delay="0.2" version="sl:1.3.0">
     <param type="list" name="rules"/>
     <description lang="en">
 Sets the prim's parameters according to rules
     </description>
   </function>
 
-  <function name="llStringToBase64" type="string">
+  <function name="llStringToBase64" type="string" version="sl:1.3.0">
     <param type="string" name="str"/>
     <description lang="en">
 Converts a string to the Base64 representation of the string
     </description>
   </function>
 
-  <function name="llBase64ToString" type="string">
+  <function name="llBase64ToString" type="string" version="sl:1.3.0">
     <param type="string" name="str"/>
     <description lang="en">
 Converts a Base64 string to a conventional string.
@@ -7732,7 +7732,7 @@ If the conversion creates any unprintable characters, they are converted to spac
     </description>
   </function>
 
-  <function name="llXorBase64Strings" type="string" delay="0.3" status="deprecated">
+  <function name="llXorBase64Strings" type="string" delay="0.3" status="deprecated" version="sl:1.3.0">
     <param type="string" name="str1"/>
     <param type="string" name="str2"/>
     <description lang="en">
@@ -7762,7 +7762,7 @@ Returns the natural logarithm of val. Returns zero if val &lt;= 0.
     </description>
   </function>
 
-  <function name="llGetAnimationList" type="list">
+  <function name="llGetAnimationList" type="list" version="sl:1.4.0">
     <param type="key" name="id"/>
     <description lang="en">
 Returns a list of keys of playing animations for avatar described by id
@@ -7777,44 +7777,44 @@ Sets the streaming audio URL for the parcel which the object is on
     </description>
   </function>
 
-  <function name="llGetRootPosition" type="vector">
+  <function name="llGetRootPosition" type="vector" version="sl:1.5.0">
     <description lang="en">
 Returns the position (in region coordinates) of the root prim of the object which the script is attached to
     </description>
   </function>
 
-  <function name="llGetRootRotation" type="rotation">
+  <function name="llGetRootRotation" type="rotation" version="sl:1.5.0">
     <description lang="en">
 Returns the rotation (relative to the region) of the root prim of the object which the script is attached to
     </description>
   </function>
 
-  <function name="llGetObjectDesc" type="string">
+  <function name="llGetObjectDesc" type="string" version="sl:1.5.0">
     <description lang="en">
 Returns the description of the prim the script is attached to
     </description>
   </function>
 
-  <function name="llSetObjectDesc">
+  <function name="llSetObjectDesc" version="sl:1.5.0">
     <param type="string" name="desc"/>
     <description lang="en">
 Sets the prim's description to desc
     </description>
   </function>
 
-  <function name="llGetCreator" type="key">
+  <function name="llGetCreator" type="key" version="sl:1.5.0">
     <description lang="en">
 Returns a key for the creator of the prim
     </description>
   </function>
 
-  <function name="llGetTimestamp" type="string">
+  <function name="llGetTimestamp" type="string" version="sl:1.5.0">
     <description lang="en">
 Returns the timestamp in the UTC time zone in the format: YYYY-MM-DDThh:mm:ss.ff..fZ
     </description>
   </function>
 
-  <function name="llSetLinkAlpha">
+  <function name="llSetLinkAlpha" version="sl:1.5.0">
     <param type="integer" name="linknumber"/>
     <param type="float" name="alpha"/>
     <param type="integer" name="face"/>
@@ -7823,13 +7823,13 @@ If a prim exists in the link chain at linknumber, sets face to alpha
     </description>
   </function>
 
-  <function name="llGetNumberOfPrims" type="integer">
+  <function name="llGetNumberOfPrims" type="integer" version="sl:1.5.0">
     <description lang="en">
 Returns the number of prims in a link set the script is attached to
     </description>
   </function>
 
-  <function name="llGetNumberOfNotecardLines" type="key" delay="0.1">
+  <function name="llGetNumberOfNotecardLines" type="key" delay="0.1" version="sl:1.5.0">
     <param type="string" name="name"/>
     <description lang="en">
 Returns number of lines in notecard name via the dataserver event (cast return value to integer)
@@ -7849,28 +7849,28 @@ Returns the geometric center of the linked set the script is attached to
     </description>
   </function>
 
-  <function name="llGetPrimitiveParams" type="list" delay="0.2">
+  <function name="llGetPrimitiveParams" type="list" delay="0.2" version="sl:1.5.0">
     <param type="list" name="params"/>
     <description lang="en">
 Returns the primitive parameters specified in the params list
     </description>
   </function>
 
-  <function name="llIntegerToBase64" type="string" delay="0.0">
+  <function name="llIntegerToBase64" type="string" delay="0.0" version="sl:1.5.0">
     <param type="integer" name="number"/>
     <description lang="en">
 Returns a string that is a Base64 big endian encode of number
     </description>
   </function>
 
-  <function name="llBase64ToInteger" type="integer" delay="0.0">
+  <function name="llBase64ToInteger" type="integer" delay="0.0" version="sl:1.5.0">
     <param type="string" name="str"/>
     <description lang="en">
 Returns an integer that is the str Base64 decoded as a big endian integer
     </description>
   </function>
 
-  <function name="llGetGMTclock" type="float">
+  <function name="llGetGMTclock" type="float" version="sl:1.5.0">
     <description lang="en">
 Returns the time in seconds since midnight GMT
     </description>
@@ -7957,7 +7957,7 @@ Says msg to owner only. (Owner must be in the same region.)
     </description>
   </function>
 
-  <function name="llRequestSimulatorData" type="key" delay="1">
+  <function name="llRequestSimulatorData" type="key" delay="1" version="sl:1.6.0">
     <param type="string" name="simulator"/>
     <param type="integer" name="data"/>
     <description lang="en">
@@ -7965,21 +7965,21 @@ Requests data about simulator. When data is available the dataserver event will 
     </description>
   </function>
 
-  <function name="llForceMouselook">
+  <function name="llForceMouselook" version="sl:1.6.0">
     <param type="integer" name="mouselook"/>
     <description lang="en">
 If mouselook is TRUE, any avatar that sits upon the prim will be forced into mouselook mode
     </description>
   </function>
 
-  <function name="llGetObjectMass" type="float">
+  <function name="llGetObjectMass" type="float" version="sl:1.6.0">
     <param type="key" name="id"/>
     <description lang="en">
 Returns the mass of the avatar or object in the region
     </description>
   </function>
 
-  <function name="llListReplaceList" type="list">
+  <function name="llListReplaceList" type="list" version="sl:1.6.0">
     <param type="list" name="dest"/>
     <param type="list" name="src"/>
     <param type="integer" name="start"/>
@@ -7990,7 +7990,7 @@ Returns a list that is dest with start through end removed and src inserted at s
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llLoadURL" delay="0.1">
+  <function name="llLoadURL" delay="0.1" version="sl:1.6.0">
     <param type="key" name="avatar"/>
     <param type="string" name="message"/>
     <param type="string" name="url"/>
@@ -8025,14 +8025,14 @@ b is capped at 0xFFFF (16 bits).
     </description>
   </function>
 
-  <function name="llGetInventoryType" type="integer">
+  <function name="llGetInventoryType" type="integer" version="sl:1.7.0">
     <param type="string" name="name"/>
     <description lang="en">
 Returns the type of the inventory item name
     </description>
   </function>
 
-  <function name="llSetPayPrice">
+  <function name="llSetPayPrice" version="sl:1.7.0">
     <param type="integer" name="price"/>
     <param type="list" name="quick_pay_buttons"/>
     <description lang="en">
@@ -8067,14 +8067,14 @@ Reloads the web page shown on the sides of the object
     </description>
   </function>
 
-  <function name="llEscapeURL" type="string">
+  <function name="llEscapeURL" type="string" version="sl:1.7.0">
     <param type="string" name="url"/>
     <description lang="en">
 Returns an escaped/encoded version of url, replacing spaces with %20 etc.
     </description>
   </function>
 
-  <function name="llUnescapeURL" type="string">
+  <function name="llUnescapeURL" type="string" version="sl:1.7.0">
     <param type="string" name="url"/>
     <description lang="en">
 Returns an unescaped/ unencoded version of url, replacing %20 with spaces etc.
@@ -8082,7 +8082,7 @@ Returns an unescaped/ unencoded version of url, replacing %20 with spaces etc.
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llMapDestination" delay="1">
+  <function name="llMapDestination" delay="1" version="sl:1.8.0">
     <param type="string" name="simname"/>
     <param type="vector" name="pos"/>
     <param type="vector" name="look_at"/>
@@ -8093,7 +8093,7 @@ Only works for scripts attached to avatar, or during touch events.
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llAddToLandBanList" delay="0.1">
+  <function name="llAddToLandBanList" delay="0.1" version="sl:1.8.0">
     <param type="key" name="avatar"/>
     <param type="float" name="hours"/>
     <description lang="en">
@@ -8102,7 +8102,7 @@ Adds avatar to the land ban list for hours, or indefinitely if hours is 0
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llRemoveFromLandPassList" delay="0.1">
+  <function name="llRemoveFromLandPassList" delay="0.1" version="sl:1.8.0">
     <param type="key" name="avatar"/>
     <description lang="en">
 Removes avatar from the land pass list
@@ -8110,14 +8110,14 @@ Removes avatar from the land pass list
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llRemoveFromLandBanList" delay="0.1">
+  <function name="llRemoveFromLandBanList" delay="0.1" version="sl:1.8.0">
     <param type="key" name="avatar"/>
     <description lang="en">
 Removes avatar from the land ban list
     </description>
   </function>
 
-  <function name="llSetCameraParams">
+  <function name="llSetCameraParams" version="sl:1.9.0(15)">
     <param type="list" name="rules"/>
     <description lang="en">
 Sets multiple camera parameters at once.
@@ -8125,13 +8125,13 @@ List format is [ rule1, data1, rule2, data2 ... rulen, datan ].
     </description>
   </function>
 
-  <function name="llClearCameraParams">
+  <function name="llClearCameraParams" version="sl:1.9.0(15)">
     <description lang="en">
 Resets all camera parameters to default values and turns off scripted camera control
     </description>
   </function>
 
-  <function name="llListStatistics" type="float">
+  <function name="llListStatistics" type="float" version="sl:1.9.0(15)">
     <param type="integer" name="operation"/>
     <param type="list" name="src"/>
     <description lang="en">
@@ -8139,26 +8139,26 @@ Performs statistical aggregate functions on list src using LIST_STAT_* operation
     </description>
   </function>
 
-  <function name="llGetUnixTime" type="integer">
+  <function name="llGetUnixTime" type="integer" version="sl:1.9.0(15)">
     <description lang="en">
 Returns the number of seconds elapsed since 00:00 hours, Jan 1, 1970 UTC from the system clock
     </description>
   </function>
 
-  <function name="llGetParcelFlags" type="integer">
+  <function name="llGetParcelFlags" type="integer" version="sl:1.9.1(9)">
     <param type="vector" name="pos"/>
     <description lang="en">
 Returns a mask of the parcel flags (PARCEL_FLAG_*) for the parcel that includes the point pos
     </description>
   </function>
 
-  <function name="llGetRegionFlags" type="integer">
+  <function name="llGetRegionFlags" type="integer" version="sl:1.9.0(15)">
     <description lang="en">
 Returns the region flags (REGION_FLAG_*) for the region the object is in
     </description>
   </function>
 
-  <function name="llXorBase64StringsCorrect" type="string" status="deprecated">
+  <function name="llXorBase64StringsCorrect" type="string" status="deprecated" version="sl:1.9.0(21)">
     <param type="string" name="str1"/>
     <param type="string" name="str2"/>
     <description lang="en">
@@ -8168,7 +8168,7 @@ str2 repeats if it is shorter than str1. Retained for backwards compatability.
     </description>
   </function>
 
-  <function name="llHTTPRequest" type="key">
+  <function name="llHTTPRequest" type="key" version="sl:1.9.1(9)">
     <param type="string" name="url"/>
     <param type="list" name="parameters"/>
     <param type="string" name="body"/>
@@ -8191,14 +8191,14 @@ Removes all Residents from the land access/pass list
     </description>
   </function>
 
-  <function name="llGetObjectPrimCount" type="integer">
+  <function name="llGetObjectPrimCount" type="integer" version="sl:1.13.0(8)">
     <param type="key" name="object_id"/>
     <description lang="en">
 Returns the total number of prims for an object in the region
     </description>
   </function>
 
-  <function name="llGetParcelPrimOwners" type="list" delay="2.0">
+  <function name="llGetParcelPrimOwners" type="list" delay="2.0" version="sl:1.13.0(8)">
     <param type="vector" name="pos"/>
     <description lang="en">
 Returns a list of all Residents who own objects on the parcel at pos and with individual prim counts.
@@ -8206,7 +8206,7 @@ Requires owner-like permissions for the parcel.
     </description>
   </function>
 
-  <function name="llGetParcelPrimCount" type="integer">
+  <function name="llGetParcelPrimCount" type="integer" version="sl:1.13.0(8)">
     <param type="vector" name="pos"/>
     <param type="integer" name="category"/>
     <param type="integer" name="sim_wide"/>
@@ -8216,7 +8216,7 @@ Categories: PARCEL_COUNT_TOTAL, _OWNER, _GROUP, _OTHER, _SELECTED, _TEMP.
     </description>
   </function>
 
-  <function name="llGetParcelMaxPrims" type="integer">
+  <function name="llGetParcelMaxPrims" type="integer" version="sl:1.13.0(8)">
     <param type="vector" name="pos"/>
     <param type="integer" name="sim_wide"/>
     <description lang="en">
@@ -8224,7 +8224,7 @@ Returns the maximum number of prims allowed on the parcel at pos
     </description>
   </function>
 
-  <function name="llGetParcelDetails" type="list">
+  <function name="llGetParcelDetails" type="list" version="sl:1.13.0(8)">
     <param type="vector" name="pos"/>
     <param type="list" name="params"/>
     <description lang="en">
@@ -8233,7 +8233,7 @@ Params is one or more of: PARCEL_DETAILS_NAME, _DESC, _OWNER, _GROUP, _AREA, _ID
     </description>
   </function>
 
-  <function name="llSetLinkPrimitiveParams" delay="0.2">
+  <function name="llSetLinkPrimitiveParams" delay="0.2" version="sl:1.13.4(1)">
     <param type="integer" name="linknumber"/>
     <param type="list" name="rules"/>
     <description lang="en">
@@ -8242,7 +8242,7 @@ Sets primitive parameters for linknumber based on rules
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llSetLinkTexture" delay="0.2">
+  <function name="llSetLinkTexture" delay="0.2" version="sl:1.13.4(1)">
     <param type="integer" name="linknumber"/>
     <param type="string" name="texture"/>
     <param type="integer" name="face"/>
@@ -8251,7 +8251,7 @@ Sets the texture of face for a task that exists in the link chain at linknumber
     </description>
   </function>
 
-  <function name="llStringTrim" type="string">
+  <function name="llStringTrim" type="string" version="sl:1.15.0(2)">
     <param type="string" name="src"/>
     <param type="integer" name="trim_type"/>
     <description lang="en">
@@ -8260,7 +8260,7 @@ trim_type can be STRING_TRIM, STRING_TRIM_HEAD or STRING_TRIM_TAIL.
     </description>
   </function>
 
-  <function name="llRegionSay">
+  <function name="llRegionSay" version="sl:1.16.0(1)">
     <param type="integer" name="channel"/>
     <param type="string" name="msg"/>
     <description lang="en">
@@ -8268,7 +8268,7 @@ Broadcasts msg on channel (not 0) that can be heard anywhere in the region by a 
     </description>
   </function>
 
-  <function name="llGetObjectDetails" type="list">
+  <function name="llGetObjectDetails" type="list" version="sl:1.18.3(5)">
     <param type="key" name="id"/>
     <param type="list" name="params"/>
     <description lang="en">
@@ -8968,21 +8968,21 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llAgentInExperience" type="integer" grid="sl" version="14.07.18.292162">
+  <function name="llAgentInExperience" type="integer" grid="sl" version="sl:14.07.18.292162">
     <param type="key" name="agent"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetExperienceDetails" grid="sl" type="list" version="14.07.18.292162">
+  <function name="llGetExperienceDetails" grid="sl" type="list" version="sl:14.07.18.292162">
     <param type="key" name="experience_id"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llRequestExperiencePermissions" grid="sl" version="14.07.18.292162">
+  <function name="llRequestExperiencePermissions" grid="sl" version="sl:14.07.18.292162">
     <param type="key" name="agent"/>
     <param type="string" name="name"/>
     <description lang="en">
@@ -8990,14 +8990,14 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llReadKeyValue" grid="sl" type="key" version="14.07.18.292162">
+  <function name="llReadKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
     <param type="key" name="k"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llCreateKeyValue" grid="sl" type="key" version="14.07.18.292162">
+  <function name="llCreateKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
     <param type="key" name="k"/>
     <param type="string" name="v"/>
     <description lang="en">
@@ -9005,7 +9005,7 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llUpdateKeyValue" grid="sl" type="key" version="14.07.18.292162">
+  <function name="llUpdateKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
     <param type="key" name="k"/>
     <param type="string" name="v"/>
     <param type="integer" name="checked"/>
@@ -9015,20 +9015,20 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llDeleteKeyValue" grid="sl" type="key" version="14.07.18.292162">
+  <function name="llDeleteKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
     <param type="key" name="k"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llDataSizeKeyValue" grid="sl" type="key" version="14.07.18.292162">
+  <function name="llDataSizeKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llKeysKeyValue" grid="sl" type="key" version="14.07.18.292162">
+  <function name="llKeysKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
     <param type="integer" name="start"/>
     <param type="integer" name="count"/>
     <description lang="en">
@@ -9036,27 +9036,27 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llKeyCountKeyValue" grid="sl" type="key" version="14.07.18.292162">
+  <function name="llKeyCountKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetExperienceErrorMessage" grid="sl" type="string" version="14.07.18.292162">
+  <function name="llGetExperienceErrorMessage" grid="sl" type="string" version="sl:14.07.18.292162">
     <param type="integer" name="value"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetExperienceList" grid="sl" type="list" version="14.07.18.292162" status="unimplemented">
+  <function name="llGetExperienceList" grid="sl" type="list" version="sl:14.07.18.292162" status="unimplemented">
     <param type="key" name="agent"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llClearExperiencePermissions" grid="sl" version="14.07.18.292162" status="unimplemented">
+  <function name="llClearExperiencePermissions" grid="sl" version="sl:14.07.18.292162" status="unimplemented">
     <param type="key" name="agent"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -10933,7 +10933,7 @@ Triggered when L$ is given to task
     </description>
   </event>
 
-  <event name="email">
+  <event name="email" version="sl:1.3.0">
     <param type="string"  name="time"    />
     <param type="string"  name="address" />
     <param type="string"  name="subj"    />
@@ -11022,7 +11022,7 @@ Triggered by various XML-RPC calls (event_type will be one of REMOTE_DATA_CHANNE
     </description>
   </event>
 
-  <event name="http_response">
+  <event name="http_response" version="sl:1.9.1.9">
     <param type="key"     name="request_id"/>
     <param type="integer" name="status"    />
     <param type="list"    name="metadata"  />
@@ -11058,7 +11058,7 @@ Triggered when transferring L$ to Agent via llTransferLindenDollars
     </description>
   </event>
 
-  <event name="experience_permissions" grid="sl" version="14.07.18.292162">
+  <event name="experience_permissions" grid="sl" version="sl:14.07.18.292162">
     <param type="key"     name="agent"   />
     <description lang="en">
 Triggered by llRequestExperiencePermissions when the permission has been granted.
@@ -11066,7 +11066,7 @@ Triggered by llRequestExperiencePermissions when the permission has been granted
     </description>
   </event>
 
-  <event name="experience_permissions_denied" grid="sl" version="14.07.18.292162">
+  <event name="experience_permissions_denied" grid="sl" version="sl:14.07.18.292162">
     <param type="key"     name="agent"   />
     <param type="integer" name="reason"  />
     <description lang="en">
