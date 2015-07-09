@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20150501000">
+<keywords version="0.0.20150709000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -4521,6 +4521,25 @@ Triggered when a character failed to enter a parcel because it is not allowed to
   <constant name="XP_ERROR_NOT_PERMITTED_LAND" type="integer" value="17" grid="sl" version="sl:15.01.23.298475">
     <description lang="en">
 <!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <!-- The following three constants were added as a result of SVC-5923 -->
+  <constant name="PASS_IF_NOT_HANDLED" type="integer" value="0" grid="sl" version="sl:1.40.0">
+    <description lang="en">
+Used with llPassTouches to only pass touches to the root if the touch event was not handled.
+    </description>
+  </constant>
+
+  <constant name="PASS_ALWAYS" type="integer" value="1" grid="sl" version="sl:1.40.0">
+    <description lang="en">
+Used with llPassTouches to always pass touches to the root regardless of whether the touch event was handled or not.
+    </description>
+  </constant>
+
+  <constant name="PASS_NEVER" type="integer" value="2" grid="sl" version="sl:1.40.0">
+    <description lang="en">
+Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
