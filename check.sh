@@ -5,6 +5,8 @@ function dfg ()
   PYTHONPATH=lsl2dfg python lsl2dfg/LSL2dfg.py -d database/kwdb.xml "$@"
 }
 
+md5sum database/kwdb.xml > database/kwdb.xml.md5
+
 dfg -ycp
 dfg -f rawkeywords -o outputs/rawkeywords.txt # includes dupes
 dfg -f rawkeywords -g sl -o outputs/rawkeywords-sl.txt

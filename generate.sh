@@ -14,8 +14,6 @@ function replace_if_different ()
   fi
 }
 
-md5sum database/kwdb.xml > database/kwdb.xml.md5
-
 dfg -f viewerkw -g sl -t LSL \
                        -i inputs/firestorm_keywords.ini.in \
  | dfg -f viewerkw -g os,-sl -t OSSL \
