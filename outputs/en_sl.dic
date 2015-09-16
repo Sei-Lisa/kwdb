@@ -1,4 +1,4 @@
-11254
+11256
 rez
 slex
 slutorial
@@ -10217,6 +10217,7 @@ llGetAnimation
 llGetAnimationList
 llGetAnimationOverride
 llGetAttached
+llGetAttachedList
 llGetBoundingBox
 llGetCameraPos
 llGetCameraRot
@@ -10823,6 +10824,7 @@ NULL_KEY
 OBJECT_ATTACHED_POINT
 OBJECT_BODY_SHAPE_TYPE
 OBJECT_CHARACTER_TIME
+OBJECT_CLICK_ACTION
 OBJECT_CREATOR
 OBJECT_DESC
 OBJECT_GROUP

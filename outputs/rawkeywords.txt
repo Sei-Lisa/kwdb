@@ -158,6 +158,7 @@ OBJECT_RENDER_WEIGHT
 OBJECT_HOVER_HEIGHT
 OBJECT_BODY_SHAPE_TYPE
 OBJECT_LAST_OWNER_ID
+OBJECT_CLICK_ACTION
 OPT_AVATAR
 OPT_CHARACTER
 OPT_EXCLUSION_VOLUME
@@ -1390,6 +1391,7 @@ llKeyCountKeyValue
 llGetExperienceErrorMessage
 llGetExperienceList
 llClearExperiencePermissions
+llGetAttachedList
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted
