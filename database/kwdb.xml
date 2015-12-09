@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20150916000">
+<keywords version="0.0.20151209000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -106,7 +106,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="15.09.14.305056">Second Life</grid>
+  <grid id="sl" version="15.12.01.308474">Second Life</grid>
   <grid id="os" version="v0.7.5-rc1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -883,6 +883,12 @@ Used with llGetObjectDetails to get the streaming (download) cost
   </constant>
 
   <constant name="OBJECT_CLICK_ACTION" type="integer" value="28" grid="sl" version="sl:15.09.14.305056">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OBJECT_OMEGA" type="integer" value="29" grid="sl" version="sl:15.12.01.308474">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
