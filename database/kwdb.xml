@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20160114000">
+<keywords version="0.0.20160121000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -106,7 +106,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="16.01.05.309639">Second Life</grid>
+  <grid id="sl" version="16.01.19.310114">Second Life</grid>
   <grid id="os" version="v0.7.5-rc1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -4562,6 +4562,12 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="OBJECT_TOTAL_INVENTORY_COUNT" type="integer" value="31" grid="sl" version="sl:16.01.05.309639">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OBJECT_REZZER_KEY" type="integer" value="32" grid="sl" version="sl:16.01.19.310114">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
