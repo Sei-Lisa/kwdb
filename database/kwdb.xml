@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20160121000">
+<keywords version="0.0.20160602000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -3618,9 +3618,9 @@ Option for llSetKeyframedMotion, used after KFM_COMMAND to pause the motion
     </description>
   </constant>
 
-  <constant name="KFM_CMD_SET_MODE" type="integer" value="3" grid="sl">
+  <constant name="KFM_CMD_SET_MODE" type="integer" value="3" grid="sl" status="unimplemented">
     <description lang="en">
-<!-- TODO: add documentation -->
+This constant has no use for keyframed motion.
     </description>
   </constant>
 
