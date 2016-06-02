@@ -2,7 +2,7 @@
 <!--
 
 (C) Copyright 2012 Linden Research, Inc.
-(C) Copyright 2013-2015 Sei Lisa.
+(C) Copyright 2013-2016 Sei Lisa.
 Sei Lisa is the username of one of the authors in the Second Life online
 virtual world.
 
@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20160602000">
+<keywords version="0.0.20160602001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -106,7 +106,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="16.01.19.310114">Second Life</grid>
+  <grid id="sl" version="16.05.24.315768">Second Life</grid>
   <grid id="os" version="v0.7.5-rc1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -1676,6 +1676,96 @@ Passed to llAttachToAvatar to attach task to neck
   <constant name="ATTACH_AVATAR_CENTER" type="integer" value="40">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to avatar center
+    </description>
+  </constant>
+
+  <constant name="ATTACH_LHAND_RING1" type="integer" value="41" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to left ring finger
+    </description>
+  </constant>
+
+  <constant name="ATTACH_RHAND_RING1" type="integer" value="42" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to right ring finger
+    </description>
+  </constant>
+
+  <constant name="ATTACH_TAIL_BASE" type="integer" value="43" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to tail base
+    </description>
+  </constant>
+
+  <constant name="ATTACH_TAIL_TIP" type="integer" value="44" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to tail tip
+    </description>
+  </constant>
+
+  <constant name="ATTACH_LWING" type="integer" value="45" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to left wing
+    </description>
+  </constant>
+
+  <constant name="ATTACH_RWING" type="integer" value="46" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to right wing
+    </description>
+  </constant>
+
+  <constant name="ATTACH_FACE_JAW" type="integer" value="47" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to jaw
+    </description>
+  </constant>
+
+  <constant name="ATTACH_FACE_LEAR" type="integer" value="48" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to left ear (extended)
+    </description>
+  </constant>
+
+  <constant name="ATTACH_FACE_REAR" type="integer" value="49" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to right ear (extended)
+    </description>
+  </constant>
+
+  <constant name="ATTACH_FACE_LEYE" type="integer" value="50" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to left eye (extended)
+    </description>
+  </constant>
+
+  <constant name="ATTACH_FACE_REYE" type="integer" value="51" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to right eye (extended)
+    </description>
+  </constant>
+
+  <constant name="ATTACH_FACE_TOUNGE" type="integer" value="52" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to tongue
+    </description>
+  </constant>
+
+  <constant name="ATTACH_GROIN" type="integer" value="53" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to groin
+    </description>
+  </constant>
+
+  <constant name="ATTACH_HIND_LFOOT" type="integer" value="54" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to left hindfoot
+    </description>
+  </constant>
+
+  <constant name="ATTACH_HIND_RFOOT" type="integer" value="55" version="sl:16.05.24.315768">
+    <description lang="en">
+Passed to llAttachToAvatar to attach task to right hindfoot
     </description>
   </constant>
 
