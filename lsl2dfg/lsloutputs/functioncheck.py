@@ -31,7 +31,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20140625000"
+  version = "0.0.20160606000"
 
   if infilename is not None:
     inf = open(infilename, "r")
@@ -74,6 +74,12 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
             retvalchecker = ''
             if 'type' in element:
               retvalchecker = element['type'][0] + ' = '
+              if element['type'][0] in ('s',):
+                # string + key will give a type mismatch;
+                # therefore this check further ensures that functions marked
+                # as string are actually string and not key.
+                # Unfortunately it can't be used for anything else.
+                retvalchecker = retvalchecker + element['type'][0] + ' + '
 
             outf.write(("%s%s(%s);\n" % (retvalchecker, name, paramstr)).encode('utf8'))
       else:
