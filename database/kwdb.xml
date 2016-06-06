@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20160602001">
+<keywords version="0.0.20160606000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -9131,14 +9131,14 @@ str2 repeats if it is shorter than str1.
   </function>
 
   <function name="llReadKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
-    <param type="key" name="k"/>
+    <param type="string" name="k"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
   <function name="llCreateKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
-    <param type="key" name="k"/>
+    <param type="string" name="k"/>
     <param type="string" name="v"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -9146,7 +9146,7 @@ str2 repeats if it is shorter than str1.
   </function>
 
   <function name="llUpdateKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
-    <param type="key" name="k"/>
+    <param type="string" name="k"/>
     <param type="string" name="v"/>
     <param type="integer" name="checked"/>
     <param type="string" name="original_value"/>
@@ -9156,7 +9156,7 @@ str2 repeats if it is shorter than str1.
   </function>
 
   <function name="llDeleteKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
-    <param type="key" name="k"/>
+    <param type="string" name="k"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
