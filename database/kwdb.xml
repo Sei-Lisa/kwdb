@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20160606000">
+<keywords version="0.0.20160624000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -106,7 +106,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="16.05.24.315768">Second Life</grid>
+  <grid id="sl" version="16.06.20.316774">Second Life</grid>
   <grid id="os" version="v0.7.5-rc1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -1745,11 +1745,15 @@ Passed to llAttachToAvatar to attach task to right eye (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_TOUNGE" type="integer" value="52" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_TONGUE" type="integer" value="52" version="sl:16.06.20.316774">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to tongue
     </description>
   </constant>
+
+<!-- For a while this misspelled version existed (disappeared in 16.06.15.316586, BUG-18250):
+  <constant name="ATTACH_FACE_TOUNGE" type="integer" value="52" version="sl:16.05.24.315768" />
+-->
 
   <constant name="ATTACH_GROIN" type="integer" value="53" version="sl:16.05.24.315768">
     <description lang="en">
@@ -3043,6 +3047,12 @@ Used with llGetRegionFlags to find if a region restricts llPushObject calls
     </description>
   </constant>
 
+  <constant name="REGION_FLAG_BLOCK_FLYOVER" type="integer" value="0x08000000" version="sl:16.06.20.316774">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
   <constant name="HTTP_METHOD" type="integer" value="0">
     <description lang="en">
 Used with llHTTPRequest to specify the method, such as "GET" or "POST"
@@ -3708,11 +3718,13 @@ Option for llSetKeyframedMotion, used after KFM_COMMAND to pause the motion
     </description>
   </constant>
 
+<!-- Removed in version 16.06.20.316774
   <constant name="KFM_CMD_SET_MODE" type="integer" value="3" grid="sl" status="unimplemented">
     <description lang="en">
 This constant has no use for keyframed motion.
     </description>
   </constant>
+-->
 
   <constant name="ESTATE_ACCESS_ALLOWED_AGENT_ADD" type="integer" value="0x4" grid="sl">
     <description lang="en">
