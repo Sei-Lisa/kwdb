@@ -95,7 +95,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20160624000">
+<keywords version="0.0.20161017000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.7.5-rc1
@@ -106,7 +106,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="16.06.20.316774">Second Life</grid>
+  <grid id="sl" version="16.10.07.320397">Second Life</grid>
   <grid id="os" version="v0.7.5-rc1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -4675,6 +4675,23 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
+  <constant name="PRIM_ALLOW_UNSIT" type="integer" value="39" grid="sl" version="16.10.07.320397">
+	<description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_SCRIPTED_SIT_ONLY" type="integer" value="40" grid="sl" version="16.10.07.320397">
+	<description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_SIT_TARGET" type="integer" value="41" grid="sl" version="16.10.07.320397">
+	<description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
 
 
 <!-- These do not exist but are in the official viewer's keywords.ini:
@@ -9218,6 +9235,14 @@ str2 repeats if it is shorter than str1.
   <function name="llGetAttachedList" type="list" grid="sl" version="sl:15.09.14.305056">
     <param type="key" name="agent"/>
     <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llSitOnLink" type="integer" grid="sl" version="16.10.07.320397">
+	<param type="key" name="agent_id"/>
+	<param type="integer" name="link"/>
+	<description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>

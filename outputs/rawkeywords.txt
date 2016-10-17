@@ -790,6 +790,9 @@ PASS_NEVER
 OBJECT_PRIM_COUNT
 OBJECT_TOTAL_INVENTORY_COUNT
 OBJECT_REZZER_KEY
+PRIM_ALLOW_UNSIT
+PRIM_SCRIPTED_SIT_ONLY
+PRIM_SIT_TARGET
 NULL_KEY
 EOF
 TEXTURE_BLANK
@@ -1411,6 +1414,7 @@ llGetExperienceErrorMessage
 llGetExperienceList
 llClearExperiencePermissions
 llGetAttachedList
+llSitOnLink
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted
