@@ -4675,20 +4675,20 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
-  <constant name="PRIM_ALLOW_UNSIT" type="integer" value="39" grid="sl" version="16.10.07.320397">
-	<description lang="en">
+  <constant name="PRIM_ALLOW_UNSIT" type="integer" value="39" grid="sl" version="sl:16.10.07.320397">
+    <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_SCRIPTED_SIT_ONLY" type="integer" value="40" grid="sl" version="16.10.07.320397">
-	<description lang="en">
+  <constant name="PRIM_SCRIPTED_SIT_ONLY" type="integer" value="40" grid="sl" version="sl:16.10.07.320397">
+    <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_SIT_TARGET" type="integer" value="41" grid="sl" version="16.10.07.320397">
-	<description lang="en">
+  <constant name="PRIM_SIT_TARGET" type="integer" value="41" grid="sl" version="sl:16.10.07.320397">
+    <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
@@ -9239,10 +9239,10 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llSitOnLink" type="integer" grid="sl" version="16.10.07.320397">
-	<param type="key" name="agent_id"/>
-	<param type="integer" name="link"/>
-	<description lang="en">
+  <function name="llSitOnLink" type="integer" grid="sl" version="sl:16.10.07.320397">
+    <param type="key" name="agent_id"/>
+    <param type="integer" name="link"/>
+    <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
