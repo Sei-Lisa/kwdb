@@ -79,6 +79,7 @@ AGENT_CROUCHING
 AGENT_BUSY
 AGENT_ALWAYS_RUN
 AGENT_AUTOPILOT
+AGENT_MALE
 AGENT_LIST_PARCEL
 AGENT_LIST_PARCEL_OWNER
 AGENT_LIST_REGION
@@ -358,6 +359,7 @@ CHANGED_REGION_RESTART
 CHANGED_MEDIA
 CHANGED_ANIMATION
 CHANGED_STATE
+CHANGED_POSITION
 TYPE_INTEGER
 TYPE_FLOAT
 TYPE_STRING
@@ -450,6 +452,7 @@ PRIM_SCULPT_FLAG_MIRROR
 PRIM_PHYSICS_SHAPE_PRIM
 PRIM_PHYSICS_SHAPE_CONVEX
 PRIM_PHYSICS_SHAPE_NONE
+PRIM_PHYSICS_MATERIAL
 DENSITY
 DENSITY
 FRICTION
@@ -814,6 +817,15 @@ JSON_NULL
 JSON_TRUE
 JSON_FALSE
 JSON_DELETE
+JSON_ARRAY
+JSON_OBJECT
+JSON_INVALID
+JSON_NUMBER
+JSON_STRING
+JSON_TRUE
+JSON_FALSE
+JSON_NULL
+JSON_APPEND
 PI
 TWO_PI
 PI_BY_TWO
@@ -878,6 +890,7 @@ OS_NPC_NOT_OWNED
 OS_NPC_NO_FLY
 OS_NPC_RUNNING
 OS_NPC_SENSE_AS_AGENT
+OS_NPC_OBJECT_GROUP
 OS_NPC_SIT_NOW
 WL_WATER_COLOR
 WL_WATER_FOG_DENSITY_EXPONENT
@@ -1453,7 +1466,9 @@ osForceAttachToAvatar
 osForceAttachToAvatarFromInventory
 osForceAttachToOtherAvatarFromInventory
 osForceDetachFromAvatar
+osGetAvatarHomeURI
 osGetNumberOfAttachments
+osForceOtherSit
 osMessageAttachments
 osMovePen
 osDrawLine
@@ -1489,6 +1504,8 @@ osParcelJoin
 osParcelSubdivide
 osSetParcelDetails
 osParcelSetDetails
+osGetPhysicsEngineName
+osGetPhysicsEngineType
 osGetScriptEngineName
 osGetSimulatorVersion
 osMessageObject
@@ -1543,11 +1560,15 @@ osOwnerSaveAppearance
 osAgentSaveAppearance
 osGetMapTexture
 osGetRegionMapTexture
+osGetRegionSize
 osGetRegionStats
 osGetSimulatorMemory
 osKickAvatar
 osSetSpeed
 osGetHealth
+osSetHealth
+osGetHealRate
+osSetHealRate
 osCauseHealing
 osCauseDamage
 osCauseDamage
@@ -1556,7 +1577,11 @@ osSetPrimitiveParams
 osSetProjectionParams
 osSetProjectionParams
 osGetAvatarList
+osGetGender
 osUnixTimeToTimestamp
+osForceBreakAllLinks
+osForceBreakLink
+osForceCreateLink
 osGetInventoryDesc
 osInviteToGroup
 osEjectFromGroup
@@ -1573,6 +1598,11 @@ osDropAttachmentAt
 osForceDropAttachmentAt
 osListenRegex
 osRegexIsMatch
+osRequestURL
+osRequestSecureURL
+osCheckODE
+osCollisionSound
+osVolumeDetect
 aaSetCloudDensity
 aaUpdateDatabase
 aaQueryDatabase
