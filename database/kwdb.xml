@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20170107000">
+<keywords version="0.0.20170108000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc1
@@ -241,7 +241,7 @@ Access components by .x, .y, .z, or .s
     </description>
   </type>
 
-  <type name="quaternion">
+  <type name="quaternion" grid="sl aa">
     <description lang="en">
 Rotation type of 4 floats. Used to represent rotation.
 Access components by .x, .y, .z, or .s
@@ -1686,73 +1686,73 @@ Passed to llAttachToAvatar to attach task to avatar center
     </description>
   </constant>
 
-  <constant name="ATTACH_LHAND_RING1" type="integer" value="41" version="sl:16.05.24.315768">
+  <constant name="ATTACH_LHAND_RING1" type="integer" value="41" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left ring finger
     </description>
   </constant>
 
-  <constant name="ATTACH_RHAND_RING1" type="integer" value="42" version="sl:16.05.24.315768">
+  <constant name="ATTACH_RHAND_RING1" type="integer" value="42" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right ring finger
     </description>
   </constant>
 
-  <constant name="ATTACH_TAIL_BASE" type="integer" value="43" version="sl:16.05.24.315768">
+  <constant name="ATTACH_TAIL_BASE" type="integer" value="43" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to tail base
     </description>
   </constant>
 
-  <constant name="ATTACH_TAIL_TIP" type="integer" value="44" version="sl:16.05.24.315768">
+  <constant name="ATTACH_TAIL_TIP" type="integer" value="44" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to tail tip
     </description>
   </constant>
 
-  <constant name="ATTACH_LWING" type="integer" value="45" version="sl:16.05.24.315768">
+  <constant name="ATTACH_LWING" type="integer" value="45" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left wing
     </description>
   </constant>
 
-  <constant name="ATTACH_RWING" type="integer" value="46" version="sl:16.05.24.315768">
+  <constant name="ATTACH_RWING" type="integer" value="46" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right wing
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_JAW" type="integer" value="47" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_JAW" type="integer" value="47" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to jaw
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_LEAR" type="integer" value="48" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_LEAR" type="integer" value="48" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left ear (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_REAR" type="integer" value="49" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_REAR" type="integer" value="49" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right ear (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_LEYE" type="integer" value="50" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_LEYE" type="integer" value="50" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left eye (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_REYE" type="integer" value="51" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_REYE" type="integer" value="51" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right eye (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_TONGUE" type="integer" value="52" version="sl:16.06.20.316774">
+  <constant name="ATTACH_FACE_TONGUE" type="integer" value="52" version="sl:16.06.20.316774" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to tongue
     </description>
@@ -1762,19 +1762,19 @@ Passed to llAttachToAvatar to attach task to tongue
   <constant name="ATTACH_FACE_TOUNGE" type="integer" value="52" version="sl:16.05.24.315768" />
 -->
 
-  <constant name="ATTACH_GROIN" type="integer" value="53" version="sl:16.05.24.315768">
+  <constant name="ATTACH_GROIN" type="integer" value="53" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to groin
     </description>
   </constant>
 
-  <constant name="ATTACH_HIND_LFOOT" type="integer" value="54" version="sl:16.05.24.315768">
+  <constant name="ATTACH_HIND_LFOOT" type="integer" value="54" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left hindfoot
     </description>
   </constant>
 
-  <constant name="ATTACH_HIND_RFOOT" type="integer" value="55" version="sl:16.05.24.315768">
+  <constant name="ATTACH_HIND_RFOOT" type="integer" value="55" version="sl:16.05.24.315768" grid="sl">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right hindfoot
     </description>
@@ -3066,7 +3066,7 @@ Used with llGetRegionFlags to find if a region restricts llPushObject calls
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_BLOCK_FLYOVER" type="integer" value="0x08000000" version="sl:16.06.20.316774">
+  <constant name="REGION_FLAG_BLOCK_FLYOVER" type="integer" value="0x08000000" version="sl:16.06.20.316774" grid="sl">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -3841,13 +3841,8 @@ Returned by llCastRay when the raycast failed because simulator performance is l
     </description>
   </constant>
 
-  <constant name="RCERR_CAST_TIME_EXCEEDED" type="integer" value="-3" grid="sl">
-    <description lang="en">
-Returned by llCastRay when the raycast failed because the parcel or agent has exceeded the maximum time allowed for raycasting
-    </description>
-  </constant>
-
-  <constant name="RCERR_CAST_TIME_EXCEEDED" type="integer" value="3" grid="os">
+<!-- Earlier than 0.9.0, the value in opensim had been 3. It was changed to -3 due to http://opensimulator.org/mantis/view.php?id=7591 --> 
+  <constant name="RCERR_CAST_TIME_EXCEEDED" type="integer" value="-3" grid="sl os">
     <description lang="en">
 Returned by llCastRay when the raycast failed because the parcel or agent has exceeded the maximum time allowed for raycasting
     </description>
@@ -4931,41 +4926,53 @@ Used with http_request when a public URL is not available
 
   <!-- Float constants -->
 
-  <constant name="PI" type="float" value="3.14159265">
+  <constant name="PI" type="float" value="3.14159265" grid="sl aa">
     <description lang="en">
 3.1415926535897932384626433832795
     </description>
   </constant>
 
-  <constant name="TWO_PI" type="float" value="6.2831853">
+  <constant name="PI" type="float" value="3.14159274f" grid="os"/>
+
+  <constant name="TWO_PI" type="float" value="6.2831853" grid="sl aa">
     <description lang="en">
 6.283185307179586476925286766559
     </description>
   </constant>
 
-  <constant name="PI_BY_TWO" type="float" value="1.57079632">
+  <constant name="TWO_PI" type="float" value="6.28318548f" grid="os"/>
+
+  <constant name="PI_BY_TWO" type="float" value="1.57079632" grid="sl aa">
     <description lang="en">
 1.5707963267948966192313216916398
     </description>
   </constant>
 
-  <constant name="DEG_TO_RAD" type="float" value="0.017453292">
+  <constant name="PI_BY_TWO" type="float" value="1.57079637f" grid="os"/>
+
+  <constant name="DEG_TO_RAD" type="float" value="0.017453292" grid="sl aa">
     <description lang="en">
 To convert from degrees to radians
     </description>
   </constant>
 
-  <constant name="RAD_TO_DEG" type="float" value="57.295779">
+  <constant name="DEG_TO_RAD" type="float" value="0.01745329238f" grid="os"/>
+
+  <constant name="RAD_TO_DEG" type="float" value="57.295779" grid="sl aa">
     <description lang="en">
 To convert from radians to degrees
     </description>
   </constant>
 
-  <constant name="SQRT2" type="float" value="1.4142135">
+  <constant name="RAD_TO_DEG" type="float" value="57.29578f" grid="os"/>
+
+  <constant name="SQRT2" type="float" value="1.4142135" grid="sl aa">
     <description lang="en">
 1.4142135623730950488016887242097
     </description>
   </constant>
+
+  <constant name="SQRT2" type="float" value="1.414213538f" grid="os"/>
 
   <!-- Vector and rotation constants -->
 
@@ -5277,12 +5284,12 @@ process message parameter as regex
     </description>
   </constant>
 
-  <constant name="OS_NPC" type="integer" value="0x01000000" grid="os" status="deprecated">
+ <!--  <constant name="OS_NPC" type="integer" value="0x01000000" grid="os" status="deprecated">
     <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
+ --><!-- TODO: add documentation -->
+<!--     </description>
   </constant>
-
+ -->
   <constant name="OS_NPC_CREATOR_OWNED" type="integer" value="0x1" grid="os">
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -8879,7 +8886,9 @@ Returns the mass of the linkset in kilograms
     </description>
   </function>
 
-  <function name="llSetPhysicsMaterial" grid="sl os">
+<!-- Due to the bug http://opensimulator.org/mantis/view.php?id=8117 it is unusable as of OpenSimulator 0.9.0.0-rc1 -->
+  <!-- <function name="llSetPhysicsMaterial" grid="sl os"> -->
+  <function name="llSetPhysicsMaterial" grid="sl">
     <param type="integer" name="flags"/>
     <param type="float" name="gravity_multiplier"/>
     <param type="float" name="restitution"/>
@@ -9391,7 +9400,22 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="osSetDynamicTextureURLBlendFace" type="string" grid="os aa">
+  <function name="osSetDynamicTextureURLBlendFace" type="string" grid="os">
+    <param type="string" name="dynamicID"/>
+    <param type="string" name="contentType"/>
+    <param type="string" name="url"/>
+    <param type="string" name="extraParams"/>
+    <param type="integer" name="blend"/>
+    <param type="integer" name="disp"/>
+    <param type="integer" name="timer"/>
+    <param type="integer" name="alpha"/>
+    <param type="integer" name="face"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetDynamicTextureURLBlendFace" type="string" grid="aa">
     <param type="string" name="dynamicID"/>
     <param type="string" name="contentType"/>
     <param type="string" name="url"/>
@@ -9429,7 +9453,22 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="osSetDynamicTextureDataBlendFace" type="string" grid="os aa">
+  <function name="osSetDynamicTextureDataBlendFace" type="string" grid="os">
+    <param type="string" name="dynamicID"/>
+    <param type="string" name="contentType"/>
+    <param type="string" name="data"/>
+    <param type="string" name="extraParams"/>
+    <param type="integer" name="blend"/>
+    <param type="integer" name="disp"/>
+    <param type="integer" name="timer"/>
+    <param type="integer" name="alpha"/>
+    <param type="integer" name="face"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetDynamicTextureDataBlendFace" type="string" grid="aa">
     <param type="string" name="dynamicID"/>
     <param type="string" name="contentType"/>
     <param type="string" name="data"/>
@@ -9498,7 +9537,14 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="osConsoleCommand" type="bool" grid="os aa">
+  <function name="osConsoleCommand" type="integer" grid="os">
+    <param type="string" name="Command"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osConsoleCommand" type="bool" grid="aa">
     <param type="string" name="Command"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -9854,7 +9900,16 @@ Sends a specified message to the specified avatar's attachments on the specified
     </description>
   </function>
 
-  <function name="osSetRegionSunSettings" grid="os aa">
+  <function name="osSetRegionSunSettings" grid="os">
+    <param type="integer" name="useEstateSun"/>
+    <param type="integer" name="sunFixed"/>
+    <param type="float" name="sunHour"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetRegionSunSettings" grid="aa">
     <param type="bool" name="useEstateSun"/>
     <param type="bool" name="sunFixed"/>
     <param type="float" name="sunHour"/>
@@ -9863,7 +9918,15 @@ Sends a specified message to the specified avatar's attachments on the specified
     </description>
   </function>
 
-  <function name="osSetEstateSunSettings" grid="os aa">
+  <function name="osSetEstateSunSettings" grid="os">
+    <param type="integer" name="sunFixed"/>
+    <param type="float" name="sunHour"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetEstateSunSettings" grid="aa">
     <param type="bool" name="sunFixed"/>
     <param type="float" name="sunHour"/>
     <description lang="en">
@@ -10451,7 +10514,7 @@ Get the owner of the NPC
 
   <function name="osSetHealth" grid="os">
     <param type="string" name="avatar"/>
-    <param type="double" name="health"/>
+    <param type="float" name="health"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -10466,7 +10529,7 @@ Get the owner of the NPC
 
   <function name="osSetHealRate" grid="os">
     <param type="string" name="avatar"/>
-    <param type="double" name="healrate"/>
+    <param type="float" name="healrate"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -10515,7 +10578,18 @@ Get the owner of the NPC
     </description>
   </function>
 
-  <function name="osSetProjectionParams" grid="os aa">
+  <function name="osSetProjectionParams" grid="os">
+    <param type="integer" name="projection"/>
+    <param type="key" name="texture"/>
+    <param type="float" name="fov"/>
+    <param type="float" name="focus"/>
+    <param type="float" name="amb"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetProjectionParams" grid="aa">
     <param type="bool" name="projection"/>
     <param type="key" name="texture"/>
     <param type="float" name="fov"/>
@@ -10526,7 +10600,19 @@ Get the owner of the NPC
     </description>
   </function>
 
-  <function name="osSetProjectionParams" grid="os aa">
+  <function name="osSetProjectionParams" grid="os">
+    <param type="key" name="prim"/>
+    <param type="integer" name="projection"/>
+    <param type="key" name="texture"/>
+    <param type="float" name="fov"/>
+    <param type="float" name="focus"/>
+    <param type="float" name="amb"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetProjectionParams" grid="aa">
     <param type="key" name="prim"/>
     <param type="bool" name="projection"/>
     <param type="key" name="texture"/>
@@ -10726,7 +10812,7 @@ Wraps to bool Regex.IsMatch(string input, string pattern)
 
   <function name="osCollisionSound" grid="os">
     <param type="string" name="impact_sound"/>
-    <param type="double" name="impact_volume"/>
+    <param type="float" name="impact_volume"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>    

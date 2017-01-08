@@ -653,7 +653,6 @@ RCERR_UNKNOWN
 RCERR_SIM_PERF_LOW
 RCERR_CAST_TIME_EXCEEDED
 RCERR_CAST_TIME_EXCEEDED
-RCERR_CAST_TIME_EXCEEDED
 RC_REJECT_TYPES
 RC_REJECT_TYPES
 RC_DETECT_PHANTOM
@@ -827,10 +826,16 @@ JSON_FALSE
 JSON_NULL
 JSON_APPEND
 PI
+PI
+TWO_PI
 TWO_PI
 PI_BY_TWO
+PI_BY_TWO
+DEG_TO_RAD
 DEG_TO_RAD
 RAD_TO_DEG
+RAD_TO_DEG
+SQRT2
 SQRT2
 ZERO_VECTOR
 TOUCH_INVALID_TEXCOORD
@@ -882,7 +887,6 @@ OS_ATTACH_MSG_OBJECT_CREATOR
 OS_ATTACH_MSG_SCRIPT_CREATOR
 OS_LISTEN_REGEX_NAME
 OS_LISTEN_REGEX_MESSAGE
-OS_NPC
 OS_NPC_CREATOR_OWNED
 OS_NPC_FLY
 OS_NPC_LAND_AT_TARGET
@@ -1438,8 +1442,10 @@ lsClearWindlightScene
 osSetDynamicTextureURL
 osSetDynamicTextureURLBlend
 osSetDynamicTextureURLBlendFace
+osSetDynamicTextureURLBlendFace
 osSetDynamicTextureData
 osSetDynamicTextureDataBlend
+osSetDynamicTextureDataBlendFace
 osSetDynamicTextureDataBlendFace
 osGetTerrainHeight
 osTerrainGetHeight
@@ -1448,6 +1454,7 @@ osTerrainSetHeight
 osTerrainFlush
 osRegionRestart
 osRegionNotice
+osConsoleCommand
 osConsoleCommand
 osSetParcelMediaURL
 osSetPrimFloatOnWater
@@ -1491,6 +1498,8 @@ osSetStateEvents
 osList2Double
 osSetRegionWaterHeight
 osSetRegionSunSettings
+osSetRegionSunSettings
+osSetEstateSunSettings
 osSetEstateSunSettings
 osGetCurrentSunHour
 osGetSunParam
@@ -1574,6 +1583,8 @@ osCauseDamage
 osCauseDamage
 osGetPrimitiveParams
 osSetPrimitiveParams
+osSetProjectionParams
+osSetProjectionParams
 osSetProjectionParams
 osSetProjectionParams
 osGetAvatarList
