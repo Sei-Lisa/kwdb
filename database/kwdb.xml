@@ -9650,7 +9650,7 @@ Detach the object containing this script from the avatar it is attached to witho
   <function name="osGetAvatarHomeURI" type="string" grid="os">
     <param type="string" name="uuid"/>
     <description lang="en">
-RReturns an avatar's Home URI
+<!-- TODO: add documentation -->
     </description>
   </function>
 
@@ -9666,7 +9666,7 @@ Returns a strided list of the specified attachment points and the number of atta
     <param type="string" name="avatar"/>
     <param type="string" name="target"/>
     <description lang="en">
-Allows a script (in the target prim if target omitted) to force an avatar to sit on it using normal methods as if called by the client.
+<!-- TODO: add documentation -->
     </description>
   </function>
 
@@ -9963,13 +9963,13 @@ Sends a specified message to the specified avatar's attachments on the specified
 
   <function name="osGetPhysicsEngineName" type="string" grid="os">
     <description lang="en">
-Returns a string containing the name and version number of the physics engine.
+<!-- TODO: add documentation -->
     </description>
   </function>
 
   <function name="osGetPhysicsEngineType" type="string" grid="os">
     <description lang="en">
-Returns a string containing the name of the physics engine.
+<!-- TODO: add documentation -->
     </description>
   </function>
 
@@ -10408,7 +10408,7 @@ Get the owner of the NPC
 
   <function name="osGetRegionSize" type="vector" grid="os">
     <description lang="en">
-Returns the size of the region in meters.
+<!-- TODO: add documentation -->
     </description>
   </function>
 
@@ -10452,14 +10452,14 @@ Returns the size of the region in meters.
     <param type="string" name="avatar"/>
     <param type="double" name="health"/>
     <description lang="en">
-Sets an avatars health by key to the specified float value.
+<!-- TODO: add documentation -->
     </description>
   </function>
 
   <function name="osGetHealRate" type="float" grid="os">
     <param type="string" name="avatar"/>
     <description lang="en">
-Gets the current automatic healing rate in % per second.
+<!-- TODO: add documentation -->
     </description>
   </function>
 
@@ -10467,7 +10467,7 @@ Gets the current automatic healing rate in % per second.
     <param type="string" name="avatar"/>
     <param type="double" name="healrate"/>
     <description lang="en">
-Gets the automatic healing rate in % per second. A value of zero can disable automatic heal.
+<!-- TODO: add documentation -->
     </description>
   </function>
 
@@ -10546,7 +10546,7 @@ Gets the automatic healing rate in % per second. A value of zero can disable aut
   <function name="osGetGender" type="string" grid="os">
     <param type="key" name="rawAvatarId"/>
     <description lang="en">
-Get the gender as specified in avatar appearance for a given avatar key.
+<!-- TODO: add documentation -->
     </description>
   </function>
 
@@ -10562,14 +10562,14 @@ Get the gender as specified in avatar appearance for a given avatar key.
 
   <function name="osForceBreakAllLinks" grid="os">
     <description lang="en">
-Identical to llBreakAllLinks() except that it doesn't require the link permission to be granted.
+<!-- TODO: add documentation -->
     </description>    
   </function>
 
   <function name="osForceBreakLink" grid="os">
     <param type="integer" name="linknum"/>
     <description lang="en">
-Identical to llBreakLink(integer link) except that it doesn't require the link permission to be granted.
+<!-- TODO: add documentation -->
     </description>    
   </function>
 
@@ -10577,7 +10577,7 @@ Identical to llBreakLink(integer link) except that it doesn't require the link p
     <param type="string" name="target"/>
     <param type="integer" name="parent"/>
     <description lang="en">
-Idential to llCreateLink() except that it doesn't require the link permission to be granted.
+<!-- TODO: add documentation -->
     </description>    
   </function>
 
@@ -10706,14 +10706,14 @@ Wraps to bool Regex.IsMatch(string input, string pattern)
   <function name="osRequestURL" grid="os">
     <param type="list" name="options"/>
     <description lang="en">
-Requests one HTTP:// url
+<!-- TODO: add documentation -->
     </description>
   </function>
 
   <function name="osRequestSecureURL" grid="os">
     <param type="list" name="options"/>
     <description lang="en">
-Requests one HTTPS:// url
+<!-- TODO: add documentation -->
     </description>
   </function>
 
@@ -10727,7 +10727,7 @@ Requests one HTTPS:// url
     <param type="string" name="impact_sound"/>
     <param type="double" name="impact_volume"/>
     <description lang="en">
-Sets collision sound to impact_sound with specified volume.
+<!-- TODO: add documentation -->
     </description>    
   </function>
 
