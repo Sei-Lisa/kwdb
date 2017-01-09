@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20170109000">
+<keywords version="0.0.20170109001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -254,7 +254,7 @@ List of various data types
     </description>
   </type>
 
-  <type name="bool" grid="os aa">
+  <type name="bool" grid="aa">
     <description lang="en">
 Boolean type, either TRUE or FALSE
     </description>
