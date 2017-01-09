@@ -1565,6 +1565,8 @@ osNpcPlayAnimation
 osNpcStopAnimation
 osNpcTouch
 osNpcWhisper
+osNpcSetProfileAbout
+osNpcSetProfileImage
 osOwnerSaveAppearance
 osAgentSaveAppearance
 osGetMapTexture
@@ -1581,6 +1583,7 @@ osSetHealRate
 osCauseHealing
 osCauseDamage
 osCauseDamage
+osDie
 osGetPrimitiveParams
 osSetPrimitiveParams
 osSetProjectionParams

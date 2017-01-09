@@ -96,11 +96,11 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20170108000">
+<keywords version="0.0.20170109000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
-      OpenSim revision 0.9.0.0-rc1
-          http://opensimulator.org/dist/opensim-0.9.0.0-rc1-source.tar.gz
+      OpenSim revision 0.9.0.0-rc2
+          http://opensimulator.org/dist/opensim-0.9.0.0-rc2-source.tar.gz
 
       AuroraSim revision 0049c9335f8b91ab119ce4fee5ba1d50d4f6f017
           https://github.com/aurora-sim/Aurora-Sim/commit/0049c9335f8b91ab119ce4fee5ba1d50d4f6f017
@@ -108,7 +108,7 @@ Example: grid="os aa"
 
   <!-- Grids supported and their versions -->
   <grid id="sl" version="16.12.03.322072">Second Life</grid>
-  <grid id="os" version="v0.9.0.0-rc1">OpenSimulator</grid>
+  <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
   <!-- Defaults for absent descriptions -->
@@ -889,13 +889,13 @@ Used with llGetObjectDetails to get the streaming (download) cost
     </description>
   </constant>
 
-  <constant name="OBJECT_CLICK_ACTION" type="integer" value="28" grid="sl" version="sl:15.09.14.305056">
+  <constant name="OBJECT_CLICK_ACTION" type="integer" value="28" grid="sl os" version="sl:15.09.14.305056">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_OMEGA" type="integer" value="29" grid="sl" version="sl:15.12.01.308474">
+  <constant name="OBJECT_OMEGA" type="integer" value="29" grid="sl os" version="sl:15.12.01.308474">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -1686,73 +1686,73 @@ Passed to llAttachToAvatar to attach task to avatar center
     </description>
   </constant>
 
-  <constant name="ATTACH_LHAND_RING1" type="integer" value="41" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_LHAND_RING1" type="integer" value="41" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left ring finger
     </description>
   </constant>
 
-  <constant name="ATTACH_RHAND_RING1" type="integer" value="42" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_RHAND_RING1" type="integer" value="42" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right ring finger
     </description>
   </constant>
 
-  <constant name="ATTACH_TAIL_BASE" type="integer" value="43" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_TAIL_BASE" type="integer" value="43" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to tail base
     </description>
   </constant>
 
-  <constant name="ATTACH_TAIL_TIP" type="integer" value="44" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_TAIL_TIP" type="integer" value="44" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to tail tip
     </description>
   </constant>
 
-  <constant name="ATTACH_LWING" type="integer" value="45" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_LWING" type="integer" value="45" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left wing
     </description>
   </constant>
 
-  <constant name="ATTACH_RWING" type="integer" value="46" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_RWING" type="integer" value="46" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right wing
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_JAW" type="integer" value="47" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_FACE_JAW" type="integer" value="47" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to jaw
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_LEAR" type="integer" value="48" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_FACE_LEAR" type="integer" value="48" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left ear (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_REAR" type="integer" value="49" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_FACE_REAR" type="integer" value="49" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right ear (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_LEYE" type="integer" value="50" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_FACE_LEYE" type="integer" value="50" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left eye (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_REYE" type="integer" value="51" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_FACE_REYE" type="integer" value="51" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right eye (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_TONGUE" type="integer" value="52" version="sl:16.06.20.316774" grid="sl">
+  <constant name="ATTACH_FACE_TONGUE" type="integer" value="52" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to tongue
     </description>
@@ -1762,19 +1762,19 @@ Passed to llAttachToAvatar to attach task to tongue
   <constant name="ATTACH_FACE_TOUNGE" type="integer" value="52" version="sl:16.05.24.315768" />
 -->
 
-  <constant name="ATTACH_GROIN" type="integer" value="53" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_GROIN" type="integer" value="53" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to groin
     </description>
   </constant>
 
-  <constant name="ATTACH_HIND_LFOOT" type="integer" value="54" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_HIND_LFOOT" type="integer" value="54" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left hindfoot
     </description>
   </constant>
 
-  <constant name="ATTACH_HIND_RFOOT" type="integer" value="55" version="sl:16.05.24.315768" grid="sl">
+  <constant name="ATTACH_HIND_RFOOT" type="integer" value="55" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right hindfoot
     </description>
@@ -4671,55 +4671,55 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
-  <constant name="OBJECT_PRIM_COUNT" type="integer" value="30" grid="sl" version="sl:16.01.05.309639">
+  <constant name="OBJECT_PRIM_COUNT" type="integer" value="30" grid="sl os" version="sl:16.01.05.309639">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_TOTAL_INVENTORY_COUNT" type="integer" value="31" grid="sl" version="sl:16.01.05.309639">
+  <constant name="OBJECT_TOTAL_INVENTORY_COUNT" type="integer" value="31" grid="sl os" version="sl:16.01.05.309639">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_REZZER_KEY" type="integer" value="32" grid="sl" version="sl:16.01.19.310114">
+  <constant name="OBJECT_REZZER_KEY" type="integer" value="32" grid="sl os" version="sl:16.01.19.310114">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_ALLOW_UNSIT" type="integer" value="39" grid="sl" version="sl:16.10.07.320397">
+  <constant name="PRIM_ALLOW_UNSIT" type="integer" value="39" grid="sl os" version="sl:16.10.07.320397">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_SCRIPTED_SIT_ONLY" type="integer" value="40" grid="sl" version="sl:16.10.07.320397">
+  <constant name="PRIM_SCRIPTED_SIT_ONLY" type="integer" value="40" grid="sl os" version="sl:16.10.07.320397">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_SIT_TARGET" type="integer" value="41" grid="sl" version="sl:16.10.07.320397">
+  <constant name="PRIM_SIT_TARGET" type="integer" value="41" grid="sl os" version="sl:16.10.07.320397">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_GROUP_TAG" type="integer" value="33" grid="sl" version="sl:16.11.02.321369">
+  <constant name="OBJECT_GROUP_TAG" type="integer" value="33" grid="sl os" version="sl:16.11.02.321369">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_TEMP_ATTACHED" type="integer" value="34" grid="sl" version="sl:16.11.02.321369">
+  <constant name="OBJECT_TEMP_ATTACHED" type="integer" value="34" grid="sl os" version="sl:16.11.02.321369">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_ATTACHED_SLOTS_AVAILABLE" type="integer" value="35" grid="sl" version="sl:16.12.03.322072">
+  <constant name="OBJECT_ATTACHED_SLOTS_AVAILABLE" type="integer" value="35" grid="sl os" version="sl:16.12.03.322072">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -8886,9 +8886,7 @@ Returns the mass of the linkset in kilograms
     </description>
   </function>
 
-<!-- Due to the bug http://opensimulator.org/mantis/view.php?id=8117 it is unusable as of OpenSimulator 0.9.0.0-rc1 -->
-  <!-- <function name="llSetPhysicsMaterial" grid="sl os"> -->
-  <function name="llSetPhysicsMaterial" grid="sl">
+  <function name="llSetPhysicsMaterial" grid="sl os">
     <param type="integer" name="flags"/>
     <param type="float" name="gravity_multiplier"/>
     <param type="float" name="restitution"/>
@@ -9214,20 +9212,20 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llScaleByFactor" type="integer" grid="sl">
+  <function name="llScaleByFactor" type="integer" grid="sl os">
     <param type="float" name="scaling_factor"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetMinScaleFactor" type="float" grid="sl">
+  <function name="llGetMinScaleFactor" type="float" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetMaxScaleFactor" type="float" grid="sl">
+  <function name="llGetMaxScaleFactor" type="float" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -9328,7 +9326,7 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llGetAttachedList" type="list" grid="sl" version="sl:15.09.14.305056">
+  <function name="llGetAttachedList" type="list" grid="sl os" version="sl:15.09.14.305056">
     <param type="key" name="agent"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -10442,6 +10440,16 @@ Get the owner of the NPC
     </description>
   </function>
 
+  <function name="osNpcSetProfileAbout" grid="os">
+    <param type="key" name="npc"/>
+    <param type="string" name="about"/>
+  </function>
+
+  <function name="osNpcSetProfileImage" grid="os">
+    <param type="key" name="npc"/>
+    <param type="string" name="image"/>
+  </function>
+
   <function name="osOwnerSaveAppearance" type="key" grid="os">
     <param type="string" name="notecard"/>
     <description lang="en">
@@ -10560,6 +10568,10 @@ Get the owner of the NPC
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
+  </function>
+
+  <function name="osDie" grid="os">
+    <param type="key" name="uuid"/>
   </function>
 
   <function name="osGetPrimitiveParams" type="list" grid="os aa">
