@@ -1722,7 +1722,7 @@ Passed to llAttachToAvatar to attach task to right wing
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_JAW" type="integer" value="47" grid="sl os" version="sl:16.06.20.316774">
+  <constant name="ATTACH_FACE_JAW" type="integer" value="47" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to jaw
     </description>
@@ -1752,7 +1752,7 @@ Passed to llAttachToAvatar to attach task to right eye (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_TONGUE" type="integer" value="52" grid="sl os" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_TONGUE" type="integer" value="52" grid="sl os" version="sl:16.06.20.316774">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to tongue
     </description>
