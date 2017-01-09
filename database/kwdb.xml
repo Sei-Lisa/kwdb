@@ -3,7 +3,7 @@
 
 (C) Copyright 2012 Linden Research, Inc.
 (C) Copyright 2013-2016 Sei Lisa.
-Partial Copyright (C) 2017 Mako Nozaki.
+(C) Copyright 2017 Mako Nozaki.
 Sei Lisa and Mako Nozaki are the usernames of the authors in the Second Life
 online virtual world.
 
@@ -1722,7 +1722,7 @@ Passed to llAttachToAvatar to attach task to right wing
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_JAW" type="integer" value="47" grid="sl os" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_JAW" type="integer" value="47" grid="sl os" version="sl:16.06.20.316774">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to jaw
     </description>
@@ -3066,7 +3066,7 @@ Used with llGetRegionFlags to find if a region restricts llPushObject calls
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_BLOCK_FLYOVER" type="integer" value="0x08000000" version="sl:16.06.20.316774" grid="sl">
+  <constant name="REGION_FLAG_BLOCK_FLYOVER" type="integer" value="0x08000000" grid="sl" version="sl:16.06.20.316774">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -5284,12 +5284,13 @@ process message parameter as regex
     </description>
   </constant>
 
- <!--  <constant name="OS_NPC" type="integer" value="0x01000000" grid="os" status="deprecated">
+<!-- Removed in version 0.9.0.0-rc1 (Commit af05aaaf36c402cd774acd62893113681596474c)
+  <constant name="OS_NPC" type="integer" value="0x01000000" grid="os" status="unimplemented">
     <description lang="en">
- --><!-- TODO: add documentation -->
-<!--     </description>
+    </description>
   </constant>
- -->
+-->
+
   <constant name="OS_NPC_CREATOR_OWNED" type="integer" value="0x1" grid="os">
     <description lang="en">
 <!-- TODO: add documentation -->
