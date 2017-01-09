@@ -3,8 +3,9 @@
 
 (C) Copyright 2012 Linden Research, Inc.
 (C) Copyright 2013-2016 Sei Lisa.
-Sei Lisa is the username of one of the authors in the Second Life online
-virtual world.
+(C) Copyright 2017 Mako Nozaki.
+Sei Lisa and Mako Nozaki are the usernames of the authors in the Second Life
+online virtual world.
 
     LSL2 Keywords Database
 
@@ -95,11 +96,11 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20161208000">
+<keywords version="0.0.20170109000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
-      OpenSim revision 0.7.5-rc1
-          http://dist.opensimulator.org/opensim-0.7.5-rc1-source.tar.gz
+      OpenSim revision 0.9.0.0-rc2
+          http://opensimulator.org/dist/opensim-0.9.0.0-rc2-source.tar.gz
 
       AuroraSim revision 0049c9335f8b91ab119ce4fee5ba1d50d4f6f017
           https://github.com/aurora-sim/Aurora-Sim/commit/0049c9335f8b91ab119ce4fee5ba1d50d4f6f017
@@ -107,7 +108,7 @@ Example: grid="os aa"
 
   <!-- Grids supported and their versions -->
   <grid id="sl" version="16.12.03.322072">Second Life</grid>
-  <grid id="os" version="v0.7.5-rc1">OpenSimulator</grid>
+  <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
   <!-- Defaults for absent descriptions -->
@@ -240,7 +241,7 @@ Access components by .x, .y, .z, or .s
     </description>
   </type>
 
-  <type name="quaternion">
+  <type name="quaternion" grid="sl aa">
     <description lang="en">
 Rotation type of 4 floats. Used to represent rotation.
 Access components by .x, .y, .z, or .s
@@ -335,7 +336,7 @@ Passed in the llSetStatus library function. If TRUE, object can't be grabbed and
     </description>
   </constant>
 
-  <constant name="STATUS_BLOCK_GRAB_OBJECT" type="integer" value="0x400" grid="sl aa">
+  <constant name="STATUS_BLOCK_GRAB_OBJECT" type="integer" value="0x400">
     <description lang="en">
 Passed in the llSetStatus library function. If TRUE, the object can't be moved by grabs.
 This flag applies to the entire linkset.
@@ -524,7 +525,7 @@ Passed to llRequestPermissions library function to request permission to change 
     </description>
   </constant>
 
-  <constant name="PERMISSION_TELEPORT" type="integer" value="0x1000" grid="sl aa">
+  <constant name="PERMISSION_TELEPORT" type="integer" value="0x1000">
     <description lang="en">
 Passed to llRequestPermissions library function to request permission to teleport an agent
     </description>
@@ -536,7 +537,7 @@ Passed to llRequestPermissions library function to request permission to telepor
     </description>
   </constant>
 
-  <constant name="PERMISSION_OVERRIDE_ANIMATIONS" type="integer" value="0x8000" grid="sl">
+  <constant name="PERMISSION_OVERRIDE_ANIMATIONS" type="integer" value="0x8000" grid="sl os">
     <description lang="en">
 Passed to llRequestPermissions library function to request permission to override animations
     </description>
@@ -651,6 +652,12 @@ Returned by llGetAgentInfo if the Agent is under autopilot control
     </description>
   </constant>
 
+  <constant name="AGENT_MALE" type="integer" value="0x2000" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
   <constant name="AGENT_LIST_PARCEL" type="integer" value="1">
     <description lang="en">
 Passed to llGetAgentList to return only agents on the same parcel where the script is running
@@ -686,16 +693,16 @@ Passed to llGetAgentList to return any/all agents in the region
   <constant name="PSYS_PART_TARGET_POS_MASK" type="integer" value="0x40"/>
   <constant name="PSYS_PART_TARGET_LINEAR_MASK" type="integer" value="0x80"/>
   <constant name="PSYS_PART_EMISSIVE_MASK" type="integer" value="0x100"/>
-  <constant name="PSYS_PART_RIBBON_MASK" type="integer" value="0x400" grid="sl"/>
+  <constant name="PSYS_PART_RIBBON_MASK" type="integer" value="0x400" grid="sl os"/>
   <constant name="PSYS_SRC_PATTERN" type="integer" value="9"/>
-  <constant name="PSYS_PART_BF_ONE" type="integer" value="0" grid="sl"/>
-  <constant name="PSYS_PART_BF_ZERO" type="integer" value="1" grid="sl"/>
-  <constant name="PSYS_PART_BF_DEST_COLOR" type="integer" value="2" grid="sl"/>
-  <constant name="PSYS_PART_BF_SOURCE_COLOR" type="integer" value="3" grid="sl"/>
-  <constant name="PSYS_PART_BF_ONE_MINUS_DEST_COLOR" type="integer" value="4" grid="sl"/>
-  <constant name="PSYS_PART_BF_ONE_MINUS_SOURCE_COLOR" type="integer" value="5" grid="sl"/>
-  <constant name="PSYS_PART_BF_SOURCE_ALPHA" type="integer" value="7" grid="sl"/>
-  <constant name="PSYS_PART_BF_ONE_MINUS_SOURCE_ALPHA" type="integer" value="9" grid="sl"/>
+  <constant name="PSYS_PART_BF_ONE" type="integer" value="0" grid="sl os"/>
+  <constant name="PSYS_PART_BF_ZERO" type="integer" value="1" grid="sl os"/>
+  <constant name="PSYS_PART_BF_DEST_COLOR" type="integer" value="2" grid="sl os"/>
+  <constant name="PSYS_PART_BF_SOURCE_COLOR" type="integer" value="3" grid="sl os"/>
+  <constant name="PSYS_PART_BF_ONE_MINUS_DEST_COLOR" type="integer" value="4" grid="sl os"/>
+  <constant name="PSYS_PART_BF_ONE_MINUS_SOURCE_COLOR" type="integer" value="5" grid="sl os"/>
+  <constant name="PSYS_PART_BF_SOURCE_ALPHA" type="integer" value="7" grid="sl os"/>
+  <constant name="PSYS_PART_BF_ONE_MINUS_SOURCE_ALPHA" type="integer" value="9" grid="sl os"/>
 
   <constant name="PSYS_SRC_INNERANGLE" type="integer" value="10" status="deprecated">
     <description lang="en">
@@ -727,10 +734,10 @@ Deprecated -- Use PSYS_SRC_ANGLE_END
   <constant name="PSYS_SRC_PATTERN_ANGLE_CONE" type="integer" value="8"/>
   <constant name="PSYS_SRC_PATTERN_ANGLE_CONE_EMPTY" type="integer" value="16"/>
   <constant name="PSYS_SRC_OBJ_REL_MASK" type="integer" value="1" status="unimplemented" grid="sl"/>
-  <constant name="PSYS_PART_BLEND_FUNC_SOURCE" type="integer" value="24" grid="sl"/>
-  <constant name="PSYS_PART_BLEND_FUNC_DEST" type="integer" value="25" grid="sl"/>
-  <constant name="PSYS_PART_START_GLOW" type="integer" value="26" grid="sl"/>
-  <constant name="PSYS_PART_END_GLOW" type="integer" value="27" grid="sl"/>
+  <constant name="PSYS_PART_BLEND_FUNC_SOURCE" type="integer" value="24" grid="sl os"/>
+  <constant name="PSYS_PART_BLEND_FUNC_DEST" type="integer" value="25" grid="sl os"/>
+  <constant name="PSYS_PART_START_GLOW" type="integer" value="26" grid="sl os"/>
+  <constant name="PSYS_PART_END_GLOW" type="integer" value="27" grid="sl os"/>
 
   <constant name="OBJECT_UNKNOWN_DETAIL" type="integer" value="-1" version="sl:1.18.3(5)">
     <description lang="en">
@@ -834,61 +841,61 @@ Used with llGetObjectDetails to get the streaming (download) cost
     </description>
   </constant>
 
-  <constant name="OBJECT_CHARACTER_TIME" type="integer" value="17" grid="sl aa">
+  <constant name="OBJECT_CHARACTER_TIME" type="integer" value="17">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_ROOT" type="integer" value="18" grid="sl aa">
+  <constant name="OBJECT_ROOT" type="integer" value="18">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_ATTACHED_POINT" type="integer" value="19" grid="sl aa">
+  <constant name="OBJECT_ATTACHED_POINT" type="integer" value="19">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_PATHFINDING_TYPE" type="integer" value="20" grid="sl aa">
+  <constant name="OBJECT_PATHFINDING_TYPE" type="integer" value="20">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_RENDER_WEIGHT" type="integer" value="24" grid="sl">
+  <constant name="OBJECT_RENDER_WEIGHT" type="integer" value="24" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_HOVER_HEIGHT" type="integer" value="25" grid="sl" version="sl:15.04.08.300724">
+  <constant name="OBJECT_HOVER_HEIGHT" type="integer" value="25" grid="sl os" version="sl:15.04.08.300724">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_BODY_SHAPE_TYPE" type="integer" value="26" grid="sl" version="sl:15.04.08.300724">
+  <constant name="OBJECT_BODY_SHAPE_TYPE" type="integer" value="26" grid="sl os" version="sl:15.04.08.300724">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_LAST_OWNER_ID" type="integer" value="27" grid="sl" version="sl:15.04.24.301279">
+  <constant name="OBJECT_LAST_OWNER_ID" type="integer" value="27" grid="sl os" version="sl:15.04.24.301279">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_CLICK_ACTION" type="integer" value="28" grid="sl" version="sl:15.09.14.305056">
+  <constant name="OBJECT_CLICK_ACTION" type="integer" value="28" grid="sl os" version="sl:15.09.14.305056">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_OMEGA" type="integer" value="29" grid="sl" version="sl:15.12.01.308474">
+  <constant name="OBJECT_OMEGA" type="integer" value="29" grid="sl os" version="sl:15.12.01.308474">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -899,49 +906,49 @@ Used with llGetObjectDetails to get the streaming (download) cost
   <constant name="OBJECT_ATTACHMENT_SURFACE_AREA" type="integer" value="26" grid="sl"/>
 -->
 
-  <constant name="OPT_AVATAR" type="integer" value="1" grid="sl">
+  <constant name="OPT_AVATAR" type="integer" value="1" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OPT_CHARACTER" type="integer" value="2" grid="sl">
+  <constant name="OPT_CHARACTER" type="integer" value="2" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OPT_EXCLUSION_VOLUME" type="integer" value="6" grid="sl">
+  <constant name="OPT_EXCLUSION_VOLUME" type="integer" value="6" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OPT_LEGACY_LINKSET" type="integer" value="0" grid="sl">
+  <constant name="OPT_LEGACY_LINKSET" type="integer" value="0" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OPT_MATERIAL_VOLUME" type="integer" value="5" grid="sl">
+  <constant name="OPT_MATERIAL_VOLUME" type="integer" value="5" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OPT_OTHER" type="integer" value="-1" grid="sl">
+  <constant name="OPT_OTHER" type="integer" value="-1" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OPT_STATIC_OBSTACLE" type="integer" value="4" grid="sl">
+  <constant name="OPT_STATIC_OBSTACLE" type="integer" value="4" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OPT_WALKABLE" type="integer" value="3" grid="sl">
+  <constant name="OPT_WALKABLE" type="integer" value="3" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -1679,73 +1686,73 @@ Passed to llAttachToAvatar to attach task to avatar center
     </description>
   </constant>
 
-  <constant name="ATTACH_LHAND_RING1" type="integer" value="41" version="sl:16.05.24.315768">
+  <constant name="ATTACH_LHAND_RING1" type="integer" value="41" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left ring finger
     </description>
   </constant>
 
-  <constant name="ATTACH_RHAND_RING1" type="integer" value="42" version="sl:16.05.24.315768">
+  <constant name="ATTACH_RHAND_RING1" type="integer" value="42" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right ring finger
     </description>
   </constant>
 
-  <constant name="ATTACH_TAIL_BASE" type="integer" value="43" version="sl:16.05.24.315768">
+  <constant name="ATTACH_TAIL_BASE" type="integer" value="43" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to tail base
     </description>
   </constant>
 
-  <constant name="ATTACH_TAIL_TIP" type="integer" value="44" version="sl:16.05.24.315768">
+  <constant name="ATTACH_TAIL_TIP" type="integer" value="44" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to tail tip
     </description>
   </constant>
 
-  <constant name="ATTACH_LWING" type="integer" value="45" version="sl:16.05.24.315768">
+  <constant name="ATTACH_LWING" type="integer" value="45" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left wing
     </description>
   </constant>
 
-  <constant name="ATTACH_RWING" type="integer" value="46" version="sl:16.05.24.315768">
+  <constant name="ATTACH_RWING" type="integer" value="46" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right wing
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_JAW" type="integer" value="47" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_JAW" type="integer" value="47" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to jaw
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_LEAR" type="integer" value="48" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_LEAR" type="integer" value="48" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left ear (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_REAR" type="integer" value="49" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_REAR" type="integer" value="49" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right ear (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_LEYE" type="integer" value="50" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_LEYE" type="integer" value="50" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left eye (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_REYE" type="integer" value="51" version="sl:16.05.24.315768">
+  <constant name="ATTACH_FACE_REYE" type="integer" value="51" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right eye (extended)
     </description>
   </constant>
 
-  <constant name="ATTACH_FACE_TONGUE" type="integer" value="52" version="sl:16.06.20.316774">
+  <constant name="ATTACH_FACE_TONGUE" type="integer" value="52" grid="sl os" version="sl:16.06.20.316774">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to tongue
     </description>
@@ -1755,19 +1762,19 @@ Passed to llAttachToAvatar to attach task to tongue
   <constant name="ATTACH_FACE_TOUNGE" type="integer" value="52" version="sl:16.05.24.315768" />
 -->
 
-  <constant name="ATTACH_GROIN" type="integer" value="53" version="sl:16.05.24.315768">
+  <constant name="ATTACH_GROIN" type="integer" value="53" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to groin
     </description>
   </constant>
 
-  <constant name="ATTACH_HIND_LFOOT" type="integer" value="54" version="sl:16.05.24.315768">
+  <constant name="ATTACH_HIND_LFOOT" type="integer" value="54" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to left hindfoot
     </description>
   </constant>
 
-  <constant name="ATTACH_HIND_RFOOT" type="integer" value="55" version="sl:16.05.24.315768">
+  <constant name="ATTACH_HIND_RFOOT" type="integer" value="55" grid="sl os" version="sl:16.05.24.315768">
     <description lang="en">
 Passed to llAttachToAvatar to attach task to right hindfoot
     </description>
@@ -2062,6 +2069,12 @@ Parameter of changed event handler used to indicate that media has changed on a 
     </description>
   </constant>
 
+  <constant name="CHANGED_POSITION" type="integer" value="0x8000" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
   <constant name="TYPE_INTEGER" type="integer" value="1">
     <description lang="en">
 Indicates that the list entry is holding an integer
@@ -2269,7 +2282,7 @@ Will cause subsequent parameters to affect the prim which link number parameter 
     </description>
   </constant>
 
-  <constant name="PRIM_PHYSICS_SHAPE_TYPE" type="integer" value="30" grid="sl">
+  <constant name="PRIM_PHYSICS_SHAPE_TYPE" type="integer" value="30" grid="sl os">
     <description lang="en">
 For primitive physics shape type. Followed with either PRIM_PHYSICS_SHAPE_PRIM, PRIM_PHYSICS_SHAPE_NONE or PRIM_PHYSICS_SHAPE_CONVEX.
     </description>
@@ -2609,25 +2622,31 @@ Flag to specify that the prim should be reflected along X axis
     </description>
   </constant>
 
-  <constant name="PRIM_PHYSICS_SHAPE_PRIM" type="integer" value="0" grid="sl aa">
+  <constant name="PRIM_PHYSICS_SHAPE_PRIM" type="integer" value="0">
     <description lang="en">
 Use the normal prim shape for physics (this is the default for all non-mesh objects)
     </description>
   </constant>
 
-  <constant name="PRIM_PHYSICS_SHAPE_CONVEX" type="integer" value="2" grid="sl aa">
+  <constant name="PRIM_PHYSICS_SHAPE_CONVEX" type="integer" value="2">
     <description lang="en">
 Use the convex hull of the prim shape for physics (this is the default for mesh objects)
     </description>
   </constant>
 
-  <constant name="PRIM_PHYSICS_SHAPE_NONE" type="integer" value="1" grid="sl aa">
+  <constant name="PRIM_PHYSICS_SHAPE_NONE" type="integer" value="1">
     <description lang="en">
 Ignore this prim in the physics shape. This cannot be applied to the root prim.
     </description>
   </constant>
 
-  <constant name="DENSITY" type="integer" value="0x1" grid="sl">
+  <constant name="PRIM_PHYSICS_MATERIAL" type="integer" value="31" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="DENSITY" type="integer" value="0x1" grid="sl os">
     <description lang="en">
 For use with llSetPhysicsMaterial() as a bitwise value in its material_bits parameter, to set the density
     </description>
@@ -2639,7 +2658,7 @@ For use with llSetPhysicsMaterial() as a bitwise value in its material_bits para
     </description>
   </constant>
 
-  <constant name="FRICTION" type="integer" value="0x2" grid="sl">
+  <constant name="FRICTION" type="integer" value="0x2" grid="sl os">
     <description lang="en">
 For use with llSetPhysicsMaterial as a bitwise value in its material_bits parameter, to set the friction
     </description>
@@ -2651,7 +2670,7 @@ For use with llSetPhysicsMaterial as a bitwise value in its material_bits parame
     </description>
   </constant>
 
-  <constant name="RESTITUTION" type="integer" value="0x4" grid="sl">
+  <constant name="RESTITUTION" type="integer" value="0x4" grid="sl os">
     <description lang="en">
 For use with llSetPhysicsMaterial as a bitwise value in its material_bits parameter, to set the restitution
     </description>
@@ -2663,7 +2682,7 @@ For use with llSetPhysicsMaterial as a bitwise value in its material_bits parame
     </description>
   </constant>
 
-  <constant name="GRAVITY_MULTIPLIER" type="integer" value="0x8" grid="sl">
+  <constant name="GRAVITY_MULTIPLIER" type="integer" value="0x8" grid="sl os">
     <description lang="en">
 For use with llSetPhysicsMaterial as a bitwise value in its material_bits parameter, to set the gravity multiplier
     </description>
@@ -3047,7 +3066,7 @@ Used with llGetRegionFlags to find if a region restricts llPushObject calls
     </description>
   </constant>
 
-  <constant name="REGION_FLAG_BLOCK_FLYOVER" type="integer" value="0x08000000" version="sl:16.06.20.316774">
+  <constant name="REGION_FLAG_BLOCK_FLYOVER" type="integer" value="0x08000000" grid="sl" version="sl:16.06.20.316774">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -3083,13 +3102,13 @@ Used with http_response to indicate truncation point in bytes
     </description>
   </constant>
 
-  <constant name="HTTP_CUSTOM_HEADER" type="integer" value="5" grid="sl aa">
+  <constant name="HTTP_CUSTOM_HEADER" type="integer" value="5">
     <description lang="en">
 Used with http_response to indicate truncation point in bytes
     </description>
   </constant>
 
-  <constant name="HTTP_VERBOSE_THROTTLE" type="integer" value="4" grid="sl aa">
+  <constant name="HTTP_VERBOSE_THROTTLE" type="integer" value="4">
     <description lang="en">
 Used with llHTTPRequest to toggle errors on outgoing requests throttling hit
     </description>
@@ -3520,61 +3539,61 @@ URL failed to pass whitelist in llSetPrimMediaParams
     </description>
   </constant>
 
-  <constant name="CONTENT_TYPE_TEXT" type="integer" value="0" grid="sl aa">
+  <constant name="CONTENT_TYPE_TEXT" type="integer" value="0">
     <description lang="en">
 Used with llSetContentType to indicate text contents
     </description>
   </constant>
 
-  <constant name="CONTENT_TYPE_HTML" type="integer" value="1" grid="sl aa">
+  <constant name="CONTENT_TYPE_HTML" type="integer" value="1">
     <description lang="en">
 Used with llSetContentType to indicate HTML contents
     </description>
   </constant>
 
-  <constant name="CONTENT_TYPE_XML" type="integer" value="2" grid="sl">
+  <constant name="CONTENT_TYPE_XML" type="integer" value="2" grid="sl os">
     <description lang="en">
 Used with llSetContentType to indicate XML contents
     </description>
   </constant>
 
-  <constant name="CONTENT_TYPE_XHTML" type="integer" value="3" grid="sl">
+  <constant name="CONTENT_TYPE_XHTML" type="integer" value="3" grid="sl os">
     <description lang="en">
 Used with llSetContentType to indicate XHTML contents
     </description>
   </constant>
 
-  <constant name="CONTENT_TYPE_ATOM" type="integer" value="4" grid="sl">
+  <constant name="CONTENT_TYPE_ATOM" type="integer" value="4" grid="sl os">
     <description lang="en">
 Used with llSetContentType to indicate Atom Syndication Format contents
     </description>
   </constant>
 
-  <constant name="CONTENT_TYPE_JSON" type="integer" value="5" grid="sl">
+  <constant name="CONTENT_TYPE_JSON" type="integer" value="5" grid="sl os">
     <description lang="en">
 Used with llSetContentType to indicate JSON (JavaScript Object Notation) contents
     </description>
   </constant>
 
-  <constant name="CONTENT_TYPE_LLSD" type="integer" value="6" grid="sl">
+  <constant name="CONTENT_TYPE_LLSD" type="integer" value="6" grid="sl os">
     <description lang="en">
 Used with llSetContentType to indicate LLSD (Linden Lab Serialized Data) contents
     </description>
   </constant>
 
-  <constant name="CONTENT_TYPE_FORM" type="integer" value="7" grid="sl">
+  <constant name="CONTENT_TYPE_FORM" type="integer" value="7" grid="sl os">
     <description lang="en">
 Used with llSetContentType to indicate form data contents
     </description>
   </constant>
 
-  <constant name="CONTENT_TYPE_RSS" type="integer" value="8" grid="sl">
+  <constant name="CONTENT_TYPE_RSS" type="integer" value="8" grid="sl os">
     <description lang="en">
 Used with llSetContentType to indicate RSS contents
     </description>
   </constant>
 
-  <constant name="KFM_COMMAND" type="integer" value="0" grid="sl">
+  <constant name="KFM_COMMAND" type="integer" value="0" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, followed by one of KFM_CMD_STOP, KFM_CMD_PLAY, KFM_CMD_PAUSE. Note that KFM_COMMAND must be the only option in the list, and cannot be specified in the same function call that sets the keyframes list.
     </description>
@@ -3586,7 +3605,7 @@ Option for llSetKeyframedMotion, followed by one of KFM_CMD_STOP, KFM_CMD_PLAY, 
     </description>
   </constant>
 
-  <constant name="KFM_MODE" type="integer" value="1" grid="sl">
+  <constant name="KFM_MODE" type="integer" value="1" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, used to specify the playback mode, followed by one of KFM_FORWARD, KFM_LOOP, KFM_PING_PONG or KFM_REVERSE
     </description>
@@ -3598,7 +3617,7 @@ Option for llSetKeyframedMotion, used to specify the playback mode, followed by 
     </description>
   </constant>
 
-  <constant name="KFM_DATA" type="integer" value="2" grid="sl">
+  <constant name="KFM_DATA" type="integer" value="2" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, followed by a bitwise combination of KFM_TRANSLATION and KFM_ROTATION. If you specify one or the other, you should only include translations or rotations in your keyframe list.
     </description>
@@ -3610,7 +3629,7 @@ Option for llSetKeyframedMotion, followed by a bitwise combination of KFM_TRANSL
     </description>
   </constant>
 
-  <constant name="KFM_FORWARD" type="integer" value="0" grid="sl">
+  <constant name="KFM_FORWARD" type="integer" value="0" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, used after KFM_MODE to specify the forward playback mode
     </description>
@@ -3622,7 +3641,7 @@ Option for llSetKeyframedMotion, used after KFM_MODE to specify the forward play
     </description>
   </constant>
 
-  <constant name="KFM_LOOP" type="integer" value="1" grid="sl">
+  <constant name="KFM_LOOP" type="integer" value="1" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, used after KFM_MODE to specify the loop playback mode
     </description>
@@ -3634,7 +3653,7 @@ Option for llSetKeyframedMotion, used after KFM_MODE to specify the loop playbac
     </description>
   </constant>
 
-  <constant name="KFM_PING_PONG" type="integer" value="2" grid="sl">
+  <constant name="KFM_PING_PONG" type="integer" value="2" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, used after KFM_MODE to specify the ping pong playback mode
     </description>
@@ -3646,7 +3665,7 @@ Option for llSetKeyframedMotion, used after KFM_MODE to specify the ping pong pl
     </description>
   </constant>
 
-  <constant name="KFM_REVERSE" type="integer" value="3" grid="sl">
+  <constant name="KFM_REVERSE" type="integer" value="3" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, used after KFM_MODE to specify the reverse playback mode
     </description>
@@ -3658,7 +3677,7 @@ Option for llSetKeyframedMotion, used after KFM_MODE to specify the reverse play
     </description>
   </constant>
 
-  <constant name="KFM_ROTATION" type="integer" value="1" grid="sl">
+  <constant name="KFM_ROTATION" type="integer" value="1" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, used after KFM_DATA, possibly as a bitwise combination with KFM_TRANSLATION
     </description>
@@ -3670,7 +3689,7 @@ Option for llSetKeyframedMotion, used after KFM_DATA, possibly as a bitwise comb
     </description>
   </constant>
 
-  <constant name="KFM_TRANSLATION" type="integer" value="2" grid="sl">
+  <constant name="KFM_TRANSLATION" type="integer" value="2" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, used after KFM_DATA, possibly as a bitwise combination with KFM_ROTATION
     </description>
@@ -3682,7 +3701,7 @@ Option for llSetKeyframedMotion, used after KFM_DATA, possibly as a bitwise comb
     </description>
   </constant>
 
-  <constant name="KFM_CMD_PLAY" type="integer" value="0" grid="sl">
+  <constant name="KFM_CMD_PLAY" type="integer" value="0" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, used after KFM_COMMAND to play the motion
     </description>
@@ -3694,7 +3713,7 @@ Option for llSetKeyframedMotion, used after KFM_COMMAND to play the motion
     </description>
   </constant>
 
-  <constant name="KFM_CMD_STOP" type="integer" value="1" grid="sl">
+  <constant name="KFM_CMD_STOP" type="integer" value="1" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, used after KFM_COMMAND to stop the motion
     </description>
@@ -3706,7 +3725,7 @@ Option for llSetKeyframedMotion, used after KFM_COMMAND to stop the motion
     </description>
   </constant>
 
-  <constant name="KFM_CMD_PAUSE" type="integer" value="2" grid="sl">
+  <constant name="KFM_CMD_PAUSE" type="integer" value="2" grid="sl os">
     <description lang="en">
 Option for llSetKeyframedMotion, used after KFM_COMMAND to pause the motion
     </description>
@@ -3822,13 +3841,8 @@ Returned by llCastRay when the raycast failed because simulator performance is l
     </description>
   </constant>
 
-  <constant name="RCERR_CAST_TIME_EXCEEDED" type="integer" value="-3" grid="sl">
-    <description lang="en">
-Returned by llCastRay when the raycast failed because the parcel or agent has exceeded the maximum time allowed for raycasting
-    </description>
-  </constant>
-
-  <constant name="RCERR_CAST_TIME_EXCEEDED" type="integer" value="3" grid="os">
+<!-- Earlier than 0.9.0, the value in opensim had been 3. It was changed to -3 due to http://opensimulator.org/mantis/view.php?id=7591 --> 
+  <constant name="RCERR_CAST_TIME_EXCEEDED" type="integer" value="-3" grid="sl os">
     <description lang="en">
 Returned by llCastRay when the raycast failed because the parcel or agent has exceeded the maximum time allowed for raycasting
     </description>
@@ -4410,25 +4424,25 @@ Triggered when a character failed to enter a parcel because it is not allowed to
     </description>
   </constant>
 
-  <constant name="HTTP_PRAGMA_NO_CACHE" type="integer" value="6" grid="sl aa">
+  <constant name="HTTP_PRAGMA_NO_CACHE" type="integer" value="6">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_PHYSICS" type="integer" value="21" grid="sl">
+  <constant name="OBJECT_PHYSICS" type="integer" value="21" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_PHANTOM" type="integer" value="22" grid="sl">
+  <constant name="OBJECT_PHANTOM" type="integer" value="22" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_TEMP_ON_REZ" type="integer" value="23" grid="sl">
+  <constant name="OBJECT_TEMP_ON_REZ" type="integer" value="23" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -4488,19 +4502,19 @@ Triggered when a character failed to enter a parcel because it is not allowed to
     </description>
   </constant>
 
-  <constant name="PRIM_NORMAL" type="integer" value="37" grid="sl" version="sl:14.06.20.291351">
+  <constant name="PRIM_NORMAL" type="integer" value="37" grid="sl os" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_SPECULAR" type="integer" value="36" grid="sl" version="sl:14.06.20.291351">
+  <constant name="PRIM_SPECULAR" type="integer" value="36" grid="sl os" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_ALPHA_MODE" type="integer" value="38" grid="sl" version="sl:14.06.20.291351">
+  <constant name="PRIM_ALPHA_MODE" type="integer" value="38" grid="sl os" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -4657,55 +4671,55 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
-  <constant name="OBJECT_PRIM_COUNT" type="integer" value="30" grid="sl" version="sl:16.01.05.309639">
+  <constant name="OBJECT_PRIM_COUNT" type="integer" value="30" grid="sl os" version="sl:16.01.05.309639">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_TOTAL_INVENTORY_COUNT" type="integer" value="31" grid="sl" version="sl:16.01.05.309639">
+  <constant name="OBJECT_TOTAL_INVENTORY_COUNT" type="integer" value="31" grid="sl os" version="sl:16.01.05.309639">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_REZZER_KEY" type="integer" value="32" grid="sl" version="sl:16.01.19.310114">
+  <constant name="OBJECT_REZZER_KEY" type="integer" value="32" grid="sl os" version="sl:16.01.19.310114">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_ALLOW_UNSIT" type="integer" value="39" grid="sl" version="sl:16.10.07.320397">
+  <constant name="PRIM_ALLOW_UNSIT" type="integer" value="39" grid="sl os" version="sl:16.10.07.320397">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_SCRIPTED_SIT_ONLY" type="integer" value="40" grid="sl" version="sl:16.10.07.320397">
+  <constant name="PRIM_SCRIPTED_SIT_ONLY" type="integer" value="40" grid="sl os" version="sl:16.10.07.320397">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_SIT_TARGET" type="integer" value="41" grid="sl" version="sl:16.10.07.320397">
+  <constant name="PRIM_SIT_TARGET" type="integer" value="41" grid="sl os" version="sl:16.10.07.320397">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_GROUP_TAG" type="integer" value="33" grid="sl" version="sl:16.11.02.321369">
+  <constant name="OBJECT_GROUP_TAG" type="integer" value="33" grid="sl os" version="sl:16.11.02.321369">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_TEMP_ATTACHED" type="integer" value="34" grid="sl" version="sl:16.11.02.321369">
+  <constant name="OBJECT_TEMP_ATTACHED" type="integer" value="34" grid="sl os" version="sl:16.11.02.321369">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_ATTACHED_SLOTS_AVAILABLE" type="integer" value="35" grid="sl" version="sl:16.12.03.322072">
+  <constant name="OBJECT_ATTACHED_SLOTS_AVAILABLE" type="integer" value="35" grid="sl os" version="sl:16.12.03.322072">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -4822,6 +4836,60 @@ Used with http_request when a public URL is not available
     </description>
   </constant>
 
+  <constant name="JSON_ARRAY" type="string" value="JSON_ARRAY" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_OBJECT" type="string" value="JSON_OBJECT" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_INVALID" type="string" value="JSON_INVALID" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_NUMBER" type="string" value="JSON_NUMBER" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_STRING" type="string" value="JSON_STRING" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_TRUE" type="string" value="JSON_TRUE" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_FALSE" type="string" value="JSON_FALSE" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_NULL" type="string" value="JSON_NULL" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="JSON_APPEND" type="string" value="JSON_APPEND" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
 
 <!-- These are actually strings without a constant, returned in the transaction_result() event. Maybe one is added some day...
   <constant name="LINDENDOLLAR_ENTITYDOESNOTEXIST" type="string" value="LINDENDOLLAR_ENTITYDOESNOTEXIST"/>
@@ -4858,41 +4926,53 @@ Used with http_request when a public URL is not available
 
   <!-- Float constants -->
 
-  <constant name="PI" type="float" value="3.14159265">
+  <constant name="PI" type="float" value="3.14159265" grid="sl aa">
     <description lang="en">
 3.1415926535897932384626433832795
     </description>
   </constant>
 
-  <constant name="TWO_PI" type="float" value="6.2831853">
+  <constant name="PI" type="float" value="3.14159274f" grid="os"/>
+
+  <constant name="TWO_PI" type="float" value="6.2831853" grid="sl aa">
     <description lang="en">
 6.283185307179586476925286766559
     </description>
   </constant>
 
-  <constant name="PI_BY_TWO" type="float" value="1.57079632">
+  <constant name="TWO_PI" type="float" value="6.28318548f" grid="os"/>
+
+  <constant name="PI_BY_TWO" type="float" value="1.57079632" grid="sl aa">
     <description lang="en">
 1.5707963267948966192313216916398
     </description>
   </constant>
 
-  <constant name="DEG_TO_RAD" type="float" value="0.017453292">
+  <constant name="PI_BY_TWO" type="float" value="1.57079637f" grid="os"/>
+
+  <constant name="DEG_TO_RAD" type="float" value="0.017453292" grid="sl aa">
     <description lang="en">
 To convert from degrees to radians
     </description>
   </constant>
 
-  <constant name="RAD_TO_DEG" type="float" value="57.295779">
+  <constant name="DEG_TO_RAD" type="float" value="0.01745329238f" grid="os"/>
+
+  <constant name="RAD_TO_DEG" type="float" value="57.295779" grid="sl aa">
     <description lang="en">
 To convert from radians to degrees
     </description>
   </constant>
 
-  <constant name="SQRT2" type="float" value="1.4142135">
+  <constant name="RAD_TO_DEG" type="float" value="57.29578f" grid="os"/>
+
+  <constant name="SQRT2" type="float" value="1.4142135" grid="sl aa">
     <description lang="en">
 1.4142135623730950488016887242097
     </description>
   </constant>
+
+  <constant name="SQRT2" type="float" value="1.414213538f" grid="os"/>
 
   <!-- Vector and rotation constants -->
 
@@ -5204,11 +5284,12 @@ process message parameter as regex
     </description>
   </constant>
 
-  <constant name="OS_NPC" type="integer" value="0x01000000" grid="os">
+<!-- Removed in version 0.9.0.0-rc1 (Commit af05aaaf36c402cd774acd62893113681596474c)
+  <constant name="OS_NPC" type="integer" value="0x01000000" grid="os" status="unimplemented">
     <description lang="en">
-<!-- TODO: add documentation -->
     </description>
   </constant>
+-->
 
   <constant name="OS_NPC_CREATOR_OWNED" type="integer" value="0x1" grid="os">
     <description lang="en">
@@ -5247,6 +5328,12 @@ process message parameter as regex
   </constant>
 
   <constant name="OS_NPC_SENSE_AS_AGENT" type="integer" value="0x4" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OS_NPC_OBJECT_GROUP" type="integer" value="0x8" grid="os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -8677,7 +8764,7 @@ Requests name of an avatar. When data is available the dataserver event will be 
     </description>
   </function>
 
-  <function name="llGetEnv" type="string" grid="sl aa">
+  <function name="llGetEnv" type="string">
     <param type="string" name="name"/>
     <description lang="en">
 Returns a string with the requested data about the region
@@ -8777,7 +8864,7 @@ If an avatar is sitting on the sit target, return the avatar's key, NULL_KEY oth
     </description>
   </function>
 
-  <function name="llSetVelocity" grid="sl aa">
+  <function name="llSetVelocity">
     <param type="vector" name="velocity"/>
     <param type="integer" name="local"/>
     <description lang="en">
@@ -8794,13 +8881,13 @@ Casts a ray into the physics world from 'start' to 'end' and returns data accord
     </description>
   </function>
 
-  <function name="llGetMassMKS" type="float" grid="sl aa">
+  <function name="llGetMassMKS" type="float">
     <description lang="en">
 Returns the mass of the linkset in kilograms
     </description>
   </function>
 
-  <function name="llSetPhysicsMaterial" grid="sl">
+  <function name="llSetPhysicsMaterial" grid="sl os">
     <param type="integer" name="flags"/>
     <param type="float" name="gravity_multiplier"/>
     <param type="float" name="restitution"/>
@@ -8811,7 +8898,7 @@ Sets the requested attributes of the root object's physics material
     </description>
   </function>
 
-  <function name="llGetPhysicsMaterial" type="list" grid="sl">
+  <function name="llGetPhysicsMaterial" type="list" grid="sl os">
     <description lang="en">
 Returns the gravity multiplier, restitution, friction, and density of the linkset as a list in that order
     </description>
@@ -8828,7 +8915,7 @@ Returns TRUE if successful and FALSE if throttled, on invalid action, on invalid
     </description>
   </function>
 
-  <function name="llSetKeyframedMotion" grid="sl aa">
+  <function name="llSetKeyframedMotion">
     <param type="list" name="keyframes"/>
     <param type="list" name="options"/>
     <description lang="en">
@@ -8836,7 +8923,7 @@ Requests that a nonphysical object be keyframed according to keyframe list
     </description>
   </function>
 
-  <function name="llTransferLindenDollars" type="key" grid="sl aa">
+  <function name="llTransferLindenDollars" type="key">
     <param type="key" name="destination"/>
     <param type="integer" name="amount"/>
     <description lang="en">
@@ -8870,7 +8957,7 @@ Returns the current used memory for the current script. Non-mono scripts always 
     </description>
   </function>
 
-  <function name="llSetAngularVelocity" grid="sl aa">
+  <function name="llSetAngularVelocity">
     <param type="vector" name="angular_velocity"/>
     <param type="integer" name="local"/>
     <description lang="en">
@@ -9040,7 +9127,7 @@ Returns the value of a particular simulator statistic
     </description>
   </function>
 
-  <function name="llSetAnimationOverride" grid="sl">
+  <function name="llSetAnimationOverride" grid="sl os">
     <param type="string" name="anim_state"/>
     <param type="string" name="anim"/>
     <description lang="en">
@@ -9048,28 +9135,28 @@ Set the animation that will play for the given animation state. Requires PERMISS
     </description>
   </function>
 
-  <function name="llGetAnimationOverride" type="string" grid="sl">
+  <function name="llGetAnimationOverride" type="string" grid="sl os">
     <param type="string" name="anim_state"/>
     <description lang="en">
 Get the name of the animation currently set for the given animation state. Requires either PERMISSION_OVERRIDE_ANIMATIONS or PERMISSION_TRIGGER_ANIMATION.
     </description>
   </function>
 
-  <function name="llResetAnimationOverride" grid="sl">
+  <function name="llResetAnimationOverride" grid="sl os">
     <param type="string" name="anim_state"/>
     <description lang="en">
 Resets the animation for the given animation state to the default. The special value "ALL" will reset the animations for all states. Requires PERMISSION_OVERRIDE_ANIMATIONS.
     </description>
   </function>
 
-  <function name="llJson2List" type="list" grid="sl">
+  <function name="llJson2List" type="list" grid="sl os">
     <param type="string" name="json"/>
     <description lang="en">
 Converts the top level of the json string to a list
     </description>
   </function>
 
-  <function name="llList2Json" type="string" grid="sl">
+  <function name="llList2Json" type="string" grid="sl os">
     <param type="string" name="type"/>
     <param type="list" name="values"/>
     <description lang="en">
@@ -9077,7 +9164,7 @@ Converts either a strided list of key:value pairs to a JSON_OBJECT or a list of 
     </description>
   </function>
 
-  <function name="llJsonGetValue" type="string" grid="sl">
+  <function name="llJsonGetValue" type="string" grid="sl os">
     <param type="string" name="json"/>
     <param type="list" name="specifiers"/>
     <description lang="en">
@@ -9085,7 +9172,7 @@ Gets the value indicated by specifiers from the json string
     </description>
   </function>
 
-  <function name="llJsonSetValue" type="string" grid="sl">
+  <function name="llJsonSetValue" type="string" grid="sl os">
     <param type="string" name="json"/>
     <param type="list" name="specifiers"/>
     <param type="string" name="value"/>
@@ -9094,7 +9181,7 @@ Returns a new json string that is the json given with the value indicated by spe
     </description>
   </function>
 
-  <function name="llJsonValueType" type="string" grid="sl">
+  <function name="llJsonValueType" type="string" grid="sl os">
     <param type="string" name="json"/>
     <param type="list" name="specifiers"/>
     <description lang="en">
@@ -9126,20 +9213,20 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llScaleByFactor" type="integer" grid="sl">
+  <function name="llScaleByFactor" type="integer" grid="sl os">
     <param type="float" name="scaling_factor"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetMinScaleFactor" type="float" grid="sl">
+  <function name="llGetMinScaleFactor" type="float" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetMaxScaleFactor" type="float" grid="sl">
+  <function name="llGetMaxScaleFactor" type="float" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -9240,7 +9327,7 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llGetAttachedList" type="list" grid="sl" version="sl:15.09.14.305056">
+  <function name="llGetAttachedList" type="list" grid="sl os" version="sl:15.09.14.305056">
     <param type="key" name="agent"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -9312,7 +9399,22 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="osSetDynamicTextureURLBlendFace" type="string" grid="os aa">
+  <function name="osSetDynamicTextureURLBlendFace" type="string" grid="os">
+    <param type="string" name="dynamicID"/>
+    <param type="string" name="contentType"/>
+    <param type="string" name="url"/>
+    <param type="string" name="extraParams"/>
+    <param type="integer" name="blend"/>
+    <param type="integer" name="disp"/>
+    <param type="integer" name="timer"/>
+    <param type="integer" name="alpha"/>
+    <param type="integer" name="face"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetDynamicTextureURLBlendFace" type="string" grid="aa">
     <param type="string" name="dynamicID"/>
     <param type="string" name="contentType"/>
     <param type="string" name="url"/>
@@ -9350,7 +9452,22 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="osSetDynamicTextureDataBlendFace" type="string" grid="os aa">
+  <function name="osSetDynamicTextureDataBlendFace" type="string" grid="os">
+    <param type="string" name="dynamicID"/>
+    <param type="string" name="contentType"/>
+    <param type="string" name="data"/>
+    <param type="string" name="extraParams"/>
+    <param type="integer" name="blend"/>
+    <param type="integer" name="disp"/>
+    <param type="integer" name="timer"/>
+    <param type="integer" name="alpha"/>
+    <param type="integer" name="face"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetDynamicTextureDataBlendFace" type="string" grid="aa">
     <param type="string" name="dynamicID"/>
     <param type="string" name="contentType"/>
     <param type="string" name="data"/>
@@ -9419,7 +9536,14 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="osConsoleCommand" type="bool" grid="os aa">
+  <function name="osConsoleCommand" type="integer" grid="os">
+    <param type="string" name="Command"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osConsoleCommand" type="bool" grid="aa">
     <param type="string" name="Command"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -9569,11 +9693,26 @@ Detach the object containing this script from the avatar it is attached to witho
     </description>
   </function>
 
+  <function name="osGetAvatarHomeURI" type="string" grid="os">
+    <param type="string" name="uuid"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osGetNumberOfAttachments" type="list" grid="os">
     <param type="key" name="avatar"/>
     <param type="list" name="attachmentPoints"/>
     <description lang="en">
 Returns a strided list of the specified attachment points and the number of attachments on those points
+    </description>
+  </function>
+
+  <function name="osForceOtherSit" grid="os">
+    <param type="string" name="avatar"/>
+    <param type="string" name="target"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
     </description>
   </function>
 
@@ -9760,7 +9899,16 @@ Sends a specified message to the specified avatar's attachments on the specified
     </description>
   </function>
 
-  <function name="osSetRegionSunSettings" grid="os aa">
+  <function name="osSetRegionSunSettings" grid="os">
+    <param type="integer" name="useEstateSun"/>
+    <param type="integer" name="sunFixed"/>
+    <param type="float" name="sunHour"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetRegionSunSettings" grid="aa">
     <param type="bool" name="useEstateSun"/>
     <param type="bool" name="sunFixed"/>
     <param type="float" name="sunHour"/>
@@ -9769,7 +9917,15 @@ Sends a specified message to the specified avatar's attachments on the specified
     </description>
   </function>
 
-  <function name="osSetEstateSunSettings" grid="os aa">
+  <function name="osSetEstateSunSettings" grid="os">
+    <param type="integer" name="sunFixed"/>
+    <param type="float" name="sunHour"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetEstateSunSettings" grid="aa">
     <param type="bool" name="sunFixed"/>
     <param type="float" name="sunHour"/>
     <description lang="en">
@@ -9863,6 +10019,18 @@ Sends a specified message to the specified avatar's attachments on the specified
   <function name="osParcelSetDetails" status="deprecated" grid="os">
     <param type="vector" name="pos"/>
     <param type="list" name="rules"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetPhysicsEngineName" type="string" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetPhysicsEngineType" type="string" grid="os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -10273,6 +10441,16 @@ Get the owner of the NPC
     </description>
   </function>
 
+  <function name="osNpcSetProfileAbout" grid="os">
+    <param type="key" name="npc"/>
+    <param type="string" name="about"/>
+  </function>
+
+  <function name="osNpcSetProfileImage" grid="os">
+    <param type="key" name="npc"/>
+    <param type="string" name="image"/>
+  </function>
+
   <function name="osOwnerSaveAppearance" type="key" grid="os">
     <param type="string" name="notecard"/>
     <description lang="en">
@@ -10296,6 +10474,12 @@ Get the owner of the NPC
 
   <function name="osGetRegionMapTexture" type="key" grid="os aa">
     <param type="string" name="regionName"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetRegionSize" type="vector" grid="os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -10337,6 +10521,29 @@ Get the owner of the NPC
     </description>
   </function>
 
+  <function name="osSetHealth" grid="os">
+    <param type="string" name="avatar"/>
+    <param type="float" name="health"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetHealRate" type="float" grid="os">
+    <param type="string" name="avatar"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetHealRate" grid="os">
+    <param type="string" name="avatar"/>
+    <param type="float" name="healrate"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osCauseHealing" grid="os aa">
     <param type="string" name="avatar"/>
     <param type="float" name="healing"/>
@@ -10364,6 +10571,10 @@ Get the owner of the NPC
     </description>
   </function>
 
+  <function name="osDie" grid="os">
+    <param type="key" name="uuid"/>
+  </function>
+
   <function name="osGetPrimitiveParams" type="list" grid="os aa">
     <param type="key" name="prim"/>
     <param type="list" name="rules"/>
@@ -10380,7 +10591,18 @@ Get the owner of the NPC
     </description>
   </function>
 
-  <function name="osSetProjectionParams" grid="os aa">
+  <function name="osSetProjectionParams" grid="os">
+    <param type="integer" name="projection"/>
+    <param type="key" name="texture"/>
+    <param type="float" name="fov"/>
+    <param type="float" name="focus"/>
+    <param type="float" name="amb"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetProjectionParams" grid="aa">
     <param type="bool" name="projection"/>
     <param type="key" name="texture"/>
     <param type="float" name="fov"/>
@@ -10391,7 +10613,19 @@ Get the owner of the NPC
     </description>
   </function>
 
-  <function name="osSetProjectionParams" grid="os aa">
+  <function name="osSetProjectionParams" grid="os">
+    <param type="key" name="prim"/>
+    <param type="integer" name="projection"/>
+    <param type="key" name="texture"/>
+    <param type="float" name="fov"/>
+    <param type="float" name="focus"/>
+    <param type="float" name="amb"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetProjectionParams" grid="aa">
     <param type="key" name="prim"/>
     <param type="bool" name="projection"/>
     <param type="key" name="texture"/>
@@ -10409,6 +10643,13 @@ Get the owner of the NPC
     </description>
   </function>
 
+  <function name="osGetGender" type="string" grid="os">
+    <param type="key" name="rawAvatarId"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osUnixTimeToTimestamp" type="string" grid="os aa">
     <!-- Parameter type is actually long but we're using integer here:
     <param type="long" name="time"/>
@@ -10417,6 +10658,27 @@ Get the owner of the NPC
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
+  </function>
+
+  <function name="osForceBreakAllLinks" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>    
+  </function>
+
+  <function name="osForceBreakLink" grid="os">
+    <param type="integer" name="linknum"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>    
+  </function>
+
+  <function name="osForceCreateLink" grid="os">
+    <param type="string" name="target"/>
+    <param type="integer" name="parent"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>    
   </function>
 
   <function name="osGetInventoryDesc" type="string" grid="os aa">
@@ -10539,6 +10801,41 @@ Identical to llListen except for a bitfield which indicates which string paramet
     <description lang="en">
 Wraps to bool Regex.IsMatch(string input, string pattern)
     </description>
+  </function>
+
+  <function name="osRequestURL" grid="os">
+    <param type="list" name="options"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osRequestSecureURL" grid="os">
+    <param type="list" name="options"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osCheckODE" type="integer" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>    
+  </function>
+
+  <function name="osCollisionSound" grid="os">
+    <param type="string" name="impact_sound"/>
+    <param type="float" name="impact_volume"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>    
+  </function>
+
+  <function name="osVolumeDetect" grid="os">
+    <param type="integer" name="detect"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>    
   </function>
 
   <!-- Aurora exclusive functions (from IAA_Api.cs) -->
@@ -11233,7 +11530,7 @@ Triggered when task receives an http request against a public URL
     </description>
   </event>
 
-  <event name="transaction_result" grid="sl aa">
+  <event name="transaction_result">
     <param type="key"     name="id"     />
     <param type="integer" name="success"/>
     <param type="string"  name="data"   />
