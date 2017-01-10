@@ -4,7 +4,7 @@ function dfg ()
 {
   file="$1"
   shift
-  touch "$file"
+  test -e "$file" || touch "$file"
   PYTHONPATH=lsl2dfg python lsl2dfg/LSL2dfg.py -u -d database/kwdb.xml "$@" \
    -o "$file".out
   cmp -s <(egrep -v '[Dd]atabase version:|[Oo]utput module version:' "$file".out) \
