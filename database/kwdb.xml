@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20170109001">
+<keywords version="0.0.20170317000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -4720,6 +4720,48 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="OBJECT_ATTACHED_SLOTS_AVAILABLE" type="integer" value="35" grid="sl os" version="sl:16.12.03.322072">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SIT_NOT_EXPERIENCE" type="integer" value="-1" grid="sl" version="sl:16.10.07.320397">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SIT_NO_EXPERIENCE_PERMISSION" type="integer" value="-2" grid="sl" version="sl:16.10.07.320397">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SIT_NO_SIT_TARGET" type="integer" value="-3" grid="sl" version="sl:16.10.07.320397">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SIT_INVALID_AGENT" type="integer" value="-4" grid="sl" version="sl:16.10.07.320397">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SIT_INVALID_LINK" type="integer" value="-5" grid="sl" version="sl:16.10.07.320397">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SIT_NO_ACCESS" type="integer" value="-6" grid="sl" version="sl:16.10.07.320397">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SIT_INVALID_OBJECT" type="integer" value="-7" grid="sl" version="sl:16.10.07.320397">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
