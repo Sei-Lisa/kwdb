@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20170317000">
+<keywords version="0.0.20170317001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -4652,6 +4652,14 @@ Triggered when a character failed to enter a parcel because it is not allowed to
     </description>
   </constant>
 
+  <!-- Possibly added as a result of BUG-18251; however, we presume it was
+       added with the rest of XP_ERROR_* constants. -->
+  <constant name="XP_ERROR_REQUEST_PERM_TIMEOUT" type="integer" value="18" grid="sl" version="sl:15.01.23.298475">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
   <!-- The following three constants were added as a result of SVC-5923 -->
   <constant name="PASS_IF_NOT_HANDLED" type="integer" value="0" grid="sl" version="sl:1.40.0">
     <description lang="en">
@@ -4984,7 +4992,7 @@ Used with http_request when a public URL is not available
 
   <constant name="TWO_PI" type="float" value="6.28318548f" grid="os"/>
 
-  <constant name="PI_BY_TWO" type="float" value="1.57079632" grid="sl aa">
+  <constant name="PI_BY_TWO" type="float" value="1.57079633" grid="sl aa">
     <description lang="en">
 1.5707963267948966192313216916398
     </description>
@@ -4992,7 +5000,7 @@ Used with http_request when a public URL is not available
 
   <constant name="PI_BY_TWO" type="float" value="1.57079637f" grid="os"/>
 
-  <constant name="DEG_TO_RAD" type="float" value="0.017453292" grid="sl aa">
+  <constant name="DEG_TO_RAD" type="float" value="0.017453293" grid="sl aa">
     <description lang="en">
 To convert from degrees to radians
     </description>
@@ -5000,7 +5008,7 @@ To convert from degrees to radians
 
   <constant name="DEG_TO_RAD" type="float" value="0.01745329238f" grid="os"/>
 
-  <constant name="RAD_TO_DEG" type="float" value="57.295779" grid="sl aa">
+  <constant name="RAD_TO_DEG" type="float" value="57.2957795" grid="sl aa">
     <description lang="en">
 To convert from radians to degrees
     </description>
@@ -5008,7 +5016,7 @@ To convert from radians to degrees
 
   <constant name="RAD_TO_DEG" type="float" value="57.29578f" grid="os"/>
 
-  <constant name="SQRT2" type="float" value="1.4142135" grid="sl aa">
+  <constant name="SQRT2" type="float" value="1.41421356" grid="sl aa">
     <description lang="en">
 1.4142135623730950488016887242097
     </description>
