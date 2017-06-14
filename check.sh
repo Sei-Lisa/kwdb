@@ -19,9 +19,9 @@ dfg outputs/rawkeywords.txt -f rawkeywords # includes dupes
 dfg outputs/rawkeywords-sl.txt -f rawkeywords -g sl
 dfg outputs/rawkeywords-os.txt -f rawkeywords -g os
 dfg outputs/rawkeywords-aa.txt -f rawkeywords -g aa
-dfg outputs/constant-test-sl.lsl -f constantvaluecheck -g sl -i inputs/constants-test.lsl.in
-dfg outputs/constant-test-os.lsl -f constantvaluecheck -g os -i inputs/constants-test.lsl.in
-dfg outputs/constant-test-aa.lsl -f constantvaluecheck -g aa -i inputs/constants-test.lsl.in
+dfg outputs/constants-test-sl.lsl -f constantvaluecheck -g sl -i inputs/constants-test.lsl.in
+dfg outputs/constants-test-os.lsl -f constantvaluecheck -g os -i inputs/constants-test.lsl.in
+dfg outputs/constants-test-aa.lsl -f constantvaluecheck -g aa -i inputs/constants-test.lsl.in
 dfg outputs/functioncheck-sl.lsl -f functioncheck -g sl -i inputs/functioncheck.lsl.in
 dfg outputs/functioncheck-os.lsl -f functioncheck -g os -i inputs/functioncheck.lsl.in
 dfg outputs/functioncheck-aa.lsl -f functioncheck -g aa -i inputs/functioncheck.lsl.in
