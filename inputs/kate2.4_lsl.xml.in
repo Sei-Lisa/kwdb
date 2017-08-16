@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="LSL" version="1.0" kateversion="2.4" section="Scripts" extensions="*.lsl" mimetype="" priority="5">
+<language name="LSL" version="3" kateversion="2.4" section="Scripts" extensions="*.lsl" mimetype="text/x-lsl" priority="5">
 
 	<highlighting>
 <<< LSL KEYWORDS >>>
