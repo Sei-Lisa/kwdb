@@ -2,7 +2,7 @@
 <!--
 
 (C) Copyright 2012 Linden Research, Inc.
-(C) Copyright 2013-2016 Sei Lisa.
+(C) Copyright 2013-2017 Sei Lisa.
 (C) Copyright 2017 Mako Nozaki.
 Sei Lisa and Mako Nozaki are the usernames of the authors in the Second Life
 online virtual world.
@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20170615000">
+<keywords version="0.0.20170816000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="17.06.13.327111">Second Life</grid>
+  <grid id="sl" version="17.08.11.328159">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -4776,6 +4776,24 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="HTTP_USER_AGENT" type="integer" value="7" grid="sl" version="sl:17.06.13.327111">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OBJECT_CREATION_TIME" type="integer" value="36" grid="sl" version="sl:17.08.11.328159">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OBJECT_SELECT_COUNT" type="integer" value="37" grid="sl" version="sl:17.08.11.328159">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OBJECT_SIT_COUNT" type="integer" value="38" grid="sl" version="sl:17.08.11.328159">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
