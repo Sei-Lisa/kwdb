@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20170816000">
+<keywords version="0.0.20170817000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -4776,6 +4776,13 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="HTTP_USER_AGENT" type="integer" value="7" grid="sl" version="sl:17.06.13.327111">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <!-- Version is estimated, since there was no announcement. -->
+  <constant name="HTTP_ACCEPT" type="integer" value="8" grid="sl" version="sl:17.06.13.327111">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
