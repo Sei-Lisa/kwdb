@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20170817000">
+<keywords version="0.0.20170910000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -6369,7 +6369,7 @@ Returns the ground height below the object position + offset
     </description>
   </function>
 
-  <function name="llCloud" type="float" status="deprecated">
+  <function name="llCloud" type="float" status="unimplemented">
     <param type="vector" name="offset"/>
     <description lang="en">
 Returns the cloud density at the object position + offset.
