@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20171002000">
+<keywords version="0.0.20171018000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -8654,42 +8654,42 @@ Returns the language code of the preferred interface language of the avatar
   </function>
 
   <function name="llDetectedTouchUV" type="vector">
-    <param type="integer" name="index"/>
+    <param type="integer" name="number"/>
     <description lang="en">
-Returns the u and v coordinates in the first two components of a vector, for the texture coordinates where the prim was touched in a triggered touch event
+Returns the u and v coordinates in the first two components of a vector, for the texture coordinates where the prim number was touched in a triggered touch event
     </description>
   </function>
 
   <function name="llDetectedTouchFace" type="integer">
-    <param type="integer" name="index"/>
+    <param type="integer" name="number"/>
     <description lang="en">
-Returns the index of the face where the avatar clicked in a triggered touch event
+Returns the index of the face where the avatar number clicked in a triggered touch event
     </description>
   </function>
 
   <function name="llDetectedTouchPos" type="vector">
-    <param type="integer" name="index"/>
+    <param type="integer" name="number"/>
     <description lang="en">
-Returns the position where the object was touched in a triggered touch event
+Returns the position where the object number was touched in a triggered touch event
     </description>
   </function>
 
   <function name="llDetectedTouchNormal" type="vector">
-    <param type="integer" name="index"/>
+    <param type="integer" name="number"/>
     <description lang="en">
 Returns the surface normal for a triggered touch event
     </description>
   </function>
 
   <function name="llDetectedTouchBinormal" type="vector">
-    <param type="integer" name="index"/>
+    <param type="integer" name="number"/>
     <description lang="en">
 Returns the surface binormal for a triggered touch event
     </description>
   </function>
 
   <function name="llDetectedTouchST" type="vector">
-    <param type="integer" name="index"/>
+    <param type="integer" name="number"/>
     <description lang="en">
 Returns the s and t coordinates in the first two components of a vector, for the surface coordinates where the prim was touched in a triggered touch event
     </description>
