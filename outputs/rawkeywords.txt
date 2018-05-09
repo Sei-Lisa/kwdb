@@ -1448,6 +1448,8 @@ llGetExperienceList
 llClearExperiencePermissions
 llGetAttachedList
 llSitOnLink
+llName2Key
+llRequestUserKey
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted

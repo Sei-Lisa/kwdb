@@ -1,4 +1,4 @@
-11294
+11296
 rez
 slex
 slutorial
@@ -10375,6 +10375,7 @@ llMinEventDelay
 llModifyLand
 llModPow
 llMoveToTarget
+llName2Key
 llNavigateTo
 llOffsetTexture
 llOpenRemoteDataChannel
@@ -10413,6 +10414,7 @@ llRequestPermissions
 llRequestSecureURL
 llRequestSimulatorData
 llRequestURL
+llRequestUserKey
 llRequestUsername
 llResetAnimationOverride
 llResetLandBanList

@@ -9423,6 +9423,20 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
+  <function name="llName2Key" type="key" grid="sl" version="sl:18.05.07.515224">
+    <param type="string" name="name"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llRequestUserKey" type="key" grid="sl" version="sl:18.05.07.515224">
+    <param type="string" name="name"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <!-- OpenSim/Aurora-specific functions -->
 
   <!-- From ILS_Api.cs -->
