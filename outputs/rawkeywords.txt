@@ -1450,6 +1450,9 @@ llGetAttachedList
 llSitOnLink
 llName2Key
 llRequestUserKey
+llStartObjectAnimation
+llStopObjectAnimation
+llGetObjectAnimationNames
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted

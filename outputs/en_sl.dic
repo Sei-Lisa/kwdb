@@ -1,4 +1,4 @@
-11296
+11299
 rez
 slex
 slutorial
@@ -10265,6 +10265,7 @@ llGetNotecardLine
 llGetNumberOfNotecardLines
 llGetNumberOfPrims
 llGetNumberOfSides
+llGetObjectAnimationNames
 llGetObjectDesc
 llGetObjectDetails
 llGetObjectMass
@@ -10510,10 +10511,12 @@ llSitTarget
 llSleep
 llSqrt
 llStartAnimation
+llStartObjectAnimation
 llStopAnimation
 llStopHover
 llStopLookAt
 llStopMoveToTarget
+llStopObjectAnimation
 llStopSound
 llStringLength
 llStringToBase64

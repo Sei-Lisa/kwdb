@@ -1180,6 +1180,9 @@ llGetAttachedList
 llSitOnLink
 llName2Key
 llRequestUserKey
+llStartObjectAnimation
+llStopObjectAnimation
+llGetObjectAnimationNames
 state_entry
 state_exit
 touch_start
