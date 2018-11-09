@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20180626000">
+<keywords version="0.0.20181109000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="18.06.14.516474">Second Life</grid>
+  <grid id="sl" version="18.11.02.521379">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -3841,7 +3841,7 @@ Returned by llCastRay when the raycast failed because simulator performance is l
     </description>
   </constant>
 
-<!-- Earlier than 0.9.0, the value in opensim had been 3. It was changed to -3 due to http://opensimulator.org/mantis/view.php?id=7591 --> 
+<!-- Earlier than 0.9.0, the value in opensim had been 3. It was changed to -3 due to http://opensimulator.org/mantis/view.php?id=7591 -->
   <constant name="RCERR_CAST_TIME_EXCEEDED" type="integer" value="-3" grid="sl os">
     <description lang="en">
 Returned by llCastRay when the raycast failed because the parcel or agent has exceeded the maximum time allowed for raycasting
@@ -4801,6 +4801,150 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="OBJECT_SIT_COUNT" type="integer" value="38" grid="sl" version="sl:17.08.11.328159">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_AMBIENT" type="integer" value="0" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_TEXTURE_DEFAULTS" type="integer" value="1" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_CLOUDS" type="integer" value="2" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_DENSITY_PROFILE_COUNTS " type="integer" value="3" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_DOME" type="integer" value="4" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_GAMMA" type="integer" value="5" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_GLOW" type="integer" value="6" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_LIGHT" type="integer" value="8" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_MOON" type="integer" value="9" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_PLANET" type="integer" value="10" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_REFRACTION" type="integer" value="11" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_STAR_BRIGHTNESS" type="integer" value="13" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_SUN" type="integer" value="14" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_TRACKS" type="integer" value="15" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_ABSORPTION_CONFIG" type="integer" value="16" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_MIE_CONFIG" type="integer" value="17" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_RAYLEIGH_CONFIG" type="integer" value="18" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="WATER_BLUR_MULTIPLIER" type="integer" value="100" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="WATER_FOG" type="integer" value="101" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="WATER_FRESNEL" type="integer" value="102" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="WATER_TEXTURE_DEFAULTS" type="integer" value="103" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="WATER_NORMAL_SCALE" type="integer" value="104" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="WATER_REFRACTION" type="integer" value="105" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="WATER_WAVE_DIRECTION" type="integer" value="106" grid="sl" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -9457,6 +9601,14 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
+  <function name="llGetEnvironment" type="list" grid="sl" version="sl:18.11.02.521379">
+    <param type="vector" name="pos"/>
+    <param type="list" name="params"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
 
   <!-- OpenSim/Aurora-specific functions -->
 
@@ -10779,14 +10931,14 @@ Get the owner of the NPC
   <function name="osForceBreakAllLinks" grid="os">
     <description lang="en">
 <!-- TODO: add documentation -->
-    </description>    
+    </description>
   </function>
 
   <function name="osForceBreakLink" grid="os">
     <param type="integer" name="linknum"/>
     <description lang="en">
 <!-- TODO: add documentation -->
-    </description>    
+    </description>
   </function>
 
   <function name="osForceCreateLink" grid="os">
@@ -10794,7 +10946,7 @@ Get the owner of the NPC
     <param type="integer" name="parent"/>
     <description lang="en">
 <!-- TODO: add documentation -->
-    </description>    
+    </description>
   </function>
 
   <function name="osGetInventoryDesc" type="string" grid="os aa">
@@ -10936,7 +11088,7 @@ Wraps to bool Regex.IsMatch(string input, string pattern)
   <function name="osCheckODE" type="integer" grid="os">
     <description lang="en">
 <!-- TODO: add documentation -->
-    </description>    
+    </description>
   </function>
 
   <function name="osCollisionSound" grid="os">
@@ -10944,14 +11096,14 @@ Wraps to bool Regex.IsMatch(string input, string pattern)
     <param type="float" name="impact_volume"/>
     <description lang="en">
 <!-- TODO: add documentation -->
-    </description>    
+    </description>
   </function>
 
   <function name="osVolumeDetect" grid="os">
     <param type="integer" name="detect"/>
     <description lang="en">
 <!-- TODO: add documentation -->
-    </description>    
+    </description>
   </function>
 
   <!-- Aurora exclusive functions (from IAA_Api.cs) -->
