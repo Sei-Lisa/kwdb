@@ -1,4 +1,4 @@
-11324
+11335
 rez
 slex
 slutorial
@@ -10226,6 +10226,8 @@ llGetClosestNavPoint
 llGetColor
 llGetCreator
 llGetDate
+llGetDayLength
+llGetDayOffset
 llGetDisplayName
 llGetEnergy
 llGetEnv
@@ -10261,6 +10263,8 @@ llGetMassMKS
 llGetMaxScaleFactor
 llGetMemoryLimit
 llGetMinScaleFactor
+llGetMoonDirection
+llGetMoonRotation
 llGetNextEmail
 llGetNotecardLine
 llGetNumberOfNotecardLines
@@ -10290,9 +10294,15 @@ llGetPrimitiveParams
 llGetPrimMediaParams
 llGetRegionAgentCount
 llGetRegionCorner
+llGetRegionDayLength
+llGetRegionDayOffset
 llGetRegionFlags
 llGetRegionFPS
+llGetRegionMoonDirection
+llGetRegionMoonRotation
 llGetRegionName
+llGetRegionSunDirection
+llGetRegionSunRotation
 llGetRegionTimeDilation
 llGetRootPosition
 llGetRootRotation
@@ -10308,6 +10318,7 @@ llGetStaticPath
 llGetStatus
 llGetSubString
 llGetSunDirection
+llGetSunRotation
 llGetTexture
 llGetTextureOffset
 llGetTextureRot
@@ -11193,7 +11204,7 @@ SIT_NO_SIT_TARGET
 SKY_ABSORPTION_CONFIG
 SKY_AMBIENT
 SKY_CLOUDS
-SKY_DENSITY_PROFILE_COUNTS 
+SKY_DENSITY_PROFILE_COUNTS
 SKY_DOME
 SKY_GAMMA
 SKY_GLOW

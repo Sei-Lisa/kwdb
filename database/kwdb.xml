@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20181109000">
+<keywords version="0.0.20181208000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -4824,7 +4824,7 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
-  <constant name="SKY_DENSITY_PROFILE_COUNTS " type="integer" value="3" grid="sl" version="sl:18.11.02.521379">
+  <constant name="SKY_DENSITY_PROFILE_COUNTS" type="integer" value="3" grid="sl" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -9604,6 +9604,72 @@ str2 repeats if it is shorter than str1.
   <function name="llGetEnvironment" type="list" grid="sl" version="sl:18.11.02.521379">
     <param type="vector" name="pos"/>
     <param type="list" name="params"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetDayLength" type="integer" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetDayOffset" type="integer" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetRegionDayLength" type="integer" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetRegionDayOffset" type="integer" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetMoonRotation" type="rotation" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetRegionMoonRotation" type="rotation" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetRegionSunRotation" type="rotation" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetSunRotation" type="rotation" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetMoonDirection" type="vector" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetRegionMoonDirection" type="vector" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetRegionSunDirection" type="vector" grid="sl" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>

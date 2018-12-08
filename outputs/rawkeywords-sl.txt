@@ -719,7 +719,7 @@ OBJECT_SIT_COUNT
 SKY_AMBIENT
 SKY_TEXTURE_DEFAULTS
 SKY_CLOUDS
-SKY_DENSITY_PROFILE_COUNTS 
+SKY_DENSITY_PROFILE_COUNTS
 SKY_DOME
 SKY_GAMMA
 SKY_GLOW
@@ -1208,6 +1208,17 @@ llStartObjectAnimation
 llStopObjectAnimation
 llGetObjectAnimationNames
 llGetEnvironment
+llGetDayLength
+llGetDayOffset
+llGetRegionDayLength
+llGetRegionDayOffset
+llGetMoonRotation
+llGetRegionMoonRotation
+llGetRegionSunRotation
+llGetSunRotation
+llGetMoonDirection
+llGetRegionMoonDirection
+llGetRegionSunDirection
 state_entry
 state_exit
 touch_start
