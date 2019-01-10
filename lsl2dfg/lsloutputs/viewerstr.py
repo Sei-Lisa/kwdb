@@ -3,7 +3,7 @@
 # viewerstr.py - This is a LSL2dfg.py output module generating elements for strings.xml viewer file.
 #
 # (C) Copyright 2013 Sei Lisa.
-# Sei Lisa is the author's username in the Second Life online virtual world.
+# Sei Lisa is the author's username in the Second Life(R) online virtual world.
 #
 # This file is part of LSL2 Derived Files Generator.
 #
@@ -21,7 +21,7 @@
 #    along with LSL2 Derived Files Generator. If not, see
 #    <http://www.gnu.org/licenses/>.
 #
-# Second Life is a trademark of Linden Research, Inc.
+# Second Life is a registered trademark of Linden Research, Inc.
 
 
 import sys

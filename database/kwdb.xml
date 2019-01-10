@@ -4,7 +4,7 @@
 (C) Copyright 2012 Linden Research, Inc.
 (C) Copyright 2013-2018 Sei Lisa.
 (C) Copyright 2017 Mako Nozaki.
-Sei Lisa and Mako Nozaki are the usernames of the authors in the Second Life
+Sei Lisa and Mako Nozaki are the usernames of the authors in the Second Life(R)
 online virtual world.
 
     LSL2 Keywords Database
@@ -23,7 +23,7 @@ online virtual world.
     along with LSL2 Keywords Database. If not, see
     <http://www.gnu.org/licenses/>.
 
-Second Life is a trademark of Linden Research, Inc.
+Second Life is a registered trademark of Linden Research, Inc.
 
 -->
 
@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20181208000">
+<keywords version="0.0.20190110000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
