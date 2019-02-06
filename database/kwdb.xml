@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20190202000">
+<keywords version="0.0.20190206000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="19.01.18.523336">Second Life</grid>
+  <grid id="sl" version="19.01.18.523934">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -4945,6 +4945,12 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="WATER_WAVE_DIRECTION" type="integer" value="106" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="INVENTORY_SETTING" type="integer" value="56" grid="sl" version="sl:19.02.01.523934">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
