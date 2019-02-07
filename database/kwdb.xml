@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20190206000">
+<keywords version="0.0.20190207000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -4908,7 +4908,31 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
+  <constant name="SKY_CLOUD_TEXTURE" type="integer" value="19" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_MOON_TEXTURE" type="integer" value="20" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_SUN_TEXTURE" type="integer" value="21" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
   <constant name="WATER_BLUR_MULTIPLIER" type="integer" value="100" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="WATER_NORMAL_TEXTURE" type="integer" value="107" grid="sl" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -4955,6 +4979,55 @@ Used with llPassTouches to never pass touches to the root.
 <!-- TODO: add documentation -->
     </description>
   </constant>
+
+  <constant name="ENVIRONMENT_DAYINFO" type="integer" value="200" grid="sl" version="sl:19.02.01.523934">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="ENV_INVALID_AGENT" type="integer" value="-4" grid="sl" version="sl:19.02.01.523934">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="ENV_INVALID_RULE" type="integer" value="-5" grid="sl" version="sl:19.02.01.523934">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="ENV_NOT_EXPERIENCE" type="integer" value="-1" grid="sl" version="sl:19.02.01.523934">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="ENV_NO_ENVIRONMENT" type="integer" value="-3" grid="sl" version="sl:19.02.01.523934">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="ENV_NO_EXPERIENCE_PERMISSION" type="integer" value="-2" grid="sl" version="sl:19.02.01.523934">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="ENV_VALIDATION_FAIL" type="integer" value="-6" grid="sl" version="sl:19.02.01.523934">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+<!--Documented but not active
+  <constant name="ENV_NO_EXPERIENCE_LAND" type="integer" value="-7" grid="sl" version="sl:19.02.01.523934">
+    <description lang="en">
+    </description>
+  </constant>
+-->
 
 
   <!-- String constants -->
@@ -9676,6 +9749,30 @@ str2 repeats if it is shorter than str1.
   </function>
 
   <function name="llGetRegionSunDirection" type="vector" grid="sl" version="sl:18.11.02.521379">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llGetRegionTimeOfDay" type="float" grid="sl" version="sl:19.02.01.523934">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llSetAgentEnvironment" type="integer" grid="sl" version="sl:19.02.01.523934">
+    <param type="key" name="agent_id"/>
+    <param type="float" name="transition"/>
+    <param type="list" name="params"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="llReplaceAgentEnvironment" type="integer" grid="sl" version="sl:19.02.01.523934">
+    <param type="key" name="agent_id"/>
+    <param type="float" name="transition"/>
+    <param type="string" name="environment"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
