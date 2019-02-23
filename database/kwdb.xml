@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20190207000">
+<keywords version="0.0.20190223000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="19.01.18.523934">Second Life</grid>
+  <grid id="sl" version="19.02.16.524516">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -5022,12 +5022,11 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
-<!--Documented but not active
-  <constant name="ENV_NO_EXPERIENCE_LAND" type="integer" value="-7" grid="sl" version="sl:19.02.01.523934">
+  <constant name="ENV_NO_EXPERIENCE_LAND" type="integer" value="-7" grid="sl" version="sl:19.02.16.524516">
     <description lang="en">
+<!-- TODO: add documentation -->
     </description>
   </constant>
--->
 
 
   <!-- String constants -->
