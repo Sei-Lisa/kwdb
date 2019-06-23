@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20190623000">
+<keywords version="0.0.20190623001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="19.05.17.527341">Second Life</grid>
+  <grid id="sl" version="19.06.11.528038">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -5028,6 +5028,18 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
+  <constant name="OBJECT_ANIMATED_COUNT" type="integer" value="39" grid="sl" version="sl:19.06.11.528038">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OBJECT_ANIMATED_SLOTS_AVAILABLE" type="integer" value="40" grid="sl" version="sl:19.06.11.528038">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
 
   <!-- String constants -->
 
@@ -5075,6 +5087,7 @@ UUID for the "Default Transparent" texture
 
 
   <!-- These constants were first noticed at version 19.05.17.527341. Not sure which version they were actually introduced at. -->
+  <!-- Also, yay for consistency (TEXTURE_xxx vs IMG_xxx). -->
   <constant name="IMG_USE_BAKED_AUX1" type="string" value="9742065b-19b5-297c-858a-29711d539043" grid="sl" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
