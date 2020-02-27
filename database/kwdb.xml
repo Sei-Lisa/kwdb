@@ -2,7 +2,7 @@
 <!--
 
 (C) Copyright 2012 Linden Research, Inc.
-(C) Copyright 2013-2019 Sei Lisa.
+(C) Copyright 2013-2020 Sei Lisa.
 (C) Copyright 2017 Mako Nozaki.
 Sei Lisa and Mako Nozaki are the usernames of the authors in the Second Life(R)
 online virtual world.
@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20190623001">
+<keywords version="0.0.20200227001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="19.06.11.528038">Second Life</grid>
+  <grid id="sl" version="2020-02-14T20:17:32.536748">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -5023,6 +5023,15 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="ENV_NO_EXPERIENCE_LAND" type="integer" value="-7" grid="sl" version="sl:19.02.16.524516">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <!-- Note: This constant was missed from this database for a long time and the version it was released is probably near the time it was documented,
+    which is August 20, 2019 - see http://wiki.secondlife.com/w/index.php?title=LlSetAgentEnvironment&diff=1208681&oldid=1208540
+  -->
+  <constant name="ENV_THROTTLE" type="integer" value="-8" grid="sl" version="sl:2020-02-14T20:17:32.536748">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
