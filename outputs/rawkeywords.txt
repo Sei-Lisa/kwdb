@@ -851,6 +851,8 @@ ENV_NO_EXPERIENCE_LAND
 ENV_THROTTLE
 OBJECT_ANIMATED_COUNT
 OBJECT_ANIMATED_SLOTS_AVAILABLE
+TARGETED_EMAIL_ROOT_CREATOR
+TARGETED_EMAIL_OBJECT_OWNER
 NULL_KEY
 EOF
 TEXTURE_BLANK
@@ -1519,6 +1521,7 @@ llGetRegionSunDirection
 llGetRegionTimeOfDay
 llSetAgentEnvironment
 llReplaceAgentEnvironment
+llTargetedEmail
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted

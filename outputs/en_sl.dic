@@ -1,4 +1,4 @@
-11361
+11363
 rez
 slex
 slutorial
@@ -10540,6 +10540,7 @@ llSubStringIndex
 llTakeControls
 llTan
 llTarget
+llTargetedEmail
 llTargetOmega
 llTargetRemove
 llTeleportAgent
@@ -11266,6 +11267,7 @@ STATUS_WHITELIST_FAILED
 STRING_TRIM
 STRING_TRIM_HEAD
 STRING_TRIM_TAIL
+TARGETED_EMAIL_OBJECT_OWNER
 TEXTURE_BLANK
 TEXTURE_DEFAULT
 TEXTURE_MEDIA
