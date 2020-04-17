@@ -20,6 +20,6 @@ The inputs/ subfolder contains the input templates needed by some of the generat
 
 ### License ###
 
-The license for the project is the GNU Lesser General Public License (LGPL) version 3. Read the full text of the license here:
+The license for the project is the GNU Lesser General Public License (LGPL) version 3 or later. Read the full text of the license here:
 
 http://www.gnu.org/licenses/lgpl-3.0.html
