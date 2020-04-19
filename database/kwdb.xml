@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20200419000">
+<keywords version="0.0.20200419001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -9881,7 +9881,7 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llTargetedEmail" delay="20" grid="sl" version="sl:2020-04-10T18:39:41.540037">
+  <function name="llTargetedEmail" delay="20" grid="sl" version="sl:2020-04-03T19:49:49.539684">
     <param type="integer" name="target"/>
     <param type="string" name="header"/>
     <param type="string" name="body"/>
