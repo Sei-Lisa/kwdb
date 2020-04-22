@@ -1522,6 +1522,8 @@ llGetRegionTimeOfDay
 llSetAgentEnvironment
 llReplaceAgentEnvironment
 llTargetedEmail
+llsRGB2Linear
+llLinear2sRGB
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted

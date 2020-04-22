@@ -1252,6 +1252,8 @@ llGetRegionTimeOfDay
 llSetAgentEnvironment
 llReplaceAgentEnvironment
 llTargetedEmail
+llsRGB2Linear
+llLinear2sRGB
 state_entry
 state_exit
 touch_start

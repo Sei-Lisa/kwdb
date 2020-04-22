@@ -1,4 +1,4 @@
-11363
+11365
 rez
 slex
 slutorial
@@ -10353,6 +10353,7 @@ llJsonValueType
 llKey2Name
 llKeyCountKeyValue
 llKeysKeyValue
+llLinear2sRGB
 llLinkParticleSystem
 llLinkSitTarget
 llList2CSV
@@ -10525,6 +10526,7 @@ llSitOnLink
 llSitTarget
 llSleep
 llSqrt
+llsRGB2Linear
 llStartAnimation
 llStartObjectAnimation
 llStopAnimation
