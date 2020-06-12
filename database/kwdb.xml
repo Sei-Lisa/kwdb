@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20200422000">
+<keywords version="0.0.20200612000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2020-04-14T23:08:20.540213">Second Life</grid>
+  <grid id="sl" version="2020-06-05T19:36:41.543337">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -3269,7 +3269,7 @@ Used with llSetClickAction to set open-media as the default action when object i
     </description>
   </constant>
 
-  <constant name="CLICK_ACTION_ZOOM" type="integer" value="7" grid="os aa">
+  <constant name="CLICK_ACTION_ZOOM" type="integer" value="7">
     <description lang="en">
 Used with llSetClickAction to set zoom in as the default action when object is clicked
     </description>
@@ -5056,6 +5056,12 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="TARGETED_EMAIL_OBJECT_OWNER" type="integer" value="2" grid="sl" version="2020-04-10T18:39:41.540037">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="CLICK_ACTION_DISABLED" type="integer" value="8" grid="sl" version="2020-06-05T19:36:41.543337">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
