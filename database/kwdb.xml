@@ -2,7 +2,7 @@
 <!--
 
 (C) Copyright 2012 Linden Research, Inc.
-(C) Copyright 2013-2020 Sei Lisa.
+(C) Copyright 2013-2021 Sei Lisa.
 (C) Copyright 2017 Mako Nozaki.
 Sei Lisa and Mako Nozaki are the usernames of the authors in the Second Life(R)
 online virtual world.
@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20200612000">
+<keywords version="0.0.20210128000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2020-06-05T19:36:41.543337">Second Life</grid>
+  <grid id="sl" version="2021-01-20.555189">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -4884,7 +4884,8 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
-  <constant name="SKY_TRACKS" type="integer" value="15" grid="sl" version="sl:18.11.02.521379">
+  <!-- This has gone missing in the sim's keyword list and is not listed in the wiki; assuming it's obsolete -->
+  <constant name="SKY_TRACKS" type="integer" value="15" grid="sl" version="sl:18.11.02.521379" status="deprecated">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -5062,6 +5063,24 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="CLICK_ACTION_DISABLED" type="integer" value="8" grid="sl" version="2020-06-05T19:36:41.543337">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_BLUE" type="integer" value="22" grid="sl" version="sl:2021-01-08.554811">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_HAZE" type="integer" value="23" grid="sl" version="sl:2021-01-08.554811">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="HTTP_EXTENDED_ERROR" type="integer" value="9" grid="sl" version="sl:2021-01-20.555189">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
