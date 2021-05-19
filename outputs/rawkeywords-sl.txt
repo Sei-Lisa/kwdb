@@ -1259,6 +1259,10 @@ llReplaceAgentEnvironment
 llTargetedEmail
 llsRGB2Linear
 llLinear2sRGB
+llOrd
+llChar
+llHash
+llOpenFloater
 state_entry
 state_exit
 touch_start

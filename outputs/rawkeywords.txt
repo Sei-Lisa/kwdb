@@ -1528,6 +1528,10 @@ llReplaceAgentEnvironment
 llTargetedEmail
 llsRGB2Linear
 llLinear2sRGB
+llOrd
+llChar
+llHash
+llOpenFloater
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted
