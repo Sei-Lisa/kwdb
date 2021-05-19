@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20210519000">
+<keywords version="0.0.20210519001">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -9923,20 +9923,20 @@ str2 repeats if it is shorter than str1.
     <param type="vector" name="color"/>
   </function>
 
-  <function name="llOrd" type="integer" grid="sl" version="2021-05-05.559308">
+  <function name="llOrd" type="integer" grid="sl" version="sl:2021-05-05.559308">
     <param type="string" name="val"/>
     <param type="integer" name="index"/>
   </function>
 
-  <function name="llChar" type="string" grid="sl" version="2021-05-05.559308">
+  <function name="llChar" type="string" grid="sl" version="sl:2021-05-05.559308">
     <param type="integer" name="code"/>
   </function>
 
-  <function name="llHash" type="integer" grid="sl" version="2021-05-05.559308">
+  <function name="llHash" type="integer" grid="sl" version="sl:2021-05-05.559308">
     <param type="string" name="val"/>
   </function>
 
-  <function name="llOpenFloater" type="integer" grid="sl" version="2021-05-12.559669">
+  <function name="llOpenFloater" type="integer" grid="sl" version="sl:2021-05-12.559669" status="godmode">
     <param type="string" name="title"/>
     <param type="string" name="url"/>
     <param type="list" name="params"/>

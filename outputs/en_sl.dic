@@ -1,4 +1,4 @@
-11373
+11372
 rez
 slex
 slutorial
@@ -10395,7 +10395,6 @@ llMoveToTarget
 llName2Key
 llNavigateTo
 llOffsetTexture
-llOpenFloater
 llOpenRemoteDataChannel
 llOrd
 llOverMyLand
