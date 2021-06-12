@@ -1263,6 +1263,7 @@ llOrd
 llChar
 llHash
 llOpenFloater
+llGetInventoryAcquireTime
 state_entry
 state_exit
 touch_start

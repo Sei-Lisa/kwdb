@@ -1532,6 +1532,7 @@ llOrd
 llChar
 llHash
 llOpenFloater
+llGetInventoryAcquireTime
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted

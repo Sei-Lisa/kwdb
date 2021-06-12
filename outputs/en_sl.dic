@@ -1,4 +1,4 @@
-11372
+11373
 rez
 slex
 slutorial
@@ -10241,6 +10241,7 @@ llGetFreeURLs
 llGetGeometricCenter
 llGetGMTclock
 llGetHTTPHeader
+llGetInventoryAcquireTime
 llGetInventoryCreator
 llGetInventoryKey
 llGetInventoryName

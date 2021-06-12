@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20210519001">
+<keywords version="0.0.20210612000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2021-05-12.559669">Second Life</grid>
+  <grid id="sl" version="2021-05-25.560108">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -9940,6 +9940,10 @@ str2 repeats if it is shorter than str1.
     <param type="string" name="title"/>
     <param type="string" name="url"/>
     <param type="list" name="params"/>
+  </function>
+
+  <function name="llGetInventoryAcquireTime" type="string" grid="sl" version="sl:2021-05-25.560108">
+    <param type="string" name="item"/>
   </function>
 
   <!-- OpenSim/Aurora-specific functions -->
