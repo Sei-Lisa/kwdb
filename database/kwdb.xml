@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20210612000">
+<keywords version="0.0.20211027000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2021-05-25.560108">Second Life</grid>
+  <grid id="sl" version="2021-10-25.565008">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -5081,6 +5081,12 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="HTTP_EXTENDED_ERROR" type="integer" value="9" grid="sl" version="sl:2021-01-20.555189">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_PROJECTOR" type="integer" value="42" grid="sl" version="sl:2021-10-25.565008">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
