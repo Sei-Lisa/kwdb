@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20220306000">
+<keywords version="0.0.20220513000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2022-02-02.568051">Second Life</grid>
+  <grid id="sl" version="2022-04-21.571166">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -4678,6 +4678,7 @@ Used with llPassTouches to always pass touches to the root regardless of whether
 Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
+  <!-- End of constants added for SVC-5923 -->
 
   <constant name="OBJECT_PRIM_COUNT" type="integer" value="30" grid="sl os" version="sl:16.01.05.309639">
     <description lang="en">
@@ -5098,6 +5099,61 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
+  <constant name="PARCEL_DETAILS_PRIM_CAPACITY" type="integer" value="7" grid="sl" version="sl:2022-04-21.571166">
+    <!-- Version unsure -->
+  </constant>
+
+  <constant name="PARCEL_DETAILS_PRIM_USED" type="integer" value="8" grid="sl" version="sl:2022-04-21.571166">
+    <!-- Version unsure -->
+  </constant>
+
+  <constant name="PARCEL_DETAILS_LANDING_POINT" type="integer" value="9" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="PARCEL_DETAILS_LANDING_LOOKAT" type="integer" value="10" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="PARCEL_DETAILS_TP_ROUTING" type="integer" value="11" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="PARCEL_DETAILS_FLAGS" type="integer" value="12" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="PARCEL_DETAILS_SCRIPT_DANGER" type="integer" value="13" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="TP_ROUTING_BLOCKED" type="integer" value="0" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="TP_ROUTING_LANDINGP" type="integer" value="1" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="TP_ROUTING_FREE" type="integer" value="2" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="OBJECT_MATERIAL" type="integer" value="42" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="OBJECT_MASS" type="integer" value="43" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="OBJECT_TEXT" type="integer" value="44" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="OBJECT_REZ_TIME" type="integer" value="45" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="OBJECT_LINK_NUMBER" type="integer" value="46" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="OBJECT_SCALE" type="integer" value="47" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="OBJECT_TEXT_COLOR" type="integer" value="48" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
+
+  <constant name="OBJECT_TEXT_ALPHA" type="integer" value="49" grid="sl" version="sl:2022-04-21.571166">
+  </constant>
 
 
   <!-- String constants -->
@@ -9956,6 +10012,11 @@ str2 repeats if it is shorter than str1.
 
   <function name="llGetInventoryAcquireTime" type="string" grid="sl" version="sl:2021-05-25.560108">
     <param type="string" name="item"/>
+  </function>
+
+  <function name="llGetVisualParams" type="list" grid="sl" version="sl:2022-04-21.571166">
+    <param type="key" name="id"/>
+    <param type="list" name="params"/>
   </function>
 
   <!-- OpenSim/Aurora-specific functions -->
