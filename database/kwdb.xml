@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20220513000">
+<keywords version="0.0.20220817000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2022-04-21.571166">Second Life</grid>
+  <grid id="sl" version="2022-08-12.574216">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -5155,6 +5155,10 @@ Used with llPassTouches to never pass touches to the root.
   <constant name="OBJECT_TEXT_ALPHA" type="integer" value="49" grid="sl" version="sl:2022-04-21.571166">
   </constant>
 
+  <constant name="STATUS_DIE_AT_NO_ENTRY" type="integer" value="0x800" grid="sl" version="sl:2022-08-12.574216"/>
+
+  <constant name="ENV_NO_PERMISSIONS" type="integer" value="-9" grid="sl" version="sl:2022-08-12.574216"/>
+
 
   <!-- String constants -->
 
@@ -10018,6 +10022,15 @@ str2 repeats if it is shorter than str1.
     <param type="key" name="id"/>
     <param type="list" name="params"/>
   </function>
+
+  <function name="llReplaceEnvironment" type="integer" grid="sl" version="sl:2022-08-12.574216">
+    <param type="vector" name="position"/>
+    <param type="string" name="environment"/>
+    <param type="integer" name="track_no"/>
+    <param type="integer" name="day_length"/>
+    <param type="integer" name="day_offset"/>
+  </function>
+
 
   <!-- OpenSim/Aurora-specific functions -->
 

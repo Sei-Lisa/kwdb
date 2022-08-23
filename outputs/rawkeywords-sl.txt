@@ -783,6 +783,8 @@ OBJECT_LINK_NUMBER
 OBJECT_SCALE
 OBJECT_TEXT_COLOR
 OBJECT_TEXT_ALPHA
+STATUS_DIE_AT_NO_ENTRY
+ENV_NO_PERMISSIONS
 NULL_KEY
 EOF
 TEXTURE_BLANK
@@ -1285,6 +1287,7 @@ llHash
 llOpenFloater
 llGetInventoryAcquireTime
 llGetVisualParams
+llReplaceEnvironment
 state_entry
 state_exit
 touch_start
