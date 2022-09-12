@@ -1287,6 +1287,7 @@ llHash
 llOpenFloater
 llGetInventoryAcquireTime
 llGetVisualParams
+llSetEnvironment
 llReplaceEnvironment
 state_entry
 state_exit

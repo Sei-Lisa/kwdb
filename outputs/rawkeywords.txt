@@ -1556,6 +1556,7 @@ llHash
 llOpenFloater
 llGetInventoryAcquireTime
 llGetVisualParams
+llSetEnvironment
 llReplaceEnvironment
 lsGetWindlightScene
 lsSetWindlightScene

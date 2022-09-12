@@ -1,4 +1,4 @@
-11397
+11398
 rez
 slex
 slutorial
@@ -10482,6 +10482,7 @@ llSetClickAction
 llSetColor
 llSetContentType
 llSetDamage
+llSetEnvironment
 llSetForce
 llSetForceAndTorque
 llSetHoverHeight
