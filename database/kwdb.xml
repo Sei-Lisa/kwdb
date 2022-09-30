@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20220912000">
+<keywords version="0.0.20220928000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2022-08-12.574216">Second Life</grid>
+  <grid id="sl" version="2022-09-23.575315">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -10034,6 +10034,11 @@ str2 repeats if it is shorter than str1.
     <param type="integer" name="track_no"/>
     <param type="integer" name="day_length"/>
     <param type="integer" name="day_offset"/>
+  </function>
+
+  <function name="llGetObjectLinkKey" type="key" grid="sl" version="sl:2022-09-23.575315">
+    <param type="key" name="id"/>
+    <param type="integer" name="link"/>
   </function>
 
 

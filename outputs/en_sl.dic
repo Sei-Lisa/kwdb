@@ -1,4 +1,4 @@
-11398
+11399
 rez
 slex
 slutorial
@@ -10275,6 +10275,7 @@ llGetNumberOfSides
 llGetObjectAnimationNames
 llGetObjectDesc
 llGetObjectDetails
+llGetObjectLinkKey
 llGetObjectMass
 llGetObjectName
 llGetObjectPermMask

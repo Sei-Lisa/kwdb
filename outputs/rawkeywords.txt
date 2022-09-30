@@ -1558,6 +1558,7 @@ llGetInventoryAcquireTime
 llGetVisualParams
 llSetEnvironment
 llReplaceEnvironment
+llGetObjectLinkKey
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted

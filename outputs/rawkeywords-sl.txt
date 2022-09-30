@@ -1289,6 +1289,7 @@ llGetInventoryAcquireTime
 llGetVisualParams
 llSetEnvironment
 llReplaceEnvironment
+llGetObjectLinkKey
 state_entry
 state_exit
 touch_start
