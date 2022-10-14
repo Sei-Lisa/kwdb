@@ -1559,6 +1559,7 @@ llGetVisualParams
 llSetEnvironment
 llReplaceEnvironment
 llGetObjectLinkKey
+llSHA256String
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted

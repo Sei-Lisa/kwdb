@@ -1290,6 +1290,7 @@ llGetVisualParams
 llSetEnvironment
 llReplaceEnvironment
 llGetObjectLinkKey
+llSHA256String
 state_entry
 state_exit
 touch_start

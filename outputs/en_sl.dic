@@ -1,4 +1,4 @@
-11399
+11400
 rez
 slex
 slutorial
@@ -10528,6 +10528,7 @@ llSetVehicleType
 llSetVehicleVectorParam
 llSetVelocity
 llSHA1String
+llSHA256String
 llShout
 llSin
 llSitOnLink
