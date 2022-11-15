@@ -1,4 +1,4 @@
-11400
+11421
 rez
 slex
 slutorial
@@ -10360,6 +10360,17 @@ llKeyCountKeyValue
 llKeysKeyValue
 llLinear2sRGB
 llLinkParticleSystem
+llLinksetDataAvailable
+llLinksetDataCountKeys
+llLinksetDataDelete
+llLinksetDataDeleteProtected
+llLinksetDataFindKeys
+llLinksetDataListKeys
+llLinksetDataRead
+llLinksetDataReadProtected
+llLinksetDataReset
+llLinksetDataWrite
+llLinksetDataWriteProtected
 llLinkSitTarget
 llList2CSV
 llList2Float
@@ -10594,6 +10605,7 @@ land_collision
 land_collision_end
 land_collision_start
 link_message
+linkset_data
 listen
 money
 moving_end
@@ -10873,6 +10885,15 @@ LAND_NOISE
 LAND_RAISE
 LAND_REVERT
 LAND_SMOOTH
+LINKSETDATA_DELETE
+LINKSETDATA_EMEMORY
+LINKSETDATA_ENOKEY
+LINKSETDATA_EPROTECTED
+LINKSETDATA_NOTFOUND
+LINKSETDATA_NOUPDATE
+LINKSETDATA_OK
+LINKSETDATA_RESET
+LINKSETDATA_UPDATE
 LINK_ALL_CHILDREN
 LINK_ALL_OTHERS
 LINK_ROOT

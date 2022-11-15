@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20221014000">
+<keywords version="0.0.20221115000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2022-10-07.575585">Second Life</grid>
+  <grid id="sl" version="2022-11-04.576376">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -5159,6 +5159,24 @@ Used with llPassTouches to never pass touches to the root.
 
   <constant name="ENV_NO_PERMISSIONS" type="integer" value="-9" grid="sl" version="sl:2022-08-12.574216"/>
 
+  <constant name="LINKSETDATA_RESET" type="integer" value="0" grid="sl" version="sl:2022-11-04.576376"/>
+
+  <constant name="LINKSETDATA_UPDATE" type="integer" value="1" grid="sl" version="sl:2022-11-04.576376"/>
+
+  <constant name="LINKSETDATA_DELETE" type="integer" value="2" grid="sl" version="sl:2022-11-04.576376"/>
+
+  <constant name="LINKSETDATA_OK" type="integer" value="0" grid="sl" version="sl:2022-11-04.576376"/>
+
+  <constant name="LINKSETDATA_EMEMORY" type="integer" value="1" grid="sl" version="sl:2022-11-04.576376"/>
+
+  <constant name="LINKSETDATA_ENOKEY" type="integer" value="2" grid="sl" version="sl:2022-11-04.576376"/>
+
+  <constant name="LINKSETDATA_EPROTECTED" type="integer" value="3" grid="sl" version="sl:2022-11-04.576376"/>
+
+  <constant name="LINKSETDATA_NOTFOUND" type="integer" value="4" grid="sl" version="sl:2022-11-04.576376"/>
+
+  <constant name="LINKSETDATA_NOUPDATE" type="integer" value="5" grid="sl" version="sl:2022-11-04.576376"/>
+
 
   <!-- String constants -->
 
@@ -10047,6 +10065,52 @@ str2 repeats if it is shorter than str1.
     <param type="string" name="src"/>
   </function>
 
+  <function name="llLinksetDataReset" grid="sl" version="sl:2022-11-04.576376"/>
+
+  <function name="llLinksetDataAvailable" type="integer" grid="sl" version="sl:2022-11-04.576376"/>
+
+  <function name="llLinksetDataCountKeys" type="integer" grid="sl" version="sl:2022-11-04.576376"/>
+
+  <function name="llLinksetDataWrite" type="integer" grid="sl" version="sl:2022-11-04.576376">
+    <param type="string" name="key"/>
+    <param type="string" name="value"/>
+  </function>
+
+  <function name="llLinksetDataWriteProtected" type="integer" grid="sl" version="sl:2022-11-04.576376">
+    <param type="string" name="key"/>
+    <param type="string" name="value"/>
+    <param type="string" name="password"/>
+  </function>
+
+  <function name="llLinksetDataRead" type="string" grid="sl" version="sl:2022-11-04.576376">
+    <param type="string" name="key"/>
+  </function>
+
+  <function name="llLinksetDataReadProtected" type="string" grid="sl" version="sl:2022-11-04.576376">
+    <param type="string" name="key"/>
+    <param type="string" name="password"/>
+  </function>
+
+  <function name="llLinksetDataDelete" type="integer" grid="sl" version="sl:2022-11-04.576376">
+    <param type="string" name="key"/>
+  </function>
+
+  <function name="llLinksetDataDeleteProtected" type="integer" grid="sl" version="sl:2022-11-04.576376">
+    <param type="string" name="key"/>
+    <param type="string" name="password"/>
+  </function>
+
+  <function name="llLinksetDataFindKeys" type="list" grid="sl" version="sl:2022-11-04.576376">
+    <param type="string" name="pattern"/>
+    <param type="integer" name="start"/>
+    <param type="integer" name="count"/>
+  </function>
+
+  <function name="llLinksetDataListKeys" type="list" grid="sl" version="sl:2022-11-04.576376">
+    <param type="integer" name="start"/>
+    <param type="integer" name="count"/>
+  </function>
+
 
   <!-- OpenSim/Aurora-specific functions -->
 
@@ -12267,6 +12331,12 @@ Triggered by llRequestExperiencePermissions when the permission has been granted
     <description lang="en">
 Triggered by llRequestExperiencePermissions when the permission has been denied.
     </description>
+  </event>
+
+  <event name="linkset_data" grid="sl" version="sl:2022-11-04.576376">
+    <param type="integer" name="action" />
+    <param type="string"  name="key"    />
+    <param type="string"  name="value"  />
   </event>
 
 </keywords>
