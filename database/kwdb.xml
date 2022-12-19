@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20221115000">
+<keywords version="0.0.20221219000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -10072,31 +10072,31 @@ str2 repeats if it is shorter than str1.
   <function name="llLinksetDataCountKeys" type="integer" grid="sl" version="sl:2022-11-04.576376"/>
 
   <function name="llLinksetDataWrite" type="integer" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="key"/>
+    <param type="string" name="keyname"/>
     <param type="string" name="value"/>
   </function>
 
   <function name="llLinksetDataWriteProtected" type="integer" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="key"/>
+    <param type="string" name="keyname"/>
     <param type="string" name="value"/>
     <param type="string" name="password"/>
   </function>
 
   <function name="llLinksetDataRead" type="string" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="key"/>
+    <param type="string" name="keyname"/>
   </function>
 
   <function name="llLinksetDataReadProtected" type="string" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="key"/>
+    <param type="string" name="keyname"/>
     <param type="string" name="password"/>
   </function>
 
   <function name="llLinksetDataDelete" type="integer" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="key"/>
+    <param type="string" name="keyname"/>
   </function>
 
   <function name="llLinksetDataDeleteProtected" type="integer" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="key"/>
+    <param type="string" name="keyname"/>
     <param type="string" name="password"/>
   </function>
 
@@ -12318,7 +12318,7 @@ Triggered when transferring L$ to Agent via llTransferLindenDollars
   </event>
 
   <event name="experience_permissions" grid="sl" version="sl:14.07.18.292162">
-    <param type="key"     name="agent"   />
+    <param type="key"     name="agent"/>
     <description lang="en">
 Triggered by llRequestExperiencePermissions when the permission has been granted.
 <!-- TODO: add documentation -->
@@ -12326,8 +12326,8 @@ Triggered by llRequestExperiencePermissions when the permission has been granted
   </event>
 
   <event name="experience_permissions_denied" grid="sl" version="sl:14.07.18.292162">
-    <param type="key"     name="agent"   />
-    <param type="integer" name="reason"  />
+    <param type="key"     name="agent" />
+    <param type="integer" name="reason"/>
     <description lang="en">
 Triggered by llRequestExperiencePermissions when the permission has been denied.
     </description>
@@ -12335,7 +12335,7 @@ Triggered by llRequestExperiencePermissions when the permission has been denied.
 
   <event name="linkset_data" grid="sl" version="sl:2022-11-04.576376">
     <param type="integer" name="action" />
-    <param type="string"  name="key"    />
+    <param type="string"  name="keyname"/>
     <param type="string"  name="value"  />
   </event>
 
