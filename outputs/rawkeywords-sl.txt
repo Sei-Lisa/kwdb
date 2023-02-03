@@ -794,6 +794,10 @@ LINKSETDATA_ENOKEY
 LINKSETDATA_EPROTECTED
 LINKSETDATA_NOTFOUND
 LINKSETDATA_NOUPDATE
+SOUND_PLAY
+SOUND_LOOP
+SOUND_TRIGGER
+SOUND_SYNC
 NULL_KEY
 EOF
 TEXTURE_BLANK
@@ -1311,6 +1315,11 @@ llLinksetDataDelete
 llLinksetDataDeleteProtected
 llLinksetDataFindKeys
 llLinksetDataListKeys
+llLinkPlaySound
+llLinkStopSound
+llLinkAdjustSoundVolume
+llLinkSetSoundQueueing
+llLinkSetSoundRadius
 state_entry
 state_exit
 touch_start

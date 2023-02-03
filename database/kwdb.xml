@@ -2,7 +2,7 @@
 <!--
 
 (C) Copyright 2012 Linden Research, Inc.
-(C) Copyright 2013-2022 Sei Lisa.
+(C) Copyright 2013-2023 Sei Lisa.
 (C) Copyright 2017 Mako Nozaki.
 Sei Lisa and Mako Nozaki are the usernames of the authors in the Second Life(R)
 online virtual world.
@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20221219000">
+<keywords version="0.0.20230203000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.0.0-rc2
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2022-11-04.576376">Second Life</grid>
+  <grid id="sl" version="2023-01-11.577595">Second Life</grid>
   <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -5177,6 +5177,14 @@ Used with llPassTouches to never pass touches to the root.
 
   <constant name="LINKSETDATA_NOUPDATE" type="integer" value="5" grid="sl" version="sl:2022-11-04.576376"/>
 
+  <constant name="SOUND_PLAY" type="integer" value="0x00" grid="sl" version="sl:2023-01-11.577595"/>
+
+  <constant name="SOUND_LOOP" type="integer" value="0x01" grid="sl" version="sl:2023-01-11.577595"/>
+
+  <constant name="SOUND_TRIGGER" type="integer" value="0x02" grid="sl" version="sl:2023-01-11.577595"/>
+
+  <constant name="SOUND_SYNC" type="integer" value="0x04" grid="sl" version="sl:2023-01-11.577595"/>
+
 
   <!-- String constants -->
 
@@ -10109,6 +10117,33 @@ str2 repeats if it is shorter than str1.
   <function name="llLinksetDataListKeys" type="list" grid="sl" version="sl:2022-11-04.576376">
     <param type="integer" name="start"/>
     <param type="integer" name="count"/>
+  </function>
+
+  <!-- Version unsure - could be later -->
+  <function name="llLinkPlaySound" grid="sl" version="sl:2023-01-11.577595">
+    <param type="integer" name="link"/>
+    <param type="string" name="sound"/>
+    <param type="float" name="volume"/>
+    <param type="integer" name="flags"/>
+  </function>
+
+  <function name="llLinkStopSound" grid="sl" version="sl:2023-01-11.577595">
+    <param type="integer" name="link"/>
+  </function>
+
+  <function name="llLinkAdjustSoundVolume" delay="0.1" grid="sl" version="sl:2023-01-11.577595">
+    <param type="integer" name="link"/>
+    <param type="float" name="volume"/>
+  </function>
+
+  <function name="llLinkSetSoundQueueing" grid="sl" version="sl:2023-01-11.577595">
+    <param type="integer" name="link"/>
+    <param type="integer" name="queue"/>
+  </function>
+
+  <function name="llLinkSetSoundRadius" grid="sl" version="sl:2023-01-11.577595">
+    <param type="integer" name="link"/>
+    <param type="float" name="radius"/>
   </function>
 
 

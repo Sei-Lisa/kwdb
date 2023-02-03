@@ -1,4 +1,4 @@
-11421
+11430
 rez
 slex
 slutorial
@@ -10359,7 +10359,9 @@ llKey2Name
 llKeyCountKeyValue
 llKeysKeyValue
 llLinear2sRGB
+llLinkAdjustSoundVolume
 llLinkParticleSystem
+llLinkPlaySound
 llLinksetDataAvailable
 llLinksetDataCountKeys
 llLinksetDataDelete
@@ -10371,7 +10373,10 @@ llLinksetDataReadProtected
 llLinksetDataReset
 llLinksetDataWrite
 llLinksetDataWriteProtected
+llLinkSetSoundQueueing
+llLinkSetSoundRadius
 llLinkSitTarget
+llLinkStopSound
 llList2CSV
 llList2Float
 llList2Integer
@@ -11299,6 +11304,10 @@ SKY_SUN
 SKY_SUN_TEXTURE
 SKY_TEXTURE_DEFAULTS
 SMOOTH
+SOUND_LOOP
+SOUND_PLAY
+SOUND_SYNC
+SOUND_TRIGGER
 SQRT2
 STATUS_BLOCK_GRAB
 STATUS_BLOCK_GRAB_OBJECT
