@@ -1682,7 +1682,6 @@ osSetPenColour
 osSetPenCap
 osDrawImage
 osGetDrawStringSize
-osSetStateEvents
 osList2Double
 osSetRegionWaterHeight
 osSetRegionSunSettings

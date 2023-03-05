@@ -509,8 +509,6 @@ s = s + osSetPenColour(s,s);
 s = s + osSetPenCap(s,s,s);
 s = s + osDrawImage(s,i,i,s);
 v = osGetDrawStringSize(s,s,s,i);
-osSetStateEvents(i);
-f = osList2Double(l,i);
 osSetRegionWaterHeight(f);
 osSetRegionSunSettings(i,i,f);
 osSetEstateSunSettings(i,f);

@@ -10908,14 +10908,16 @@ Sends a specified message to the specified avatar's attachments on the specified
     </description>
   </function>
 
-  <function name="osSetStateEvents" grid="os" status="unimplemented">
+<!-- removed in opensim version 0.9.2.1 -->
+<!--
+  <function name="osSetStateEvents" grid="os">
     <param type="integer" name="events"/>
     <description lang="en">
-<!-- TODO: add documentation -->
     </description>
   </function>
+-->
 
-  <function name="osList2Double" type="float" grid="os aa" status="unimplemented">
+  <function name="osList2Double" type="float" grid="aa" status="unimplemented">
     <param type="list" name="src"/>
     <param type="integer" name="index"/>
     <description lang="en">
