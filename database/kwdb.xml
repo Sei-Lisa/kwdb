@@ -3,7 +3,7 @@
 
 (C) Copyright 2012 Linden Research, Inc.
 (C) Copyright 2013-2023 Sei Lisa.
-(C) Copyright 2017 Mako Nozaki.
+(C) Copyright 2017-2023 Mako Nozaki.
 Sei Lisa and Mako Nozaki are the usernames of the authors in the Second Life(R)
 online virtual world.
 
@@ -96,11 +96,11 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20230203000">
+<keywords version="0.0.20230304000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
-      OpenSim revision 0.9.0.0-rc2
-          http://opensimulator.org/dist/opensim-0.9.0.0-rc2-source.tar.gz
+      OpenSim revision 0.9.2.1
+          http://opensimulator.org/dist/opensim-0.9.2.1-source.tar.gz
 
       AuroraSim revision 0049c9335f8b91ab119ce4fee5ba1d50d4f6f017
           https://github.com/aurora-sim/Aurora-Sim/commit/0049c9335f8b91ab119ce4fee5ba1d50d4f6f017
@@ -108,7 +108,7 @@ Example: grid="os aa"
 
   <!-- Grids supported and their versions -->
   <grid id="sl" version="2023-01-11.577595">Second Life</grid>
-  <grid id="os" version="v0.9.0.0-rc2">OpenSimulator</grid>
+  <grid id="os" version="v0.9.2.1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
   <!-- Defaults for absent descriptions -->
@@ -531,7 +531,7 @@ Passed to llRequestPermissions library function to request permission to telepor
     </description>
   </constant>
 
-  <constant name="PERMISSION_SILENT_ESTATE_MANAGEMENT" type="integer" value="0x4000" grid="sl">
+  <constant name="PERMISSION_SILENT_ESTATE_MANAGEMENT" type="integer" value="0x4000" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -543,7 +543,7 @@ Passed to llRequestPermissions library function to request permission to overrid
     </description>
   </constant>
 
-  <constant name="PERMISSION_RETURN_OBJECTS" type="integer" value="0x10000" grid="sl">
+  <constant name="PERMISSION_RETURN_OBJECTS" type="integer" value="0x10000" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -646,13 +646,13 @@ Returned by llGetAgentInfo if the Agent has 'Always Run' enabled
     </description>
   </constant>
 
-  <constant name="AGENT_AUTOPILOT" type="integer" value="0x2000" grid="sl">
+  <constant name="AGENT_AUTOPILOT" type="integer" value="0x2000" grid="sl os">
     <description lang="en">
 Returned by llGetAgentInfo if the Agent is under autopilot control
     </description>
   </constant>
 
-  <constant name="AGENT_MALE" type="integer" value="0x2000" grid="os">
+  <constant name="AGENT_MALE" type="integer" value="0x40000000" grid="os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -673,6 +673,12 @@ Passed to llGetAgentList to return only agents on any parcel in the region where
   <constant name="AGENT_LIST_REGION" type="integer" value="4">
     <description lang="en">
 Passed to llGetAgentList to return any/all agents in the region
+    </description>
+  </constant>
+
+  <constant name="AGENT_LIST_EXCLUDENPC" type="integer" value="0x4000000" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
     </description>
   </constant>
 
@@ -1111,7 +1117,7 @@ The exponential timescale for the banking behavior to take full effect
     </description>
   </constant>
 
-  <constant name="VEHICLE_FLAG_NO_FLY_UP" type="integer" value="0x1" status="deprecated" grid="sl aa" version="sl:1.1.0">
+  <constant name="VEHICLE_FLAG_NO_FLY_UP" type="integer" value="0x1" status="deprecated" version="sl:1.1.0">
     <description lang="en">
 DEPRECATED - use VEHICLE_FLAG_NO_DEFLECTION_UP
     </description>
@@ -2604,7 +2610,7 @@ Stitch edges in a cylinder-like way
     </description>
   </constant>
 
-  <constant name="PRIM_SCULPT_TYPE_MASK" type="integer" value="7" grid="sl">
+  <constant name="PRIM_SCULPT_TYPE_MASK" type="integer" value="7" grid="sl os">
     <description lang="en">
 Mask used to determine stitching type
     </description>
@@ -3200,6 +3206,24 @@ Used with llGetParcelDetails to get the avatars visibility setting
   <constant name="PARCEL_DETAILS_PRIVACY" type="integer" value="6" grid="aa">
     <description lang="en">
 Used with llGetParcelDetails to get the avatars visibility setting
+    </description>
+  </constant>
+
+  <constant name="PARCEL_DETAILS_ANY_AVATAR_SOUNDS" type="integer" value="7" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PARCEL_DETAILS_GROUP_SOUNDS" type="integer" value="8" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PARCEL_DETAILS_DWELL" type="integer" value="64" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
     </description>
   </constant>
 
@@ -3950,6 +3974,18 @@ Flag used in the RC_REJECT_TYPES mask to reject land in llCastRay
     </description>
   </constant>
 
+  <constant name="RC_REJECT_HOST" type="integer" value="0x20000000" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="RC_REJECT_HOSTGROUP" type="integer" value="0x40000000" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
   <constant name="RC_GET_NORMAL" type="integer" value="0x1" grid="sl os">
     <description lang="en">
 Flag used in the RC_DATA_FLAGS mask to get hit normals in llCastRay results
@@ -4520,25 +4556,25 @@ Triggered when a character failed to enter a parcel because it is not allowed to
     </description>
   </constant>
 
-  <constant name="PRIM_ALPHA_MODE_NONE" type="integer" value="0" grid="sl" version="sl:14.06.20.291351">
+  <constant name="PRIM_ALPHA_MODE_NONE" type="integer" value="0" grid="sl os" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_ALPHA_MODE_BLEND" type="integer" value="1" grid="sl" version="sl:14.06.20.291351">
+  <constant name="PRIM_ALPHA_MODE_BLEND" type="integer" value="1" grid="sl os" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_ALPHA_MODE_MASK" type="integer" value="2" grid="sl" version="sl:14.06.20.291351">
+  <constant name="PRIM_ALPHA_MODE_MASK" type="integer" value="2" grid="sl os" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="PRIM_ALPHA_MODE_EMISSIVE" type="integer" value="3" grid="sl" version="sl:14.06.20.291351">
+  <constant name="PRIM_ALPHA_MODE_EMISSIVE" type="integer" value="3" grid="sl os" version="sl:14.06.20.291351">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -4789,19 +4825,19 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
-  <constant name="OBJECT_CREATION_TIME" type="integer" value="36" grid="sl" version="sl:17.08.11.328159">
+  <constant name="OBJECT_CREATION_TIME" type="integer" value="36" grid="sl os" version="sl:17.08.11.328159">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_SELECT_COUNT" type="integer" value="37" grid="sl" version="sl:17.08.11.328159">
+  <constant name="OBJECT_SELECT_COUNT" type="integer" value="37" grid="sl os" version="sl:17.08.11.328159">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_SIT_COUNT" type="integer" value="38" grid="sl" version="sl:17.08.11.328159">
+  <constant name="OBJECT_SIT_COUNT" type="integer" value="38" grid="sl os" version="sl:17.08.11.328159">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -4976,7 +5012,7 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
-  <constant name="INVENTORY_SETTING" type="integer" value="56" grid="sl" version="sl:19.02.01.523934">
+  <constant name="INVENTORY_SETTING" type="integer" value="56" grid="sl os" version="sl:19.02.01.523934">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -5039,13 +5075,13 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
-  <constant name="OBJECT_ANIMATED_COUNT" type="integer" value="39" grid="sl" version="sl:19.06.11.528038">
+  <constant name="OBJECT_ANIMATED_COUNT" type="integer" value="39" grid="sl os" version="sl:19.06.11.528038">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="OBJECT_ANIMATED_SLOTS_AVAILABLE" type="integer" value="40" grid="sl" version="sl:19.06.11.528038">
+  <constant name="OBJECT_ANIMATED_SLOTS_AVAILABLE" type="integer" value="40" grid="sl os" version="sl:19.06.11.528038">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -5057,13 +5093,13 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
-  <constant name="TARGETED_EMAIL_ROOT_CREATOR" type="integer" value="1" grid="sl" version="2020-04-10T18:39:41.540037" status="unimplemented">
+  <constant name="TARGETED_EMAIL_ROOT_CREATOR" type="integer" value="1" grid="sl os" version="2020-04-10T18:39:41.540037" status="unimplemented">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="TARGETED_EMAIL_OBJECT_OWNER" type="integer" value="2" grid="sl" version="2020-04-10T18:39:41.540037">
+  <constant name="TARGETED_EMAIL_OBJECT_OWNER" type="integer" value="2" grid="sl os" version="2020-04-10T18:39:41.540037">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -5233,67 +5269,67 @@ UUID for the "Default Transparent" texture
 
   <!-- These constants were first noticed at version 19.05.17.527341. Not sure which version they were actually introduced at. -->
   <!-- Also, yay for consistency (TEXTURE_xxx vs IMG_xxx). -->
-  <constant name="IMG_USE_BAKED_AUX1" type="string" value="9742065b-19b5-297c-858a-29711d539043" grid="sl" version="sl:19.05.17.527341">
+  <constant name="IMG_USE_BAKED_AUX1" type="string" value="9742065b-19b5-297c-858a-29711d539043" grid="sl os" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="IMG_USE_BAKED_AUX2" type="string" value="03642e83-2bd1-4eb9-34b4-4c47ed586d2d" grid="sl" version="sl:19.05.17.527341">
+  <constant name="IMG_USE_BAKED_AUX2" type="string" value="03642e83-2bd1-4eb9-34b4-4c47ed586d2d" grid="sl os" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="IMG_USE_BAKED_AUX3" type="string" value="edd51b77-fc10-ce7a-4b3d-011dfc349e4f" grid="sl" version="sl:19.05.17.527341">
+  <constant name="IMG_USE_BAKED_AUX3" type="string" value="edd51b77-fc10-ce7a-4b3d-011dfc349e4f" grid="sl os" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="IMG_USE_BAKED_EYES" type="string" value="52cc6bb6-2ee5-e632-d3ad-50197b1dcb8a" grid="sl" version="sl:19.05.17.527341">
+  <constant name="IMG_USE_BAKED_EYES" type="string" value="52cc6bb6-2ee5-e632-d3ad-50197b1dcb8a" grid="sl os" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="IMG_USE_BAKED_HAIR" type="string" value="09aac1fb-6bce-0bee-7d44-caac6dbb6c63" grid="sl" version="sl:19.05.17.527341">
+  <constant name="IMG_USE_BAKED_HAIR" type="string" value="09aac1fb-6bce-0bee-7d44-caac6dbb6c63" grid="sl os" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="IMG_USE_BAKED_HEAD" type="string" value="5a9f4a74-30f2-821c-b88d-70499d3e7183" grid="sl" version="sl:19.05.17.527341">
+  <constant name="IMG_USE_BAKED_HEAD" type="string" value="5a9f4a74-30f2-821c-b88d-70499d3e7183" grid="sl os" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="IMG_USE_BAKED_LEFTARM" type="string" value="ff62763f-d60a-9855-890b-0c96f8f8cd98" grid="sl" version="sl:19.05.17.527341">
+  <constant name="IMG_USE_BAKED_LEFTARM" type="string" value="ff62763f-d60a-9855-890b-0c96f8f8cd98" grid="sl os" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="IMG_USE_BAKED_LEFTLEG" type="string" value="8e915e25-31d1-cc95-ae08-d58a47488251" grid="sl" version="sl:19.05.17.527341">
+  <constant name="IMG_USE_BAKED_LEFTLEG" type="string" value="8e915e25-31d1-cc95-ae08-d58a47488251" grid="sl os" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="IMG_USE_BAKED_LOWER" type="string" value="24daea5f-0539-cfcf-047f-fbc40b2786ba" grid="sl" version="sl:19.05.17.527341">
+  <constant name="IMG_USE_BAKED_LOWER" type="string" value="24daea5f-0539-cfcf-047f-fbc40b2786ba" grid="sl os" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="IMG_USE_BAKED_SKIRT" type="string" value="43529ce8-7faa-ad92-165a-bc4078371687" grid="sl" version="sl:19.05.17.527341">
+  <constant name="IMG_USE_BAKED_SKIRT" type="string" value="43529ce8-7faa-ad92-165a-bc4078371687" grid="sl os" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="IMG_USE_BAKED_UPPER" type="string" value="ae2de45c-d252-50b8-5c6e-19f39ce79317" grid="sl" version="sl:19.05.17.527341">
+  <constant name="IMG_USE_BAKED_UPPER" type="string" value="ae2de45c-d252-50b8-5c6e-19f39ce79317" grid="sl os" version="sl:19.05.17.527341">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -5312,109 +5348,61 @@ Used with http_request when a public URL is not available
     </description>
   </constant>
 
-  <constant name="JSON_INVALID" type="string" value="&#xFDD0;" grid="sl">
+  <constant name="JSON_INVALID" type="string" value="&#xFDD0;" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_OBJECT" type="string" value="&#xFDD1;" grid="sl">
+  <constant name="JSON_OBJECT" type="string" value="&#xFDD1;" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_ARRAY" type="string" value="&#xFDD2;" grid="sl">
+  <constant name="JSON_ARRAY" type="string" value="&#xFDD2;" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_NUMBER" type="string" value="&#xFDD3;" grid="sl">
+  <constant name="JSON_NUMBER" type="string" value="&#xFDD3;" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_STRING" type="string" value="&#xFDD4;" grid="sl">
+  <constant name="JSON_STRING" type="string" value="&#xFDD4;" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_NULL" type="string" value="&#xFDD5;" grid="sl">
+  <constant name="JSON_NULL" type="string" value="&#xFDD5;" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_TRUE" type="string" value="&#xFDD6;" grid="sl">
+  <constant name="JSON_TRUE" type="string" value="&#xFDD6;" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_FALSE" type="string" value="&#xFDD7;" grid="sl">
+  <constant name="JSON_FALSE" type="string" value="&#xFDD7;" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_DELETE" type="string" value="&#xFDD8;" grid="sl">
+  <constant name="JSON_DELETE" type="string" value="&#xFDD8;" grid="sl os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </constant>
 
-  <constant name="JSON_ARRAY" type="string" value="JSON_ARRAY" grid="os">
-    <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
-  </constant>
-
-  <constant name="JSON_OBJECT" type="string" value="JSON_OBJECT" grid="os">
-    <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
-  </constant>
-
-  <constant name="JSON_INVALID" type="string" value="JSON_INVALID" grid="os">
-    <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
-  </constant>
-
-  <constant name="JSON_NUMBER" type="string" value="JSON_NUMBER" grid="os">
-    <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
-  </constant>
-
-  <constant name="JSON_STRING" type="string" value="JSON_STRING" grid="os">
-    <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
-  </constant>
-
-  <constant name="JSON_TRUE" type="string" value="JSON_TRUE" grid="os">
-    <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
-  </constant>
-
-  <constant name="JSON_FALSE" type="string" value="JSON_FALSE" grid="os">
-    <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
-  </constant>
-
-  <constant name="JSON_NULL" type="string" value="JSON_NULL" grid="os">
-    <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
-  </constant>
-
-  <constant name="JSON_APPEND" type="string" value="JSON_APPEND" grid="os">
+  <constant name="JSON_APPEND" type="string" value="-1" grid="os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -5713,7 +5701,7 @@ Value returned by llDetectedTouchPos, llDetectedTouchNormal, and llDetectedTouch
     </description>
   </constant>
 
-  <constant name="STATS_SCRIPT_LPS" type="integer" value="20" grid="os">
+  <constant name="STATS_SCRIPT_LPS" type="integer" value="38" grid="os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -5773,10 +5761,45 @@ Value returned by llDetectedTouchPos, llDetectedTouchNormal, and llDetectedTouch
     </description>
   </constant>
 
+  <constant name="STATS_SIM_SLEEP" type="integer" value="20" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="STATS_SCRIPT_EPS" type="integer" value="28" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="STATS_SCRIPT_TIME" type="integer" value="37" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="STATS_SCRIPT_LPS" type="integer" value="38" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="STATS_SCRIPT_NPCS" type="integer" value="47" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
 
   <!-- OpenSim-specific constants -->
 
   <!-- From LSL_Constants.cs -->
+
+  <constant name="OS_APIVERSION" type="integer" value="20" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
 
   <constant name="OS_ATTACH_MSG_ALL" type="integer" value="-65535" grid="os">
     <description lang="en">
@@ -5875,7 +5898,65 @@ process message parameter as regex
     </description>
   </constant>
 
-  <!-- From CM_Constants.cs -->
+  <constant name="OSTPOBJ_NONE" type="integer" value="0x0" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OSTPOBJ_STOPATTARGET" type="integer" value="0x1" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OSTPOBJ_STOPONFAIL" type="integer" value="0x2" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OSTPOBJ_SETROT" type="integer" value="0x4" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OS_LTPAG_NONE" type="integer" value="0x0" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OS_LTPAG_USEVEL" type="integer" value="0x1" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OS_LTPAG_USELOOKAT" type="integer" value="0x2" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OS_LTPAG_ALGNLV" type="integer" value="0x4" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OS_LTPAG_FORCEFLY" type="integer" value="0x8" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="OS_LTPAG_FORCENOFLY" type="integer" value="0x16" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
 
   <constant name="WL_WATER_COLOR" type="integer" value="0" grid="os">
     <description lang="en">
@@ -6099,6 +6180,71 @@ process message parameter as regex
     </description>
   </constant>
 
+  <constant name="NPCLOOKAT_NONE" type="integer" value="0" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="NPCLOOKAT_IDLE" type="integer" value="1" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="NPCLOOKAT_LISTEN" type="integer" value="2" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="NPCLOOKAT_FREELOOK" type="integer" value="3" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="NPCLOOKAT_RESPOND" type="integer" value="4" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="NPCLOOKAT_HOVER" type="integer" value="5" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="NPCLOOKAT_CONVERSATION" type="integer" value="6" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="NPCLOOKAT_SELECT" type="integer" value="7" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="NPCLOOKAT_FOCUS" type="integer" value="8" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="NPCLOOKAT_MOUSELOOK" type="integer" value="9" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="NPCLOOKAT_CLEAR" type="integer" value="10" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
 
   <!-- AuroraSim specific constants -->
 
@@ -9510,7 +9656,7 @@ Requests a list of agents currently in the region, limited by the scope paramete
     </description>
   </function>
 
-  <function name="llAttachToAvatarTemp" energy="0" grid="sl aa">
+  <function name="llAttachToAvatarTemp" energy="0">
     <param type="integer" name="attach_point"/>
     <description lang="en">
 Attaches the object to the avatar who has granted permission to the script, with the exception that the object will not create new inventory for the user, and will disappear on detach or disconnect
@@ -9734,7 +9880,7 @@ Returns the type constant for the value in json indicated by specifiers
     </description>
   </function>
 
-  <function name="llXorBase64" type="string" grid="sl">
+  <function name="llXorBase64" type="string" grid="sl os">
     <param type="string" name="str1"/>
     <param type="string" name="str2"/>
     <description lang="en">
@@ -9872,35 +10018,35 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llName2Key" type="key" grid="sl" version="sl:18.05.07.515224">
+  <function name="llName2Key" type="key" grid="sl os" version="sl:18.05.07.515224">
     <param type="string" name="name"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llRequestUserKey" type="key" grid="sl" version="sl:18.05.07.515224">
+  <function name="llRequestUserKey" type="key" grid="sl os" version="sl:18.05.07.515224">
     <param type="string" name="name"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llStartObjectAnimation" grid="sl" version="sl:18.06.14.516474">
+  <function name="llStartObjectAnimation" grid="sl os" version="sl:18.06.14.516474">
     <param type="string" name="anim"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llStopObjectAnimation" grid="sl" version="sl:18.06.14.516474">
+  <function name="llStopObjectAnimation" grid="sl os" version="sl:18.06.14.516474">
     <param type="string" name="anim"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetObjectAnimationNames" type="list" grid="sl" version="sl:18.06.14.516474">
+  <function name="llGetObjectAnimationNames" type="list" grid="sl os" version="sl:18.06.14.516474">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -9914,67 +10060,67 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llGetDayLength" type="integer" grid="sl" version="sl:18.11.02.521379">
+  <function name="llGetDayLength" type="integer" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetDayOffset" type="integer" grid="sl" version="sl:18.11.02.521379">
+  <function name="llGetDayOffset" type="integer" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetRegionDayLength" type="integer" grid="sl" version="sl:18.11.02.521379">
+  <function name="llGetRegionDayLength" type="integer" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetRegionDayOffset" type="integer" grid="sl" version="sl:18.11.02.521379">
+  <function name="llGetRegionDayOffset" type="integer" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetMoonRotation" type="rotation" grid="sl" version="sl:18.11.02.521379">
+  <function name="llGetMoonRotation" type="rotation" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetRegionMoonRotation" type="rotation" grid="sl" version="sl:18.11.02.521379">
+  <function name="llGetRegionMoonRotation" type="rotation" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetRegionSunRotation" type="rotation" grid="sl" version="sl:18.11.02.521379">
+  <function name="llGetRegionSunRotation" type="rotation" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetSunRotation" type="rotation" grid="sl" version="sl:18.11.02.521379">
+  <function name="llGetSunRotation" type="rotation" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetMoonDirection" type="vector" grid="sl" version="sl:18.11.02.521379">
+  <function name="llGetMoonDirection" type="vector" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetRegionMoonDirection" type="vector" grid="sl" version="sl:18.11.02.521379">
+  <function name="llGetRegionMoonDirection" type="vector" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="llGetRegionSunDirection" type="vector" grid="sl" version="sl:18.11.02.521379">
+  <function name="llGetRegionSunDirection" type="vector" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -10004,7 +10150,7 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
-  <function name="llTargetedEmail" delay="20" grid="sl" version="sl:2020-04-03T19:49:49.539684">
+  <function name="llTargetedEmail" delay="20" grid="sl os" version="sl:2020-04-03T19:49:49.539684">
     <param type="integer" name="target"/>
     <param type="string" name="header"/>
     <param type="string" name="body"/>
@@ -10021,16 +10167,16 @@ str2 repeats if it is shorter than str1.
     <param type="vector" name="color"/>
   </function>
 
-  <function name="llOrd" type="integer" grid="sl" version="sl:2021-05-05.559308">
+  <function name="llOrd" type="integer" grid="sl os" version="sl:2021-05-05.559308">
     <param type="string" name="val"/>
     <param type="integer" name="index"/>
   </function>
 
-  <function name="llChar" type="string" grid="sl" version="sl:2021-05-05.559308">
+  <function name="llChar" type="string" grid="sl os" version="sl:2021-05-05.559308">
     <param type="integer" name="code"/>
   </function>
 
-  <function name="llHash" type="integer" grid="sl" version="sl:2021-05-05.559308">
+  <function name="llHash" type="integer" grid="sl os" version="sl:2021-05-05.559308">
     <param type="string" name="val"/>
   </function>
 
@@ -10245,6 +10391,18 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
+  <function name="osSetDynamicTextureDataFace" type="string" grid="os">
+    <param type="string" name="dynamicID"/>
+    <param type="string" name="contentType"/>
+    <param type="string" name="data"/>
+    <param type="string" name="extraParams"/>
+    <param type="integer" name="timer"/>
+    <param type="integer" name="face"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osSetDynamicTextureDataBlend" type="string" grid="os aa">
     <param type="string" name="dynamicID"/>
     <param type="string" name="contentType"/>
@@ -10341,6 +10499,14 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
+  <function name="osRegionNotice" grid="os">
+    <param type="key" name="agent_id"/>
+    <param type="string" name="msg"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osConsoleCommand" type="integer" grid="os">
     <param type="string" name="Command"/>
     <description lang="en">
@@ -10350,6 +10516,13 @@ str2 repeats if it is shorter than str1.
 
   <function name="osConsoleCommand" type="bool" grid="aa">
     <param type="string" name="Command"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetParcelMusicURL" grid="os">
+    <param type="string" name="url"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -10384,6 +10557,17 @@ str2 repeats if it is shorter than str1.
   </function>
 
   <function name="osGetAgents" type="list" grid="os aa">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osLocalTeleportAgent" grid="os">
+    <param type="key" name="agent"/>
+    <param type="vector" name="position"/>
+    <param type="vector" name="velocity"/>
+    <param type="vector" name="lookat"/>
+    <param type="integer" name="flags"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -10453,7 +10637,7 @@ str2 repeats if it is shorter than str1.
   </function>
 
   <function name="osAvatarPlayAnimation" grid="os aa">
-    <param type="string" name="avatar"/>
+    <param type="key" name="avatar"/>
     <param type="string" name="animation"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -10461,7 +10645,7 @@ str2 repeats if it is shorter than str1.
   </function>
 
   <function name="osAvatarStopAnimation" grid="os aa">
-    <param type="string" name="avatar"/>
+    <param type="key" name="avatar"/>
     <param type="string" name="animation"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -10577,6 +10761,15 @@ Sends a specified message to the specified avatar's attachments on the specified
     </description>
   </function>
 
+  <function name="osDrawFilledEllipse" type="string" grid="os">
+    <param type="string" name="drawList"/>
+    <param type="integer" name="width"/>
+    <param type="integer" name="height"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osDrawRectangle" type="string" grid="os aa">
     <param type="string" name="drawList"/>
     <param type="integer" name="width"/>
@@ -10608,6 +10801,39 @@ Sends a specified message to the specified avatar's attachments on the specified
     <param type="string" name="drawList"/>
     <param type="list" name="x"/>
     <param type="list" name="y"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osDrawResetTransform" type="string" grid="os">
+    <param type="string" name="drawList"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osDrawRotationTransform" type="string" grid="os">
+    <param type="string" name="drawList"/>
+    <param type="float" name="x"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osDrawScaleTransform" type="string" grid="os">
+    <param type="string" name="drawList"/>
+    <param type="float" name="x"/>
+    <param type="float" name="y"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osDrawTranslationTransform" type="string" grid="os">
+    <param type="string" name="drawList"/>
+    <param type="float" name="x"/>
+    <param type="float" name="y"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -10682,14 +10908,16 @@ Sends a specified message to the specified avatar's attachments on the specified
     </description>
   </function>
 
+<!-- removed in opensim version 0.9.2.1 -->
+<!--
   <function name="osSetStateEvents" grid="os">
     <param type="integer" name="events"/>
     <description lang="en">
-<!-- TODO: add documentation -->
     </description>
   </function>
+-->
 
-  <function name="osList2Double" type="float" grid="os aa">
+  <function name="osList2Double" type="float" grid="aa" status="unimplemented">
     <param type="list" name="src"/>
     <param type="integer" name="index"/>
     <description lang="en">
@@ -10797,6 +11025,13 @@ Sends a specified message to the specified avatar's attachments on the specified
     </description>
   </function>
 
+  <function name="osGetParcelDwell" type="integer" grid="os">
+    <param type="vector" name="pos"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osParcelJoin" grid="os aa">
     <param type="vector" name="pos1"/>
     <param type="vector" name="pos2"/>
@@ -10875,6 +11110,14 @@ Sends a specified message to the specified avatar's attachments on the specified
     </description>
   </function>
 
+  <function name="osMakeNotecard" grid="os">
+    <param type="string" name="notecardName"/>
+    <param type="string" name="contents"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osMakeNotecard" grid="os aa">
     <param type="string" name="notecardName"/>
     <param type="list" name="contents"/>
@@ -10915,6 +11158,13 @@ Sends a specified message to the specified avatar's attachments on the specified
 
   <function name="osKey2Name" type="string" grid="os aa">
     <param type="string" name="id"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSHA256" type="string" grid="os">
+    <param type="string" name="input"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -11102,6 +11352,15 @@ Check if the given key is an npc
     </description>
   </function>
 
+  <function name="osNpcSaveAppearance" type="key" grid="os">
+    <param type="key" name="npc"/>
+    <param type="string" name="notecard"/>
+    <param type="integer" name="includeHuds"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osNpcLoadAppearance" grid="os">
     <param type="key" name="npc"/>
     <param type="string" name="notecard"/>
@@ -11173,6 +11432,16 @@ Get the owner of the NPC
 
   <function name="osNpcSay" grid="os">
     <param type="key" name="npc"/>
+    <param type="integer" name="channel"/>
+    <param type="string" name="message"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osNpcSayTo" grid="os">
+    <param type="key" name="npc"/>
+    <param type="key" name="target"/>
     <param type="integer" name="channel"/>
     <param type="string" name="message"/>
     <description lang="en">
@@ -11263,9 +11532,26 @@ Get the owner of the NPC
     </description>
   </function>
 
+  <function name="osOwnerSaveAppearance" type="key" grid="os">
+    <param type="string" name="notecard"/>
+    <param type="integer" name="includeHuds"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osAgentSaveAppearance" type="key" grid="os">
     <param type="key" name="agentId"/>
     <param type="string" name="notecard"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osAgentSaveAppearance" type="key" grid="os">
+    <param type="key" name="agentId"/>
+    <param type="string" name="notecard"/>
+    <param type="integer" name="includeHuds"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -11278,7 +11564,7 @@ Get the owner of the NPC
   </function>
 
   <function name="osGetRegionMapTexture" type="key" grid="os aa">
-    <param type="string" name="regionName"/>
+    <param type="string" name="regionNameOrID"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -11302,9 +11588,23 @@ Get the owner of the NPC
     </description>
   </function>
 
+  <function name="osGetSimulatorMemoryKB" type="integer" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osKickAvatar" grid="os aa">
     <param type="string" name="FirstName"/>
     <param type="string" name="SurName"/>
+    <param type="string" name="alert"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osKickAvatar" grid="os">
+    <param type="key" name="agentId"/>
     <param type="string" name="alert"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -11319,15 +11619,22 @@ Get the owner of the NPC
     </description>
   </function>
 
+  <function name="osSetOwnerSpeed" grid="os">
+    <param type="float" name="SpeedModifier"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osGetHealth" type="float" grid="os aa">
-    <param type="string" name="avatar"/>
+    <param type="key" name="agentId"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
   <function name="osSetHealth" grid="os">
-    <param type="string" name="avatar"/>
+    <param type="key" name="agentId"/>
     <param type="float" name="health"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -11335,14 +11642,14 @@ Get the owner of the NPC
   </function>
 
   <function name="osGetHealRate" type="float" grid="os">
-    <param type="string" name="avatar"/>
+    <param type="key" name="agentId"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
   <function name="osSetHealRate" grid="os">
-    <param type="string" name="avatar"/>
+    <param type="key" name="agentId"/>
     <param type="float" name="healrate"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -11350,7 +11657,7 @@ Get the owner of the NPC
   </function>
 
   <function name="osCauseHealing" grid="os aa">
-    <param type="string" name="avatar"/>
+    <param type="key" name="agentId"/>
     <param type="float" name="healing"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -11358,7 +11665,7 @@ Get the owner of the NPC
   </function>
 
   <function name="osCauseDamage" grid="os aa">
-    <param type="string" name="avatar"/>
+    <param type="key" name="avatar"/>
     <param type="float" name="damage"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -11442,7 +11749,25 @@ Get the owner of the NPC
     </description>
   </function>
 
+  <function name="osSetProjectionParams" grid="os">
+    <param type="integer" name="linknumber"/>
+    <param type="integer" name="projection"/>
+    <param type="key" name="texture"/>
+    <param type="float" name="fov"/>
+    <param type="float" name="focus"/>
+    <param type="float" name="amb"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
   <function name="osGetAvatarList" type="list" grid="os aa">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetNPCList" type="list" grid="os">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -11608,14 +11933,14 @@ Wraps to bool Regex.IsMatch(string input, string pattern)
     </description>
   </function>
 
-  <function name="osRequestURL" grid="os">
+  <function name="osRequestURL" type="key" grid="os">
     <param type="list" name="options"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
   </function>
 
-  <function name="osRequestSecureURL" grid="os">
+  <function name="osRequestSecureURL" type="key" grid="os">
     <param type="list" name="options"/>
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -11638,6 +11963,607 @@ Wraps to bool Regex.IsMatch(string input, string pattern)
 
   <function name="osVolumeDetect" grid="os">
     <param type="integer" name="detect"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetInertiaData" type="list" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osClearInertia" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetInertia" grid="os">
+    <param type="float" name="mass"/>
+    <param type="vector" name="centerOfMass"/>
+    <param type="vector" name="principalInertiaScaled"/>
+    <param type="rotation" name="rot"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetInertiaAsBox" grid="os">
+    <param type="float" name="mass"/>
+    <param type="vector" name="boxSize"/>
+    <param type="vector" name="centerOfMass"/>
+    <param type="rotation" name="rot"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetInertiaAsSphere" grid="os">
+    <param type="float" name="mass"/>
+    <param type="float" name="radius"/>
+    <param type="vector" name="centerOfMass"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetInertiaAsCylinder" grid="os">
+    <param type="float" name="mass"/>
+    <param type="float" name="radius"/>
+    <param type="float" name="length"/>
+    <param type="vector" name="centerOfMass"/>
+    <param type="rotation" name="lslrot"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osTeleportObject" type="integer" grid="os">
+    <param type="key" name="objectUUID"/>
+    <param type="vector" name="targetPos"/>
+    <param type="rotation" name="targetrotation"/>
+    <param type="integer" name="flags"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetLinkNumber" type="integer" grid="os">
+    <param type="string" name="name"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osRound" type="float" grid="os">
+    <param type="float" name="value"/>
+    <param type="integer" name="digits"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osVecMagSquare" type="float" grid="os">
+    <param type="vector" name="a"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osVecDistSquare" type="float" grid="os">
+    <param type="vector" name="a"/>
+    <param type="vector" name="b"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osAngleBetween" type="float" grid="os">
+    <param type="vector" name="a"/>
+    <param type="vector" name="b"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osAdjustSoundVolume" grid="os">
+    <param type="integer" name="linknum"/>
+    <param type="float" name="volume"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osLoopSound" grid="os">
+    <param type="integer" name="linknum"/>
+    <param type="string" name="sound"/>
+    <param type="float" name="volume"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osLoopSoundMaster" grid="os">
+    <param type="integer" name="linknum"/>
+    <param type="string" name="sound"/>
+    <param type="float" name="volume"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osLoopSoundSlave" grid="os">
+    <param type="integer" name="linknum"/>
+    <param type="string" name="sound"/>
+    <param type="float" name="volume"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osPlaySound" grid="os">
+    <param type="integer" name="linknum"/>
+    <param type="string" name="sound"/>
+    <param type="float" name="volume"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osPlaySoundSlave" grid="os">
+    <param type="integer" name="linknum"/>
+    <param type="string" name="sound"/>
+    <param type="float" name="volume"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osPreloadSound" grid="os">
+    <param type="integer" name="linknum"/>
+    <param type="string" name="sound"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetSoundRadius" grid="os">
+    <param type="integer" name="linknum"/>
+    <param type="float" name="radius"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osStopSound" grid="os">
+    <param type="integer" name="linknum"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osTriggerSound" grid="os">
+    <param type="integer" name="linknum"/>
+    <param type="string" name="sound"/>
+    <param type="float" name="volume"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osTriggerSoundLimited" grid="os">
+    <param type="integer" name="linknum"/>
+    <param type="string" name="sound"/>
+    <param type="float" name="volume"/>
+    <param type="vector" name="top_north_east"/>
+    <param type="vector" name="bottom_south_west"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osDetectedCountry" type="string" grid="os">
+    <param type="integer" name="number"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetAgentCountry" type="string" grid="os">
+    <param type="key" name="agentId"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osStringSubString" type="string" grid="os">
+    <param type="string" name="src"/>
+    <param type="integer" name="start"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osStringSubString" type="string" grid="os">
+    <param type="string" name="src"/>
+    <param type="integer" name="start"/>
+    <param type="integer" name="length"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osStringStartsWith" type="integer" grid="os">
+    <param type="string" name="src"/>
+    <param type="string" name="value"/>
+    <param type="integer" name="ignorecase"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osStringEndsWith" type="integer" grid="os">
+    <param type="string" name="src"/>
+    <param type="string" name="value"/>
+    <param type="integer" name="ignorecase"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osStringIndexOf" type="integer" grid="os">
+    <param type="string" name="src"/>
+    <param type="string" name="value"/>
+    <param type="integer" name="ignorecase"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osStringIndexOf" type="integer" grid="os">
+    <param type="string" name="src"/>
+    <param type="string" name="value"/>
+    <param type="integer" name="start"/>
+    <param type="integer" name="count"/>
+    <param type="integer" name="ignorecase"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osStringLastIndexOf" type="integer" grid="os">
+    <param type="string" name="src"/>
+    <param type="string" name="value"/>
+    <param type="integer" name="ignorecase"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osStringLastIndexOf" type="integer" grid="os">
+    <param type="string" name="src"/>
+    <param type="string" name="value"/>
+    <param type="integer" name="start"/>
+    <param type="integer" name="count"/>
+    <param type="integer" name="ignorecase"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osStringRemove" type="string" grid="os">
+    <param type="string" name="src"/>
+    <param type="integer" name="start"/>
+    <param type="integer" name="count"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osStringReplace" type="string" grid="os">
+    <param type="string" name="src"/>
+    <param type="string" name="oldvalue"/>
+    <param type="string" name="newvalue"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osApproxEquals" type="integer" grid="os">
+    <param type="float" name="a"/>
+    <param type="float" name="b"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osApproxEquals" type="integer" grid="os">
+    <param type="float" name="a"/>
+    <param type="float" name="b"/>
+    <param type="float" name="margin"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osApproxEquals" type="integer" grid="os">
+    <param type="vector" name="va"/>
+    <param type="vector" name="vb"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osApproxEquals" type="integer" grid="os">
+    <param type="vector" name="va"/>
+    <param type="vector" name="vb"/>
+    <param type="float" name="margin"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osApproxEquals" type="integer" grid="os">
+    <param type="rotation" name="ra"/>
+    <param type="rotation" name="rb"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osApproxEquals" type="integer" grid="os">
+    <param type="rotation" name="ra"/>
+    <param type="rotation" name="rb"/>
+    <param type="float" name="margin"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetInventoryLastOwner" type="key" grid="os">
+    <param type="string" name="itemNameOrId"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetInventoryItemKey" type="key" grid="os">
+    <param type="string" name="name"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetInventoryName" type="string" grid="os">
+    <param type="key" name="itemId"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetInventoryDesc" type="string" grid="os">
+    <param type="string" name="itemNameOrId"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetLastChangedEventKey" type="key" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetPSTWallclock" type="float" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSlerp" type="rotation" grid="os">
+    <param type="rotation" name="a"/>
+    <param type="rotation" name="b"/>
+    <param type="float" name="amount"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSlerp" type="vector" grid="os">
+    <param type="vector" name="a"/>
+    <param type="vector" name="b"/>
+    <param type="float" name="amount"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osResetAllScripts" grid="os">
+    <param type="integer" name="AllLinkset"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osIsNotValidNumber" type="integer" grid="os">
+    <param type="float" name="v"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetSitActiveRange" grid="os">
+    <param type="float" name="v"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetLinkSitActiveRange" grid="os">
+    <param type="integer" name="linkNumber"/>
+    <param type="float" name="v"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetSitActiveRange" type="float" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetLinkSitActiveRange" type="float" grid="os">
+    <param type="integer" name="linkNumber"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetStandTarget" grid="os">
+    <param type="vector" name="v"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osSetLinkStandTarget" grid="os">
+    <param type="integer" name="linkNumber"/>
+    <param type="vector" name="v"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetStandTarget" type="vector" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetLinkStandTarget" type="vector" grid="os">
+    <param type="integer" name="linkNumber"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osClearObjectAnimations" type="integer" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetApparentTime" type="float" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetApparentTimeString" type="string" grid="os">
+    <param type="integer" name="format24"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetApparentRegionTime" type="float" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osGetApparentRegionTimeString" type="string" grid="os">
+    <param type="integer" name="format24"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osReplaceAgentEnvironment" type="integer" grid="os">
+    <param type="key" name="agentkey"/>
+    <param type="integer" name="transition"/>
+    <param type="string" name="daycycle"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osReplaceParcelEnvironment" type="integer" grid="os">
+    <param type="integer" name="transition"/>
+    <param type="string" name="daycycle"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osReplaceRegionEnvironment" type="integer" grid="os">
+    <param type="integer" name="transition"/>
+    <param type="string" name="daycycle"/>
+    <param type="float" name="daylen"/>
+    <param type="float" name="dayoffset"/>
+    <param type="float" name="altitude1"/>
+    <param type="float" name="altitude2"/>
+    <param type="float" name="altitude3"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osResetEnvironment" type="integer" grid="os">
+    <param type="integer" name="parcelOrRegion"/>
+    <param type="integer" name="transition"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osParticleSystem" grid="os">
+    <param type="list" name="rules"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osLinkParticleSystem" grid="os">
+    <param type="integer" name="linknumber"/>
+    <param type="list" name="rules"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osNpcLookAt" type="integer" grid="os">
+    <param type="key" name="npckey"/>
+    <param type="integer" name="type"/>
+    <param type="key" name="objkey"/>
+    <param type="vector" name="offset"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osAvatarType" type="integer" grid="os">
+    <param type="key" name="avkey"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osAvatarType" type="integer" grid="os">
+    <param type="string" name="sFirstName"/>
+    <param type="string" name="sLastName"/>
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </function>
+
+  <function name="osListSortInPlace" grid="os">
+    <param type="list" name="src"/>
+    <param type="integer" name="stride"/>
+    <param type="integer" name="ascending"/>
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
