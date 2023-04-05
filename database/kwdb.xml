@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2023-01-11.577595">Second Life</grid>
+  <grid id="sl" version="2023-03-24.579022">Second Life</grid>
   <grid id="os" version="v0.9.2.1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -4456,7 +4456,163 @@ Triggered when a character failed to enter a parcel because it is not allowed to
 
   <constant name="SIM_STAT_PCT_CHARS_STEPPED" type="integer" value="0" grid="sl">
     <description lang="en">
-<!-- TODO: add documentation -->
+ The % of pathfinding characters updated each frame, averaged over the last minute. The value corresponds to the "Characters Updated" stat in the viewer's Statistics Bar.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_PHYSICS_FPS" type="integer" value="1" grid="sl">
+    <description lang="en">
+ Physics simulation FPS.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_AGENT_UPDATES" type="integer" value="2" grid="sl">
+    <description lang="en">
+ Agent updates per second.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_FRAME_MS" type="integer" value="3" grid="sl">
+    <description lang="en">
+ Total frame time.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_NET_MS" type="integer" value="4" grid="sl">
+    <description lang="en">
+ Time spent in 'network' segment of simulation frame.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_OTHER_MS" type="integer" value="5" grid="sl">
+    <description lang="en">
+ Main simulation segment of frame, encapsulating task, script and misc. updates.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_PHYSICS_MS" type="integer" value="6" grid="sl">
+    <description lang="en">
+ Time spent in 'physics' segment of simulation frame.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_AGENT_MS" type="integer" value="7" grid="sl">
+    <description lang="en">
+ Time spent in 'agent' segment of simulation frame.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_IMAGE_MS" type="integer" value="8" grid="sl">
+    <description lang="en">
+ Time spent in 'image' segment of simulation frame.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_SCRIPT_MS" type="integer" value="9" grid="sl">
+    <description lang="en">
+ Time spent in 'script' segment of simulation frame.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_AGENT_COUNT" type="integer" value="10" grid="sl">
+    <description lang="en">
+ Number of agents in region.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_CHILD_AGENT_COUNT" type="integer" value="11" grid="sl">
+    <description lang="en">
+ Number of child (neighboring) agents in region.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_ACTIVE_SCRIPT_COUNT" type="integer" value="12" grid="sl">
+    <description lang="en">
+ Number of active scripts in region.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_PACKETS_IN" type="integer" value="13" grid="sl">
+    <description lang="en">
+ Average packets in per second.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_PACKETS_OUT" type="integer" value="14" grid="sl">
+    <description lang="en">
+ Average packets out per second.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_ASSET_DOWNLOADS" type="integer" value="15" grid="sl">
+    <description lang="en">
+ Pending asset download count.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_ASSET_UPLOADS" type="integer" value="16" grid="sl">
+    <description lang="en">
+ Pending asset upload count.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_UNACKED_BYTES" type="integer" value="17" grid="sl">
+    <description lang="en">
+ Total unacknowledged bytes.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_PHYSICS_STEP_MS" type="integer" value="18" grid="sl">
+    <description lang="en">
+ Average physics step time.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_PHYSICS_SHAPE_MS" type="integer" value="19" grid="sl">
+    <description lang="en">
+ Average physics 'shape' segment update time.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_PHYSICS_OTHER_MS" type="integer" value="20" grid="sl">
+    <description lang="en">
+ Average physics 'other' segment update time.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_SCRIPT_EPS" type="integer" value="21" grid="sl">
+    <description lang="en">
+ Script events per second.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_SPARE_MS" type="integer" value="22" grid="sl">
+    <description lang="en">
+ Spare time left after frame.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_SLEEP_MS" type="integer" value="23" grid="sl">
+    <description lang="en">
+ Time spent sleeping.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_IO_PUMP_MS" type="integer" value="24" grid="sl">
+    <description lang="en">
+ PumpIO time.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_SCRIPT_RUN_PCT" type="integer" value="25" grid="sl">
+    <description lang="en">
+ Percent of scripts run during frame.
+    </description>
+  </constant>
+
+  <constant name="SIM_STAT_AI_MS" type="integer" value="26" grid="sl">
+    <description lang="en">
+ Time spent on AI step. 
     </description>
   </constant>
 
@@ -10150,6 +10306,16 @@ str2 repeats if it is shorter than str1.
     </description>
   </function>
 
+  <function name="llReplaceSubString" type="string" grid="sl" version="sl:2023-03-24.579022">
+    <param type="string" name="src"/>
+    <param type="string" name="pattern"/>
+    <param type="string" name="replacement_pattern"/>
+    <param type="integer" name="count"/>
+    <description lang="en">
+Returns a string that is the result of replacing the first count matching instances pattern in src with replacement_pattern.
+    </description>
+  </function>
+
   <function name="llTargetedEmail" delay="20" grid="sl os" version="sl:2020-04-03T19:49:49.539684">
     <param type="integer" name="target"/>
     <param type="string" name="header"/>
@@ -10178,6 +10344,34 @@ str2 repeats if it is shorter than str1.
 
   <function name="llHash" type="integer" grid="sl os" version="sl:2021-05-05.559308">
     <param type="string" name="val"/>
+  </function>
+
+  <function name="llHMAC" type="string" grid="sl" version="sl:2023-03-24.579022">
+    <param type="string" name="private_key"/>
+    <param type="string" name="msg"/>
+    <param type="string" name="algorithm"/>
+    <description lang="en">
+Returns a string that is the Base64-encoded HMAC hash of msg when using hash algorithm algorithm and secret key private_key. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm.
+    </description>
+  </function>
+
+  <function name="llSignRSA" type="string" grid="sl" version="sl:2023-03-24.579022">
+    <param type="string" name="private_key"/>
+    <param type="string" name="msg"/>
+    <param type="string" name="algorithm"/>
+    <description lang="en">
+Returns a string that is the Base64-encoded RSA signature of msg when using hash algorithm algorithm and secret key private_key. Can be paired with llVerifyRSA to pass verifiable messages. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm.
+    </description>
+  </function>
+
+  <function name="llVerifyRSA" type="integer" grid="sl" version="sl:2023-03-24.579022">
+    <param type="string" name="public_key"/>
+    <param type="string" name="msg"/>
+    <param type="string" name="signature"/>
+    <param type="string" name="algorithm"/>
+    <description lang="en">
+Returns an integer indicating whether the RSA signature is valid for msg when using hash algorithm algorithm and public RSA key public_key. Returns TRUE if the signature is verified, and FALSE otherwise. Can be paired with llSignRSA to validate the authenticity of messages from other LSL scripts. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm.
+    </description>
   </function>
 
   <function name="llOpenFloater" type="integer" grid="sl" version="sl:2021-05-12.559669" status="godmode">
