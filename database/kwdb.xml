@@ -8761,7 +8761,7 @@ If running == TRUE, starts the script with start_param.
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llOpenRemoteDataChannel" delay="1">
+  <function name="llOpenRemoteDataChannel" delay="1" status="deprecated">
     <description lang="en">
 Creates a channel to listen for XML-RPC calls, and will trigger a remote_data event with channel id once it is available
     </description>
@@ -8792,7 +8792,7 @@ Sends an XML-RPC reply to message_id on channel with payload of string sdata and
   <!-- In AuroraSim, this function requires an object type param and returns DateTime.
        We're not adding the Aurora specifics here.
   -->
-  <function name="llCloseRemoteDataChannel" delay="1">
+  <function name="llCloseRemoteDataChannel" delay="1" status="deprecated">
     <param type="key" name="channel"/>
     <description lang="en">
 Closes XML-RPC channel
@@ -13425,7 +13425,7 @@ Triggered various event change the task
     </description>
   </event>
 
-  <event name="remote_data">
+  <event name="remote_data" status="deprecated">
     <param type="integer" name="event_type"/>
     <param type="key"     name="channel"   />
     <param type="key"     name="message_id"/>
