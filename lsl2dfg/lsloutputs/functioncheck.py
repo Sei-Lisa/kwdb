@@ -60,7 +60,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
       elif line.startswith("<<< %s TYPES >>>" % tag):
         for element in document:
           if element['cat'] == 'type':
-            outf.write("        %s %s;\n" % (element['name'], element['name'][:1]))
+            outf.write(("        %s %s;\n" % (element['name'], element['name'][:1])).encode('utf8'))
 
       elif line.startswith("<<< %s KEYWORDS >>>" % tag):
 
