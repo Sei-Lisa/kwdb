@@ -96,7 +96,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20230304000">
+<keywords version="0.0.20230409000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.2.1
@@ -107,7 +107,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2023-01-11.577595">Second Life</grid>
+  <grid id="sl" version="2023-03-24.579022">Second Life</grid>
   <grid id="os" version="v0.9.2.1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -5221,6 +5221,60 @@ Used with llPassTouches to never pass touches to the root.
 
   <constant name="SOUND_SYNC" type="integer" value="0x04" grid="sl" version="sl:2023-01-11.577595"/>
 
+  <!-- These constants' exact appearance version is unknown. The version
+       specified is the one where it was first seen by the maintainer. -->
+  <constant name="SIM_STAT_PHYSICS_FPS" type="integer" value="1" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_AGENT_UPDATES" type="integer" value="2" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_FRAME_MS" type="integer" value="3" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_NET_MS" type="integer" value="4" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_OTHER_MS" type="integer" value="5" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_PHYSICS_MS" type="integer" value="6" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_AGENT_MS" type="integer" value="7" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_IMAGE_MS" type="integer" value="8" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_SCRIPT_MS" type="integer" value="9" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_AGENT_COUNT" type="integer" value="10" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_CHILD_AGENT_COUNT" type="integer" value="11" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_ACTIVE_SCRIPT_COUNT" type="integer" value="12" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_PACKETS_IN" type="integer" value="13" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_PACKETS_OUT" type="integer" value="14" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_ASSET_DOWNLOADS" type="integer" value="15" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_ASSET_UPLOADS" type="integer" value="16" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_UNACKED_BYTES" type="integer" value="17" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_PHYSICS_STEP_MS" type="integer" value="18" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_PHYSICS_SHAPE_MS" type="integer" value="19" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_PHYSICS_OTHER_MS" type="integer" value="20" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_SCRIPT_EPS" type="integer" value="21" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_SPARE_MS" type="integer" value="22" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_SLEEP_MS" type="integer" value="23" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_IO_PUMP_MS" type="integer" value="24" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_SCRIPT_RUN_PCT" type="integer" value="25" grid="sl" version="sl:2023-03-24.579022"/>
+
+  <constant name="SIM_STAT_AI_MS" type="integer" value="26" grid="sl" version="sl:2023-03-24.579022"/>
+
 
   <!-- String constants -->
 
@@ -10292,6 +10346,34 @@ str2 repeats if it is shorter than str1.
     <param type="float" name="radius"/>
   </function>
 
+  <!-- These functions were present in a previous version, but they seemed inactive. -->
+  <function name="llHMAC" type="string" grid="sl" version="sl:2023-02-21.578370">
+    <param type="string" name="authkey"/>
+    <param type="string" name="message"/>
+    <param type="string" name="hashalg"/>
+  </function>
+
+  <function name="llSignRSA" type="string" grid="sl" version="sl:2023-02-21.578370">
+    <param type="string" name="privkey"/>
+    <param type="string" name="message"/>
+    <param type="string" name="hashalg"/>
+  </function>
+
+  <function name="llVerifyRSA" type="integer" grid="sl" version="sl:2023-02-21.578370">
+    <param type="string" name="pubkey"/>
+    <param type="string" name="message"/>
+    <param type="string" name="signature"/>
+    <param type="string" name="hashalg"/>
+  </function>
+
+  <!-- This function's exact appearance version is unknown. The version
+       specified is the one where it was first seen by the maintainer. -->
+  <function name="llReplaceSubString" type="string" grid="sl" version="sl:2023-03-24.579022">
+    <param type="string" name="source"/>
+    <param type="string" name="search"/>
+    <param type="string" name="replace"/>
+    <param type="integer" name="count"/>
+  </function>
 
   <!-- OpenSim/Aurora-specific functions -->
 
