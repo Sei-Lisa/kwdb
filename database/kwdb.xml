@@ -86,7 +86,8 @@ Example: grid="os aa"
 <!ATTLIST event
           name CDATA #REQUIRED
           version CDATA #IMPLIED
-          grid NMTOKENS #IMPLIED>
+          grid NMTOKENS #IMPLIED
+          status (normal | deprecated | godmode | unimplemented) "normal">
 <!ELEMENT description (#PCDATA)>
 <!ATTLIST description
           lang NMTOKENS #REQUIRED>
