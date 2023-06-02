@@ -27,6 +27,10 @@
 import sys
 import re
 
+# Python3 does not have this function, so this replaces it with equivalent behavior.
+def cmp(a, b):
+  return (a > b) - (a < b)
+
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
   def UpperCamelCase_TO_UNDERSCORES(arg):
