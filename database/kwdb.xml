@@ -4,8 +4,9 @@
 (C) Copyright 2012 Linden Research, Inc.
 (C) Copyright 2013-2023 Sei Lisa.
 (C) Copyright 2017-2023 Mako Nozaki.
-Sei Lisa and Mako Nozaki are the usernames of the authors in the Second Life(R)
-online virtual world.
+(C) Copyright 2023-2023 Alex Carpenter.
+Sei Lisa, Mako Nozaki, and Alex Carpenter are the usernames of the authors in the
+Second Life(R) online virtual world.
 
     LSL2 Keywords Database
 
@@ -85,7 +86,8 @@ Example: grid="os aa"
 <!ATTLIST event
           name CDATA #REQUIRED
           version CDATA #IMPLIED
-          grid NMTOKENS #IMPLIED>
+          grid NMTOKENS #IMPLIED
+          status (normal | deprecated | godmode | unimplemented) "normal">
 <!ELEMENT description (#PCDATA)>
 <!ATTLIST description
           lang NMTOKENS #REQUIRED>
@@ -2123,19 +2125,19 @@ Indicates that this wasn't a valid list entry
     </description>
   </constant>
 
-  <constant name="REMOTE_DATA_CHANNEL" type="integer" value="1">
+  <constant name="REMOTE_DATA_CHANNEL" type="integer" value="1" status="deprecated">
     <description lang="en">
 Value of event_type in remote_event after successful llOpenRemoteDataChannel
     </description>
   </constant>
 
-  <constant name="REMOTE_DATA_REQUEST" type="integer" value="2">
+  <constant name="REMOTE_DATA_REQUEST" type="integer" value="2" status="deprecated">
     <description lang="en">
 Value of event_type in remote_event if XML-RPC request is received
     </description>
   </constant>
 
-  <constant name="REMOTE_DATA_REPLY" type="integer" value="3">
+  <constant name="REMOTE_DATA_REPLY" type="integer" value="3" status="deprecated">
     <description lang="en">
 Value of event_type in remote_event if XML-RPC reply is received
     </description>
@@ -8658,13 +8660,13 @@ If running == TRUE, starts the script with start_param.
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llOpenRemoteDataChannel" delay="1">
+  <function name="llOpenRemoteDataChannel" delay="1" status="deprecated">
     <description lang="en">
 Creates a channel to listen for XML-RPC calls, and will trigger a remote_data event with channel id once it is available
     </description>
   </function>
 
-  <function name="llSendRemoteData" type="key" delay="3">
+  <function name="llSendRemoteData" type="key" delay="3" status="deprecated">
     <param type="key" name="channel"/>
     <param type="string" name="dest"/>
     <param type="integer" name="idata"/>
@@ -8676,7 +8678,7 @@ Returns a key that is the message_id for the resulting remote_data events.
   </function>
 
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
-  <function name="llRemoteDataReply" delay="3">
+  <function name="llRemoteDataReply" delay="3" status="deprecated">
     <param type="key" name="channel"/>
     <param type="key" name="message_id"/>
     <param type="string" name="sdata"/>
@@ -8689,7 +8691,7 @@ Sends an XML-RPC reply to message_id on channel with payload of string sdata and
   <!-- In AuroraSim, this function requires an object type param and returns DateTime.
        We're not adding the Aurora specifics here.
   -->
-  <function name="llCloseRemoteDataChannel" delay="1">
+  <function name="llCloseRemoteDataChannel" delay="1" status="deprecated">
     <param type="key" name="channel"/>
     <description lang="en">
 Closes XML-RPC channel
@@ -13312,7 +13314,7 @@ Triggered various event change the task
     </description>
   </event>
 
-  <event name="remote_data">
+  <event name="remote_data" status="deprecated">
     <param type="integer" name="event_type"/>
     <param type="key"     name="channel"   />
     <param type="key"     name="message_id"/>
