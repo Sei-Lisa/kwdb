@@ -98,7 +98,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20230409000">
+<keywords version="0.0.20230714000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.2.1
@@ -109,7 +109,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2023-03-24.579022">Second Life</grid>
+  <grid id="sl" version="2023-06-09.580543">Second Life</grid>
   <grid id="os" version="v0.9.2.1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -651,6 +651,12 @@ Returned by llGetAgentInfo if the Agent has 'Always Run' enabled
   <constant name="AGENT_AUTOPILOT" type="integer" value="0x2000" grid="sl os">
     <description lang="en">
 Returned by llGetAgentInfo if the Agent is under autopilot control
+    </description>
+  </constant>
+
+  <constant name="AGENT_AUTOMATED" type="integer" value="0x4000" grid="sl" version="sl:2023-06-09.580543">
+    <description lang="en">
+Returned by llGetAgentInfo if the Agent is marked as a scripted agent/bot.
     </description>
   </constant>
 
@@ -10489,6 +10495,38 @@ Returns an integer indicating whether the RSA signature is valid for msg when us
     <param type="integer" name="count"/>
     <description lang="en">
 Returns a string that is the result of replacing the first count matching instances pattern in src with replacement_pattern.
+    </description>
+  </function>
+
+  <function name="llList2ListSlice" type="list" grid="sl" version="sl:2023-04-03.579248">
+    <param type="list" name="src"/>
+    <param type="integer" name="start"/>
+    <param type="integer" name="end"/>
+    <param type="integer" name="stride"/>
+    <param type="integer" name="slice_index"/>
+    <description lang="en">
+Returns a list of the slice_index'th element of every stride in strided list whose index is a multiple of stride in the range start to end.
+    </description>
+  </function>
+
+  <function name="llListSortStrided" type="list" grid="sl" version="sl:2023-04-03.579248">
+    <param type="list" name="src"/>
+    <param type="integer" name="stride"/>
+    <param type="integer" name="stride_index"/>
+    <param type="integer" name="ascending"/>
+    <description lang="en">
+llListSortStrided is llListSort with the added parameter of stride_index, adding the flexibility to sort by any item in the stride. These routines use the same underlying code and have the same computational complexity.
+    </description>
+  </function>
+
+  <function name="llListFindStrided" type="integer" grid="sl" version="sl:2023-04-03.579248">
+    <param type="list" name="src"/>
+    <param type="list" name="test"/>
+    <param type="integer" name="start"/>
+    <param type="integer" name="end"/>
+    <param type="integer" name="stride"/>
+    <description lang="en">
+Returns the integer index of the first instance of test in src matching conditions.
     </description>
   </function>
 
