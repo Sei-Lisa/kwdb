@@ -77,6 +77,7 @@ AGENT_CROUCHING
 AGENT_BUSY
 AGENT_ALWAYS_RUN
 AGENT_AUTOPILOT
+AGENT_AUTOMATED
 AGENT_LIST_PARCEL
 AGENT_LIST_PARCEL_OWNER
 AGENT_LIST_REGION
@@ -1350,6 +1351,9 @@ llHMAC
 llSignRSA
 llVerifyRSA
 llReplaceSubString
+llList2ListSlice
+llListSortStrided
+llListFindStrided
 state_entry
 state_exit
 touch_start

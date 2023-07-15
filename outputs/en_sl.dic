@@ -1,4 +1,4 @@
-11460
+11457
 rez
 slex
 slutorial
@@ -10161,7 +10161,6 @@ llChar
 llClearCameraParams
 llClearLinkMedia
 llClearPrimMedia
-llCloseRemoteDataChannel
 llCollisionFilter
 llCollisionSound
 llCos
@@ -10384,6 +10383,7 @@ llList2Integer
 llList2Json
 llList2Key
 llList2List
+llList2ListSlice
 llList2ListStrided
 llList2Rot
 llList2String
@@ -10392,10 +10392,12 @@ llListen
 llListenControl
 llListenRemove
 llListFindList
+llListFindStrided
 llListInsertList
 llListRandomize
 llListReplaceList
 llListSort
+llListSortStrided
 llListStatistics
 llLoadURL
 llLog
@@ -10415,7 +10417,6 @@ llMoveToTarget
 llName2Key
 llNavigateTo
 llOffsetTexture
-llOpenRemoteDataChannel
 llOrd
 llOverMyLand
 llOwnerSay
@@ -10438,7 +10439,6 @@ llRegionSay
 llRegionSayTo
 llReleaseControls
 llReleaseURL
-llRemoteDataReply
 llRemoteLoadScriptPin
 llRemoveFromLandBanList
 llRemoveFromLandPassList
@@ -10485,7 +10485,6 @@ llScaleByFactor
 llScaleTexture
 llScriptDanger
 llScriptProfiler
-llSendRemoteData
 llSensor
 llSensorRemove
 llSensorRepeat
@@ -10639,6 +10638,7 @@ ACTIVE
 AGENT
 AGENT_ALWAYS_RUN
 AGENT_ATTACHMENTS
+AGENT_AUTOMATED
 AGENT_AUTOPILOT
 AGENT_AWAY
 AGENT_BUSY
@@ -11273,9 +11273,6 @@ REGION_FLAG_DISABLE_PHYSICS
 REGION_FLAG_FIXED_SUN
 REGION_FLAG_RESTRICT_PUSHOBJECT
 REGION_FLAG_SANDBOX
-REMOTE_DATA_CHANNEL
-REMOTE_DATA_REPLY
-REMOTE_DATA_REQUEST
 REQUIRE_LINE_OF_SIGHT
 RESTITUTION
 REVERSE

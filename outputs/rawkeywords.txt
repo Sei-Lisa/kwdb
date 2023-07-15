@@ -79,6 +79,7 @@ AGENT_CROUCHING
 AGENT_BUSY
 AGENT_ALWAYS_RUN
 AGENT_AUTOPILOT
+AGENT_AUTOMATED
 AGENT_MALE
 AGENT_LIST_PARCEL
 AGENT_LIST_PARCEL_OWNER
@@ -1644,6 +1645,9 @@ llHMAC
 llSignRSA
 llVerifyRSA
 llReplaceSubString
+llList2ListSlice
+llListSortStrided
+llListFindStrided
 lsGetWindlightScene
 lsSetWindlightScene
 lsSetWindlightSceneTargeted
