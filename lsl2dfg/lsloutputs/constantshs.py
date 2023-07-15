@@ -42,7 +42,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
     # though it can be written as SQRT2 to avoid that problem
     return re.sub('([A-Z0-9])_(?:(?=[A-Z0-9]_)|(?=[A-Z0-9]$))', '\\1', re.sub('([A-Z0-9])', '_\\1', arg))[1:].upper()
 
-  version = "0.0.20130817000"
+  version = "0.0.20230603000"
 
   try:
     document.sort(key=lambda x: x["name"])

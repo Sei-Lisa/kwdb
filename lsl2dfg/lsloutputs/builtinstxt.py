@@ -34,7 +34,7 @@ def cmp(a, b):
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20140731000"
+  version = "0.0.20230603000"
 
   def print_function_or_event(element):
     if element["cat"] in ("function", "event"):

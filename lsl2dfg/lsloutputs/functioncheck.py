@@ -31,7 +31,7 @@ import sys
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20170109000"
+  version = "0.0.20230603000"
 
   if infilename is not None:
     inf = open(infilename, "r")
