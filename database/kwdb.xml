@@ -2614,7 +2614,7 @@ Stitch edges in a cylinder-like way
 
   <constant name="PRIM_SCULPT_TYPE_MESH" type="integer" value="5" grid="sl aa" version="sl:2023-07-14.581036">
     <description lang="en">
-<!-- TODO: add documentation -->
+Mesh model.
     </description>
   </constant>
 
@@ -5209,11 +5209,29 @@ Used with llPassTouches to never pass touches to the root.
 
   <constant name="ENV_NO_PERMISSIONS" type="integer" value="-9" grid="sl" version="sl:2022-08-12.574216"/>
 
-  <constant name="LINKSETDATA_RESET" type="integer" value="0" grid="sl" version="sl:2022-11-04.576376"/>
+  <constant name="LINKSETDATA_RESET" type="integer" value="0" grid="sl" version="sl:2022-11-04.576376">
+    <description lang="en">
+The linkset's datastore has been cleared by a call to llLinksetDataReset. 
+    </description>
+  </constant>
 
-  <constant name="LINKSETDATA_UPDATE" type="integer" value="1" grid="sl" version="sl:2022-11-04.576376"/>
+  <constant name="LINKSETDATA_UPDATE" type="integer" value="1" grid="sl" version="sl:2022-11-04.576376">
+    <description lang="en">
+A key in the linkset's datastore has been assigned a new value with llLinksetDataWrite
+    </description>
+  </constant>
 
-  <constant name="LINKSETDATA_DELETE" type="integer" value="2" grid="sl" version="sl:2022-11-04.576376"/>
+  <constant name="LINKSETDATA_DELETE" type="integer" value="2" grid="sl" version="sl:2022-11-04.576376">
+    <description lang="en">
+A key in the linkset's datastore has been deleted. Either through a call to llLinksetDataDelete or llLinksetDataWrite with an empty value. 
+    </description>
+  </constant>
+
+  <constant name="LINKSETDATA_MULTIDELETE" type="integer" value="3" grid="sl" version="2023-07-14.581036">
+    <description lang="en">
+A comma separated list of the keys in the linkset's datastore which have been deleted through a call to llLinksetDataDeleteFound. 
+    </description>
+  </constant>
 
   <constant name="LINKSETDATA_MULTIDELETE" type="integer" value="3" grid="sl" version="2023-07-14.581036">
     <description lang="en">
