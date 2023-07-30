@@ -98,7 +98,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20230714000">
+<keywords version="0.0.20230730000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.2.1
@@ -109,7 +109,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2023-06-09.580543">Second Life</grid>
+  <grid id="sl" version="2023-07-14.581036">Second Life</grid>
   <grid id="os" version="v0.9.2.1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -2368,7 +2368,7 @@ float revolutions, float radius offset, and float skew
 
   <constant name="PRIM_TYPE_SCULPT" type="integer" value="7">
     <description lang="en">
-Followed by a key/string texture uuid, and one of PRIM_SCULPT_TYPE_SPHERE, PRIM_SCULPT_TYPE_TORUS, PRIM_SCULPT_TYPE_PLANE, or PRIM_SCULPT_TYPE_CYLINDER
+Followed by a key/string texture uuid, and one of PRIM_SCULPT_TYPE_SPHERE, PRIM_SCULPT_TYPE_TORUS, PRIM_SCULPT_TYPE_PLANE, PRIM_SCULPT_TYPE_CYLINDER, or PRIM_SCULPT_TYPE_MESH.
     </description>
   </constant>
 
@@ -2612,15 +2612,21 @@ Stitch edges in a cylinder-like way
     </description>
   </constant>
 
-  <constant name="PRIM_SCULPT_TYPE_MESH" type="integer" value="5" grid="aa">
+  <constant name="PRIM_SCULPT_TYPE_MESH" type="integer" value="5" grid="sl aa" version="sl:2023-07-14.581036">
     <description lang="en">
-<!-- TODO: add documentation -->
+Mesh model.
     </description>
   </constant>
 
   <constant name="PRIM_SCULPT_TYPE_MASK" type="integer" value="7" grid="sl os">
     <description lang="en">
 Mask used to determine stitching type
+    </description>
+  </constant>
+
+  <constant name="PRIM_SCULPT_FLAG_ANIMESH" type="integer" value="0x20" grid="sl" version="sl:2023-07-14.581036">
+    <description lang="en">
+Flag to specify that the prim is animated mesh.
     </description>
   </constant>
 
@@ -5203,11 +5209,29 @@ Used with llPassTouches to never pass touches to the root.
 
   <constant name="ENV_NO_PERMISSIONS" type="integer" value="-9" grid="sl" version="sl:2022-08-12.574216"/>
 
-  <constant name="LINKSETDATA_RESET" type="integer" value="0" grid="sl" version="sl:2022-11-04.576376"/>
+  <constant name="LINKSETDATA_RESET" type="integer" value="0" grid="sl" version="sl:2022-11-04.576376">
+    <description lang="en">
+The linkset's datastore has been cleared by a call to llLinksetDataReset. 
+    </description>
+  </constant>
 
-  <constant name="LINKSETDATA_UPDATE" type="integer" value="1" grid="sl" version="sl:2022-11-04.576376"/>
+  <constant name="LINKSETDATA_UPDATE" type="integer" value="1" grid="sl" version="sl:2022-11-04.576376">
+    <description lang="en">
+A key in the linkset's datastore has been assigned a new value with llLinksetDataWrite
+    </description>
+  </constant>
 
-  <constant name="LINKSETDATA_DELETE" type="integer" value="2" grid="sl" version="sl:2022-11-04.576376"/>
+  <constant name="LINKSETDATA_DELETE" type="integer" value="2" grid="sl" version="sl:2022-11-04.576376">
+    <description lang="en">
+A key in the linkset's datastore has been deleted. Either through a call to llLinksetDataDelete or llLinksetDataWrite with an empty value. 
+    </description>
+  </constant>
+
+  <constant name="LINKSETDATA_MULTIDELETE" type="integer" value="3" grid="sl" version="2023-07-14.581036">
+    <description lang="en">
+A comma separated list of the keys in the linkset's datastore which have been deleted through a call to llLinksetDataDeleteFound. 
+    </description>
+  </constant>
 
   <constant name="LINKSETDATA_OK" type="integer" value="0" grid="sl" version="sl:2022-11-04.576376"/>
 
@@ -10428,6 +10452,21 @@ str2 repeats if it is shorter than str1.
   <function name="llLinksetDataListKeys" type="list" grid="sl" version="sl:2022-11-04.576376">
     <param type="integer" name="start"/>
     <param type="integer" name="count"/>
+  </function>
+
+  <function name="llLinksetDataCountFound" type="integer" grid="sl" version="sl:2023-07-14.581036">
+    <param type="string" name="pattern"/>
+    <description lang="en">
+The llLinksetDataCountFound function returns the number of keys in the linkset datastore that match the pattern supplied in the pattern.
+    </description>
+  </function>
+
+  <function name="llLinksetDataDeleteFound" type="list" grid="sl" version="sl:2023-07-14.581036">
+    <param type="string" name="pattern"/>
+    <param type="string" name="pass"/>
+    <description lang="en">
+The llLinksetDataDeleteFound function finds and attempts to delete all keys in the data store that match pattern. This function will delete protected key-value pairs only if the matching pass phrase is passed in the pass parameter. The function returns a list, the first entry in the list is the number of keys deleted, the second entry in the list is the number of keys that could not be deleted due to a non-matching pass phrase. If this function successfully deletes any keys from the datastore it will trigger a linkset_data event with the type of LINKSET_DATA_MULTIDELETE, the key name will consist of a comma separated list of the key names removed from the datastore.
+    </description>
   </function>
 
   <!-- Version unsure - could be later -->
