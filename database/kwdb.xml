@@ -98,7 +98,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20230730000">
+<keywords version="0.0.20230926000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.2.1
@@ -109,7 +109,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2023-07-14.581036">Second Life</grid>
+  <grid id="sl" version="2023-09-07.6113592855">Second Life</grid>
   <grid id="os" version="v0.9.2.1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -3313,6 +3313,18 @@ Used with llSetClickAction to set zoom in as the default action when object is c
     </description>
   </constant>
 
+  <constant name="CLICK_ACTION_DISABLED" type="integer" value="8" grid="sl" version="2020-06-05T19:36:41.543337">
+    <description lang="en">
+Used with llSetClickAction to disable the click action. No touches are detected or passed.
+    </description>
+  </constant>
+
+  <constant name="CLICK_ACTION_IGNORE" type="integer" value="9" grid="sl" version="sl:2023-09-07.6113592855">
+    <description lang="en">
+Used with llSetClickAction. Causes clicks to go through the object to whatever is behind it. No touches detected.
+    </description>
+  </constant>
+
   <constant name="TOUCH_INVALID_FACE" type="integer" value="-1">
     <description lang="en">
 Value returned by llDetectedTouchFace when the touch position is not valid
@@ -5119,12 +5131,6 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
-  <constant name="CLICK_ACTION_DISABLED" type="integer" value="8" grid="sl" version="2020-06-05T19:36:41.543337">
-    <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
-  </constant>
-
   <constant name="SKY_BLUE" type="integer" value="22" grid="sl" version="sl:2021-01-08.554811">
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -5144,6 +5150,12 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="PRIM_PROJECTOR" type="integer" value="42" grid="sl" version="sl:2021-10-25.565008">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_CLICK_ACTION" type="integer" value="43" grid="sl" version="sl:2023-09-07.6113592855">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
