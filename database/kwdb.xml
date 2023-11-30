@@ -109,7 +109,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2023-09-07.6113592855">Second Life</grid>
+  <grid id="sl" version="2023-11-07.6790647783">Second Life</grid>
   <grid id="os" version="v0.9.2.1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -2089,6 +2089,12 @@ Parameter of changed event handler used to indicate that media has changed on a 
     </description>
   </constant>
 
+  <constant name="CHANGED_RENDER_MATERIAL" type="integer" value="0x1000" grid="sl" version="sl:2021-01-08.554811">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
   <constant name="TYPE_INTEGER" type="integer" value="1">
     <description lang="en">
 Indicates that the list entry is holding an integer
@@ -2661,6 +2667,72 @@ Ignore this prim in the physics shape. This cannot be applied to the root prim.
   </constant>
 
   <constant name="PRIM_PHYSICS_MATERIAL" type="integer" value="31" grid="os">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_RENDER_MATERIAL" type="integer" value="49" grid="sl" version="sl:2023-11-07.6790647783">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_GLTF_BASE_COLOR" type="integer" value="48" grid="sl" version="sl:2023-11-07.6790647783">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_GLTF_NORMAL" type="integer" value="45" grid="sl" version="sl:2023-11-07.6790647783">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_GLTF_METALLIC_ROUGHNESS" type="integer" value="47" grid="sl" version="sl:2023-11-07.6790647783">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_GLTF_EMISSIVE" type="integer" value="46" grid="sl" version="sl:2023-11-07.6790647783">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_GLTF_ALPHA_MODE_NONE" type="integer" value="0" grid="sl" version="sl:2023-11-07.6790647783">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_GLTF_ALPHA_MODE_BLEND" type="integer" value="1" grid="sl" version="sl:2023-11-07.6790647783">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_GLTF_ALPHA_MODE_MASK" type="integer" value="2" grid="sl" version="sl:2023-11-07.6790647783">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_REFLECTION_PROBE" type="integer" value="44" grid="sl" version="sl:2023-11-07.6790647783">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_REFLECTION_PROBE_BOX" type="integer" value="1" grid="sl" version="sl:2023-11-07.6790647783">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="PRIM_REFLECTION_PROBE_DYNAMIC" type="integer" value="2" grid="sl" version="sl:2023-11-07.6790647783">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -4990,6 +5062,24 @@ Used with llPassTouches to never pass touches to the root.
     </description>
   </constant>
 
+  <constant name="SKY_BLUE" type="integer" value="22" grid="sl" version="sl:2021-01-08.554811">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_HAZE" type="integer" value="23" grid="sl" version="sl:2021-01-08.554811">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="SKY_REFLECTION_PROBE_AMBIANCE" type="integer" value="24" grid="sl" version="sl:2021-01-08.554811">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
   <constant name="WATER_BLUR_MULTIPLIER" type="integer" value="100" grid="sl" version="sl:18.11.02.521379">
     <description lang="en">
 <!-- TODO: add documentation -->
@@ -5126,18 +5216,6 @@ Used with llPassTouches to never pass touches to the root.
   </constant>
 
   <constant name="TARGETED_EMAIL_OBJECT_OWNER" type="integer" value="2" grid="sl os" version="2020-04-10T18:39:41.540037">
-    <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
-  </constant>
-
-  <constant name="SKY_BLUE" type="integer" value="22" grid="sl" version="sl:2021-01-08.554811">
-    <description lang="en">
-<!-- TODO: add documentation -->
-    </description>
-  </constant>
-
-  <constant name="SKY_HAZE" type="integer" value="23" grid="sl" version="sl:2021-01-08.554811">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
@@ -10484,6 +10562,30 @@ The llLinksetDataCountFound function returns the number of keys in the linkset d
     <param type="string" name="pass"/>
     <description lang="en">
 The llLinksetDataDeleteFound function finds and attempts to delete all keys in the data store that match pattern. This function will delete protected key-value pairs only if the matching pass phrase is passed in the pass parameter. The function returns a list, the first entry in the list is the number of keys deleted, the second entry in the list is the number of keys that could not be deleted due to a non-matching pass phrase. If this function successfully deletes any keys from the datastore it will trigger a linkset_data event with the type of LINKSET_DATA_MULTIDELETE, the key name will consist of a comma separated list of the key names removed from the datastore.
+    </description>
+  </function>
+
+  <function name="llGetRenderMaterial" type="string" grid="sl" version="sl:2023-11-07.6790647783">
+    <param type="integer" name="face"/>
+    <description lang="en">
+Returns a string that is the Material on face.
+    </description>
+  </function>
+
+  <function name="llSetRenderMaterial" grid="sl" version="sl:2023-11-07.6790647783">
+    <param type="string" name="material"/>
+    <param type="integer" name="face"/>
+    <description lang="en">
+Sets the material of this prim's face. This function will clear most PRIM_GLTF_* properties on the face, with the exceptions of repeats, offsets, and rotation_in_radians.
+    </description>
+  </function>
+
+  <function name="llSetLinkRenderMaterial" grid="sl" version="sl:2023-11-07.6790647783">
+    <param type="integer" name="link"/>
+    <param type="string" name="material"/>
+    <param type="integer" name="face"/>
+    <description lang="en">
+If a prim exists in the link set at link, set material on face of that prim. This function will clear most PRIM_GLTF_* properties on the face, with the exceptions of repeats, offsets, and rotation_in_radians.
     </description>
   </function>
 
