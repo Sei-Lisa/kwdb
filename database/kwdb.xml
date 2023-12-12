@@ -98,7 +98,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20230926000">
+<keywords version="0.0.20231212000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.2.1
@@ -2702,7 +2702,7 @@ Ignore this prim in the physics shape. This cannot be applied to the root prim.
     </description>
   </constant>
 
-  <constant name="PRIM_GLTF_ALPHA_MODE_NONE" type="integer" value="0" grid="sl" version="sl:2023-11-07.6790647783">
+  <constant name="PRIM_GLTF_ALPHA_MODE_OPAQUE" type="integer" value="0" grid="sl" version="sl:2023-11-07.6790647783">
     <description lang="en">
 <!-- TODO: add documentation -->
     </description>
