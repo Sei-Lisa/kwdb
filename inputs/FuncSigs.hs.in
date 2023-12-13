@@ -1,32 +1,22 @@
--- Based on revision 810ff3edd145
--- http://code.google.com/p/lslforge/source/browse/lslforge/haskell/src/Language/Lsl/Internal/FuncSigs.hs?spec=svn2621f419ec07347a14bcb1df0649e46e711b4685&r=810ff3edd1459090ef516ff24cf908a060d347fc
+-- Based on
+-- https://github.com/KoolLSL/lslforge/blob/b93f6b4b8deed79662f67c0c53e30bd106d70a53/lslforge/haskell/src/Language/Lsl/Internal/FuncSigs.hs
 module Language.Lsl.Internal.FuncSigs(
-    funcDescriptions,
-    funcMeta,
-    funcSigs,
+    functionSigs,
     findSig,
     convertArgs) where
 
 import Data.List(find)
 import Language.Lsl.Internal.Type(LSLType(..), convertValues,LSLValue)
 
--- TODO: import real info into funcMeta, and derive funcSigs from that
-funcMeta :: [(String,LSLType,[(String,LSLType)],String)]
-funcMeta =
-    let dummyNames = zipWith (++) (repeat "arg") (map show [1..])
-        sig2Meta (name,rt,args) = 
-            let (argNames,description) = case lookup name funcDescriptions of
-                    Nothing -> (dummyNames,"no description")
-                    Just (names,desc) -> (names ++ dummyNames,desc)
-            in (name, rt,zip argNames args,description)
-    in map sig2Meta funcSigs
-        
-findSig name = find (\ (fname,_,_) -> name == fname) funcSigs
+lslFunctionDescriptors = [
+        ]
+
+findSig name = find (\ (fname,_,_,_) -> name == fname) functionSigs
 
 convertArgs :: RealFrac a => String -> [LSLValue a] -> [LSLValue a]
 convertArgs name args = case findSig name of
     Nothing -> args
-    Just (_,_,argTypes) -> convertValues argTypes args
+    Just (_,_,argTypes,_) -> convertValues (snd (unzip argTypes)) args
 
-funcSigs :: [(String,LSLType,[LSLType])]
+functionSigs :: [(String,LSLType,[(String,LSLType)], String)]
 <<< LSL KEYWORDS >>>

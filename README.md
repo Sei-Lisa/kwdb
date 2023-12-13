@@ -6,7 +6,7 @@
 
 This project aims to help synchronizing the various files around that depend on functions and constants added to LSL and similar languages, as additions are frequent and this causes obsolete syntax highlighting files, etc.
 
-This mission is accomplished through a central keyword database in XML format maintained by volunteers; an XML parser using pyXML SAX, and output drivers (Python modules) for the different kinds of files to generate. Output drivers included here are the three files in the viewer source necessary for LSL syntax highlighting, [GeSHi](http://qbnz.com/highlighter/) syntax highlighter PHP code output, [Kate](http://kate-editor.org/) editor syntax highlighting XML output, Haskell code for [LSLForge](http://code.google.com/p/lslforge/), [lslint](https://github.com/pclewis/lslint) output, and a few more.
+This mission is accomplished through a central keyword database in XML format maintained by volunteers; an XML parser using pyXML SAX, and output drivers (Python modules) for the different kinds of files to generate. Output drivers included here are the three files in the viewer source necessary for LSL syntax highlighting, [GeSHi](http://qbnz.com/highlighter/) syntax highlighter PHP code output, [Kate](http://kate-editor.org/) editor syntax highlighting XML output, Haskell code for [LSLForge](https://github.com/KoolLSL/lslforge) (most maintained fork of now archived [LSLForge](https://github.com/elnewfie/lslforge)), [lslint](https://github.com/pclewis/lslint) output, and a few more.
 
 ### Quickstart ###
 
