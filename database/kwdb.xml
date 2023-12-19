@@ -5308,7 +5308,7 @@ Used with llPassTouches to never pass touches to the root.
 
   <constant name="LINKSETDATA_RESET" type="integer" value="0" grid="sl" version="sl:2022-11-04.576376">
     <description lang="en">
-The linkset's datastore has been cleared by a call to llLinksetDataReset. 
+The linkset's datastore has been cleared by a call to llLinksetDataReset.
     </description>
   </constant>
 
@@ -5320,19 +5320,19 @@ A key in the linkset's datastore has been assigned a new value with llLinksetDat
 
   <constant name="LINKSETDATA_DELETE" type="integer" value="2" grid="sl" version="sl:2022-11-04.576376">
     <description lang="en">
-A key in the linkset's datastore has been deleted. Either through a call to llLinksetDataDelete or llLinksetDataWrite with an empty value. 
+A key in the linkset's datastore has been deleted. Either through a call to llLinksetDataDelete or llLinksetDataWrite with an empty value.
     </description>
   </constant>
 
   <constant name="LINKSETDATA_MULTIDELETE" type="integer" value="3" grid="sl" version="2023-07-14.581036">
     <description lang="en">
-A comma separated list of the keys in the linkset's datastore which have been deleted through a call to llLinksetDataDeleteFound. 
+A comma separated list of the keys in the linkset's datastore which have been deleted through a call to llLinksetDataDeleteFound.
     </description>
   </constant>
 
   <constant name="LINKSETDATA_MULTIDELETE" type="integer" value="3" grid="sl" version="2023-07-14.581036">
     <description lang="en">
-A comma separated list of the keys in the linkset's datastore which have been deleted through a call to llLinksetDataDeleteFound. 
+A comma separated list of the keys in the linkset's datastore which have been deleted through a call to llLinksetDataDeleteFound.
     </description>
   </constant>
 
@@ -5510,7 +5510,7 @@ A comma separated list of the keys in the linkset's datastore which have been de
 
   <constant name="SIM_STAT_AI_MS" type="integer" value="26" grid="sl" version="sl:2023-03-24.579022">
     <description lang="en">
- Time spent on AI step. 
+ Time spent on AI step.
     </description>
   </constant>
 
@@ -9786,7 +9786,7 @@ Get the media params for a particular face on linked prim, given the desired lis
     <param type="integer" name="link"/>
     <param type="integer" name="face"/>
     <description lang="en">
-Clears (deletes) the media and all params from the given face on linked prim
+Clears (deletes) the media and all params from the given face on linked prim.
     </description>
   </function>
 
@@ -10160,7 +10160,7 @@ Returns the type constant for the value in json indicated by specifiers
   <function name="llReturnObjectsByID" type="integer" grid="sl">
     <param type="list" name="objects"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns an integer that is the number of objects successfully returned to their owners or an ERR_* flag
     </description>
   </function>
 
@@ -10168,7 +10168,7 @@ Returns the type constant for the value in json indicated by specifiers
     <param type="key" name="owner"/>
     <param type="integer" name="scope"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns an integer that is the number of objects successfully returned to their owners or an ERR_* flag
     </description>
   </function>
 
@@ -10184,33 +10184,33 @@ str2 repeats if it is shorter than str1.
   <function name="llScaleByFactor" type="integer" grid="sl os">
     <param type="float" name="scaling_factor"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Attempts to resize the entire object by scaling_factor, maintaining the size-position ratios of the prims
     </description>
   </function>
 
   <function name="llGetMinScaleFactor" type="float" grid="sl os">
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a float that is the smallest scaling factor that can be used with llScaleByFactor to resize the object. This minimum is determined by the prim scale limits
     </description>
   </function>
 
   <function name="llGetMaxScaleFactor" type="float" grid="sl os">
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a float that is the largest scaling factor that can be used with llScaleByFactor to resize the object. This maximum is determined by the Linkability Rules and prim scale limits
     </description>
   </function>
 
   <function name="llAgentInExperience" type="integer" grid="sl" version="sl:14.07.18.292162">
     <param type="key" name="agent"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Determines whether or not the specified agent is in the script's experience
     </description>
   </function>
 
   <function name="llGetExperienceDetails" grid="sl" type="list" version="sl:14.07.18.292162">
     <param type="key" name="experience_id"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a list of details about the experience. This list has 6 components: [string experience_name, key owner_id, key experience_id, integer state, string state_message, key group_id]
     </description>
   </function>
 
@@ -10218,14 +10218,14 @@ str2 repeats if it is shorter than str1.
     <param type="key" name="agent"/>
     <param type="string" name="name"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Asks the agent for permission to participate in the script's Experience
     </description>
   </function>
 
   <function name="llReadKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
     <param type="string" name="k"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Start an asynchronous transaction to read the value associated with the specified key (k) and the script's Experience
     </description>
   </function>
 
@@ -10233,7 +10233,7 @@ str2 repeats if it is shorter than str1.
     <param type="string" name="k"/>
     <param type="string" name="v"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Start an asynchronous transaction to create a key-value pair associated with the script's Experience using the given key (k) and value (v)
     </description>
   </function>
 
@@ -10243,20 +10243,20 @@ str2 repeats if it is shorter than str1.
     <param type="integer" name="checked"/>
     <param type="string" name="original_value"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Start an asynchronous transaction to update a key-value pair associated with the script's Experience with the given key (k) and value (v)
     </description>
   </function>
 
   <function name="llDeleteKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
     <param type="string" name="k"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Start an asynchronous transaction to delete a key-value pair associated with the script's Experience with the given key (k)
     </description>
   </function>
 
   <function name="llDataSizeKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
     <description lang="en">
-<!-- TODO: add documentation -->
+Start an asynchronous transaction to request the used and total amount of data allocated for the Experience
     </description>
   </function>
 
@@ -10264,20 +10264,20 @@ str2 repeats if it is shorter than str1.
     <param type="integer" name="start"/>
     <param type="integer" name="count"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Start an asynchronous transaction to request a number of keys from the script's Experience
     </description>
   </function>
 
   <function name="llKeyCountKeyValue" grid="sl" type="key" version="sl:14.07.18.292162">
     <description lang="en">
-<!-- TODO: add documentation -->
+Start an asynchronous transaction to request the number of keys with the script's Experience
     </description>
   </function>
 
   <function name="llGetExperienceErrorMessage" grid="sl" type="string" version="sl:14.07.18.292162">
     <param type="integer" name="value"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a text description of a particular Experience LSL error constant
     </description>
   </function>
 
@@ -10296,9 +10296,9 @@ str2 repeats if it is shorter than str1.
   </function>
 
   <function name="llGetAttachedList" type="list" grid="sl os" version="sl:15.09.14.305056">
-    <param type="key" name="agent"/>
+    <param type="key" name="avatar"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a list of object keys corresponding to public attachments worn by an avatar
     </description>
   </function>
 
@@ -10306,41 +10306,41 @@ str2 repeats if it is shorter than str1.
     <param type="key" name="agent_id"/>
     <param type="integer" name="link"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+The avatar specified by agent_id is forced to sit on the sit target of the prim indicated by the link parameter
     </description>
   </function>
 
   <function name="llName2Key" type="key" grid="sl os" version="sl:18.05.07.515224">
     <param type="string" name="name"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a key the Agent ID for the named agent in the region
     </description>
   </function>
 
   <function name="llRequestUserKey" type="key" grid="sl os" version="sl:18.05.07.515224">
-    <param type="string" name="name"/>
+    <param type="string" name="username"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Requests the Agent ID for the agent identified by name from the dataserver
     </description>
   </function>
 
   <function name="llStartObjectAnimation" grid="sl os" version="sl:18.06.14.516474">
     <param type="string" name="anim"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Start animation for the current object
     </description>
   </function>
 
   <function name="llStopObjectAnimation" grid="sl os" version="sl:18.06.14.516474">
     <param type="string" name="anim"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Stop an animation for the current object
     </description>
   </function>
 
   <function name="llGetObjectAnimationNames" type="list" grid="sl os" version="sl:18.06.14.516474">
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a list of names of animations playing in the current object
     </description>
   </function>
 
@@ -10348,79 +10348,79 @@ str2 repeats if it is shorter than str1.
     <param type="vector" name="pos"/>
     <param type="list" name="params"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a list containing the current environment values for the parcel or region as a list of attributes
     </description>
   </function>
 
   <function name="llGetDayLength" type="integer" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
-<!-- TODO: add documentation -->
+Return the number of seconds in the day cycle applied to the current parcel
     </description>
   </function>
 
   <function name="llGetDayOffset" type="integer" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
-<!-- TODO: add documentation -->
+Return the number of seconds added to the current time before calculating the current environmental time for the parcel
     </description>
   </function>
 
   <function name="llGetRegionDayLength" type="integer" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
-<!-- TODO: add documentation -->
+Return the number of seconds in the day cycle applied to the current region
     </description>
   </function>
 
   <function name="llGetRegionDayOffset" type="integer" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
-<!-- TODO: add documentation -->
+Return the number of seconds added to the current time before calculating the current environmental time for the region
     </description>
   </function>
 
   <function name="llGetMoonRotation" type="rotation" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
-<!-- TODO: add documentation -->
+Return the rotation applied to the moon for the parcel at the location of the object containing the script
     </description>
   </function>
 
   <function name="llGetRegionMoonRotation" type="rotation" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
-<!-- TODO: add documentation -->
+Return the rotation applied to the moon for the region at the location of the object containing the script
     </description>
   </function>
 
   <function name="llGetRegionSunRotation" type="rotation" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
-<!-- TODO: add documentation -->
+Return the rotation applied to the sun for the region at the location of the object containing the script
     </description>
   </function>
 
   <function name="llGetSunRotation" type="rotation" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
-<!-- TODO: add documentation -->
+Return the rotation applied to the sun for the parcel at the location of the object containing the script
     </description>
   </function>
 
   <function name="llGetMoonDirection" type="vector" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a normalized vector to the current moon position at the location of object containing the script
     </description>
   </function>
 
   <function name="llGetRegionMoonDirection" type="vector" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a normalized vector to the current moon position at the location of object containing the script
     </description>
   </function>
 
   <function name="llGetRegionSunDirection" type="vector" grid="sl os" version="sl:18.11.02.521379">
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a normalized vector to the current sun position at the location of object containing the script
     </description>
   </function>
 
   <function name="llGetRegionTimeOfDay" type="float" grid="sl" version="sl:19.02.01.523934">
     <description lang="en">
-<!-- TODO: add documentation -->
+Returns a float that is the time in seconds with subsecond precision since Second Life midnight (per the region-scoped day cycle settings) or region up-time (time since when the region was brought online/rebooted); whichever is smaller
     </description>
   </function>
 
@@ -10429,7 +10429,7 @@ str2 repeats if it is shorter than str1.
     <param type="float" name="transition"/>
     <param type="list" name="params"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+This function sets environment values for an individual agent in an experience
     </description>
   </function>
 
@@ -10438,58 +10438,85 @@ str2 repeats if it is shorter than str1.
     <param type="float" name="transition"/>
     <param type="string" name="environment"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Overrides the current region and parcel environment seen by an agent
     </description>
   </function>
 
   <function name="llTargetedEmail" delay="20" grid="sl os" version="sl:2020-04-03T19:49:49.539684">
     <param type="integer" name="target"/>
-    <param type="string" name="header"/>
-    <param type="string" name="body"/>
+    <param type="string" name="subject"/>
+    <param type="string" name="message"/>
     <description lang="en">
-<!-- TODO: add documentation -->
+Sends an email to the owner (selected by target) of an object with subject and message
     </description>
   </function>
 
   <function name="llsRGB2Linear" type="vector" grid="sl" version="sl:2020-04-16T22:38:28.540369">
     <param type="vector" name="srgb"/>
+    <description lang="en">
+Returns a vector Transforms a color specified in the sRGB colorspace to the linear RGB colorspace
+    </description>
   </function>
 
   <function name="llLinear2sRGB" type="vector" grid="sl" version="sl:2020-04-16T22:38:28.540369">
     <param type="vector" name="color"/>
+    <description lang="en">
+Returns a vector Transforms a color specified in linear RGB colorspace into the sRGB colorspace
+    </description>
   </function>
 
   <function name="llOrd" type="integer" grid="sl os" version="sl:2021-05-05.559308">
     <param type="string" name="val"/>
     <param type="integer" name="index"/>
+    <description lang="en">
+Calculate the ordinal value for a character in a string
+    </description>
   </function>
 
   <function name="llChar" type="string" grid="sl os" version="sl:2021-05-05.559308">
     <param type="integer" name="code"/>
+    <description lang="en">
+Construct a single character string from the supplied Unicode value
+    </description>
   </function>
 
   <function name="llHash" type="integer" grid="sl os" version="sl:2021-05-05.559308">
     <param type="string" name="val"/>
+    <description lang="en">
+Returns a 32bit hash for the provided string. Returns 0 if the input string is empty
+    </description>
   </function>
 
   <function name="llOpenFloater" type="integer" grid="sl" version="sl:2021-05-12.559669" status="godmode">
-    <param type="string" name="title"/>
+    <param type="string" name="floater_name"/>
     <param type="string" name="url"/>
     <param type="list" name="params"/>
+    <description lang="en">
+Returns an integer Error code, or 0 if no error
+    </description>
   </function>
 
   <function name="llGetInventoryAcquireTime" type="string" grid="sl" version="sl:2021-05-25.560108">
     <param type="string" name="item"/>
+    <description lang="en">
+Returns a string with the timestamp that the item was added to the prim's inventory
+    </description>
   </function>
 
   <function name="llGetVisualParams" type="list" grid="sl" version="sl:2022-04-21.571166">
-    <param type="key" name="id"/>
+    <param type="key" name="agentid"/>
     <param type="list" name="params"/>
+    <description lang="en">
+Returns a list of the details for agentid requested in params
+    </description>
   </function>
 
   <function name="llSetEnvironment" type="integer" grid="sl" version="sl:2022-08-12.574216">
     <param type="vector" name="position"/>
     <param type="list" name="params"/>
+    <description lang="en">
+Overrides the environmental settings for a region or a parcel
+    </description>
   </function>
 
   <function name="llReplaceEnvironment" type="integer" grid="sl" version="sl:2022-08-12.574216">
@@ -10498,69 +10525,114 @@ str2 repeats if it is shorter than str1.
     <param type="integer" name="track_no"/>
     <param type="integer" name="day_length"/>
     <param type="integer" name="day_offset"/>
+    <description lang="en">
+Replaces the environment in a parcel or a region
+    </description>
   </function>
 
   <function name="llGetObjectLinkKey" type="key" grid="sl" version="sl:2022-09-23.575315">
-    <param type="key" name="id"/>
+    <param type="key" name="object_id"/>
     <param type="integer" name="link"/>
+    <description lang="en">
+Returns the key of the linked prim link in the linkset identified by object_id
+    </description>
   </function>
 
   <!-- Version unsure - could be earlier; it was documented in the indicated version, but some
        other functions were added before this one and also documented in it. -->
   <function name="llSHA256String" type="string" grid="sl" version="sl:2022-10-07.575585">
     <param type="string" name="src"/>
+    <description lang="en">
+Returns a string of 64 hex characters that is the SHA-256 security hash of src
+    </description>
   </function>
 
-  <function name="llLinksetDataReset" grid="sl" version="sl:2022-11-04.576376"/>
+  <function name="llLinksetDataReset" grid="sl" version="sl:2022-11-04.576376">
+    <description lang="en">
+Erases all name:value pairs stored in the linkset's datastore
+    </description>
+  </function>
 
-  <function name="llLinksetDataAvailable" type="integer" grid="sl" version="sl:2022-11-04.576376"/>
+  <function name="llLinksetDataAvailable" type="integer" grid="sl" version="sl:2022-11-04.576376">
+    <description lang="en">
+Returns the number of bytes available in the linkset's datastore
+    </description>
+  </function>
 
-  <function name="llLinksetDataCountKeys" type="integer" grid="sl" version="sl:2022-11-04.576376"/>
+  <function name="llLinksetDataCountKeys" type="integer" grid="sl" version="sl:2022-11-04.576376">
+    <description lang="en">
+Returns the number of unique keys that have been stored in the linkset's datastore
+    </description>
+  </function>
 
   <function name="llLinksetDataWrite" type="integer" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="keyname"/>
+    <param type="string" name="name"/>
     <param type="string" name="value"/>
+    <description lang="en">
+Creates or updates an unprotected name:value pair from the linkset's datastore
+    </description>
   </function>
 
   <function name="llLinksetDataWriteProtected" type="integer" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="keyname"/>
+    <param type="string" name="name"/>
     <param type="string" name="value"/>
     <param type="string" name="password"/>
+    <description lang="en">
+Creates or updates a protected name:value pair from the linkset's datastore
+    </description>
   </function>
 
   <function name="llLinksetDataRead" type="string" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="keyname"/>
+    <param type="string" name="name"/>
+    <description lang="en">
+Reads an unprotected name:value pair from the linkset's datastore
+    </description>
   </function>
 
   <function name="llLinksetDataReadProtected" type="string" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="keyname"/>
+    <param type="string" name="name"/>
     <param type="string" name="password"/>
+    <description lang="en">
+Reads a protected name:value pair from the datastore
+    </description>
   </function>
 
   <function name="llLinksetDataDelete" type="integer" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="keyname"/>
+    <param type="string" name="name"/>
+    <description lang="en">
+Removes an unprotected name:value pair from the linkset's datastore
+    </description>
   </function>
 
   <function name="llLinksetDataDeleteProtected" type="integer" grid="sl" version="sl:2022-11-04.576376">
-    <param type="string" name="keyname"/>
+    <param type="string" name="name"/>
     <param type="string" name="password"/>
+    <description lang="en">
+Removes a protected name:value pair from the linkset's datastore
+    </description>
   </function>
 
   <function name="llLinksetDataFindKeys" type="list" grid="sl" version="sl:2022-11-04.576376">
     <param type="string" name="pattern"/>
     <param type="integer" name="start"/>
     <param type="integer" name="count"/>
+    <description lang="en">
+Returns a list of up to count keys from the datastore that match pattern, starting at the one indicated by start
+    </description>
   </function>
 
   <function name="llLinksetDataListKeys" type="list" grid="sl" version="sl:2022-11-04.576376">
     <param type="integer" name="start"/>
     <param type="integer" name="count"/>
+    <description lang="en">
+Returns a list of up to count keys in the datastore, starting at the one indicated by start
+    </description>
   </function>
 
   <function name="llLinksetDataCountFound" type="integer" grid="sl" version="sl:2023-07-14.581036">
     <param type="string" name="pattern"/>
     <description lang="en">
-The llLinksetDataCountFound function returns the number of keys in the linkset datastore that match the pattern supplied in the pattern.
+Returns the number of keys in the linkset datastore that match the pattern supplied in the pattern
     </description>
   </function>
 
@@ -10568,14 +10640,14 @@ The llLinksetDataCountFound function returns the number of keys in the linkset d
     <param type="string" name="pattern"/>
     <param type="string" name="pass"/>
     <description lang="en">
-The llLinksetDataDeleteFound function finds and attempts to delete all keys in the data store that match pattern. This function will delete protected key-value pairs only if the matching pass phrase is passed in the pass parameter. The function returns a list, the first entry in the list is the number of keys deleted, the second entry in the list is the number of keys that could not be deleted due to a non-matching pass phrase. If this function successfully deletes any keys from the datastore it will trigger a linkset_data event with the type of LINKSET_DATA_MULTIDELETE, the key name will consist of a comma separated list of the key names removed from the datastore.
+Finds and attempts to delete all keys in the data store that match pattern. This function will delete protected key-value pairs only if the matching pass phrase is passed in the pass parameter. The function returns a list, the first entry in the list is the number of keys deleted, the second entry in the list is the number of keys that could not be deleted due to a non-matching pass phrase. If this function successfully deletes any keys from the datastore it will trigger a linkset_data event with the type of LINKSET_DATA_MULTIDELETE, the key name will consist of a comma separated list of the key names removed from the datastore
     </description>
   </function>
 
   <function name="llGetRenderMaterial" type="string" grid="sl" version="sl:2023-11-07.6790647783">
     <param type="integer" name="face"/>
     <description lang="en">
-Returns a string that is the Material on face.
+Returns a string that is the Material on face
     </description>
   </function>
 
@@ -10583,7 +10655,7 @@ Returns a string that is the Material on face.
     <param type="string" name="material"/>
     <param type="integer" name="face"/>
     <description lang="en">
-Sets the material of this prim's face. This function will clear most PRIM_GLTF_* properties on the face, with the exceptions of repeats, offsets, and rotation_in_radians.
+Sets the material of this prim's face. This function will clear most PRIM_GLTF_* properties on the face, with the exceptions of repeats, offsets, and rotation_in_radians
     </description>
   </function>
 
@@ -10592,7 +10664,7 @@ Sets the material of this prim's face. This function will clear most PRIM_GLTF_*
     <param type="string" name="material"/>
     <param type="integer" name="face"/>
     <description lang="en">
-If a prim exists in the link set at link, set material on face of that prim. This function will clear most PRIM_GLTF_* properties on the face, with the exceptions of repeats, offsets, and rotation_in_radians.
+If a prim exists in the link set at link, set material on face of that prim. This function will clear most PRIM_GLTF_* properties on the face, with the exceptions of repeats, offsets, and rotation_in_radians
     </description>
   </function>
 
@@ -10602,25 +10674,40 @@ If a prim exists in the link set at link, set material on face of that prim. Thi
     <param type="string" name="sound"/>
     <param type="float" name="volume"/>
     <param type="integer" name="flags"/>
+    <description lang="en">
+Plays attached sound once at volume
+    </description>
   </function>
 
   <function name="llLinkStopSound" grid="sl" version="sl:2023-01-11.577595">
     <param type="integer" name="link"/>
+    <description lang="en">
+Stops the attached sound(s) currently playing, if they were started by llLoopSound
+    </description>
   </function>
 
   <function name="llLinkAdjustSoundVolume" delay="0.1" grid="sl" version="sl:2023-01-11.577595">
     <param type="integer" name="link"/>
     <param type="float" name="volume"/>
+    <description lang="en">
+Adjusts volume of attached sound (0.0 - 1.0)
+    </description>
   </function>
 
   <function name="llLinkSetSoundQueueing" grid="sl" version="sl:2023-01-11.577595">
     <param type="integer" name="link"/>
     <param type="integer" name="queue"/>
+    <description lang="en">
+Set whether attached sounds wait for the current sound to finish. If queue is TRUE, queuing is enabled, if FALSE queuing is disabled. Sound queuing is disabled by default
+    </description>
   </function>
 
   <function name="llLinkSetSoundRadius" grid="sl" version="sl:2023-01-11.577595">
     <param type="integer" name="link"/>
     <param type="float" name="radius"/>
+    <description lang="en">
+Establishes a hard cut-off radius for audibility of scripted sounds (both attached and triggered)
+    </description>
   </function>
 
   <!-- These functions were present in a previous version, but they seemed inactive. -->
@@ -10629,38 +10716,38 @@ If a prim exists in the link set at link, set material on face of that prim. Thi
     <param type="string" name="message"/>
     <param type="string" name="hashalg"/>
     <description lang="en">
-Returns a string that is the Base64-encoded HMAC hash of msg when using hash algorithm algorithm and secret key private_key. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm.
+Returns a string that is the Base64-encoded HMAC hash of msg when using hash algorithm algorithm and secret key private_key. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm
     </description>
   </function>
 
   <function name="llSignRSA" type="string" grid="sl" version="sl:2023-02-21.578370">
-    <param type="string" name="privkey"/>
-    <param type="string" name="message"/>
-    <param type="string" name="hashalg"/>
+    <param type="string" name="private_key"/>
+    <param type="string" name="msg"/>
+    <param type="string" name="algorithm"/>
     <description lang="en">
-Returns a string that is the Base64-encoded RSA signature of msg when using hash algorithm algorithm and secret key private_key. Can be paired with llVerifyRSA to pass verifiable messages. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm.
+Returns a string that is the Base64-encoded RSA signature of msg when using hash algorithm algorithm and secret key private_key. Can be paired with llVerifyRSA to pass verifiable messages. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm
     </description>
   </function>
 
   <function name="llVerifyRSA" type="integer" grid="sl" version="sl:2023-02-21.578370">
-    <param type="string" name="pubkey"/>
-    <param type="string" name="message"/>
+    <param type="string" name="public_key"/>
+    <param type="string" name="msg"/>
     <param type="string" name="signature"/>
-    <param type="string" name="hashalg"/>
+    <param type="string" name="algorithm"/>
     <description lang="en">
-Returns an integer indicating whether the RSA signature is valid for msg when using hash algorithm algorithm and public RSA key public_key. Returns TRUE if the signature is verified, and FALSE otherwise. Can be paired with llSignRSA to validate the authenticity of messages from other LSL scripts. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm.
+Returns an integer indicating whether the RSA signature is valid for msg when using hash algorithm algorithm and public RSA key public_key. Returns TRUE if the signature is verified, and FALSE otherwise. Can be paired with llSignRSA to validate the authenticity of messages from other LSL scripts. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm
     </description>
   </function>
 
   <!-- This function's exact appearance version is unknown. The version
        specified is the one where it was first seen by the maintainer. -->
   <function name="llReplaceSubString" type="string" grid="sl" version="sl:2023-03-24.579022">
-    <param type="string" name="source"/>
-    <param type="string" name="search"/>
-    <param type="string" name="replace"/>
+    <param type="string" name="src"/>
+    <param type="string" name="pattern"/>
+    <param type="string" name="replacement_pattern"/>
     <param type="integer" name="count"/>
     <description lang="en">
-Returns a string that is the result of replacing the first count matching instances pattern in src with replacement_pattern.
+Returns a string that is the result of replacing the first count matching instances pattern in src with replacement_pattern
     </description>
   </function>
 
@@ -10671,7 +10758,7 @@ Returns a string that is the result of replacing the first count matching instan
     <param type="integer" name="stride"/>
     <param type="integer" name="slice_index"/>
     <description lang="en">
-Returns a list of the slice_index'th element of every stride in strided list whose index is a multiple of stride in the range start to end.
+Returns a list of the slice_index'th element of every stride in strided list whose index is a multiple of stride in the range start to end
     </description>
   </function>
 
@@ -10681,7 +10768,7 @@ Returns a list of the slice_index'th element of every stride in strided list who
     <param type="integer" name="stride_index"/>
     <param type="integer" name="ascending"/>
     <description lang="en">
-llListSortStrided is llListSort with the added parameter of stride_index, adding the flexibility to sort by any item in the stride. These routines use the same underlying code and have the same computational complexity.
+llListSortStrided is llListSort with the added parameter of stride_index, adding the flexibility to sort by any item in the stride. These routines use the same underlying code and have the same computational complexity
     </description>
   </function>
 
@@ -10692,7 +10779,7 @@ llListSortStrided is llListSort with the added parameter of stride_index, adding
     <param type="integer" name="end"/>
     <param type="integer" name="stride"/>
     <description lang="en">
-Returns the integer index of the first instance of test in src matching conditions.
+Returns the integer index of the first instance of test in src matching conditions
     </description>
   </function>
 
