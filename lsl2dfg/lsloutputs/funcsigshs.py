@@ -77,7 +77,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
 
         newline = ""
         for element in document:
-          if element["cat"] == "function" and ("status" not in element or element["status"] != "godmode"):
+          if element["cat"] == "function" and ("status" not in element or (element["status"] != "godmode" and element["status"] != "unimplemented")):
             if newline != "":
               outf.write(newline + ",\n")
             newline = '    ("' + element['name'] + '",'
