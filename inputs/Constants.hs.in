@@ -6,7 +6,7 @@
 {-# LANGUAGE NoMonomorphismRestriction #-}
 module Language.Lsl.Internal.Constants where
 
-import Data.Bits((.|.),shiftL)
+import Data.Bits((.|.))
 import Data.Foldable(find)
 import Language.Lsl.Internal.Key(LSLKey(..))
 import Language.Lsl.Internal.Type(LSLType,LSLValue(..),typeOfLSLValue)
