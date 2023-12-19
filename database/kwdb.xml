@@ -5334,12 +5334,6 @@ A comma separated list of the keys in the linkset's datastore which have been de
     </description>
   </constant>
 
-  <constant name="LINKSETDATA_MULTIDELETE" type="integer" value="3" grid="sl" version="2023-07-14.581036">
-    <description lang="en">
-A comma separated list of the keys in the linkset's datastore which have been deleted through a call to llLinksetDataDeleteFound.
-    </description>
-  </constant>
-
   <constant name="LINKSETDATA_OK" type="integer" value="0" grid="sl" version="sl:2022-11-04.576376"/>
 
   <constant name="LINKSETDATA_EMEMORY" type="integer" value="1" grid="sl" version="sl:2022-11-04.576376"/>
