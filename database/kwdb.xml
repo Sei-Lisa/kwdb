@@ -1127,7 +1127,7 @@ The exponential timescale for the banking behavior to take full effect
 
   <constant name="VEHICLE_FLAG_NO_FLY_UP" type="integer" value="0x1" status="deprecated" version="sl:1.1.0">
     <description lang="en">
-DEPRECATED - use VEHICLE_FLAG_NO_DEFLECTION_UP
+(DEPRECATED) Use VEHICLE_FLAG_NO_DEFLECTION_UP
     </description>
   </constant>
 
@@ -1611,8 +1611,8 @@ Passed to llAttachToAvatar to attach task to belly
 
   <constant name="ATTACH_RPEC" type="integer" value="29" status="deprecated" grid="sl os">
     <description lang="en">
+(DEPRECATED/MISNAMED) Use ATTACH_LEFT_PEC or ATTACH_RIGHT_PEC.
 Passed to llAttachToAvatar to attach task to LEFT pectoral.
-DEPRECATED/MISNAMED - use ATTACH_LEFT_PEC or ATTACH_RIGHT_PEC.
     </description>
   </constant>
 
@@ -1624,8 +1624,8 @@ Passed to llAttachToAvatar to attach task to left pectoral
 
   <constant name="ATTACH_LPEC" type="integer" value="30" status="deprecated" grid="sl os">
     <description lang="en">
+(DEPRECATED/MISNAMED) Use ATTACH_LEFT_PEC or ATTACH_RIGHT_PEC.
 Passed to llAttachToAvatar to attach task to RIGHT pectoral.
-DEPRECATED/MISNAMED - use ATTACH_LEFT_PEC or ATTACH_RIGHT_PEC.
     </description>
   </constant>
 
@@ -1881,7 +1881,8 @@ Passed to llRequestAgentData to get born on date as a string
 
   <constant name="DATA_RATING" type="integer" value="4" status="deprecated" version="sl:1.1.0">
     <description lang="en">
-Passed to llRequestAgentData to get a comma separated sting of integer ratings. DEPRECATED - Ratings are no longer in use and using this value in a query always returns "0, 0, 0, 0, 0, 0".
+(DEPRECATED) Ratings are no longer in use and using this value in a query always returns "0, 0, 0, 0, 0, 0".
+Passed to llRequestAgentData to get a comma separated sting of integer ratings.
     </description>
   </constant>
 
@@ -2206,7 +2207,7 @@ Sets phantom to TRUE or FALSE
 
   <constant name="PRIM_CAST_SHADOWS" type="integer" value="24" status="unimplemented">
     <description lang="en">
-DEPRECATED. Takes 1 parameter, an integer, but has no effect when set and always returns 0 if used in llGetPrimitiveParams.
+(DEPRECATED) Takes 1 parameter, an integer, but has no effect when set and always returns 0 if used in llGetPrimitiveParams.
     </description>
   </constant>
 
@@ -2453,7 +2454,8 @@ Sets material to rubber
 
   <constant name="PRIM_MATERIAL_LIGHT" type="integer" value="7" status="deprecated">
     <description lang="en">
-Sets material to light. DEPRECATED - use PRIM_FULLBRIGHT instead.
+(DEPRECATED) Use PRIM_FULLBRIGHT instead.
+Sets material to light.
     </description>
   </constant>
 
@@ -7259,8 +7261,8 @@ Returns the ground height below the object position + offset
   <function name="llCloud" type="float" status="unimplemented">
     <param type="vector" name="offset"/>
     <description lang="en">
+(DEPRECATED) It always returns 0.0 now.
 Returns the cloud density at the object position + offset.
-DEPRECATED - It always returns 0.0 now.
     </description>
   </function>
 
@@ -7565,7 +7567,8 @@ Returns the script time in seconds and then resets the script timer to zero
     <param type="integer" name="queue"/>
     <param type="integer" name="loop"/>
     <description lang="en">
-Plays sound at volume and whether it should loop or not. DEPRECATED - Use llPlaySound / llLoopSound / llSetSoundQueueing.
+(DEPRECATED) Use llPlaySound / llLoopSound / llSetSoundQueueing.
+Plays sound at volume and whether it should loop or not.
     </description>
   </function>
 
@@ -7833,14 +7836,16 @@ Detaches object from avatar
   <function name="llTakeCamera" status="unimplemented">
     <param type="key" name="avatar"/>
     <description lang="en">
-Moves avatar's viewpoint to task
+(DEPRECATED) Use llSetCameraParams instead.
+Moves avatar's viewpoint to task.
     </description>
   </function>
 
   <function name="llReleaseCamera" status="unimplemented">
     <param type="key" name="avatar"/>
     <description lang="en">
-Returns camera to agent avatar
+(DEPRECATED) Use llClearCameraParams instead.
+Returns camera to agent avatar.
     </description>
   </function>
 
@@ -7915,7 +7920,8 @@ Sets the minimum time between events being handled
   <function name="llSoundPreload" status="deprecated">
     <param type="string" name="sound"/>
     <description lang="en">
-Preloads a sound on viewers within range. DEPRECATED - Use llPreloadSound.
+(DEPRECATED) Use llPreloadSound.
+Preloads a sound on viewers within range
     </description>
   </function>
 
@@ -8871,7 +8877,7 @@ Returns TRUE if the script name is running
     <param type="integer" name="running"/>
     <param type="integer" name="start_param"/>
     <description lang="en">
-DEPRECATED!  Please use llRemoteLoadScriptPin instead.
+(DEPRECATED) Use llRemoteLoadScriptPin instead.
     </description>
   </function>
 
@@ -8968,14 +8974,14 @@ If the conversion creates any unprintable characters, they are converted to spac
     <param type="string" name="str1"/>
     <param type="string" name="str2"/>
     <description lang="en">
-DEPRECATED!  Please use llXorBase64 instead.
+(DEPRECATED) Use llXorBase64 instead.
 Incorrectly performs an exclusive or on two Base64 strings and returns a Base64 string. str2 repeats if it is shorter than str1. Retained for backwards compatability.
     </description>
   </function>
 
   <function name="llRemoteDataSetRegion" status="deprecated">
     <description lang="en">
-DEPRECATED!  Please use llOpenRemoteDataChannel instead.
+(DEPRECATED) Use http_server instead.
 If an object using remote data channels changes regions, you must call this function to reregister the remote data channels. This call is not needed if the prim does not change regions.
     </description>
   </function>
@@ -9295,6 +9301,7 @@ Updates the URL for the web page shown on the sides of the object
   <!-- This function returns DateTime for Aurora, but we're not special-casing it -->
   <function name="llRefreshPrimURL" delay="20" status="unimplemented">
     <description lang="en">
+(DEPRECATED) Issues a warning "llRefreshPrimURL - not yet supported".
 Reloads the web page shown on the sides of the object
     </description>
   </function>
@@ -9394,7 +9401,7 @@ Returns the region flags (REGION_FLAG_*) for the region the object is in
     <param type="string" name="str1"/>
     <param type="string" name="str2"/>
     <description lang="en">
-DEPRECATED! Please use llXorBase64 instead.
+(DEPRECATED) Use llXorBase64 instead.
 Incorrectly performs an exclusive or on two Base64 strings and returns a Base64 string.
 str2 repeats if it is shorter than str1. Retained for backwards compatability.
     </description>
