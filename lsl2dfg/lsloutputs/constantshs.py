@@ -117,8 +117,12 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
                 if value.isprintable():
                   value = '"' + value + '"'
                 else:
-                  # Convert unprintable to sequence of \x, trimming b' prefix and ' postfix
-                  value = '"' + ("%s" % value.encode('utf8'))[2:-1] + '"'
+                  byte_sequence = value.encode('utf-8')
+                  # Convert bytes to string
+                  unicode_string = byte_sequence.decode('utf-8')
+                  # Convert string to Unicode literal
+                  unicode_literal = unicode_string.encode('unicode-escape').decode('utf-8')
+                  value = '"\\x' + unicode_literal[2:] + '"'
               elif element["type"] == "key": # even though there are no key valued constants
                 value = '$ LSLKey "' + value + '"'
               elif element["type"] in ("float", "integer"):
