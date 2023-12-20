@@ -32,7 +32,7 @@ def cmp(a, b):
 
 def output(document, defaultdescs, databaseversion, infilename, outfilename, lang, tag):
 
-  version = "0.0.20230603000"
+  version = "0.0.20231219001"
 
   if lang not in defaultdescs:
     defaultdescs[lang] = defaultdescs["default"]
