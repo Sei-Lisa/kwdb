@@ -10161,7 +10161,7 @@ Returns the type constant for the value in json indicated by specifiers
   <function name="llReturnObjectsByID" type="integer" grid="sl">
     <param type="list" name="objects"/>
     <description lang="en">
-Returns an integer that is the number of objects successfully returned to their owners or an ERR_* flag.llReturnObjectsByOwner.
+Returns to their owners the objects provided as a list of object keys. The return value is the number of objects successfully returned, or an ERR_* flag.
     </description>
   </function>
 
@@ -10169,7 +10169,7 @@ Returns an integer that is the number of objects successfully returned to their 
     <param type="key" name="owner"/>
     <param type="integer" name="scope"/>
     <description lang="en">
-Returns an integer that is the number of objects successfully returned to their owners or an ERR_* flag.
+Returns to the owner the objects, limited by the scope parameter. The return value is the number of objects successfully returned, or an ERR_* flag.
     </description>
   </function>
 
