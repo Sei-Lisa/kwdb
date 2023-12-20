@@ -122,7 +122,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
                   unicode_string = byte_sequence.decode('utf-8')
                   # Convert string to Unicode literal
                   unicode_literal = unicode_string.encode('unicode-escape').decode('utf-8')
-                  value = '"\\x' + unicode_literal[2:] + '"'
+                  value = '"' + unicode_literal.replace("\\u", "\\x") + '"'
               elif element["type"] == "key": # even though there are no key valued constants
                 value = '$ LSLKey "' + value + '"'
               elif element["type"] in ("float", "integer"):
