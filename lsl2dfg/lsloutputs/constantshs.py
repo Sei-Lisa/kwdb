@@ -42,7 +42,7 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
     # though it can be written as SQRT2 to avoid that problem
     return re.sub('([A-Z0-9])_(?:(?=[A-Z0-9]_)|(?=[A-Z0-9]$))', '\\1', re.sub('([A-Z0-9])', '_\\1', arg))[1:].upper()
 
-  version = "0.0.20230603000"
+  version = "0.0.20231219001"
 
   try:
     document.sort(key=lambda x: x["name"])
@@ -68,15 +68,19 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
     # (XVal is one of FVal, IVal, KVal, RVal, LVal, SVal, or VVal)
     results = re.findall(r'llc([A-Za-z0-9]+)\s*=\s*[FIKRLSV]Val\s*c\1\s*(?:$|;)', line)
     for const in results:
-      u2c[UpperCamelCase_TO_UNDERSCORES(const)] = const
+      u2c[UpperCamelCase_TO_UNDERSCORES(const)] = 'llc'+const
 
   # Special cases
-  u2c['AGENT_BY_LEGACY_NAME'] = 'Agent'  # the value used is that of Agent
-  u2c['INVENTORY_BODYPART'] = 'InventoryBodyPart'  # should have been Bodypart for consistence
-  u2c['URL_REQUEST_GRANTED'] = 'UrlRequestGranted' # there's no corresponding cXXX constant
-  u2c['URL_REQUEST_DENIED'] = 'UrlRequestDenied'   # there's no corresponding cXXX constant
-  u2c['ZERO_VECTOR'] = 'ZeroVector'                # there's no corresponding cXXX constant
-  u2c['ZERO_ROTATION'] = 'ZeroRotation'            # there's no corresponding cXXX constant
+  u2c['PRIM_HOLE_DEFAULT'] = '(IVal cPrimHoleDefault)'
+  u2c['PRIM_HOLE_CIRCLE'] = '(IVal cPrimHoleCircle)'
+  u2c['PRIM_HOLE_SQUARE'] = '(IVal cPrimHoleSquare)'
+  u2c['PRIM_HOLE_TRIANGLE'] = '(IVal cPrimHoleTriangle)'
+  u2c['AGENT_BY_LEGACY_NAME'] = 'llcAgent'  # the value used is that of Agent
+  u2c['INVENTORY_BODYPART'] = 'llcInventoryBodyPart'  # should have been Bodypart for consistence
+  u2c['URL_REQUEST_GRANTED'] = 'llcUrlRequestGranted' # there's no corresponding cXXX constant
+  u2c['URL_REQUEST_DENIED'] = 'llcUrlRequestDenied'   # there's no corresponding cXXX constant
+  u2c['ZERO_VECTOR'] = 'llcZeroVector'                # there's no corresponding cXXX constant
+  u2c['ZERO_ROTATION'] = 'llcZeroRotation'            # there's no corresponding cXXX constant
 
   newline = ""
 
@@ -99,18 +103,26 @@ def output(document, defaultdescs, databaseversion, infilename, outfilename, lan
               newline = '    Constant "EOF" $ SVal cEOF'
 
             # The Haskell code treats these as key constants, not string constants
-            elif element["name"].startswith("TEXTURE_"):
+            elif element["name"].startswith("TEXTURE_") or element["name"].startswith("IMG_USE_"):
               newline = '    Constant "%s" (KVal $ LSLKey "%s")' % (element["name"], element["value"])
 
             # Emit those having a constant
             elif element["name"] in u2c:
-              newline = '    Constant "%s" llc%s' % (element["name"], u2c[element["name"]])
+              newline = '    Constant "%s" %s' % (element["name"], u2c[element["name"]])
 
             # Emit as values
             else:
               value = element["value"]
               if element["type"] == "string":
-                value = '"' + value + '"'
+                if value.isprintable():
+                  value = '"' + value + '"'
+                else:
+                  byte_sequence = value.encode('utf-8')
+                  # Convert bytes to string
+                  unicode_string = byte_sequence.decode('utf-8')
+                  # Convert string to Unicode literal
+                  unicode_literal = unicode_string.encode('unicode-escape').decode('utf-8')
+                  value = '"' + unicode_literal.replace("\\u", "\\x") + '"'
               elif element["type"] == "key": # even though there are no key valued constants
                 value = '$ LSLKey "' + value + '"'
               elif element["type"] in ("float", "integer"):

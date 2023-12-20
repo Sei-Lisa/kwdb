@@ -1,40 +1,43 @@
--- Based on revision 810ff3edd145
--- http://code.google.com/p/lslforge/source/browse/lslforge/haskell/src/Language/Lsl/Internal/Constants.hs?spec=svn2621f419ec07347a14bcb1df0649e46e711b4685&r=810ff3edd1459090ef516ff24cf908a060d347fc
+-- Based on
+-- https://github.com/KoolLSL/lslforge/blob/b93f6b4b8deed79662f67c0c53e30bd106d70a53/lslforge/haskell/src/Language/Lsl/Internal/Constants.hs
 
 <<< LSL KEYWORDS VERSION >>>
 
-{-# OPTIONS_GHC -XNoMonomorphismRestriction #-}
+{-# LANGUAGE NoMonomorphismRestriction #-}
 module Language.Lsl.Internal.Constants where
 
-import Data.Bits((.|.),shiftL)
+import Data.Bits((.|.))
+import Data.Foldable(find)
 import Language.Lsl.Internal.Key(LSLKey(..))
-import Language.Lsl.Internal.Type(LSLValue(..),typeOfLSLValue)
-import Language.Lsl.Internal.Util(findM)
+import Language.Lsl.Internal.Type(LSLType,LSLValue(..),typeOfLSLValue)
+import Language.Lsl.Internal.Util(LSLInteger)
 
 data Constant a = Constant { constName :: String, constVal :: LSLValue a }
     deriving (Show)
 
-cInventoryAll = (-1);llcInventoryAll :: RealFloat a => LSLValue a;llcInventoryAll = IVal cInventoryAll
+cInventoryAll = -1;llcInventoryAll :: RealFloat a => LSLValue a;llcInventoryAll = IVal cInventoryAll
 cInventoryAnimation = 20;llcInventoryAnimation :: RealFloat a => LSLValue a; llcInventoryAnimation = IVal cInventoryAnimation
 cInventoryBodyPart = 13;llcInventoryBodyPart :: RealFloat a => LSLValue a; llcInventoryBodyPart = IVal cInventoryBodyPart
 cInventoryClothing = 5;llcInventoryClothing :: RealFloat a => LSLValue a; llcInventoryClothing = IVal cInventoryClothing
 cInventoryGesture = 21;llcInventoryGesture :: RealFloat a => LSLValue a; llcInventoryGesture = IVal cInventoryGesture
 cInventoryLandmark = 3;llcInventoryLandmark :: RealFloat a => LSLValue a; llcInventoryLandmark = IVal cInventoryLandmark
+cInventoryMaterial = 57;llcInventoryMaterial :: RealFloat a => LSLValue a; llcInventoryMaterial = IVal cInventoryMaterial
 cInventoryNotecard = 7;llcInventoryNotecard :: RealFloat a => LSLValue a; llcInventoryNotecard = IVal cInventoryNotecard
-cInventoryNone = (-1);llcInventoryNone :: RealFloat a => LSLValue a;llcInventoryNone = IVal cInventoryNone
+cInventoryNone = -1;llcInventoryNone :: RealFloat a => LSLValue a;llcInventoryNone = IVal cInventoryNone
 cInventoryObject = 6;llcInventoryObject :: RealFloat a => LSLValue a; llcInventoryObject = IVal cInventoryObject
 cInventoryScript = 10;llcInventoryScript :: RealFloat a => LSLValue a; llcInventoryScript = IVal cInventoryScript
+cInventorySetting = 56;llcInventorySetting :: RealFloat a => LSLValue a; llcInventorySetting = IVal cInventorySetting
 cInventorySound = 1;llcInventorySound :: RealFloat a => LSLValue a; llcInventorySound = IVal cInventorySound
 cInventoryTexture = 0;llcInventoryTexture :: RealFloat a => LSLValue a; llcInventoryTexture = IVal cInventoryTexture
-cPermissionChangeLinks = 0x80 :: Int
+cPermissionChangeLinks = 0x80 :: LSLInteger
 llcPermissionChangeLinks = IVal cPermissionChangeLinks
 
-cChangedLink = 0x20 :: Int
+cChangedLink = 0x20 :: LSLInteger
 llcChangedLink = IVal cChangedLink
 cChangedInventory = 0x1;llcChangedInventory :: RealFloat a => LSLValue a; llcChangedInventory = IVal cChangedInventory
 cChangedAllowedDrop = 0x40;llcChangedAllowedDrop :: RealFloat a => LSLValue a; llcChangedAllowedDrop = IVal cChangedAllowedDrop
 
-cChangedRegionStart = 0x400 :: Int
+cChangedRegionStart = 0x400 :: LSLInteger
 llcChangedRegionStart = IVal cChangedRegionStart
 
 cMaskBase = 0;llcMaskBase :: RealFloat a => LSLValue a; llcMaskBase = IVal cMaskBase
@@ -58,15 +61,15 @@ cPrimTypeSculpt = 7;llcPrimTypeSculpt :: RealFloat a => LSLValue a; llcPrimTypeS
 cPrimTypeTorus = 4;llcPrimTypeTorus :: RealFloat a => LSLValue a; llcPrimTypeTorus = IVal cPrimTypeTorus
 cPrimTypeTube = 5;llcPrimTypeTube :: RealFloat a => LSLValue a; llcPrimTypeTube = IVal cPrimTypeTube
 
-validAttachmentPoints = [0..36]::[Int]
+validAttachmentPoints = [0..36]::[LSLInteger]
 
-cDebugChannel = 2147483647 :: Int
+cDebugChannel = 2147483647 :: LSLInteger
 llcDebugChannel = IVal cDebugChannel
 
 cEOF = "\n\n\n"
-llcEOF = (SVal cEOF)
+llcEOF = SVal cEOF
 
-cPermissionControlCamera = 0x800 :: Int
+cPermissionControlCamera = 0x800 :: LSLInteger
 llcPermissionControlCamera = IVal cPermissionControlCamera
 cPermissionTrackCamera = 0x400;llcPermissionTrackCamera :: RealFloat a => LSLValue a; llcPermissionTrackCamera = IVal cPermissionTrackCamera
 cPermissionTriggerAnimation = 0x10;llcPermissionTriggerAnimation :: RealFloat a => LSLValue a; llcPermissionTriggerAnimation = IVal cPermissionTriggerAnimation
@@ -105,13 +108,14 @@ cPrimPointLight = 23;llcPrimPointLight :: RealFloat a => LSLValue a; llcPrimPoin
 cPrimPosition = 6;llcPrimPosition :: RealFloat a => LSLValue a; llcPrimPosition = IVal cPrimPosition
 cPrimRotation = 8;llcPrimRotation :: RealFloat a => LSLValue a; llcPrimRotation = IVal cPrimRotation
 cPrimSize = 7;llcPrimSize :: RealFloat a => LSLValue a; llcPrimSize = IVal cPrimSize
-cPrimTempOnRez = 4;llcPrimTempOnRez :: RealFloat a => LSLValue a; llcPrimTempOnRez = IVal cPrimTempOnRez 
+cPrimTempOnRez = 4;llcPrimTempOnRez :: RealFloat a => LSLValue a; llcPrimTempOnRez = IVal cPrimTempOnRez
 cPrimType = 9;llcPrimType :: RealFloat a => LSLValue a; llcPrimType = IVal cPrimType
 
 cParcelDetailsName = 0;llcParcelDetailsName :: RealFloat a => LSLValue a; llcParcelDetailsName = IVal cParcelDetailsName
 cParcelDetailsDesc = 1;llcParcelDetailsDesc :: RealFloat a => LSLValue a; llcParcelDetailsDesc = IVal cParcelDetailsDesc
+cParcelDetailsFlags = 12;llcParcelDetailsFlags :: RealFloat a => LSLValue a; llcParcelDetailsFlags = IVal cParcelDetailsFlags
 cParcelDetailsOwner = 2;llcParcelDetailsOwner :: RealFloat a => LSLValue a; llcParcelDetailsOwner = IVal cParcelDetailsOwner
-cParcelDetailsGroup = 3;llcParcelDetailsGroup :: RealFloat a => LSLValue a; llcParcelDetailsGroup = IVal cParcelDetailsGroup 
+cParcelDetailsGroup = 3;llcParcelDetailsGroup :: RealFloat a => LSLValue a; llcParcelDetailsGroup = IVal cParcelDetailsGroup
 cParcelDetailsArea = 4;llcParcelDetailsArea :: RealFloat a => LSLValue a; llcParcelDetailsArea = IVal cParcelDetailsArea
 
 cClickActionNone = 0;llcClickActionNone :: RealFloat a => LSLValue a; llcClickActionNone = IVal cClickActionNone
@@ -122,7 +126,10 @@ cClickActionPay = 3;llcClickActionPay :: RealFloat a => LSLValue a; llcClickActi
 cClickActionOpen = 4;llcClickActionOpen :: RealFloat a => LSLValue a; llcClickActionOpen = IVal cClickActionOpen
 cClickActionPlay = 5;llcClickActionPlay :: RealFloat a => LSLValue a; llcClickActionPlay = IVal cClickActionPlay
 cClickActionOpenMedia = 6;llcClickActionOpenMedia :: RealFloat a => LSLValue a; llcClickActionOpenMedia = IVal cClickActionOpenMedia
-cClickActions = [cClickActionTouch,cClickActionSit,cClickActionBuy,cClickActionPay,cClickActionOpen,cClickActionPlay,cClickActionOpenMedia]
+cClickActionZoom = 7;llcClickActionZoom :: RealFloat a => LSLValue a; llcClickActionZoom = IVal cClickActionZoom
+cClickActionDisabled = 8;llcClickActionDisabled :: RealFloat a => LSLValue a; llcClickActionDisabled = IVal cClickActionDisabled
+cClickActionIgnore = 9;llcClickActionIgnore :: RealFloat a => LSLValue a; llcClickActionIgnore = IVal cClickActionIgnore
+cClickActions = [cClickActionTouch,cClickActionSit,cClickActionBuy,cClickActionPay,cClickActionOpen,cClickActionPlay,cClickActionOpenMedia,cClickActionZoom,cClickActionDisabled,cClickActionIgnore]
 
 cDataBorn = 3;llcDataBorn :: RealFloat a => LSLValue a; llcDataBorn = IVal cDataBorn
 cDataName = 2;llcDataName :: RealFloat a => LSLValue a; llcDataName = IVal cDataName
@@ -146,13 +153,13 @@ cRemoteDataReply = 3;llcRemoteDataReply :: RealFloat a => LSLValue a; llcRemoteD
 llcZeroVector = VVal 0 0 0
 llcZeroRotation = RVal 0 0 0 1
 
-mkIConst :: RealFloat a => Int -> (Int,LSLValue a)
-mkIConst i = (i,IVal i)
+-- mkIConst :: (RealFloat a, Integral b) => b -> (b,LSLValue a)
+-- mkIConst i = (i,IVal i)
 
-cPrimHoleDefault = 0 :: Int
-cPrimHoleSquare = 32 :: Int
-cPrimHoleCircle = 16 :: Int
-cPrimHoleTriangle = 48 :: Int
+cPrimHoleDefault = 0 :: LSLInteger
+cPrimHoleSquare = 32 :: LSLInteger
+cPrimHoleCircle = 16 :: LSLInteger
+cPrimHoleTriangle = 48 :: LSLInteger
 validPrimHoleType = flip elem $ map IVal [cPrimHoleDefault,cPrimHoleSquare,
     cPrimHoleCircle,cPrimHoleTriangle]
 
@@ -164,15 +171,22 @@ allConstants = [
 <<< LSL KEYWORDS >>>
     ]
 
-findConstant s = findM (\ c -> s == constName c) allConstants
-findConstVal s = fmap constVal $ findConstant s
-findConstType s = fmap typeOfLSLValue $ findConstVal s
+findConstant :: RealFloat a => String -> Maybe (Constant a)
+findConstant s = find (\ c -> s == constName c) allConstants
+
+findConstVal :: RealFloat a => String -> Maybe (LSLValue a)
+findConstVal s = constVal <$> findConstant s
+
+findConstType :: String -> Maybe LSLType
+findConstType s = typeOfLSLValue <$> findConstVal s
+
+isConstant :: String -> Bool
 isConstant s =
     case findConstant s of
         Nothing -> False
         _ -> True
 
-        
+
 -- non LSL (lslForge only) constants
 lslForgeAvatarKey = 0
 lslForgeAvatarPos = 1
