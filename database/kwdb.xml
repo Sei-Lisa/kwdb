@@ -98,7 +98,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20240414000">
+<keywords version="0.0.20240415000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.2.1
@@ -109,7 +109,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2024-01-19.7590161929">Second Life</grid>
+  <grid id="sl" version="2024-02-21.7995320426">Second Life</grid>
   <grid id="os" version="v0.9.2.1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -5625,6 +5625,36 @@ Used with llRezObjectWithParams to lock an object's rotation over the given axes
     </description>
   </constant>
 
+  <constant name="PRIM_SIT_FLAGS" type="integer" value="50" grid="sl" version="sl:2024-02-21.7995320426">
+    <description lang="en">
+Used with the llSetPrimitiveParams family of functions to set or get the sit flags of the current or the given prim. Followed by flags (an integer combining SIT_FLAG_* constants).
+    </description>
+  </constant>
+
+  <constant name="SIT_FLAG_SIT_TARGET" type="integer" value="1" grid="sl" version="sl:2024-02-21.7995320426">
+    <description lang="en">
+Used with llGetLinkSitFlags to indicate whether the given prim has a sit target set.
+    </description>
+  </constant>
+
+  <constant name="SIT_FLAG_ALLOW_UNSIT" type="integer" value="2" grid="sl" version="sl:2024-02-21.7995320426">
+    <description lang="en">
+Used with llGet/SetLinkSitFlags to allow an avatar to unsit from the given prim. Only applies to avatars that were sat with llSitOnLink.
+    </description>
+  </constant>
+
+  <constant name="SIT_FLAG_SCRIPTED_ONLY" type="integer" value="4" grid="sl" version="sl:2024-02-21.7995320426">
+    <description lang="en">
+Used with llGet/SetLinkSitFlags to prevent (or remove the restriction for) an avatar from manually sitting on a prim.
+    </description>
+  </constant>
+
+  <constant name="SIT_FLAG_NO_COLLIDE" type="integer" value="16" grid="sl" version="sl:2024-02-21.7995320426">
+    <description lang="en">
+Used with llGet/SetLinkSitFlags to disable or enable the collision volume for an agent that sits on the given prim.
+    </description>
+  </constant>
+
   <!-- String constants -->
 
   <constant name="NULL_KEY" type="string" value="00000000-0000-0000-0000-000000000000">
@@ -5633,9 +5663,15 @@ Indicates an empty key
     </description>
   </constant>
 
-  <constant name="EOF" type="string" value="&#x0A;&#x0A;&#x0A;">
+  <constant name="EOF" type="string" value="\n\n\n">
     <description lang="en">
-Indicates the last line of a notecard was read
+Indicates an attempt to read past the last line of a notecard.
+    </description>
+  </constant>
+
+  <constant name="NAK" type="string" value="\n\x15\n" grid="sl" version="sl:2024-02-21.7995320426">
+    <description lang="en">
+Used with llGetNotecardLineSync, indicates that the given notecard could not be read, was not cached or was dropped from the cache.
     </description>
   </constant>
 
@@ -10927,6 +10963,56 @@ Returns the description of the item named itemname which is in the contents of t
     <param type="list" name="params"/>
     <description lang="en">
 Rezzes object itemname with the parameters given in the params list.
+    </description>
+  </function>
+
+  <function name="llSetLinkSitFlags" grid="sl" version="sl:2024-02-21.7995320426">
+    <param type="integer" name="link"/>
+    <param type="integer" name="flags"/>
+    <description lang="en">
+Sets the sit flags (SIT_FLAG_* constants) of a linked prim.
+    </description>
+  </function>
+
+  <function name="llGetLinkSitFlags" grid="sl" type="integer" version="sl:2024-02-21.7995320426">
+    <param type="integer" name="link"/>
+    <description lang="en">
+Returns the sit flags (a combination of SIT_FLAG_* constants) of a linked prim.
+    </description>
+  </function>
+
+  <function name="llComputeHash" type="string" grid="sl" version="sl:2024-02-21.7995320426">
+    <param type="string" name="data"/>
+    <param type="string" name="algorithm"/>
+    <description lang="en">
+Computes the hash of the given data using the given hash algorithm, which is one of "md5", "md5_sha1", "sha1", "sha224", "sha256", "sha384", or "sha512".
+    </description>
+  </function>
+
+  <function name="llGetCameraAspect" type="float" grid="sl" version="sl:2024-02-21.7995320426">
+    <description lang="en">
+Gets the aspect ratio (width divided by height) of the avatar's window. Needs the PERMISSION_TRACK_CAMERA permission to work.
+    </description>
+  </function>
+
+  <function name="llGetCameraFOV" type="float" grid="sl" version="sl:2024-02-21.7995320426">
+    <description lang="en">
+Gets the field of view (FOV), in radians, of the avatar's camera. Needs the PERMISSION_TRACK_CAMERA permission to work.
+    </description>
+  </function>
+
+  <function name="llGetNotecardLineSync" type="string" grid="sl" version="sl:2024-02-21.7995320426">
+    <param type="string" name="name"/>
+    <param type="integer" name="line"/>
+    <description lang="en">
+Returns the requested line of the notecard with the given name, or the constant NAK if the notecard does not exist, is not cached or is dropped from the cache. Returns the constant EOF if the requested line is past the end of the notecard.
+    </description>
+  </function>
+
+  <function name="llWorldPosToHUD" type="vector" grid="sl" version="sl:2024-02-21.7995320426">
+    <param type="vector" name="pos"/>
+    <description lang="en">
+Converts the given position to HUD coordinates. The returned vector's X coordinate will be 1.0 if the object is in front of the camera and -1.0 otherwise. Needs the PERMISSION_TRACK_CAMERA permission to work, otherwise it returns ZERO_VECTOR. Works with HUD attachments only.
     </description>
   </function>
 
