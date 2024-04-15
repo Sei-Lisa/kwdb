@@ -1,4 +1,4 @@
-11504
+11517
 rez
 slex
 slutorial
@@ -10163,6 +10163,7 @@ llClearLinkMedia
 llClearPrimMedia
 llCollisionFilter
 llCollisionSound
+llComputeHash
 llCos
 llCreateCharacter
 llCreateKeyValue
@@ -10219,6 +10220,8 @@ llGetAnimationOverride
 llGetAttached
 llGetAttachedList
 llGetBoundingBox
+llGetCameraAspect
+llGetCameraFOV
 llGetCameraPos
 llGetCameraRot
 llGetCenterOfMass
@@ -10256,6 +10259,7 @@ llGetLinkName
 llGetLinkNumber
 llGetLinkNumberOfSides
 llGetLinkPrimitiveParams
+llGetLinkSitFlags
 llGetListEntryType
 llGetListLength
 llGetLocalPos
@@ -10269,6 +10273,7 @@ llGetMoonDirection
 llGetMoonRotation
 llGetNextEmail
 llGetNotecardLine
+llGetNotecardLineSync
 llGetNumberOfNotecardLines
 llGetNumberOfPrims
 llGetNumberOfSides
@@ -10519,6 +10524,7 @@ llSetLinkMedia
 llSetLinkPrimitiveParams
 llSetLinkPrimitiveParamsFast
 llSetLinkRenderMaterial
+llSetLinkSitFlags
 llSetLinkTexture
 llSetLinkTextureAnim
 llSetLocalRot
@@ -10603,6 +10609,7 @@ llWanderWithin
 llWater
 llWhisper
 llWind
+llWorldPosToHUD
 llXorBase64
 at_rot_target
 at_target
@@ -10937,6 +10944,7 @@ MASK_EVERYONE
 MASK_GROUP
 MASK_NEXT
 MASK_OWNER
+NAK
 NULL_KEY
 OBJECT_ACCOUNT_LEVEL
 OBJECT_ANIMATED_COUNT
@@ -11188,6 +11196,7 @@ PRIM_SHINY_HIGH
 PRIM_SHINY_LOW
 PRIM_SHINY_MEDIUM
 PRIM_SHINY_NONE
+PRIM_SIT_FLAGS
 PRIM_SIT_TARGET
 PRIM_SIZE
 PRIM_SLICE
@@ -11352,6 +11361,10 @@ SIM_STAT_SCRIPT_RUN_PCT
 SIM_STAT_SLEEP_MS
 SIM_STAT_SPARE_MS
 SIM_STAT_UNACKED_BYTES
+SIT_FLAG_ALLOW_UNSIT
+SIT_FLAG_NO_COLLIDE
+SIT_FLAG_SCRIPTED_ONLY
+SIT_FLAG_SIT_TARGET
 SIT_INVALID_AGENT
 SIT_INVALID_LINK
 SIT_INVALID_OBJECT
