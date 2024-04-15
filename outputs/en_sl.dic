@@ -1,4 +1,4 @@
-11481
+11504
 rez
 slex
 slutorial
@@ -10242,6 +10242,7 @@ llGetGMTclock
 llGetHTTPHeader
 llGetInventoryAcquireTime
 llGetInventoryCreator
+llGetInventoryDesc
 llGetInventoryKey
 llGetInventoryName
 llGetInventoryNumber
@@ -10352,6 +10353,7 @@ llHTTPResponse
 llInsertString
 llInstantMessage
 llIntegerToBase64
+llIsFriend
 llJson2List
 llJsonGetValue
 llJsonSetValue
@@ -10395,6 +10397,7 @@ llListen
 llListenControl
 llListenRemove
 llListFindList
+llListFindListNext
 llListFindStrided
 llListInsertList
 llListRandomize
@@ -10470,6 +10473,7 @@ llReturnObjectsByID
 llReturnObjectsByOwner
 llRezAtRoot
 llRezObject
+llRezObjectWithParams
 llRot2Angle
 llRot2Axis
 llRot2Euler
@@ -11299,6 +11303,25 @@ REGION_FLAG_SANDBOX
 REQUIRE_LINE_OF_SIGHT
 RESTITUTION
 REVERSE
+REZ_ACCEL
+REZ_DAMAGE
+REZ_FLAGS
+REZ_FLAG_BLOCK_GRAB_OBJECT
+REZ_FLAG_DIE_ON_COLLIDE
+REZ_FLAG_DIE_ON_NOENTRY
+REZ_FLAG_NO_COLLIDE_FAMILY
+REZ_FLAG_NO_COLLIDE_OWNER
+REZ_FLAG_PHANTOM
+REZ_FLAG_PHYSICAL
+REZ_FLAG_TEMP
+REZ_LOCK_AXES
+REZ_OMEGA
+REZ_PARAM
+REZ_POS
+REZ_ROT
+REZ_SOUND
+REZ_SOUND_COLLIDE
+REZ_VEL
 ROTATE
 SCALE
 SCRIPTED
