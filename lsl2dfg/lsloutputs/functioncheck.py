@@ -5,7 +5,7 @@
 # type of parameters they claim, and that their return value, when it exists, can
 # be assigned to a variable of the given type.
 #
-# (C) Copyright 2013,2017 Sei Lisa.
+# (C) Copyright 2013, 2017, 2024 Sei Lisa.
 # Sei Lisa is the author's username in the Second Life(R) online virtual world.
 #
 # This file is part of LSL2 Derived Files Generator.

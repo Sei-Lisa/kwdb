@@ -3,7 +3,7 @@
 # constantvalues.py - This is a LSL2dfg.py output module to generate a raw
 # list of constants with their values.
 #
-# (C) Copyright 2013 Sei Lisa.
+# (C) Copyright 2013, 2024 Sei Lisa.
 # Sei Lisa is the author's username in the Second Life(R) online virtual world.
 #
 # This file is part of LSL2 Derived Files Generator.
