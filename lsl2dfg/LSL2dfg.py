@@ -2,7 +2,7 @@
 
 # LSL2 Derived Files Generator - Main program.
 #
-# (C) Copyright 2013 Sei Lisa.
+# (C) Copyright 2013, 2024 Sei Lisa.
 # Sei Lisa is the author's username in the Second Life(R) online virtual world.
 #
 # This file is part of LSL2 Derived Files Generator.
@@ -179,7 +179,7 @@ import sys #, os
 import getopt
 from xml import sax
 
-version = "0.0.20140116001"
+version = "0.0.20240415000"
 defaultlang = "en"
 defaulttag = "LSL"
 
@@ -283,7 +283,8 @@ class LSLDefinitionLoader(LSLXMLDefaultHandler):
           }
         for attr in ("grid", "type", "value", "status", "energy", "delay", "version"):
           if attr in attrs:
-            self.data[attr] = attrs.get(attr)
+            # Accept backslash-escaped strings
+            self.data[attr] = attrs.get(attr).encode('latin1', 'backslashreplace').decode('unicode_escape')
 
     elif tag == "description":
       if self.in_ident or self.in_defaults:
