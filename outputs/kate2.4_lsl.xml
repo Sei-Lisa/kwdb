@@ -32,6 +32,7 @@
 			<item> llAcos </item>
 			<item> llAddToLandBanList </item>
 			<item> llAddToLandPassList </item>
+			<item> llAdjustDamage </item>
 			<item> llAdjustSoundVolume </item>
 			<item> llAgentInExperience </item>
 			<item> llAllowInventoryDrop </item>
@@ -68,12 +69,15 @@
 			<item> llCreateKeyValue </item>
 			<item> llCreateLink </item>
 			<item> llCSV2List </item>
+			<item> llDamage </item>
 			<item> llDataSizeKeyValue </item>
 			<item> llDeleteCharacter </item>
 			<item> llDeleteKeyValue </item>
 			<item> llDeleteSubList </item>
 			<item> llDeleteSubString </item>
+			<item> llDerezObject </item>
 			<item> llDetachFromAvatar </item>
+			<item> llDetectedDamage </item>
 			<item> llDetectedGrab </item>
 			<item> llDetectedGroup </item>
 			<item> llDetectedKey </item>
@@ -81,6 +85,7 @@
 			<item> llDetectedName </item>
 			<item> llDetectedOwner </item>
 			<item> llDetectedPos </item>
+			<item> llDetectedRezzer </item>
 			<item> llDetectedRot </item>
 			<item> llDetectedTouchBinormal </item>
 			<item> llDetectedTouchFace </item>
@@ -142,6 +147,7 @@
 			<item> llGetFreeURLs </item>
 			<item> llGetGeometricCenter </item>
 			<item> llGetGMTclock </item>
+			<item> llGetHealth </item>
 			<item> llGetHTTPHeader </item>
 			<item> llGetInventoryAcquireTime </item>
 			<item> llGetInventoryCreator </item>
@@ -224,6 +230,7 @@
 			<item> llGetSimulatorHostname </item>
 			<item> llGetSPMaxMemory </item>
 			<item> llGetStartParameter </item>
+			<item> llGetStartString </item>
 			<item> llGetStaticPath </item>
 			<item> llGetStatus </item>
 			<item> llGetSubString </item>
@@ -679,6 +686,8 @@
 			<item> CLICK_ACTION_SIT </item>
 			<item> CLICK_ACTION_TOUCH </item>
 			<item> CLICK_ACTION_ZOOM </item>
+			<item> COMBAT_CHANNEL </item>
+			<item> COMBAT_LOG_ID </item>
 			<item> CONTENT_TYPE_ATOM </item>
 			<item> CONTENT_TYPE_FORM </item>
 			<item> CONTENT_TYPE_HTML </item>
@@ -698,6 +707,23 @@
 			<item> CONTROL_ROT_LEFT </item>
 			<item> CONTROL_ROT_RIGHT </item>
 			<item> CONTROL_UP </item>
+			<item> DAMAGEABLE </item>
+			<item> DAMAGE_TYPE_ACID </item>
+			<item> DAMAGE_TYPE_BLUDGEONING </item>
+			<item> DAMAGE_TYPE_COLD </item>
+			<item> DAMAGE_TYPE_ELECTRIC </item>
+			<item> DAMAGE_TYPE_EMOTIONAL </item>
+			<item> DAMAGE_TYPE_FIRE </item>
+			<item> DAMAGE_TYPE_FORCE </item>
+			<item> DAMAGE_TYPE_GENERIC </item>
+			<item> DAMAGE_TYPE_IMPACT </item>
+			<item> DAMAGE_TYPE_NECROTIC </item>
+			<item> DAMAGE_TYPE_PIERCING </item>
+			<item> DAMAGE_TYPE_POISON </item>
+			<item> DAMAGE_TYPE_PSYCHIC </item>
+			<item> DAMAGE_TYPE_RADIANT </item>
+			<item> DAMAGE_TYPE_SLASHING </item>
+			<item> DAMAGE_TYPE_SONIC </item>
 			<item> DATA_BORN </item>
 			<item> DATA_NAME </item>
 			<item> DATA_ONLINE </item>
@@ -709,6 +735,8 @@
 			<item> DEBUG_CHANNEL </item>
 			<item> DEG_TO_RAD </item>
 			<item> DENSITY </item>
+			<item> DEREZ_DIE </item>
+			<item> DEREZ_MAKE_TEMP </item>
 			<item> ENVIRONMENT_DAYINFO </item>
 			<item> ENV_INVALID_AGENT </item>
 			<item> ENV_INVALID_RULE </item>
@@ -1268,6 +1296,7 @@
 			<item> SIM_STAT_UNACKED_BYTES </item>
 			<item> SIT_FLAG_ALLOW_UNSIT </item>
 			<item> SIT_FLAG_NO_COLLIDE </item>
+			<item> SIT_FLAG_NO_DAMAGE </item>
 			<item> SIT_FLAG_SCRIPTED_ONLY </item>
 			<item> SIT_FLAG_SIT_TARGET </item>
 			<item> SIT_INVALID_AGENT </item>
@@ -1442,6 +1471,7 @@
 			<item> email </item>
 			<item> experience_permissions </item>
 			<item> experience_permissions_denied </item>
+			<item> final_damage </item>
 			<item> http_request </item>
 			<item> http_response </item>
 			<item> land_collision </item>
@@ -1457,6 +1487,8 @@
 			<item> not_at_rot_target </item>
 			<item> not_at_target </item>
 			<item> object_rez </item>
+			<item> on_damage </item>
+			<item> on_death </item>
 			<item> on_rez </item>
 			<item> path_update </item>
 			<item> remote_data </item>
