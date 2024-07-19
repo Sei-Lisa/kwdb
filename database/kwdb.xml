@@ -5756,6 +5756,12 @@ Used with llRezObjectWithParams to lock an object's rotation over the given axes
     </description>
   </constant>
 
+  <constant name="REZ_PARAM_STRING" type="integer" value="13" grid="sl" version="sl:2024-07-11.9900005687">
+    <description lang="en">
+Used with llRezObjectWithParams to pass an initialization string to the newly rezzed object that may be read with llGetStartString from within the rezzed object.
+    </description>
+  </constant>
+
   <constant name="PRIM_SIT_FLAGS" type="integer" value="50" grid="sl" version="sl:2024-02-21.7995320426">
     <description lang="en">
 Used with the llSetPrimitiveParams family of functions to set or get the sit flags of the current or the given prim. Followed by flags (an integer combining SIT_FLAG_* constants).
