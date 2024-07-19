@@ -3,6 +3,7 @@ integer llAbs( integer val )
 float llAcos( float val )
 void llAddToLandBanList( key avatar, float hours )
 void llAddToLandPassList( key avatar, float hours )
+void llAdjustDamage( integer number, float new_damage )
 void llAdjustSoundVolume( float volume )
 integer llAgentInExperience( key agent )
 void llAllowInventoryDrop( integer add )
@@ -39,12 +40,15 @@ float llCos( float theta )
 void llCreateCharacter( list options )
 key llCreateKeyValue( string k, string v )
 void llCreateLink( key target, integer parent )
+void llDamage( key target, float damage, integer damage_type )
 key llDataSizeKeyValue(  )
 void llDeleteCharacter(  )
 key llDeleteKeyValue( string k )
 list llDeleteSubList( list src, integer start, integer end )
 string llDeleteSubString( string src, integer start, integer end )
+integer llDerezObject( key id, integer flag )
 void llDetachFromAvatar(  )
+list llDetectedDamage( integer number )
 vector llDetectedGrab( integer number )
 integer llDetectedGroup( integer number )
 key llDetectedKey( integer number )
@@ -52,6 +56,7 @@ integer llDetectedLinkNumber( integer number )
 string llDetectedName( integer number )
 key llDetectedOwner( integer number )
 vector llDetectedPos( integer number )
+key llDetectedRezzer( integer number )
 rotation llDetectedRot( integer number )
 vector llDetectedTouchBinormal( integer number )
 integer llDetectedTouchFace( integer number )
@@ -114,6 +119,7 @@ integer llGetFreeURLs(  )
 float llGetGMTclock(  )
 vector llGetGeometricCenter(  )
 string llGetHTTPHeader( key request_id, string header )
+float llGetHealth( key id )
 string llGetInventoryAcquireTime( string item )
 key llGetInventoryCreator( string item )
 string llGetInventoryDesc( string itemname )
@@ -195,6 +201,7 @@ integer llGetScriptState( string name )
 float llGetSimStats( integer stat_type )
 string llGetSimulatorHostname(  )
 integer llGetStartParameter(  )
+string llGetStartString(  )
 list llGetStaticPath( vector start, vector end, float radius, list params )
 integer llGetStatus( integer status )
 string llGetSubString( string src, integer start, integer end )
@@ -648,6 +655,8 @@ const integer CLICK_ACTION_PLAY = 5
 const integer CLICK_ACTION_SIT = 1
 const integer CLICK_ACTION_TOUCH = 0
 const integer CLICK_ACTION_ZOOM = 7
+const integer COMBAT_CHANNEL = 0x7FFFFFFE
+const key COMBAT_LOG_ID = "45e0fcfa-2268-4490-a51c-3e51bdfe80d1"
 const integer CONTENT_TYPE_ATOM = 4
 const integer CONTENT_TYPE_FORM = 7
 const integer CONTENT_TYPE_HTML = 1
@@ -667,6 +676,23 @@ const integer CONTROL_RIGHT = 0x8
 const integer CONTROL_ROT_LEFT = 0x100
 const integer CONTROL_ROT_RIGHT = 0x200
 const integer CONTROL_UP = 0x10
+const integer DAMAGEABLE = 0x20
+const integer DAMAGE_TYPE_ACID = 1
+const integer DAMAGE_TYPE_BLUDGEONING = 2
+const integer DAMAGE_TYPE_COLD = 3
+const integer DAMAGE_TYPE_ELECTRIC = 4
+const integer DAMAGE_TYPE_EMOTIONAL = 13
+const integer DAMAGE_TYPE_FIRE = 5
+const integer DAMAGE_TYPE_FORCE = 6
+const integer DAMAGE_TYPE_GENERIC = 0
+const integer DAMAGE_TYPE_IMPACT = -1
+const integer DAMAGE_TYPE_NECROTIC = 7
+const integer DAMAGE_TYPE_PIERCING = 8
+const integer DAMAGE_TYPE_POISON = 9
+const integer DAMAGE_TYPE_PSYCHIC = 10
+const integer DAMAGE_TYPE_RADIANT = 11
+const integer DAMAGE_TYPE_SLASHING = 12
+const integer DAMAGE_TYPE_SONIC = 13
 const integer DATA_BORN = 3
 const integer DATA_NAME = 2
 const integer DATA_ONLINE = 1
@@ -678,6 +704,8 @@ const integer DATA_SIM_STATUS = 6
 const integer DEBUG_CHANNEL = 0x7FFFFFFF
 const float DEG_TO_RAD = 0.017453293
 const integer DENSITY = 0x1
+const integer DEREZ_DIE = 0
+const integer DEREZ_MAKE_TEMP = 1
 const integer ENVIRONMENT_DAYINFO = 200
 const integer ENV_INVALID_AGENT = -4
 const integer ENV_INVALID_RULE = -5
@@ -1200,6 +1228,7 @@ const integer REZ_FLAG_TEMP = 1
 const integer REZ_LOCK_AXES = 11
 const integer REZ_OMEGA = 7
 const integer REZ_PARAM = 0
+const integer REZ_PARAM_STRING = 13
 const integer REZ_POS = 2
 const integer REZ_ROT = 3
 const integer REZ_SOUND = 9
@@ -1237,6 +1266,7 @@ const integer SIM_STAT_SPARE_MS = 22
 const integer SIM_STAT_UNACKED_BYTES = 17
 const integer SIT_FLAG_ALLOW_UNSIT = 2
 const integer SIT_FLAG_NO_COLLIDE = 16
+const integer SIT_FLAG_NO_DAMAGE = 16
 const integer SIT_FLAG_SCRIPTED_ONLY = 4
 const integer SIT_FLAG_SIT_TARGET = 1
 const integer SIT_INVALID_AGENT = -4
@@ -1409,6 +1439,7 @@ event dataserver( key queryid, string data )
 event email( string time, string address, string subj, string message, integer num_left )
 event experience_permissions( key agent )
 event experience_permissions_denied( key agent, integer reason )
+event final_damage( integer num_detected )
 event http_request( key id, string method, string body )
 event http_response( key request_id, integer status, list metadata, string body )
 event land_collision( vector pos )
@@ -1424,6 +1455,8 @@ event no_sensor(  )
 event not_at_rot_target(  )
 event not_at_target(  )
 event object_rez( key id )
+event on_damage( integer num_detected )
+event on_death(  )
 event on_rez( integer start_param )
 event path_update( integer type, list reserved )
 event remote_data( integer event_type, key channel, key message_id, string sender, integer idata, string sdata )

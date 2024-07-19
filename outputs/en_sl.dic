@@ -1,4 +1,4 @@
-11518
+11551
 rez
 slex
 slutorial
@@ -10137,6 +10137,7 @@ llAbs
 llAcos
 llAddToLandBanList
 llAddToLandPassList
+llAdjustDamage
 llAdjustSoundVolume
 llAgentInExperience
 llAllowInventoryDrop
@@ -10169,12 +10170,15 @@ llCreateCharacter
 llCreateKeyValue
 llCreateLink
 llCSV2List
+llDamage
 llDataSizeKeyValue
 llDeleteCharacter
 llDeleteKeyValue
 llDeleteSubList
 llDeleteSubString
+llDerezObject
 llDetachFromAvatar
+llDetectedDamage
 llDetectedGrab
 llDetectedGroup
 llDetectedKey
@@ -10182,6 +10186,7 @@ llDetectedLinkNumber
 llDetectedName
 llDetectedOwner
 llDetectedPos
+llDetectedRezzer
 llDetectedRot
 llDetectedTouchBinormal
 llDetectedTouchFace
@@ -10242,6 +10247,7 @@ llGetFreeMemory
 llGetFreeURLs
 llGetGeometricCenter
 llGetGMTclock
+llGetHealth
 llGetHTTPHeader
 llGetInventoryAcquireTime
 llGetInventoryCreator
@@ -10324,6 +10330,7 @@ llGetSimStats
 llGetSimulatorHostname
 llGetSPMaxMemory
 llGetStartParameter
+llGetStartString
 llGetStaticPath
 llGetStatus
 llGetSubString
@@ -10623,6 +10630,7 @@ dataserver
 email
 experience_permissions
 experience_permissions_denied
+final_damage
 http_request
 http_response
 land_collision
@@ -10638,6 +10646,8 @@ no_sensor
 not_at_rot_target
 not_at_target
 object_rez
+on_damage
+on_death
 on_rez
 path_update
 remote_data
@@ -10791,6 +10801,8 @@ CLICK_ACTION_PLAY
 CLICK_ACTION_SIT
 CLICK_ACTION_TOUCH
 CLICK_ACTION_ZOOM
+COMBAT_CHANNEL
+COMBAT_LOG_ID
 CONTENT_TYPE_ATOM
 CONTENT_TYPE_FORM
 CONTENT_TYPE_HTML
@@ -10810,6 +10822,23 @@ CONTROL_RIGHT
 CONTROL_ROT_LEFT
 CONTROL_ROT_RIGHT
 CONTROL_UP
+DAMAGEABLE
+DAMAGE_TYPE_ACID
+DAMAGE_TYPE_BLUDGEONING
+DAMAGE_TYPE_COLD
+DAMAGE_TYPE_ELECTRIC
+DAMAGE_TYPE_EMOTIONAL
+DAMAGE_TYPE_FIRE
+DAMAGE_TYPE_FORCE
+DAMAGE_TYPE_GENERIC
+DAMAGE_TYPE_IMPACT
+DAMAGE_TYPE_NECROTIC
+DAMAGE_TYPE_PIERCING
+DAMAGE_TYPE_POISON
+DAMAGE_TYPE_PSYCHIC
+DAMAGE_TYPE_RADIANT
+DAMAGE_TYPE_SLASHING
+DAMAGE_TYPE_SONIC
 DATA_BORN
 DATA_NAME
 DATA_ONLINE
@@ -10820,6 +10849,8 @@ DATA_SIM_STATUS
 DEBUG_CHANNEL
 DEG_TO_RAD
 DENSITY
+DEREZ_DIE
+DEREZ_MAKE_TEMP
 ENVIRONMENT_DAYINFO
 ENV_INVALID_AGENT
 ENV_INVALID_RULE
@@ -11327,6 +11358,7 @@ REZ_FLAG_TEMP
 REZ_LOCK_AXES
 REZ_OMEGA
 REZ_PARAM
+REZ_PARAM_STRING
 REZ_POS
 REZ_ROT
 REZ_SOUND
@@ -11364,6 +11396,7 @@ SIM_STAT_SPARE_MS
 SIM_STAT_UNACKED_BYTES
 SIT_FLAG_ALLOW_UNSIT
 SIT_FLAG_NO_COLLIDE
+SIT_FLAG_NO_DAMAGE
 SIT_FLAG_SCRIPTED_ONLY
 SIT_FLAG_SIT_TARGET
 SIT_INVALID_AGENT
