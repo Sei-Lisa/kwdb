@@ -884,6 +884,7 @@ allConstants = [
     Constant "REZ_LOCK_AXES" (IVal 11),
     Constant "REZ_OMEGA" (IVal 7),
     Constant "REZ_PARAM" (IVal 0),
+    Constant "REZ_PARAM_STRING" (IVal 13),
     Constant "REZ_POS" (IVal 2),
     Constant "REZ_ROT" (IVal 3),
     Constant "REZ_SOUND" (IVal 9),

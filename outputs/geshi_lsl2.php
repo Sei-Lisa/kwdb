@@ -761,6 +761,7 @@ $language_data = array(
             'REZ_LOCK_AXES',
             'REZ_OMEGA',
             'REZ_PARAM',
+            'REZ_PARAM_STRING',
             'REZ_POS',
             'REZ_ROT',
             'REZ_SOUND',

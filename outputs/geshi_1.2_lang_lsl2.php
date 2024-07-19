@@ -1265,6 +1265,7 @@ function geshi_lsl2_lsl2 (&$context)
             'REZ_LOCK_AXES',
             'REZ_OMEGA',
             'REZ_PARAM',
+            'REZ_PARAM_STRING',
             'REZ_POS',
             'REZ_ROT',
             'REZ_SOUND',

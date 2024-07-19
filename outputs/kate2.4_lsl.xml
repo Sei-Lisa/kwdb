@@ -1259,6 +1259,7 @@
 			<item> REZ_LOCK_AXES </item>
 			<item> REZ_OMEGA </item>
 			<item> REZ_PARAM </item>
+			<item> REZ_PARAM_STRING </item>
 			<item> REZ_POS </item>
 			<item> REZ_ROT </item>
 			<item> REZ_SOUND </item>
