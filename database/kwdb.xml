@@ -2,7 +2,7 @@
 <!--
 
 (C) Copyright 2012 Linden Research, Inc.
-(C) Copyright 2013-2024 Sei Lisa.
+(C) Copyright 2013-2025 Sei Lisa.
 (C) Copyright 2017-2023 Mako Nozaki.
 (C) Copyright 2023-2023 Alex Carpenter.
 Sei Lisa, Mako Nozaki, and Alex Carpenter are the usernames of the authors in the
@@ -98,7 +98,7 @@ Example: grid="os aa"
 
 ]>
 
-<keywords version="0.0.20241027000">
+<keywords version="0.0.20250202000">
   <!--The OpenSim/Aurora functions, constants and types are based on the following revisions:
 
       OpenSim revision 0.9.2.1
@@ -109,7 +109,7 @@ Example: grid="os aa"
   -->
 
   <!-- Grids supported and their versions -->
-  <grid id="sl" version="2024-04-13.8669470296">Second Life</grid>
+  <grid id="sl" version="2024-12-17.12379604629">Second Life</grid>
   <grid id="os" version="v0.9.2.1">OpenSimulator</grid>
   <grid id="aa" version="0049c9335f8b91ab119ce4fee5ba1d50d4f6f017">Aurora-Sim</grid>
 
@@ -5661,6 +5661,461 @@ Used with llGet/SetLinkSitFlags to disable or enable the collision volume for an
     </description>
   </constant>
 
+  <!-- Constants with version sl:2024-12-17.12379604629 indicate the version
+       at which they were introduced in the database, but they may have been
+       present since an earlier version. -->
+
+  <constant name="AGENT_FLOATING_VIA_SCRIPTED_ATTACHMENT" type="integer" value="32768" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llGetAgentInfo to indicate the agent is hovering or floating because of a scripted attachment, via llSetHoverHeight or llGroundRepel.
+    </description>
+  </constant>
+
+  <constant name="ATTACH_ANY_HUD" type="integer" value="-1" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llGetAttachedListFiltered to include the HUD attachment points in the filtered results.
+    </description>
+  </constant>
+
+  <constant name="BEACON_MAP" type="integer" value="1" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Followed by integer open_map, integer focus_map. Used with llMapBeacon to decide whether the map window should be opened and optionally focused.
+    </description>
+  </constant>
+
+  <constant name="COMBAT_CHANNEL" type="integer" value="2147483646" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+The channel in which log messages related to COMBAT 2.0 are broadcast. The system messages are broadcast from an UUID given by the constant COMBAT_LOG_ID. Other scripts may be able to write to this channel depending on region settings.
+    </description>
+  </constant>
+
+  <constant name="DAMAGEABLE" type="integer" value="0x20" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDetectedType, llSensor or llSensorRepeat to indicate that the object can receive damage.
+    </description>
+  </constant>
+
+
+  <constant name="DAMAGE_TYPE_IMPACT" type="integer" value="-1" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_GENERIC" type="integer" value="0" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_ACID" type="integer" value="1" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_BLUDGEONING" type="integer" value="2" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_COLD" type="integer" value="3" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_ELECTRIC" type="integer" value="4" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_FIRE" type="integer" value="5" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_FORCE" type="integer" value="6" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_NECROTIC" type="integer" value="7" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_PIERCING" type="integer" value="8" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_POISON" type="integer" value="9" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_PSYCHIC" type="integer" value="10" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_RADIANT" type="integer" value="11" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_SLASHING" type="integer" value="12" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_SONIC" type="integer" value="13" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DAMAGE_TYPE_EMOTIONAL" type="integer" value="14" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDamage and present as the second element of the list returned by llDetectedDamage, to indicate the type of damage.
+    </description>
+  </constant>
+
+  <constant name="DEREZ_DIE" type="integer" value="0" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDerezObject to delete an object rezzed by this script.
+    </description>
+  </constant>
+
+  <constant name="DEREZ_MAKE_TEMP" type="integer" value="1" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llDerezObject to mark an object rezzed by this script as temporary.
+    </description>
+  </constant>
+
+  <constant name="FILTER_FLAGS" type="integer" value="2" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Followed by integer flags. Used with llGetAttachedListFiltered to set flags for the function (constants FILTER_FLAG_*).
+    </description>
+  </constant>
+
+  <constant name="FILTER_INCLUDE" type="integer" value="1" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Followed by integer attachment_point. Used with llGetAttachedListFiltered to indicate an attachment point to include in the filtered results.
+    </description>
+  </constant>
+
+  <constant name="FILTER_FLAG_HUDS" type="integer" value="0x0001" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used as a flag with FILTER_FLAGS in llGetAttachedListFiltered, to include HUDs in the returned result. Only valid within an experience.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_AXIS_LEFTX" type="integer" value="0" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Index of the X axis of the left analog stick, within the list received as the axes parameter in the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_AXIS_LEFTY" type="integer" value="1" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Index of the Y axis of the left analog stick, within the list received as the axes parameter in the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_AXIS_RIGHTX" type="integer" value="2" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Index of the X axis of the right analog stick, within the list received as the axes parameter in the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_AXIS_RIGHTY" type="integer" value="3" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Index of the Y axis of the right analog stick, within the list received as the axes parameter in the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_AXIS_TRIGGERLEFT" type="integer" value="4" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Index of the left trigger's analog value, within the list received as the axes parameter in the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_AXIS_TRIGGERRIGHT" type="integer" value="5" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Index of the right trigger's analog value, within the list received as the axes parameter in the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_A" type="integer" value="0x00000001" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "A", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_B" type="integer" value="0x00000002" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "B", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_X" type="integer" value="0x00000004" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "X", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_Y" type="integer" value="0x00000008" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "Y", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_BACK" type="integer" value="0x00000010" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "BACK", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_GUIDE" type="integer" value="0x00000020" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "GUIDE", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_START" type="integer" value="0x00000040" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "START", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_LEFTSTICK" type="integer" value="0x00000080" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "LEFT STICK", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_RIGHTSTICK" type="integer" value="0x00000100" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "RIGHT STICK", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_LEFTSHOULDER" type="integer" value="0x00000200" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "LEFT SHOULDER", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_RIGHTSHOULDER" type="integer" value="0x00000400" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "RIGHT SHOULDER", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_DPAD_UP" type="integer" value="0x00000800" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "UP" of the D-pad, used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_DPAD_DOWN" type="integer" value="0x00001000" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "DOWN" of the D-pad, used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_DPAD_LEFT" type="integer" value="0x00002000" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "LEFT" of the D-pad, used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_DPAD_RIGHT" type="integer" value="0x00004000" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "RIGHT" of the D-pad, used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_MISC1" type="integer" value="0x00008000" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "MISC 1", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_PADDLE1" type="integer" value="0x00010000" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "1" of the paddle, used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_PADDLE2" type="integer" value="0x00020000" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "2" of the paddle, used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_PADDLE3" type="integer" value="0x00040000" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "3" of the paddle, used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_PADDLE4" type="integer" value="0x00080000" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "4" of the paddle, used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="GAME_CONTROL_BUTTON_TOUCHPAD" type="integer" value="0x00100000" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask for button "TOUCHPAD", used with the button_levels parameter of the game_control event.
+    </description>
+  </constant>
+
+  <constant name="OBJECT_HEALTH" type="integer" value="50" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llGetObjectDetails to obtain the health of an object or agent. Equivalent to llGetHealth.
+    </description>
+  </constant>
+
+  <constant name="OBJECT_DAMAGE" type="integer" value="51" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llGetObjectDetails to obtain the amount of damage a prim will inflict when collided.
+    </description>
+  </constant>
+
+  <constant name="OBJECT_DAMAGE_TYPE" type="integer" value="52" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llGetObjectDetails to obtain the type of damage a prim will cause when collided.
+    </description>
+  </constant>
+
+  <constant name="PRIM_DAMAGE" type="integer" value="51" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with the llGet/SetPrimitiveParams family of functions to get/set the amount of damage a prim will inflict when collided.
+    </description>
+  </constant>
+
+  <constant name="PRIM_HEALTH" type="integer" value="52" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with the llGet/SetPrimitiveParams family of functions to get/set the health of an object.
+    </description>
+  </constant>
+
+  <constant name="REZ_DAMAGE_TYPE" type="integer" value="12" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llRezObjectWithParams to set the type of damage an object will cause.
+    </description>
+  </constant>
+
+  <constant name="REZ_PARAM_STRING" type="integer" value="13" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llRezObjectWithParams to set the string parameter to pass to the rezzed object.
+    </description>
+  </constant>
+
+  <constant name="SIT_FLAG_NO_DAMAGE" type="integer" value="32" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask that indicates that the sitter in this sit target should not receive damage. Used with llSet/GetLinkSitFlags and with PRIM_SIT_FLAGS primitive params.
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_DEST" type="integer" value="0" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Followed by string path, to indicate the root folder to which to send the specified folder. Used with llGiveAgentInventory.
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_FLAGS" type="integer" value="1" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+<!-- TODO: add documentation - maybe deprecated? -->
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_FLAG_RESERVED" type="integer" value="0x0001" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+<!-- TODO: add documentation - maybe deprecated? -->
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_FLAG_TAKE" type="integer" value="0x0002" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llTransferOwnership to indicate that the object should be derezzed after being placed in the target's inventory. Doesn't do anything when combined with TRANSFER_FLAG_COPY.
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_FLAG_COPY" type="integer" value="0x0004" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Used with llTransferOwnership to indicate that a copy of the object should be given to the target agent's inventory.
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_OK" type="integer" value="0" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Value returned by llTransferOwnership or llGiveAgentInventory on successful transfer.
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_BAD_OPTS" type="integer" value="-1" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Value returned by llTransferOwnership or llGiveAgentInventory when the options list contains a bad option.
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_NO_TARGET" type="integer" value="-2" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Value returned by llTransferOwnership or llGiveAgentInventory when the target is not an agent or is not in the region.
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_THROTTLE" type="integer" value="-3" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Value returned by llTransferOwnership or llGiveAgentInventory when the rate of transfers exceeds the throttle.
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_NO_ITEMS" type="integer" value="-4" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Value returned by llGiveAgentInventory when the list of items was empty.
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_BAD_ROOT" type="integer" value="-5" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Value returned by llGiveAgentInventory when the root folder name is invalid.
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_NO_PERMS" type="integer" value="-6" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Value returned by llTransferOwnership or llGiveAgentInventory when the permissions don't allow the transfer.
+    </description>
+  </constant>
+
+  <constant name="TRANSFER_NO_ATTACHMENT" type="integer" value="-7" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Value returned by llTransferOwnership when attempting to transfer an attachment.
+    </description>
+  </constant>
+
+  <constant name="VEHICLE_FLAG_BLOCK_INTERFERENCE" type="integer" value="0x0400" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Bit mask that indicates that an attachment can't push a vehicle. Used with llSetVehicleFlags and llRemoveVehicleFlags.
+    </description>
+  </constant>
+
   <!-- String constants -->
 
   <constant name="NULL_KEY" type="string" value="00000000-0000-0000-0000-000000000000">
@@ -5708,6 +6163,12 @@ UUID for the default "Plywood" texture
   <constant name="TEXTURE_TRANSPARENT" type="string" value="8dcd4a48-2d37-4909-9f78-f7a9eb4ef903">
     <description lang="en">
 UUID for the "Default Transparent" texture
+    </description>
+  </constant>
+
+  <constant name="COMBAT_LOG_ID" type="string" value="45e0fcfa-2268-4490-a51c-3e51bdfe80d1" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+UUID of the sender of the combat log messages sent by the system, usable as a filter in llListen and received as parameter in listen events.
     </description>
   </constant>
 
@@ -8682,7 +9143,7 @@ Checks to see whether the border hit by dir from pos is the edge of the world (h
     <param type="key" name="id"/>
     <description lang="en">
 Returns an integer bitfield containing the agent information about id.
-Returns AGENT_FLYING, AGENT_ATTACHMENTS, AGENT_SCRIPTED, AGENT_SITTING, AGENT_ON_OBJECT, AGENT_MOUSELOOK, AGENT_AWAY, AGENT_BUSY, AGENT_TYPING, AGENT_CROUCHING, AGENT_ALWAYS_RUN, AGENT_WALKING and/or AGENT_IN_AIR.
+Returns AGENT_FLYING, AGENT_ATTACHMENTS, AGENT_SCRIPTED, AGENT_MOUSELOOK, AGENT_SITTING, AGENT_ON_OBJECT, AGENT_AWAY, AGENT_WALKING, AGENT_IN_AIR, AGENT_TYPING, AGENT_CROUCHING, AGENT_BUSY, AGENT_ALWAYS_RUN, AGENT_AUTOPILOT, AGENT_AUTOMATED and/or AGENT_FLOATING_VIA_SCRIPTED_ATTACHMENT.
     </description>
   </function>
 
@@ -11021,6 +11482,127 @@ Returns the requested line of the notecard with the given name, or the constant 
 Converts the given position to HUD coordinates. The returned vector's X coordinate will be 1.0 if the object is in front of the camera and -1.0 otherwise. Needs the PERMISSION_TRACK_CAMERA permission to work, otherwise it returns ZERO_VECTOR. Works with HUD attachments only.
     </description>
   </function>
+
+  <function name="llGetHealth" type="float" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="key" name="id"/>
+    <description lang="en">
+Retrieves the agent or object's health.
+    </description>
+  </function>
+
+  <function name="llDerezObject" type="integer" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="key" name="id"/>
+    <param type="integer" name="mode"/>
+    <description lang="en">
+Derez or make temporary an object rezzed by this object. Mode can be DEREZ_DIE or DEREZ_MAKE_TEMP. Returns TRUE on success or FALSE on failure.
+    </description>
+  </function>
+
+  <function name="llGiveAgentInventory" type="integer" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="key" name="agent"/>
+    <param type="string" name="folder"/>
+    <param type="list" name="items"/>
+    <param type="list" name="options"/>
+    <description lang="en">
+Give the specified items to the destination agent in a folder. If a folder with that name already exists, a new one will still be created. If the options specify a root path, that root path will be created if it does not exists, but it won't be recreated if it exists. Returns TRANSFER_OK on success, or one of the TRANSFER_xxxx error constants on failure.
+    </description>
+  </function>
+
+  <function name="llTransferOwnership" type="integer" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="key" name="agent"/>
+    <param type="integer" name="flags"/>
+    <param type="list" name="options"/>
+    <description lang="en">
+Transfer the ownership of the object to the agent, assuming it's inworld and not an attachment.
+- When flags = 0, ownership of the object will change in place.
+- When flags = TRANSFER_FLAG_TAKE, the object will go to the destination agent's inventory and derezzed from inworld.
+- When flags = TRANSFER_FLAG_COPY, a copy of the object will go to the destination agent's inventory, and the original object will remain in place and owned by its original owner.
+Returns TRANSFER_OK on success, or one of the TRANSFER_xxxx error constants on failure.
+    </description>
+  </function>
+
+  <function name="llDetectedRezzer" type="key" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="integer" name="index"/>
+    <description lang="en">
+Returns the key of the object or avatar that rezzed the detected object.
+    </description>
+  </function>
+
+  <function name="llDetectedDamage" type="list" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="integer" name="index"/>
+    <description lang="en">
+Retrieves damage information for the given index. The result is valid only if called from an on_damage event. Returns a list [float damage, integer damage_type, float original_damage].
+    </description>
+  </function>
+
+  <function name="llFindNotecardTextCount" type="key" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="string" name="name"/>
+    <param type="string" name="pattern"/>
+    <param type="list" name="options"/>
+    <description lang="en">
+Counts the number of occurrences of the pattern (a regular expression) in the given notecard, returning the result through a dataserver event. Returns NULL_KEY if the regexp or the notecard were not valid, or the query ID for the dataserver event. The data parameter of the dataserver will contain a string representing an integer, which is the number of occurrences.
+    </description>
+  </function>
+
+  <function name="llFindNotecardTextSync" type="list" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="string" name="name"/>
+    <param type="string" name="pattern"/>
+    <param type="integer" name="start"/>
+    <param type="integer" name="count"/>
+    <param type="list" name="options"/>
+    <description lang="en">
+Finds all occurrences of the pattern in a given notecard, which must be cached. Returns the list [NAK] if the notecard was not cached, otherwise a strided list with [integer line, integer column, integer length] triplets. The count parameter specifies the maximum amount of matches to return.
+    </description>
+  </function>
+
+  <function name="llGetAttachedListFiltered" type="list" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="key" name="agent"/>
+    <param type="list" name="options"/>
+    <description lang="en">
+Finds the attachments in the specified agent matching the criteria.
+    </description>
+  </function>
+
+  <function name="llGetStartString" type="string" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Returns the string parameter passed to the object by the rezzer via llRezObjectWithParams.
+    </description>
+  </function>
+
+  <function name="llAdjustDamage" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="integer" name="index"/>
+    <param type="float" name="damage"/>
+    <description lang="en">
+Used in an on_damage event to set a new value for the damage that will be inflicted.
+    </description>
+  </function>
+
+  <function name="llDamage" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="key" name="id"/>
+    <param type="float" name="damage"/>
+    <param type="integer" name="damage_type"/>
+    <description lang="en">
+Inflicts damage on the target given by id (agent or object).
+    </description>
+  </function>
+
+  <function name="llMapBeacon" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="string" name="region"/>
+    <param type="vector" name="position"/>
+    <param type="list" name="options"/>
+    <description lang="en">
+Places a beacon on the owner's viewer, optionally opening and focusing the map.
+    </description>
+  </function>
+
+  <function name="llSetAgentRot" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="rotation" name="orientation"/>
+    <param type="integer" name="flags"/>
+    <description lang="en">
+Rotates the avatar to face the indicated orientation.
+    </description>
+  </function>
+
 
   <!-- OpenSim/Aurora-specific functions -->
 
@@ -14027,6 +14609,38 @@ Triggered by llRequestExperiencePermissions when the permission has been denied.
     <param type="integer" name="action" />
     <param type="string"  name="keyname"/>
     <param type="string"  name="value"  />
+    <description lang="en">
+<!-- TODO: add documentation -->
+    </description>
+  </event>
+
+  <event name="on_death" grid="sl" version="sl:2024-12-17.12379604629">
+    <description lang="en">
+Triggered in the attachments of an avatar when the avatar's health reaches zero.
+    </description>
+  </event>
+
+  <event name="on_damage" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="integer" name="num_detected" />
+    <description lang="en">
+Triggered when the avatar or object is inflicted damage, before said damage is applied.
+    </description>
+  </event>
+
+  <event name="final_damage" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="integer" name="num_detected" />
+    <description lang="en">
+Triggered when the avatar or object is inflicted damage, after said damage is applied.
+    </description>
+  </event>
+
+  <event name="game_control" grid="sl" version="sl:2024-12-17.12379604629">
+    <param type="key" name="id" />
+    <param type="integer" name="button_states" />
+    <param type="list" name="axis_values" />
+    <description lang="en">
+Triggered when a controller event happens. It's only triggered in attachments and in the objects the avatar is sitting on.
+    </description>
   </event>
 
 </keywords>
