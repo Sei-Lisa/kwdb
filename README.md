@@ -2,6 +2,10 @@
 
 ## LSL2/OSSL/AA Keywords Database and Derived Files Generator ##
 
+### UPDATE (September 2026) ###
+
+LL finally realized that LSL *really* needs a central repository of functions, and made one public, available at [https://github.com/secondlife/lsl-definitions](https://github.com/secondlife/lsl-definitions). That makes this project obsolete. Perhaps some kind of bridge program could be added to convert the YAML data from the new LL repository, into function calls usable by the output modules in this project, so that the output files that it produces can keep being generated. That's especially important for `builtins.txt`, which is a file used by both [lslint](https://github.com/Makopo/lslint) and [LSL-PyOptimizer](https://github.com/Sei-Lisa/LSL-PyOptimizer). However, don't hold your breath.
+
 ### Description ###
 
 This project aims to help synchronizing the various files around that depend on functions and constants added to LSL and similar languages, as additions are frequent and this causes obsolete syntax highlighting files, etc.
